@@ -8,84 +8,87 @@
     { "name": "redTop", "x": 15.6, "y": 7.2 },
     { "name": "redBottom", "x": 15.6, "y": 3.3 }
   ],
-  "gamePieces": [
+  "gamePiecesCoral": [
     {
-      "name": "Note",
+      "name": "Coral",
       "blueAutoCollectionLocations": [
-        { "name": "blue1", "x": 2.9, "y": 7 },
-        { "name": "blue2", "x": 2.9, "y": 5.55 },
-        { "name": "blue3", "x": 2.9, "y": 4.1 }
+        { "name": "blueCoral1", "x": 2.9, "y": 7 },
+        { "name": "blueCoral2", "x": 2.9, "y": 5.55 },
+        { "name": "blueCoral3", "x": 2.9, "y": 4.1 }
       ],
       "redAutoCollectionLocations": [
-        { "name": "red1", "x": 13.65, "y": 7 },
-        { "name": "red2", "x": 13.65, "y": 5.55 },
-        { "name": "red3", "x": 13.65, "y": 4.1 }
+        { "name": "redCoral1", "x": 13.65, "y": 7 },
+        { "name": "redCoral2", "x": 13.65, "y": 5.55 },
+        { "name": "redCoral3", "x": 13.65, "y": 4.1 }
       ],
       "neutralAutoCollectionLocations": [
-        { "name": "preLoad", "x": 0, "y": 0 },
-        { "name": "center1", "x": 8.3, "y": 7.45 },
-        { "name": "center2", "x": 8.3, "y": 5.8 },
-        { "name": "center3", "x": 8.3, "y": 4.1 },
-        { "name": "center4", "x": 8.3, "y": 2.45 },
-        { "name": "center5", "x": 8.3, "y": 0.8 }
+        { "name": "preLoad", "x": 0, "y": 0 }
       ],
       "autoFieldImageLocation": "autoField.png",
       "teleopCollectionLocations": [
         { "name": "preLoad", "x": 0, "y": 0 },
-        { "name": "blueWing", "x": 2.9, "y": 4.1 },
-        { "name": "center", "x": 8.3, "y": 4.1 },
-        { "name": "redWing", "x": 13.65, "y": 4.1 }
+        { "name": "source1", "x": 2.9, "y": 4.1 },
+        { "name": "source2", "x": 8.3, "y": 4.1 },
+        { "name": "ground", "x": 13.65, "y": 4.1 }
       ],
       "teleopFieldImageLocation": "teleopField.png",
       "autoPossibleResults": [
         { "name": "No Result" },
-        { "name": "Speaker" },
-        { "name": "Amp" },
-        { "name": "Failed" },
-        { "name": "Failed Intake" },
-        { "name": "Intentional Drop" }
+        { "name": "Processor" },
+        { "name": "Net" },
+        { "name": "Failed" }
       ],
       "teleopPossibleResults": [
         { "name": "No Result" },
-        { "name": "Speaker" },
-        { "name": "Amp" },
-        { "name": "Trap" },
-        { "name": "Failed" },
-        { "name": "Ferry" }
+        { "name": "Processor" },
+        { "name": "Net" },
+        { "name": "Failed" }
+      ]
+    }
+  ],
+  "gamePiecesAlgae": [
+    {
+      "name": "Algae",
+      "blueAutoCollectionLocations": [
+        { "name": "blueAlgae1", "x": 2.9, "y": 7 },
+        { "name": "blueAlgae2", "x": 2.9, "y": 5.55 },
+        { "name": "blueAlgae3", "x": 2.9, "y": 4.1 }
+      ],
+      "redAutoCollectionLocations": [
+        { "name": "redAlgae1", "x": 13.65, "y": 7 },
+        { "name": "redAlgae2", "x": 13.65, "y": 5.55 },
+        { "name": "redAlgae3", "x": 13.65, "y": 4.1 }
+      ],
+      "autoFieldImageLocation": "autoField.png",
+      "teleopCollectionLocations": [
+        { "name": "preLoad", "x": 0, "y": 0 },
+        { "name": "reefHigh", "x": 2.9, "y": 4.1 },
+        { "name": "reefLow", "x": 8.3, "y": 4.1 },
+        { "name": "ground", "x": 13.65, "y": 4.1 }
+      ],
+      "teleopFieldImageLocation": "teleopField.png",
+      "autoPossibleResults": [
+        { "name": "No Result" },
+        { "name": "Processor" },
+        { "name": "Net" },
+        { "name": "Failed" }
+      ],
+      "teleopPossibleResults": [
+        { "name": "No Result" },
+        { "name": "Processor" },
+        { "name": "Net" },
+        { "name": "Failed" }
       ]
     }
   ],
   "endgameOptions": [
     {
-      "name": "Park",
+      "name": "End Game",
       "possibleResults": [
         { "name": "No Attempt" },
-        { "name": "Failed" },
-        { "name": "Successful" }
-      ]
-    },
-    {
-      "name": "Onstage",
-      "possibleResults": [
-        { "name": "No Attempt" },
-        { "name": "Failed" },
-        { "name": "Successful" }
-      ]
-    },
-    {
-      "name": "Spotlit",
-      "possibleResults": [
-        { "name": "No Attempt" },
-        { "name": "Failed" },
-        { "name": "Successful" }
-      ]
-    },
-    {
-      "name": "Harmony",
-      "possibleResults": [
-        { "name": "No Attempt" },
-        { "name": "Failed" },
-        { "name": "Successful" }
+        { "name": "Park" },
+        { "name": "Climb High/Shallow" },
+        { "name": "Climb Low/Deep"}
       ]
     }
   ],
