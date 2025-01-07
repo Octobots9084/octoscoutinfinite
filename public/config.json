@@ -10,7 +10,7 @@
   ],
   "gamePiecesCoral": [
     {
-      "name": "Coral",
+      "name": "Note",
       "blueAutoCollectionLocations": [
         { "name": "blueCoral1", "x": 2.9, "y": 7 },
         { "name": "blueCoral2", "x": 2.9, "y": 5.55 },
@@ -48,7 +48,7 @@
   ],
   "gamePiecesAlgae": [
     {
-      "name": "Algae",
+      "name": "Note",
       "blueAutoCollectionLocations": [
         { "name": "blueAlgae1", "x": 2.9, "y": 7 },
         { "name": "blueAlgae2", "x": 2.9, "y": 5.55 },
