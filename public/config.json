@@ -53,8 +53,7 @@
         { "name": "Failed" },
         { "name": "Ferry" }
       ]
-    }
-    ,
+    },
     {
       "name": "Algae",
       "blueAutoCollectionLocations": [
