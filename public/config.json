@@ -57,8 +57,7 @@
         { "name": "Fell on Floor" },
         { "name": "Failed pickup" }
       ]
-    }
-    ,
+    },
     {
       "name": "Algae",
       "blueAutoCollectionLocations": [
