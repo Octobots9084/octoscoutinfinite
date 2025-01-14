@@ -1,0 +1,25 @@
+body {
+  background-color: #1a2d43;
+}
+
+button {
+  background-color: #bb9839;
+  border: none;
+  border-radius: 2px;
+}
+
+.nextButton {
+  width: 5vh;
+  height: 5vh;
+  position: absolute;
+  bottom: 5vh;
+  right: calc(95vw / 2 - 10vw);
+}
+
+.backButton {
+  width: 5vh;
+  height: 5vh;
+  position: absolute;
+  bottom: 5vh;
+  left: calc(95vw / 2 - 10vw);
+}

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Octo Scout 2024</title>
+    <link rel="stylesheet" href="globalStyle.css" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="inputContainer">
+      <h3 class="inputLabel">Scout Name</h3>
+      <input id="scoutNameInput" placeholder="Scout Name" type="text"></input>
+    </div>
+    <div class="inputContainer">
+      <h3 class="inputLabel">Match Number</h3>
+      <input id="matchNumberInput" placeholder="Match Number"></input>
+    </div>
+    <div class="inputContainer">
+      <h3 class="inputLabel">Team Number Blue</h3>
+      <input id="teamNumberInput" placeholder="Team Number Blue"></input>
+    </div>
+    <div class="inputContainer">
+      <h3 class="inputLabel">Team Number Red</h3>
+      <input id="teamNumberInput" placeholder="Team Number Red"></input>
+    </div>
+    <button class="backButton" id="analysisButton" onclick="saveData();window.location.href = '/analysis'">Analysis</button>
+    <button class="nextButton" onclick="saveData();window.location.href = '/startingLocation'">Next</button>
+    
+
+    
+    <script src="script.js"></script>
+  </body>
+</html>

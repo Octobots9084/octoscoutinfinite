@@ -1,0 +1,18 @@
+.inputLabel {
+  display: inline;
+  color: #bb9839;
+  margin: 1vh;
+  font-size: x-large;
+  font-weight: bold;
+}
+
+select {
+  height: 4vh;
+}
+
+.inputContainer {
+  position: relative;
+  display: block;
+  margin-top: 10vh;
+  text-align: center;
+}

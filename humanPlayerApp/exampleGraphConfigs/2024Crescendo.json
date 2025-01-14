@@ -1,0 +1,164 @@
+{
+  "Overall": [
+    {
+      "graphName": "Controlled Notes",
+      "metrics": [
+        { "path": "$['03auto'][?(@.result == 'Speaker')]", "weight": 1 },
+        { "path": "$['03auto'][?(@.result == 'Amp')]", "weight": 1 },
+        {
+          "path": "$['03auto'][?(@.result == 'Intentional Drop')]",
+          "weight": 1
+        },
+        { "path": "$['04teleop'][?(@.result == 'Speaker')]", "weight": 1 },
+        { "path": "$['04teleop'][?(@.result == 'Amp')]", "weight": 1 },
+        {
+          "path": "$['04teleop'][?(@.result == 'Amplified Speaker')]",
+          "weight": 1
+        },
+        {
+          "path": "$['04teleop'][?(@.result == 'Trap')]",
+          "weight": 1
+        },
+        {
+          "path": "$['04teleop'][?(@.result == 'Ferry')]",
+          "weight": 1
+        }
+      ],
+      "units": "Notes"
+    }
+  ],
+  "Teleop": [
+    {
+      "graphName": "Controlled Notes",
+      "metrics": [
+        { "path": "$['04teleop'][?(@.result == 'Speaker')]", "weight": 1 },
+        { "path": "$['04teleop'][?(@.result == 'Amp')]", "weight": 1 },
+        {
+          "path": "$['04teleop'][?(@.result == 'Amplified Speaker')]",
+          "weight": 1
+        },
+        {
+          "path": "$['04teleop'][?(@.result == 'Trap')]",
+          "weight": 1
+        },
+        {
+          "path": "$['04teleop'][?(@.result == 'Ferry')]",
+          "weight": 1
+        }
+      ],
+      "units": "Notes"
+    },
+    {
+      "graphName": "Speaker Notes",
+      "metrics": [
+        { "path": "$['04teleop'][?(@.result == 'Speaker')]", "weight": 1 }
+      ],
+      "units": "Notes"
+    },
+    {
+      "graphName": "Amp Notes",
+      "metrics": [
+        { "path": "$['04teleop'][?(@.result == 'Amp')]", "weight": 1 }
+      ],
+      "units": "Notes"
+    },
+    {
+      "graphName": "Trap Notes",
+      "metrics": [
+        {
+          "path": "$['04teleop'][?(@.result == 'Trap')]",
+          "weight": 1
+        }
+      ],
+      "units": "Notes"
+    },
+    {
+      "graphName": "Ferry Notes",
+      "metrics": [
+        {
+          "path": "$['04teleop'][?(@.result == 'Ferry')]",
+          "weight": 1
+        }
+      ],
+      "units": "Notes"
+    }
+  ],
+  "Auto": [
+    {
+      "graphName": "Controlled Notes",
+      "metrics": [
+        { "path": "$['03auto'][?(@.result == 'Speaker')]", "weight": 1 },
+        { "path": "$['03auto'][?(@.result == 'Amp')]", "weight": 1 },
+        {
+          "path": "$['03auto'][?(@.result == 'Intentional Drop')]",
+          "weight": 1
+        }
+      ],
+      "units": "Notes"
+    },
+    {
+      "graphName": "Speaker Notes",
+      "metrics": [
+        { "path": "$['03auto'][?(@.result == 'Speaker')]", "weight": 1 }
+      ],
+      "units": "Notes"
+    },
+    {
+      "graphName": "Amp Notes",
+      "metrics": [{ "path": "$['03auto'][?(@.result == 'Amp')]", "weight": 1 }],
+      "units": "Notes"
+    },
+    {
+      "graphName": "Intentional Drop Notes",
+      "metrics": [
+        {
+          "path": "$['03auto'][?(@.result == 'Intentional Drop')]",
+          "weight": 1
+        }
+      ],
+      "units": "Notes"
+    }
+  ],
+  "Endgame": [
+    {
+      "graphName": "Park",
+      "metrics": [
+        {
+          "path": "$[?(@.Park == 'Successful')]",
+          "weight": 1
+        }
+      ],
+      "units": "Parks"
+    },
+    {
+      "graphName": "Onstage",
+      "metrics": [
+        {
+          "path": "$[?(@.Onstage == 'Successful')]",
+          "weight": 1
+        }
+      ],
+      "units": "Onstages"
+    },
+    {
+      "graphName": "Spotlit",
+      "metrics": [
+        {
+          "path": "$[?(@.Spotlit == 'Successful')]",
+          "weight": 1
+        }
+      ],
+      "units": "Spotlights"
+    },
+    {
+      "graphName": "Harmony",
+      "metrics": [
+        {
+          "path": "$[?(@.Harmony == 'Successful')]",
+          "weight": 1
+        }
+      ],
+      "units": "Harmonies"
+    }
+  ]
+}

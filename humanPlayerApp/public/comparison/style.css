@@ -1,0 +1,70 @@
+.chart {
+  height: 200px;
+  width: 65vw;
+  margin: 10px;
+}
+
+.graphContainer {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+}
+
+#header {
+  color: white;
+}
+
+#backButton {
+  width: 10vh;
+  height: 5vh;
+  position: absolute;
+  left: 5vh;
+}
+
+#singleTeamButton {
+  width: 10vh;
+  height: 5vh;
+  position: absolute;
+  right: 5vh;
+}
+
+#blueTeamsSelectorContainer {
+  position: absolute;
+  left: 5vw;
+  width: 10vw;
+  top: 5vh;
+  height: 90vh;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+#redTeamsSelectorContainer {
+  position: absolute;
+  right: 5vw;
+  width: 10vw;
+  top: 5vh;
+  height: 90vh;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.addTeamButton {
+  top: 0px;
+  width: 100%;
+  margin: 0px;
+  height: 5vh;
+}
+
+.addTeamInput {
+  width: 100%;
+  box-sizing: border-box;
+  height: 5vh;
+  font-size: x-large;
+  text-align: center;
+  font-weight: bold;
+}

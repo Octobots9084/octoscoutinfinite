@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Octo Scout 2024</title>
+    <link rel="stylesheet" href="../globalStyle.css" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <button id="backButton" onclick="window.location.href = '/'">Scout</button>
+    <button
+      id="singleTeamButton"
+      onclick="window.location.href = '/teamAnalysis'"
+    >
+      Single Team
+    </button>
+    <button
+      id="autoAnalysisButton"
+      onclick="window.location.href = '/autoAnalysis'"
+    >
+      Auto
+    </button>
+    <button id="compareButton" onclick="window.location.href = '/comparison'">
+      Compare
+    </button>
+    <div id="overallGraphContainer" class="graphContainer">
+      <h1 id="header">Overall</h1>
+    </div>
+    <div id="teleopGraphContainer" class="graphContainer">
+      <h1 id="header">Teleop</h1>
+    </div>
+    <div id="autoGraphContainer" class="graphContainer">
+      <h1 id="header">Auto</h1>
+    </div>
+    <div id="endgameGraphContainer" class="graphContainer">
+      <h1 id="header">Endgame</h1>
+    </div>
+    <script
+      type="text/javascript"
+      src="https://cdn.canvasjs.com/canvasjs.min.js"
+    ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jsonpath/1.0.0/jsonpath.min.js"></script>
+    <script type="module" src="script.js"></script>
+  </body>
+</html>

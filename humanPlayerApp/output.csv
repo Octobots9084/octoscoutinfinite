@@ -1,0 +1,306 @@
+﻿scoutName,teamNumber,matchNumber,startLocation,autoSpeaker,autoAmp,autoIntentionalDrop,teleopSpeaker,teleopAmp,teleopTrap,teleopFerry,endgamePark,endgameOnstage,endgameSpotlit,endgameHarmony,died,defense,comments,timestamp
+Caio Pereira,4414,1,blueMiddle,4,0,0,4,3,1,0,1,1,0,0,False,False,,2024-10-19T16:42:02.246Z
+Stellan,7415,1,redBottom,1,0,0,1,0,0,3,0,0,0,0,False,False,"Jerky driving, slow motors, sketchy ferrying, bad aim",2024-10-19T16:42:16.105Z
+Shaoyang Chen,980,1,blueBottom,2,2,0,0,0,0,0,1,0,0,0,False,False,Entire match written in autos by accident,2024-10-19T16:42:41.509Z
+Rui,9912,1,redTop,1,0,0,0,3,0,0,0,1,0,0,False,False,,2024-10-19T16:42:44.160Z
+Nate,687,1,redMiddle,2,0,0,5,1,0,0,0,0,0,0,False,False,Very sluggish,2024-10-19T16:42:53.676Z
+Jack,3863,1,blueTop,1,0,0,1,0,0,0,1,1,0,0,False,False,,2024-10-19T16:43:57.483Z
+Caio Pereira,4419,2,blueBottom,0,0,0,7,2,0,0,1,0,0,0,True,False,,2024-10-19T16:51:00.254Z
+Shaoyang Chen,9996,2,blueTop,0,0,0,1,0,0,0,0,0,0,0,True,True,Got bumped,2024-10-19T16:51:13.688Z
+Rui,3925,2,redTop,0,0,0,0,0,0,0,0,0,0,0,True,False,,2024-10-19T16:51:18.297Z
+Stellan,2102,2,redMiddle,2,0,0,0,0,0,0,0,1,0,0,False,False,"Two notes got jammed at the beginning, overall slow movement",2024-10-19T16:51:23.551Z
+Nate,1622,2,redBottom,1,0,0,2,6,0,0,0,0,0,0,False,False,,2024-10-19T16:51:47.289Z
+Jack,9084,2,blueMiddle,2,0,0,2,2,0,0,1,1,0,0,False,False,"Slow climb, after the decision was made took a bit to hit the buttons",2024-10-19T16:53:04.602Z
+Nate,7042,3,redBottom,1,0,0,0,2,0,0,1,0,0,0,False,False,,2024-10-19T16:59:52.772Z
+Stellan,9928,3,redTop,1,0,0,8,0,0,0,1,0,0,0,False,False,Fumbling notes,2024-10-19T17:00:21.687Z
+Rui,4079,3,redMiddle,1,0,0,0,2,0,1,1,0,0,0,False,False,They parked blocking there teammate from getting onstage,2024-10-19T17:00:39.258Z
+Jack,9914,4,blueBottom,1,0,0,0,0,0,3,0,0,0,0,True,False,Slammed into source died,2024-10-19T17:01:33.507Z
+Shaoyang Chen,9948,3,blueTop,0,0,0,1,1,0,0,0,0,0,0,False,False,Very bad with fouls,2024-10-19T17:01:37.150Z
+Caio Pereira,8006,4,blueTop,0,0,0,0,0,0,0,0,0,0,0,True,True,,2024-10-19T17:09:47.447Z
+Stellan,7102,4,redTop,0,0,0,1,0,0,0,0,0,0,0,False,False,"Bad drivers, slow bot, bad shooter/aim",2024-10-19T17:10:07.301Z
+Nate,6017,4,redBottom,1,0,0,2,0,0,4,0,0,0,0,False,False,,2024-10-19T17:10:07.640Z
+Rui,1452,4,redMiddle,1,0,0,5,0,0,0,1,0,0,0,False,False,,2024-10-19T17:10:19.202Z
+Jack,1148,3,blueBottom,1,0,0,0,0,0,0,0,0,0,0,True,False,Died in auto,2024-10-19T17:10:27.057Z
+Shaoyang Chen,359,4,blueTop,4,0,0,4,6,0,0,0,0,0,0,False,False,It bumped a few people seemed fast to me though,2024-10-19T17:11:32.939Z
+Nate,9999,5,redMiddle,4,0,0,7,6,1,0,0,1,0,0,False,False,,2024-10-19T17:18:19.951Z
+Shaoyang Chen,4,5,blueBottom,1,0,0,6,2,0,0,1,1,0,0,False,False,Clunky movement ,2024-10-19T17:18:36.132Z
+Stellan,1197,5,redBottom,1,0,0,0,0,0,3,0,0,0,0,True,False,Pretty slow,2024-10-19T17:18:37.551Z
+Jack,2425,5,blueMiddle,0,0,0,0,0,0,0,1,0,0,0,False,True,Decent def,2024-10-19T17:18:39.696Z
+Rui,4415,5,redTop,3,0,0,1,0,0,10,1,0,0,0,False,False,,2024-10-19T17:19:19.645Z
+Shaoyang Chen,4,5,blueBottom,1,0,0,6,2,0,0,1,1,0,0,False,False,,2024-10-19T17:23:17.061Z
+Will Christensen,3158,6,redTop,0,0,0,2,1,0,0,0,0,0,0,False,False,,2024-10-19T17:26:53.035Z
+Jordian,9938,6,blueMiddle,1,0,0,3,3,0,1,1,0,0,0,False,False,,2024-10-19T17:27:08.628Z
+Ethan C,3759,6,redBottom,0,0,1,0,0,0,0,0,0,0,0,False,True,Shooter broke,2024-10-19T17:27:26.807Z
+Jonathan,1138,6,redMiddle,0,0,0,0,0,0,0,1,0,0,0,False,True,"Pure defense, no auto(no mobility)",2024-10-19T17:27:45.002Z
+Nico,9987,6,blueBottom,0,0,1,0,0,0,0,0,0,0,0,True,True,"Died, did nothing when rebooted",2024-10-19T17:28:08.792Z
+Taven,9987,6,noShow,0,0,0,0,0,0,0,1,0,0,0,False,False,Stayed in their spawn the entire game didn’t pick up any notes.,2024-10-19T17:29:45.909Z
+Will Christensen,9915,7,redTop,0,0,0,0,0,0,0,0,0,0,0,True,False,Got note stuck,2024-10-19T17:34:56.144Z
+Ethan C,973,7,redBottom,0,0,0,3,0,0,2,0,0,0,0,False,False,Terrible,2024-10-19T17:35:07.637Z
+Jordian,4322,7,blueMiddle,0,0,1,3,3,0,0,0,0,0,0,True,False,,2024-10-19T17:35:15.150Z
+Jonathan,9908,7,redMiddle,0,0,0,0,0,0,1,1,0,0,0,False,True,"Intake got stuck, switched to defense",2024-10-19T17:35:41.574Z
+Nico,2659,7,blueMiddle,2,0,0,1,0,1,6,0,1,0,0,False,False,"Fumbing intake, ok for an over bumper.",2024-10-19T17:36:10.785Z
+Taven,4201,7,blueTop,0,1,0,0,1,0,0,1,0,0,0,False,False,Blocked the bot on the red side from shooting and didn’t let them get into the blue area,2024-10-19T17:37:34.512Z
+Ethan C,6647,8,redBottom,0,0,0,3,3,0,3,0,0,0,0,False,False,,2024-10-19T17:44:20.450Z
+Taven,599,8,blueTop,1,0,0,1,0,0,1,0,0,0,0,True,False,Good till endgame in which they died,2024-10-19T17:44:31.099Z
+Jonathan,9408,8,redMiddle,0,0,0,1,6,0,0,1,0,0,0,False,False,"Decent amping, bad shooting",2024-10-19T17:44:31.488Z
+Jordian,5199,8,blueMiddle,1,0,0,2,1,0,0,0,0,0,0,True,True,It had a note stuck and it died half way during the match ,2024-10-19T17:45:00.422Z
+Nico,696,8,blueTop,2,0,0,4,3,0,7,1,0,0,0,False,False,"Fast, good communicating drivers",2024-10-19T17:45:25.038Z
+Ethan C,9914,9,redBottom,0,0,0,0,0,0,4,0,0,0,0,True,False,,2024-10-19T17:54:03.446Z
+Jordian,980,9,blueMiddle,0,0,0,0,0,0,0,0,1,0,0,False,False,Was not doing anything but still moving around,2024-10-19T17:54:29.924Z
+Taven,2102,9,blueMiddle,2,0,0,6,0,0,0,1,1,0,0,False,False,"Missed the first attempt at their shots almost every time, however they did usually make it on the second",2024-10-19T17:54:40.869Z
+Jonathan,1148,9,redMiddle,1,0,0,6,6,0,0,0,1,0,0,False,False,Pretty quick with collecting and shooting at own side,2024-10-19T17:54:45.265Z
+Will Christensen,3512,9,redTop,0,0,0,0,0,0,0,0,1,0,0,False,False,,2024-10-19T17:55:07.975Z
+Nico,8006,9,blueTop,0,0,0,0,0,0,0,1,0,0,0,True,True,"This bot looks it just stepped out of a trash compactor, died then just sat there (⁠´⁠∩⁠｡⁠•⁠ ⁠ᵕ⁠ ⁠•⁠｡⁠∩⁠`⁠)",2024-10-19T17:55:09.266Z
+Will Christensen,3863,10,redBottom,1,0,0,2,4,0,0,0,1,0,0,False,False,,2024-10-19T18:02:42.299Z
+Jordian,9084,10,blueMiddle,2,0,0,0,0,0,3,1,0,0,0,False,False,,2024-10-19T18:03:01.621Z
+Jonathan,9912,10,redMiddle,0,0,0,1,2,1,0,0,1,0,0,False,False,Slow shooting,2024-10-19T18:03:16.475Z
+Ethan C,9928,10,redTop,1,0,0,3,0,0,0,0,0,0,0,False,False,Was broken for first half of teleop ,2024-10-19T18:03:18.684Z
+Taven,4415,10,blueTop,3,1,0,5,2,0,0,0,0,0,0,False,False,When shooting on speaker they never missed.,2024-10-19T18:04:04.937Z
+Nico,7102,10,blueBottom,0,0,0,0,0,0,2,1,0,0,0,True,True,"Intake broke outside of the bumper, bad bot to die on the field, in the way",2024-10-19T18:05:59.451Z
+Will Christensen,2429,11,redTop,1,0,0,2,1,0,0,0,0,0,0,False,False,,2024-10-19T18:10:14.296Z
+Ethan C,9938,11,redBottom,0,0,0,0,0,0,0,1,0,0,0,False,True,Not very good at defense,2024-10-19T18:10:23.144Z
+Jonathan,597,11,redMiddle,2,0,0,1,3,0,0,0,1,0,0,False,False,Slow intake,2024-10-19T18:10:42.481Z
+Jordian,2659,11,blueMiddle,1,0,0,0,1,0,2,0,1,0,0,False,False,Repeated failed when shooting into the amp and speaker,2024-10-19T18:10:54.307Z
+Nico,7157,11,blueMiddle,4,0,0,0,0,0,1,0,0,0,0,False,True,"Shooter roller broke, really affective defense when they stopped working though, good strategy",2024-10-19T18:11:08.125Z
+Taven,4419,11,blueTop,1,0,0,9,0,0,0,1,0,1,0,True,False,Turned off for 7.5 seconds before coming back,2024-10-19T18:11:20.268Z
+Nathan,9987,12,redTop,0,0,0,0,0,0,0,1,0,0,0,False,True,,2024-10-19T18:19:04.915Z
+Lauren,1452,12,redBottom,0,0,0,2,0,0,0,0,0,0,0,True,False,Looked confused possibly camera issue,2024-10-19T18:19:22.343Z
+Shaoyang Chen,9999,12,blueMiddle,1,0,0,4,7,0,0,1,1,0,0,False,False,Very supportive lots if Amp shots,2024-10-19T18:19:32.609Z
+Stellan,9996,12,blueBottom,1,0,0,1,0,0,3,0,0,0,0,True,False,Intake from the source instead of the ground,2024-10-19T18:19:42.511Z
+Rui,687,12,redMiddle,3,0,0,5,0,0,0,0,0,0,0,True,False,Was dead most of the Mach but autos where great and so was teleop after there robot was fixed,2024-10-19T18:19:44.239Z
+Jack,3128,12,blueTop,1,0,0,3,0,0,9,1,1,0,0,False,False,Decent fairy ,2024-10-19T18:22:52.868Z
+Nathan,599,13,redTop,0,0,0,6,0,0,0,1,0,0,0,False,False,,2024-10-19T18:26:54.658Z
+Rui,4079,13,redMiddle,1,0,0,5,4,0,0,1,0,0,0,False,False,,2024-10-19T18:27:05.400Z
+Shaoyang Chen,3158,13,blueBottom,0,0,0,1,2,0,0,0,0,1,0,False,False,Hit a wall really really hard,2024-10-19T18:27:16.304Z
+Lauren,9948,13,redBottom,0,0,0,0,0,0,0,0,0,0,0,True,False,Bad,2024-10-19T18:27:39.770Z
+Stellan,3158,13,blueBottom,0,0,0,1,1,0,0,0,0,0,0,False,False,"Super slow amp, bad driving, drivers, shooter, and intake",2024-10-19T18:28:08.845Z
+Jack,973,13,blueTop,0,0,1,0,0,0,0,1,0,0,0,False,True,Mid def ,2024-10-19T18:30:30.943Z
+Nathan,4322,14,redBottom,1,0,0,1,3,1,0,0,1,0,0,False,False,,2024-10-19T18:35:11.221Z
+Stellan,1138,14,blueBottom,0,0,0,0,0,0,0,1,0,0,0,False,True,,2024-10-19T18:35:24.667Z
+Lauren,359,14,redMiddle,3,0,0,5,4,0,0,0,1,0,0,False,False,Good,2024-10-19T18:35:28.225Z
+Shaoyang Chen,1138,14,blueBottom,0,0,0,0,0,0,0,1,0,0,0,False,True,Bumped a lot of others a tiny bit was sticking out in the park but I put it as successfull,2024-10-19T18:36:05.528Z
+Rui,9908,14,redTop,0,0,0,0,0,0,4,1,0,0,0,False,False,The driver is incredibly indecisive or the both has Forbes moving because it spent a lot overtime stopped or going back and forth without doing much wile holding a note,2024-10-19T18:36:21.912Z
+Jack,4,14,blueMiddle,1,0,0,4,0,0,3,1,1,0,0,False,False,,2024-10-19T18:37:53.684Z
+Nathan,4201,15,redTop,0,0,0,2,0,0,2,1,0,0,0,False,False,,2024-10-19T18:45:52.776Z
+Shaoyang Chen,1622,15,blueBottom,1,0,0,0,1,0,0,1,0,0,0,True,True,Died for a bit then revived after revive it stopped shooting and started being more defensive,2024-10-19T18:46:22.811Z
+Lauren,1197,15,redBottom,2,0,0,0,3,0,0,0,1,0,0,False,True,"Did well till note got stuck, then played defense ",2024-10-19T18:46:24.238Z
+Jack,6647,15,blueMiddle,2,0,0,4,4,0,0,1,1,0,0,False,False,Bad slow weak intake,2024-10-19T18:46:28.113Z
+Stellan,1622,15,blueBottom,1,0,0,0,1,0,3,1,0,0,0,False,True,"Died mid match, intake broke, turned into defense bot",2024-10-19T18:46:31.460Z
+Rui,7415,15,redMiddle,3,0,0,6,0,0,0,0,0,0,0,False,False,They where doing good but there shooter broke and they till trued to shoot but could not aim or get onstage,2024-10-19T18:47:44.420Z
+Rui,7042,16,redTop,1,0,0,3,6,0,0,0,1,0,0,False,False,,2024-10-19T18:57:42.605Z
+Nate,696,16,redBottom,1,0,0,0,0,0,2,0,0,0,0,True,False,,2024-10-19T18:57:50.760Z
+Lauren,4414,16,redMiddle,1,0,0,3,1,0,2,0,1,0,0,False,False,Backup drivers so not so good,2024-10-19T18:57:58.307Z
+Jack,9915,16,blueBottom,0,0,0,0,0,0,2,1,1,0,0,False,False,Climb can reset ,2024-10-19T18:58:08.295Z
+Stellan,3925,16,blueTop,0,0,0,0,0,0,2,0,1,0,0,False,False,,2024-10-19T18:58:08.380Z
+Shaoyang Chen,5199,16,blueMiddle,2,0,0,5,4,0,0,1,1,0,0,False,False,,2024-10-19T18:58:16.193Z
+Shaoyang Chen,4415,17,blueMiddle,3,0,0,0,0,0,0,0,0,0,0,True,False,Died by the amp,2024-10-19T19:08:30.049Z
+Nate,2659,17,redMiddle,0,0,0,0,0,1,6,0,1,0,0,False,False,,2024-10-19T19:08:40.031Z
+Stellan,9928,17,blueBottom,1,0,0,0,0,0,0,1,0,0,0,False,True,Intake got jammed and they became defense,2024-10-19T19:09:03.700Z
+Jack,9948,17,blueTop,0,0,0,0,0,0,0,1,0,0,0,False,True,Dead intake good defense baited fouls ,2024-10-19T19:09:34.234Z
+Caio Pereira,2429,18,blueTop,2,0,0,0,0,0,11,1,0,0,0,False,False,,2024-10-19T19:18:36.024Z
+Camila,9408,18,redTop,3,0,0,9,6,0,0,1,0,0,0,False,False,"Good amp, fast bot, shooter ok kinda slow",2024-10-19T19:19:01.155Z
+Jordian,9996,18,redMiddle,1,0,0,0,0,0,3,0,0,0,0,False,False,,2024-10-19T19:19:07.941Z
+Nico,7157,18,blueMiddle,3,0,0,8,6,0,1,0,0,0,0,False,False,"Trigger happy co-driver, everything fast but they are rushing shots they can make ",2024-10-19T19:19:26.509Z
+Rudy Gloo,6017,18,blueBottom,0,0,0,1,0,0,0,0,0,0,0,False,False,,2024-10-19T19:20:03.078Z
+Taven,9914,18,redBottom,0,0,1,0,0,0,5,0,0,0,0,False,False,"Grabs on other side then passes to teammate, very fast, low ferries ",2024-10-19T19:20:05.787Z
+Jordian,3158,19,redMiddle,0,0,0,3,0,0,0,1,0,0,0,False,False,,2024-10-19T19:29:46.863Z
+Caio Pereira,6647,19,blueMiddle,1,0,0,1,0,0,0,1,1,0,0,False,True,,2024-10-19T19:29:48.776Z
+Camila,4079,19,redTop,0,0,0,2,2,0,0,1,0,0,0,False,False,"Eh, slow",2024-10-19T19:29:58.411Z
+Taven,9938,19,redBottom,1,0,0,2,0,0,0,1,0,1,0,False,False,Had a hard time picking up the nodes,2024-10-19T19:30:40.562Z
+Nico,9912,19,blueTop,1,0,0,2,4,0,0,1,0,0,0,False,False,"Slow over bumper collect, bad bot, not much else, not detrimental to be on s team with tho so maybe 3rd pick",2024-10-19T19:31:33.163Z
+Rudy Gloo,8006,19,blueMiddle,0,0,0,0,0,0,0,0,0,0,0,False,False,,2024-10-19T19:31:41.528Z
+Caio Pereira,4201,20,blueBottom,0,0,0,4,0,0,7,1,0,0,0,False,False,,2024-10-19T19:38:48.917Z
+Jordian,687,20,redMiddle,0,0,0,5,5,0,0,0,0,0,0,False,False,,2024-10-19T19:38:49.656Z
+Camila,3128,20,redMiddle,4,0,0,5,0,0,9,0,1,0,0,False,False,"Really good shooter, great ferry, fast movement ",2024-10-19T19:39:19.089Z
+Taven,9084,20,redTop,1,0,1,0,1,0,0,1,1,0,0,False,False,Worst team I have ever seen whoever is on this team must be stupid.,2024-10-19T19:39:43.445Z
+Rudy Gloo,3512,20,blueBottom,1,0,0,0,0,0,0,0,0,0,0,False,False,3512 definitely stuttered a lot. It had trouble starting and even on of the referees were looking at it weird.,2024-10-19T19:40:02.921Z
+Nico,3759,20,blueMiddle,1,0,0,5,0,0,0,1,0,0,0,False,False,"Would be an okay boy, but abysmal drivers",2024-10-19T19:40:07.108Z
+Caio Pereira,9926,21,blueMiddle,1,0,0,1,1,0,13,0,0,0,0,False,False,,2024-10-19T19:47:14.293Z
+Camila,1452,21,redBottom,1,0,0,0,0,0,0,0,1,0,1,False,True,,2024-10-19T19:47:21.610Z
+Jordian,980,21,redMiddle,1,0,0,3,0,0,0,0,1,0,0,False,False,980 was struggling to pick up notes,2024-10-19T19:47:21.799Z
+Taven,1622,21,redTop,1,0,0,4,1,0,0,1,0,0,0,False,False,,2024-10-19T19:47:38.391Z
+Rudy Gloo,1138,21,blueTop,0,0,0,0,0,0,0,0,0,0,0,True,True,"At one point, 1139 just stopped and it stayed there for the rest of the match.",2024-10-19T19:48:07.955Z
+Nico,5199,21,blueBottom,0,0,0,11,8,0,2,0,0,0,0,False,False,"Incredible receiving cycle time, great bot to feed notes to, sometimes 3-4 notes being amp speaker shot",2024-10-19T19:48:40.726Z
+Nico,7102,22,blueTop,0,0,0,1,0,0,0,0,0,0,0,True,False,Died immediately ,2024-10-19T20:00:15.859Z
+Caio Pereira,4322,22,blueBottom,2,0,0,7,8,0,0,1,0,0,0,False,False,,2024-10-19T20:00:36.423Z
+Camila,9999,22,redMiddle,2,0,0,5,5,1,0,0,1,0,0,False,False,"Fast hot, good aim, decent shooter, good amp,can trap but slow",2024-10-19T20:01:18.254Z
+Rudy Gloo,2102,22,blueMiddle,0,2,0,0,0,0,0,0,0,0,0,False,False,2102 seemed to run efficiently.,2024-10-19T20:01:18.983Z
+Jordian,7042,22,redMiddle,1,0,0,0,0,0,3,0,1,0,0,False,False,Was supporting the red team by picking up notes and dropped it to teammates,2024-10-19T20:01:29.976Z
+Taven, 3925,22,redTop,1,0,0,2,0,0,4,1,1,0,0,False,False,Lots of ferries,2024-10-19T20:01:31.886Z
+Lauren,597,23,redBottom,1,0,0,2,4,0,0,0,1,0,0,False,False,Actually pretty good,2024-10-19T21:08:48.386Z
+Nico,7415,23,blueMiddle,0,0,0,7,0,0,0,0,0,0,0,False,False,Pivot broke bumper shot,2024-10-19T21:09:01.212Z
+Camila,597,23,redBottom,1,0,0,2,5,0,0,0,1,0,0,False,False,,2024-10-19T21:09:22.548Z
+Taven,4,23,redMiddle,0,0,0,4,0,0,3,1,1,0,1,False,False,Shoots very powerful sometimes too powerful ,2024-10-19T21:09:49.373Z
+Kate,696,23,blueBottom,1,0,0,1,0,0,0,1,0,0,0,False,False,"Website crashed, needs to be rescouted, but 696 is rlly good and so we probably won’t end up in a situation where we would pick them",2024-10-19T21:09:50.827Z
+Ethan c,4419,24,redTop,0,0,0,8,0,0,0,1,0,0,0,False,False,,2024-10-19T21:17:51.257Z
+Will Christensen,973,24,redBottom,0,0,1,0,0,0,2,0,0,0,0,False,False,,2024-10-19T21:17:54.184Z
+Jack ,359,24,blueMiddle,3,0,0,6,6,1,0,1,0,0,0,False,False,,2024-10-19T21:18:01.336Z
+Lauren,4414,24,redTop,0,0,0,5,5,0,0,1,0,0,0,False,False,It’s 4414. But their autos completely failed,2024-10-19T21:18:23.552Z
+Richard,1197,24,blueBottom,1,0,0,0,0,0,10,0,0,0,1,False,False,Extremely heavy ferry bot,2024-10-19T21:18:40.739Z
+Kate,3863,24,blueTop,1,0,0,2,0,0,3,0,0,0,1,False,False,"Very good drivers, dodged well, aim was good",2024-10-19T21:20:04.451Z
+Ethan c,9928,25,redMiddle,1,0,0,2,0,0,0,1,0,0,0,False,False,,2024-10-19T21:25:33.484Z
+Lauren,1138,25,redTop,0,0,0,0,0,0,0,1,0,0,0,False,True,Good defense ig?,2024-10-19T21:25:36.567Z
+Will Christensen,9914,25,redBottom,0,0,0,1,2,0,4,1,0,0,0,False,False,,2024-10-19T21:25:49.899Z
+Sinjin,2659,25,blueMiddle,1,0,0,0,3,0,2,1,0,0,0,False,False,,2024-10-19T21:26:13.432Z
+Richard,3759,25,blueTop,0,0,1,0,0,0,0,1,0,0,0,True,False,,2024-10-19T21:27:07.306Z
+Jack ,9996,25,blueBottom,0,0,0,1,0,0,4,1,0,0,0,False,False,,2024-10-19T21:27:54.310Z
+Ethan c,9938,26,redBottom,0,0,0,0,0,0,0,1,0,0,0,False,True,Shooter didn’t work ,2024-10-19T21:34:24.267Z
+Lauren,687,26,redMiddle,2,0,0,4,3,0,0,0,0,0,0,False,False,Note got stuck in beginning but they unstuck it,2024-10-19T21:34:38.930Z
+Will Christensen,1622,26,redTop,0,0,0,0,0,0,0,0,1,0,0,False,False,,2024-10-19T21:34:55.301Z
+Richard,1452,26,blueMiddle,3,0,0,1,0,0,14,0,0,0,0,False,False,Heavy ferry bot,2024-10-19T21:35:14.999Z
+Jack ,7042,26,blueBottom,1,0,0,3,4,0,0,1,0,0,0,False,False,,2024-10-19T21:35:19.892Z
+Will Christensen,5199,27,redBottom,1,0,0,3,4,0,2,0,0,0,0,False,False,,2024-10-19T21:43:23.136Z
+Lauren,7415,27,redTop,0,0,0,2,0,0,1,1,0,0,0,False,False,Inconsistent,2024-10-19T21:43:28.468Z
+Ethan c,9408,27,redMiddle,0,0,0,2,1,0,2,0,0,0,0,False,False,Every shot was a little too low,2024-10-19T21:43:37.919Z
+Sinjin,9987,27,blueBottom,0,0,0,0,0,0,0,1,0,1,0,False,True,Defense bot that wasn’t good at defense,2024-10-19T21:44:07.945Z
+Kate,3512,27,blueMiddle,1,0,0,1,5,0,0,1,0,1,0,False,False,"Not very fast, wobbly, loves amps",2024-10-19T21:44:11.737Z
+Jack ,4079,27,noShow,0,0,0,0,0,0,0,0,0,0,0,False,False,No show,2024-10-19T21:44:54.255Z
+Lauren,9999,28,redMiddle,4,0,0,3,4,1,0,0,1,0,0,False,False,Really good ,2024-10-19T21:52:10.747Z
+Will Christensen,4419,28,redTop,0,0,0,1,0,0,5,0,0,0,0,False,False,,2024-10-19T21:52:16.110Z
+Jack ,6017,28,blueMiddle,0,0,0,1,0,0,4,1,1,0,0,False,False,,2024-10-19T21:52:32.526Z
+Richard,9912,28,blueBottom,1,0,0,3,0,1,0,0,1,0,0,False,False,Shooter seems to have died half way in,2024-10-19T21:52:42.682Z
+Kate,9915,28,blueTop,0,0,0,1,4,0,0,0,0,0,0,False,False,Good,2024-10-19T21:52:56.935Z
+Rogue,6647,28,redBottom,0,0,4,0,0,0,0,0,1,0,0,False,True,Note got stuck on the bot and turned to defense,2024-10-19T21:53:20.737Z
+Lauren,359,29,redMiddle,3,0,0,4,5,0,0,0,1,0,0,False,False,Pretty good,2024-10-19T22:00:40.360Z
+Will Christensen,9084,29,redBottom,2,0,0,1,2,1,0,0,1,0,0,False,False,,2024-10-19T22:00:47.447Z
+Richard,3156,29,blueTop,1,0,0,0,1,0,0,0,0,0,0,True,False,,2024-10-19T22:00:48.099Z
+Sinjin,3158,29,blueTop,1,0,0,0,2,0,0,0,0,0,0,True,False,,2024-10-19T22:00:59.972Z
+Kate,980,29,blueBottom,1,0,0,1,0,0,0,0,1,0,0,False,False,"Got one note, died and then revived",2024-10-19T22:01:23.368Z
+Jack ,696,29,blueMiddle,3,0,0,11,0,0,0,1,0,0,0,False,False,,2024-10-19T22:05:05.111Z
+Nate,9948,30,redBottom,0,0,0,1,0,0,1,1,0,0,0,False,False,,2024-10-19T22:10:20.801Z
+Camila,7157,30,blueMiddle,3,0,0,6,7,0,0,1,0,0,0,False,False,"Fast, good at speakers",2024-10-19T22:10:43.014Z
+Rui,3863,30,redMiddle,0,0,0,4,4,0,0,0,0,0,0,False,False,,2024-10-19T22:11:12.707Z
+Nico,3128,30,blueTop,2,0,0,4,0,0,15,0,1,0,0,False,False,"Vision assisted ferry, super fast, best bot with good teammates, high score 117",2024-10-19T22:11:43.579Z
+Rui,7202,31,redBottom,1,0,0,1,0,0,0,0,0,0,0,True,False,,2024-10-19T22:20:02.868Z
+Nate,9908,31,redMiddle,3,0,0,0,0,0,6,0,0,0,0,False,False,Possibly broke half way through; slowed and stopped shooting. ,2024-10-19T22:20:07.090Z
+Michael shinn ,599,31,blueTop,0,0,0,0,0,0,9,0,0,0,1,False,True,"Defended last 30 Sec, most of game ferried from Red",2024-10-19T22:20:12.438Z
+Nico,1197,31,blueBottom,0,0,0,3,5,0,0,0,1,0,1,False,False,"Clunky amp, getting in the way of drivers, ",2024-10-19T22:22:28.299Z
+Nate,2429,32,redBottom,0,0,0,0,0,0,8,1,0,0,0,False,False,,2024-10-19T22:28:40.574Z
+Rui,4201,32,redTop,1,0,0,3,0,0,7,1,0,0,0,False,False,,2024-10-19T22:28:45.628Z
+Camila,3925,32,blueTop,0,0,0,0,0,0,3,0,0,0,0,False,True,"Boy played most defensive, note got stuck, incorrect name on display it’s actually 3925",2024-10-19T22:30:20.180Z
+Nico,4414,32,blueMiddle,5,0,0,3,4,0,2,0,0,0,0,False,False,"Bad strategy and drivers, blocking teammates in flow zones, alternating source to speaker and source to amp, not good ferry aiming, auto aim from mid field speaker not good, inconsistent amp, no climb attempt, not playing game",2024-10-19T22:31:07.959Z
+Nate,1138,33,redBottom,0,0,0,0,0,0,0,0,0,0,0,True,True,,2024-10-19T22:40:30.569Z
+Rui,4415,33,redTop,2,0,0,3,3,0,1,1,0,0,0,False,False,,2024-10-19T22:40:31.091Z
+Camila,7415,33,blueMiddle,3,0,0,7,0,0,0,1,0,0,0,False,False,,2024-10-19T22:41:18.694Z
+Michael shinn ,4419,33,blueBottom,0,0,0,6,0,0,0,1,0,0,0,False,False,Dropped note once,2024-10-19T22:41:20.775Z
+Nico,9914,33,blueBottom,1,0,0,7,0,0,0,1,0,0,0,False,False,"Long field cycle ok, nothing remarkable but that might be good here ",2024-10-19T22:43:05.601Z
+Nate,3128,34,redMiddle,3,0,0,2,1,0,6,0,0,0,0,False,False,,2024-10-19T22:51:56.795Z
+Camila,7157,34,blueMiddle,4,0,0,0,0,0,4,1,0,0,0,False,False,Internal handoff,2024-10-19T22:52:16.599Z
+Rui,696,34,redTop,1,0,0,8,0,0,0,0,0,0,0,False,False,Front panel fell off,2024-10-19T22:52:20.236Z
+Michael shinn ,9912,34,blueBottom,1,0,0,2,5,0,0,1,1,1,0,False,False,Missed amp once,2024-10-19T22:52:20.418Z
+Nico,1622,34,blueTop,1,0,0,0,2,0,4,0,1,0,0,False,False,"Over bumper intake causing isuessses, intake not working",2024-10-19T22:53:09.244Z
+Rui,6017,35,redBottom,1,0,0,3,0,0,5,0,1,0,0,False,False,,2024-10-19T23:00:42.545Z
+Nate,5199,35,redMiddle,2,0,0,7,6,0,0,0,0,0,0,False,False,,2024-10-19T23:00:43.549Z
+Michael shinn ,9908,35,blueTop,0,0,0,3,0,0,13,1,0,0,0,False,False,Missed 1 ferry ,2024-10-19T23:00:45.624Z
+Nico,687,35,blueBottom,1,0,0,4,0,0,0,0,0,0,0,False,False,"Funky shooter behavior, slow in taking notes",2024-10-19T23:01:00.380Z
+Jack ,9999,35,blueMiddle,3,0,0,7,3,0,0,1,0,0,0,False,False,,2024-10-19T23:02:00.762Z
+Michael shinn ,4201,36,blueTop,0,0,0,1,0,0,10,1,0,0,0,False,False,Dropped note twice,2024-10-19T23:13:20.024Z
+Caio Pereira,3158,36,redMiddle,3,0,0,0,0,0,0,1,0,0,0,False,True,,2024-10-19T23:13:22.498Z
+Ethan c,4322,36,redBottom,1,0,0,2,5,0,0,0,1,0,0,False,False,Had some drive issues but looked pretty good,2024-10-19T23:13:30.401Z
+Austin,9996,36,blueBottom,0,0,0,0,0,0,7,0,0,0,0,False,False,Ferried a bunch of notes but did nothing with them,2024-10-19T23:13:36.019Z
+Will Christensen,599,36,redTop,0,0,0,2,0,0,1,1,0,0,0,False,False,,2024-10-19T23:14:45.341Z
+Michael shinn ,3759,37,blueTop,0,0,0,7,0,0,0,0,0,0,0,False,False,Drops note often,2024-10-19T23:22:25.048Z
+Ethan c,4,37,redBottom,1,0,0,1,0,0,3,0,1,0,0,False,False,,2024-10-19T23:22:39.852Z
+Austin,9084,37,blueMiddle,1,0,0,0,0,0,0,0,0,0,0,False,False,We didn’t shoot any notes at all instead onlly playing defense,2024-10-19T23:22:41.946Z
+Will Christensen,7102,37,redTop,0,0,0,0,0,0,0,0,1,0,0,True,False,,2024-10-19T23:22:44.203Z
+Jack ,3759,37,blueTop,0,0,0,4,0,0,0,0,0,0,0,False,False,,2024-10-19T23:22:49.996Z
+Will Christensen,7102,37,redTop,0,0,0,0,0,0,0,0,1,0,0,True,False,,2024-10-19T23:22:51.994Z
+Caio pereira,6647,38,redMiddle,1,0,0,0,2,0,9,1,0,0,0,False,False,,2024-10-19T23:30:58.482Z
+Austin,1148,38,blueMiddle,0,0,0,4,0,0,1,0,0,0,0,False,False,Pretty good shooter and amp,2024-10-19T23:31:15.056Z
+Ethan c,359,38,redMiddle,4,0,0,6,8,0,0,0,0,0,0,False,False,Really good at cleanup,2024-10-19T23:31:25.882Z
+Will Christensen,9987,38,redBottom,0,0,1,0,0,0,0,1,0,0,0,False,True,Intake didn’t work,2024-10-19T23:31:28.526Z
+Michael shinn ,597,38,blueTop,1,0,0,1,6,0,0,1,1,1,0,False,False,"When it's arm is up, it has a hard time staying up",2024-10-19T23:31:45.425Z
+Jack ,1148,38,blueMiddle,2,0,0,5,3,0,1,0,0,0,0,False,False,,2024-10-19T23:33:47.921Z
+Ethan c,980,39,redBottom,0,0,1,2,0,0,5,0,1,0,0,False,False,,2024-10-19T23:39:09.212Z
+Will Christensen,9928,39,redTop,1,0,0,1,1,0,0,1,0,0,0,False,True,Intake broke,2024-10-19T23:39:15.198Z
+Caio pereira,9408,39,redMiddle,0,0,0,6,5,0,0,0,0,0,0,False,False,,2024-10-19T23:39:15.452Z
+Austin,1197,39,blueTop,2,0,0,1,1,0,0,0,0,0,0,True,False,Pretty good shooter but died pretty early,2024-10-19T23:39:17.031Z
+Michael shinn ,3925,39,blueMiddle,0,0,0,0,0,0,1,1,0,0,0,False,False,"Slow movement, bad accuracy, bad driver",2024-10-19T23:39:39.926Z
+Jack ,1197,39,blueTop,4,0,0,1,2,0,0,0,0,0,0,True,False,,2024-10-19T23:40:13.740Z
+Caio pereira,2429,40,redMiddle,2,0,0,0,3,0,7,0,0,1,0,False,False,,2024-10-19T23:46:18.567Z
+Ethan c,2102,40,redTop,0,0,1,8,7,0,1,0,0,0,0,False,False,Fast amp,2024-10-19T23:46:22.598Z
+Jack ,9915,40,blueTop,2,0,0,0,3,0,0,0,0,0,0,False,False,Stuttering ,2024-10-19T23:46:25.708Z
+Austin,3863,40,blueMiddle,0,0,0,1,2,0,0,0,1,0,0,False,False,Too tall which is an design flaw - almost tips and can’t trap,2024-10-19T23:46:57.646Z
+Will Christensen,9948,40,redBottom,0,0,0,0,0,0,4,1,0,0,0,False,False,,2024-10-19T23:47:06.681Z
+Michael shinn ,1452,40,blueBottom,1,0,0,2,0,0,0,1,0,1,0,False,False,"Fairly slow speed, bad driver",2024-10-19T23:47:12.648Z
+Ethan c,4,41,redMiddle,2,0,0,7,0,0,3,1,0,0,0,False,False,,2024-10-19T23:55:59.880Z
+Will Christensen,3158,41,redTop,1,0,0,7,0,0,0,1,0,0,0,False,False,,2024-10-19T23:56:02.954Z
+Michael shinn ,9914,41,blueBottom,1,0,0,0,0,0,5,0,0,0,0,False,False,Driver left for half of match,2024-10-19T23:56:08.069Z
+Caio pereira,4419,41,redTop,0,0,0,9,0,0,0,1,0,0,0,False,True,,2024-10-19T23:56:11.715Z
+Jack ,7102,41,blueTop,0,0,0,1,0,0,0,0,1,0,0,True,False,,2024-10-19T23:56:19.638Z
+Austin,687,41,blueMiddle,2,0,0,5,2,0,0,0,0,0,0,False,False,Really really good robot - shoots perfectly and amps perfect ,2024-10-19T23:56:24.915Z
+Nate,3128,42,redMiddle,4,0,0,0,0,0,5,0,1,0,0,False,False,,2024-10-20T00:05:22.819Z
+Camila,4079,42,blueTop,0,0,0,0,0,0,0,0,0,0,0,True,False,,2024-10-20T00:05:35.004Z
+Rudy Gloo,6647,42,blueBottom,0,0,0,0,0,0,0,0,0,0,0,True,False,,2024-10-20T00:05:44.251Z
+Saga,359,42,redBottom,2,0,0,6,7,0,0,0,1,0,0,False,False,,2024-10-20T00:05:52.236Z
+nico,2659,42,blueMiddle,3,0,0,5,1,0,4,0,0,0,0,False,False,"nthing much to note, had some trouble with intake making it take long",2024-10-20T00:07:10.491Z
+Nate,3925,43,redTop,0,0,0,0,0,0,0,1,0,0,0,False,True,,2024-10-20T00:12:46.317Z
+Saga,1148,43,redMiddle,4,0,0,2,5,0,0,0,1,0,0,False,False,,2024-10-20T00:13:05.363Z
+Rudy,7157,43,blueTop,0,0,0,0,0,0,0,0,0,0,0,False,False,,2024-10-20T00:13:12.949Z
+Camila,9908,43,blueTop,0,0,0,4,0,0,4,0,0,0,0,False,False,"Had a pretty solid ferry, but shaky movement ",2024-10-20T00:13:30.471Z
+Declan callahan,9084,43,redBottom,1,0,0,0,2,1,0,1,1,0,0,False,False,Missed lots of speaker shots,2024-10-20T00:13:36.183Z
+nico,7415,43,blueBottom,0,0,0,4,6,0,0,1,0,0,0,True,True,"autos totally not workig, died at begining, when working drivers got their stuff together but vison was off for speaker pretty bad, kept up wth us while both bots on team died at the end",2024-10-20T00:14:28.832Z
+Nate,2102,44,redTop,4,0,0,0,0,0,13,0,1,0,0,False,False,,2024-10-20T00:20:31.490Z
+Camila,9912,44,blueTop,0,0,0,0,0,0,0,0,1,0,0,False,True,"Good climb, intake broke",2024-10-20T00:20:56.374Z
+Saga,5199,44,redBottom,0,0,0,8,8,0,3,0,1,0,0,False,False,,2024-10-20T00:21:30.384Z
+Nate,696,45,redTop,0,0,0,0,0,0,0,1,0,0,0,False,True,"Weren’t working at the start, then played defense. ",2024-10-20T00:28:46.214Z
+nico,2429,45,blueTop,3,0,0,0,0,0,1,1,0,0,0,False,False,shooter totally nonfunctionalafter autd,2024-10-20T00:28:50.499Z
+Stellan,9928,45,blueMiddle,1,0,0,3,0,0,1,1,0,0,0,False,False,Terrible shooter (not enough power) and can't amp,2024-10-20T00:28:52.468Z
+Saga,6017,45,redMiddle,0,0,0,0,0,0,7,0,1,0,0,False,False,,2024-10-20T00:29:09.523Z
+Rudy,9987,45,blueBottom,0,0,0,0,0,0,0,0,0,0,0,False,True,9987 has really good defense.,2024-10-20T00:29:15.247Z
+nico,9948,44,blueTop,0,0,0,0,0,0,0,0,0,0,0,False,False,barely moved,2024-10-20T00:30:42.730Z
+Stellan,1138,46,blueTop,0,0,0,0,0,0,0,1,0,0,0,True,True,Even when it wasn't dead the movement was janky,2024-10-20T00:38:22.555Z
+Nate,3512,46,redBottom,0,0,0,0,0,0,0,0,0,0,0,False,False,,2024-10-20T00:38:31.684Z
+Saga,9999,46,redMiddle,3,0,0,4,6,0,0,0,1,0,0,False,False,,2024-10-20T00:38:35.167Z
+Nate,1452,47,redMiddle,3,0,0,2,0,0,0,0,1,0,0,False,True,,2024-10-20T00:46:18.359Z
+Saga,9938,47,redBottom,0,0,0,2,0,0,0,1,0,0,0,False,True,,2024-10-20T00:46:33.730Z
+Stellan,4201,47,blueTop,0,0,1,0,0,0,5,0,0,0,0,True,False,Has a really good ferry,2024-10-20T00:46:58.157Z
+Nico,973,47,blueMiddle,0,0,0,8,0,0,0,1,0,0,0,False,False,"Fine for what it is, did its job, just not fast",2024-10-20T00:47:26.338Z
+nico,7042,46,blueBottom,1,0,0,0,0,0,0,0,0,0,0,False,False,,2024-10-20T00:49:52.526Z
+Lauren,4415,48,redMiddle,1,0,0,4,6,0,0,1,0,0,0,False,False,Good bot,2024-10-20T00:54:02.719Z
+Austin,9915,48,blueTop,0,0,0,2,3,0,0,0,0,0,0,False,False,Note got stuck,2024-10-20T00:54:07.102Z
+Jack,4414,48,blueTop,3,0,0,6,1,1,3,0,1,0,0,False,False,,2024-10-20T00:54:52.068Z
+Kate,9408,48,blueBottom,0,0,0,0,0,0,11,0,0,0,0,False,False,"Handle hits well, picks up well, shoots far",2024-10-20T00:55:55.728Z
+Ethan c,3158,49,redBottom,0,0,1,0,0,0,0,0,0,0,0,False,True,Couldn’t shoot for some reason,2024-10-20T01:01:58.886Z
+Lauren,9908,49,redMiddle,2,0,0,3,0,0,5,0,0,0,0,False,False,Good at ferrying but that’s about it,2024-10-20T01:02:04.903Z
+Camila,1715,49,blueBottom,1,0,0,2,1,0,0,1,0,0,0,False,False,Slow,2024-10-20T01:02:07.151Z
+Austin,2429,49,blueTop,0,0,0,0,3,0,0,0,0,0,0,False,False,Robot didn’t work for a bit and seems slightly broken,2024-10-20T01:02:12.020Z
+Jack,3128,49,blueMiddle,4,0,0,0,0,0,0,1,1,0,0,False,True,Broke intake by collision right at the beginning really good def,2024-10-20T01:04:06.225Z
+Kate,7415,49,blueBottom,1,0,0,4,0,0,0,1,0,0,0,False,False,Took a while to shoot but was usually made it in,2024-10-20T01:04:24.218Z
+Lauren,9912,50,redTop,0,0,0,0,0,0,0,0,1,0,0,False,False,"Note got stuck, spent the whole time trying to unstick it",2024-10-20T01:09:54.326Z
+Ethan c,359,50,redBottom,1,0,0,3,1,0,6,0,1,0,0,False,False,Defended most of the match,2024-10-20T01:09:56.447Z
+Austin,3925,50,blueTop,1,0,0,2,0,0,5,0,1,0,0,False,False,Can’t amp or trap but good ferry,2024-10-20T01:10:08.807Z
+Camila,687,50,blueMiddle,0,0,0,2,0,0,0,0,0,0,0,False,False,,2024-10-20T01:10:30.314Z
+Kate,687,50,blueMiddle,2,0,0,3,2,0,0,0,0,0,0,False,False,"Drivers at first were not so great,  other than that good ",2024-10-20T01:11:04.693Z
+Jack,599,50,blueTop,1,0,0,0,0,0,0,1,0,0,0,False,True,,2024-10-20T01:13:57.446Z
+Ethan c,6647,51,redTop,0,0,0,3,4,0,0,0,1,0,0,False,False,,2024-10-20T01:19:21.707Z
+Lauren,9948,51,redBottom,0,0,0,1,0,0,9,1,0,0,0,False,False,Ferry bot ,2024-10-20T01:19:34.834Z
+Camila,8006,51,blueBottom,0,0,0,3,0,0,0,1,0,0,0,False,False,DONT PICK!!!!! ❌❌❌❌,2024-10-20T01:19:38.686Z
+Austin,4418,51,blueTop,0,0,0,9,0,0,0,1,0,0,0,False,False,Really really good shooter can’t trap maybe amp,2024-10-20T01:19:38.926Z
+Kate,8006,51,blueBottom,0,0,0,1,0,0,0,1,0,0,0,False,False,"Climber hooks aren’t good, looked very lost (bumper was holding on for dear life)",2024-10-20T01:19:58.900Z
+Jack,3512,51,blueMiddle,0,0,0,3,0,0,0,1,1,0,0,False,False,Trys trap 🪤🪤🪤🪤🪤🪤🪤🪤🪤🪤🪤🪤🪤🪤 bad tho ,2024-10-20T01:20:01.735Z
+Ethan c,1197,52,redMiddle,2,0,0,2,0,0,7,0,1,0,0,False,False,,2024-10-20T01:28:48.263Z
+Lauren,4322,52,redBottom,1,0,0,2,2,1,2,0,1,0,0,False,False,Pretty good. It spotlit itself which was hilarious,2024-10-20T01:29:13.875Z
+Kate,9914,52,blueBottom,0,0,0,0,0,0,13,1,0,0,0,False,False,Can’t shoot far or high but super speed,2024-10-20T01:29:22.608Z
+Austin,1452,52,blueMiddle,3,0,0,3,0,0,0,0,1,0,0,False,False,Mediocre robot. Can shoot but not much else and has a hard time trap ,2024-10-20T01:29:32.315Z
+Camila,9914,52,blueBottom,0,0,0,0,0,0,9,1,0,0,0,False,False,Ferry robot does a good job,2024-10-20T01:29:34.969Z
+Jack,4079,52,blueTop,0,0,0,5,6,0,0,1,0,0,0,False,False,,2024-10-20T01:30:21.062Z
+Ethan c,4201,53,redTop,0,0,1,0,0,0,4,1,0,0,0,False,True,Shooter broke,2024-10-20T01:37:18.500Z
+Lauren,980,53,redBottom,1,0,0,2,0,0,1,0,1,0,0,False,False,Slow ,2024-10-20T01:37:23.524Z
+Austin,7102,53,blueTop,0,0,0,4,0,0,0,1,0,0,0,False,False,Weak and wobbly  shooter,2024-10-20T01:37:49.091Z
+Kate,7042,53,blueMiddle,3,0,0,1,4,0,0,0,1,0,0,False,False,"Got amps very well, not super fast",2024-10-20T01:38:08.637Z
+Camila,7042,53,blueMiddle,2,0,0,1,4,0,0,1,1,0,0,False,False,Great design but only uses amp when the shotter looks like it will work better for speaker,2024-10-20T01:38:56.127Z
+Jack,9987,53,blueBottom,0,0,1,0,0,0,0,1,0,0,0,False,True,Decent def broke intake still shedding parts,2024-10-20T01:39:30.844Z
+Rudy Gloo,7042,54,blueMiddle,1,0,0,0,0,0,0,0,0,0,0,False,False,,2024-10-20T01:40:06.692Z
+Caio pereira,9999,54,blueMiddle,4,0,0,6,5,0,1,1,1,1,0,False,False,,2024-10-20T01:46:53.448Z
+Jack,1138,54,blueBottom,0,0,0,1,0,0,0,0,0,0,0,False,True,Bad,2024-10-20T01:47:00.019Z
+Stellan,4414,54,redTop,1,0,2,1,0,0,1,0,1,0,0,False,True,Seems like something broke but unsure,2024-10-20T01:47:18.607Z
+Rui,597,54,redMiddle,2,0,0,4,6,0,0,1,0,1,0,False,False,,2024-10-20T01:50:54.398Z
+Caio pereira,3863,55,blueTop,1,0,0,0,2,0,5,1,1,1,0,False,False,,2024-10-20T01:54:04.728Z
+Stellan,9938,55,redTop,0,0,1,4,0,0,2,0,0,0,0,False,False,"Bad drivers, slow bot",2024-10-20T01:54:05.857Z
+Rui,9406,55,redMiddle,3,0,0,10,6,0,0,0,0,0,0,False,False,,2024-10-20T01:54:30.544Z
+Jack,9996,55 ,blueBottom,0,0,0,4,0,0,5,1,0,0,0,False,False,,2024-10-20T02:06:54.966Z
+Caio pereira,9408,Remake,blueMiddle,2,0,0,5,5,0,0,1,0,0,0,False,False,,2024-10-20T02:14:56.476Z
+Stellan,9908,14 rematch,redTop,1,0,0,0,0,0,7,1,0,0,0,False,False,,2024-10-20T02:14:58.055Z
+Jack,4,14,blueBottom,0,0,0,6,0,0,3,1,0,0,0,False,False,,2024-10-20T02:15:06.216Z
+Rudy Gloo,1138,56,blueTop,0,0,0,0,0,0,0,0,0,0,0,False,False,,2024-10-20T02:21:16.015Z

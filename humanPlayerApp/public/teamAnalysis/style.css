@@ -1,0 +1,39 @@
+.chart {
+  height: 200px;
+  width: 95%;
+  margin: 10px;
+}
+
+.graphContainer {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+#header {
+  color: white;
+}
+
+#backButton {
+  width: 10vh;
+  height: 5vh;
+  position: absolute;
+  left: 5vh;
+}
+
+#singleTeamButton {
+  width: 10vh;
+  height: 5vh;
+  position: absolute;
+  right: 5vh;
+}
+
+#teamNumberSelector {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}

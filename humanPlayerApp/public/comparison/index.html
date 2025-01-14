@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Octo Scout 2024</title>
+    <link rel="stylesheet" href="../globalStyle.css" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <button id="backButton" onclick="window.location.href = '/'">Scout</button>
+    <button id="singleTeamButton" onclick="window.location.href = '/analysis'">
+      Overall Analysis
+    </button>
+    <div id="blueTeamsSelectorContainer">
+      <div id="blueTeamInputContainer"></div>
+      <button onclick="addBlueTeam()" class="addTeamButton">Add team</button>
+    </div>
+
+    <div id="graphContainer" class="graphContainer"></div>
+    <div id="redTeamsSelectorContainer">
+      <div id="redTeamInputContainer"></div>
+      <button onclick="addRedTeam()" class="addTeamButton">Add team</button>
+    </div>
+    <script
+      type="text/javascript"
+      src="https://cdn.canvasjs.com/canvasjs.min.js"
+    ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jsonpath/1.0.0/jsonpath.min.js"></script>
+    <script type="module" src="script.js"></script>
+  </body>
+</html>

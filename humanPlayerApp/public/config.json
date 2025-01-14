@@ -1,0 +1,107 @@
+{
+  "startingLocations": [
+    { "name": "noShow", "x": 0, "y": 0 },
+    { "name": "blueMiddle", "x": 1.4, "y": 5.5 },
+    { "name": "blueTop", "x": 1, "y": 7.2 },
+    { "name": "blueBottom", "x": 1, "y": 3.3 },
+    { "name": "redMiddle", "x": 15.2, "y": 5.5 },
+    { "name": "redTop", "x": 15.6, "y": 7.2 },
+    { "name": "redBottom", "x": 15.6, "y": 3.3 }
+  ],
+  "gamePieces": [
+    {
+      "name": "Blue Algae",
+      "blueAutoCollectionLocations": [
+        
+      ],
+      "redAutoCollectionLocations": [
+        
+      ],
+      "neutralAutoCollectionLocations": [
+        
+      ],
+      "autoFieldImageLocation": "autoField.png",
+      "teleopCollectionLocations": [
+        
+        { "name": "BlueHumanPlayer", "x": 3.65, "y": 4.1 }
+      ],
+      "teleopFieldImageLocation": "teleopField.png",
+      "autoPossibleResults": [
+       
+      ],
+      "teleopPossibleResults": [
+        { "name": "No Result" },
+        { "name": "Scored in Net" },
+        { "name": "Missed -> Field" },
+        { "name": "Missed -> Out of Field" }
+      ]
+    },
+    {
+      "name": "Red Algae",
+      "blueAutoCollectionLocations": [
+        
+      ],
+      "redAutoCollectionLocations": [
+       
+      ],
+      "neutralAutoCollectionLocations": [
+       
+      ],
+      "autoFieldImageLocation": "autoField.png",
+      "teleopCollectionLocations": [
+        { "name": "redHumanPlayer", "x": 13.65, "y": 4.1 }
+      ],
+      "teleopFieldImageLocation": "teleopField.png",
+      "autoPossibleResults": [
+        
+      ],
+      "teleopPossibleResults": [
+        { "name": "No Result" },
+        { "name": "Scored in Net" },
+        { "name": "Missed -> Field" },
+        { "name": "Missed -> Out of Field" }
+      ]
+    }
+  ],
+  "endgameOptions": [
+    {
+      "name": "Climb Deep (Low)",
+      "possibleResults": [
+        { "name": "No Attempt" },
+        { "name": "Failed" },
+        { "name": "Successful" }
+      ]
+    },
+    {
+      "name": "Climb Shallow (High)",
+      "possibleResults": [
+        { "name": "No Attempt" },
+        { "name": "Failed" },
+        { "name": "Successful" }
+      ]
+    },
+    {
+      "name": "Park in Barge Area",
+      "possibleResults": [
+        { "name": "No Attempt" },
+        { "name": "Failed" },
+        { "name": "Successful" }
+      ]
+    }
+  ],
+  "commentsEnabled": true,
+  "extraOptions": [
+    {
+      "name": "Died",
+      "possibleResults": [{ "name": "False" }, { "name": "True" }]
+    },
+    {
+      "name": "Defense",
+      "possibleResults": [{ "name": "None" }, { "name": "Good" }, { "name": "Poor" }]
+    },
+    {
+      "name": "Driver Quality",
+      "possibleResults": [{ "name": "Good" }, { "name": "Average" }, { "name": "Bad" }]
+    }
+  ]
+}

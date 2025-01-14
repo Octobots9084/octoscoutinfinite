@@ -1,0 +1,69 @@
+{
+  "startingLocations": [
+    { "name": "noShow", "x": 0, "y": 0 },
+    { "name": "blueTop", "x": 6.6, "y": 4.85 },
+    { "name": "blueBottom", "x": 7.71, "y": 2.4 },
+    { "name": "redTop", "x": 9, "y": 5.85 },
+    { "name": "redBottom", "x": 10, "y": 3.5 }
+  ],
+  "gamePieces": [
+    {
+      "name": "Cargo",
+      "blueAutoCollectionLocations": [
+        { "name": "blue1", "x": 5, "y": 6.2 },
+        { "name": "blue2", "x": 5.2, "y": 1.9 },
+        { "name": "blue3", "x": 7.65, "y": 0.4 }
+      ],
+      "redAutoCollectionLocations": [
+        { "name": "red1", "x": 8.9, "y": 7.9 },
+        { "name": "red2", "x": 11.4, "y": 6.35 },
+        { "name": "red3", "x": 11.5, "y": 2.1 }
+      ],
+      "neutralAutoCollectionLocations": [{ "name": "preLoad", "x": 0, "y": 0 }],
+      "autoFieldImageLocation": "autoField.png",
+      "teleopCollectionLocations": [
+        { "name": "preLoad", "x": 0, "y": 0 },
+        { "name": "blueWing", "x": 3.85, "y": 4.3 },
+        { "name": "redWing", "x": 12.7, "y": 4.3 }
+      ],
+      "teleopFieldImageLocation": "teleopField.png",
+      "autoPossibleResults": [
+        { "name": "No Result" },
+        { "name": "Lower Hub" },
+        { "name": "Upper Hub" },
+        { "name": "Failed" },
+        { "name": "Failed Intake" }
+      ],
+      "teleopPossibleResults": [
+        { "name": "No Result" },
+        { "name": "Lower Hub" },
+        { "name": "Upper Hub" },
+        { "name": "Failed" }
+      ]
+    }
+  ],
+  "endgameOptions": [
+    {
+      "name": "Climb",
+      "possibleResults": [
+        { "name": "No Attempt" },
+        { "name": "Failed" },
+        { "name": "Level 1" },
+        { "name": "Level 2" },
+        { "name": "Level 3" },
+        { "name": "Level 4" }
+      ]
+    }
+  ],
+  "commentsEnabled": true,
+  "extraOptions": [
+    {
+      "name": "Died",
+      "possibleResults": [{ "name": "False" }, { "name": "True" }]
+    },
+    {
+      "name": "Defense",
+      "possibleResults": [{ "name": "False" }, { "name": "True" }]
+    }
+  ]
+}
