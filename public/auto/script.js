@@ -176,6 +176,7 @@ function updateGamePieceViewer() {
     }
 
     gamePieceResultSelector.value = gamePieces[i].result;
+    
 
     let clickableDeleteImage = document.createElement("img");
     clickableDeleteImage.src = "/images/deleteImage.png";

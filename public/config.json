@@ -42,19 +42,23 @@
       "teleopFieldImageLocation": "teleopField.png",
       "autoPossibleResults": [
         { "name": "No Result" },
-        { "name": "Speaker" },
-        { "name": "Amp" },
-        { "name": "Failed" },
-        { "name": "Failed Intake" },
-        { "name": "Intentional Drop" }
+        { "name": "L1 (Trough)" },
+        { "name": "L2" },
+        { "name": "L3" },
+        { "name": "L4 (Top)" },
+        { "name": "Fell in Trough" },
+        { "name": "Fell on Floor" },
+        { "name": "Failed pickup" }
       ],
       "teleopPossibleResults": [
         { "name": "No Result" },
-        { "name": "Speaker" },
-        { "name": "Amp" },
-        { "name": "Trap" },
-        { "name": "Failed" },
-        { "name": "Ferry" }
+        { "name": "L1 (Trough)" },
+        { "name": "L2" },
+        { "name": "L3" },
+        { "name": "L4 (Top)" },
+        { "name": "Fell in Trough" },
+        { "name": "Fell on Floor" },
+        { "name": "Failed pickup" }
       ]
     },
     {
@@ -87,25 +91,25 @@
       "teleopFieldImageLocation": "teleopField.png",
       "autoPossibleResults": [
         { "name": "No Result" },
-        { "name": "Speaker" },
-        { "name": "Amp" },
+        { "name": "Processor" },
+        { "name": "Net" },
         { "name": "Failed" },
-        { "name": "Failed Intake" },
-        { "name": "Intentional Drop" }
+        { "name": "Failed Pickup" },
+        { "name": "Failed Placement" }
       ],
       "teleopPossibleResults": [
         { "name": "No Result" },
-        { "name": "Speaker" },
-        { "name": "Amp" },
-        { "name": "Trap" },
+        { "name": "Processor" },
+        { "name": "Net" },
         { "name": "Failed" },
-        { "name": "Ferry" }
+        { "name": "Failed Pickup" },
+        { "name": "Failed Placement" }
       ]
     }
   ],
   "endgameOptions": [
     {
-      "name": "Park",
+      "name": "Climb Deep (Low)",
       "possibleResults": [
         { "name": "No Attempt" },
         { "name": "Failed" },
@@ -113,7 +117,7 @@
       ]
     },
     {
-      "name": "Onstage",
+      "name": "Climb Shallow (High)",
       "possibleResults": [
         { "name": "No Attempt" },
         { "name": "Failed" },
@@ -121,15 +125,7 @@
       ]
     },
     {
-      "name": "Spotlit",
-      "possibleResults": [
-        { "name": "No Attempt" },
-        { "name": "Failed" },
-        { "name": "Successful" }
-      ]
-    },
-    {
-      "name": "Harmony",
+      "name": "Park in Barge Area",
       "possibleResults": [
         { "name": "No Attempt" },
         { "name": "Failed" },
@@ -145,7 +141,11 @@
     },
     {
       "name": "Defense",
-      "possibleResults": [{ "name": "False" }, { "name": "True" }]
+      "possibleResults": [{ "name": "None" }, { "name": "Good" }, { "name": "Poor" }]
+    },
+    {
+      "name": "Driver Quality",
+      "possibleResults": [{ "name": "Good" }, { "name": "Average" }, { "name": "Bad" }]
     }
   ]
 }
