@@ -12,14 +12,17 @@
     {
       "name": "Coral",
       "blueAutoCollectionLocations": [
-        { "name": "blue1", "x": 2.9, "y": 7 },
-        { "name": "blue2", "x": 2.9, "y": 5.55 },
-        { "name": "blue3", "x": 2.9, "y": 4.1 }
+        { "name": "sourceRight", "x": 0.8, "y": 7.4 },
+        { "name": "sourceLeft", "x": 0.8, "y": 0.8 },
+        { "name": "floorLeft", "x": 1.2, "y": 5.8 },
+        { "name": "floorMiddle", "x": 1.2, "y": 4 },
+        { "name": "floorRight", "x": 1.2, "y": 2.2 }
       ],
       "redAutoCollectionLocations": [
-        { "name": "red1", "x": 13.65, "y": 7 },
-        { "name": "red2", "x": 13.65, "y": 5.55 },
-        { "name": "red3", "x": 13.65, "y": 4.1 }
+        { "name": "sourceRight", "x": 13.65, "y": 7 },
+        { "name": "sourceLeft", "x": 13.65, "y": 5.55 }
+        
+
       ],
       "neutralAutoCollectionLocations": [
         { "name": "preLoad", "x": 0, "y": 0 },
