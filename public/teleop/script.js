@@ -69,7 +69,7 @@ function addCollectionClickableImage(
     collectionLocation.y = fieldWidth - collectionLocation.y;
   }
   let clickableImage = document.createElement("img");
-  let clickableImageSideLength = 5; // In units of vh
+  let clickableImageSideLength = 4; // In units of vh
   clickableImage.onclick = function () {
     collectPiece(collectionLocation, gamePieceName, imageBackgroundColor);
   };
