@@ -24,18 +24,17 @@ with open('output.csv', mode='w', newline='', encoding='utf-8-sig') as file:
     writer = csv.writer(file)
     
     # Write header
-    writer.writerow(['scoutName', 'teamNumber', 'matchNumber', 'startLocation', 'autoSpeaker', 'autoAmp', 
-                     'autoIntentionalDrop', 'teleopSpeaker', 'teleopAmp', 'teleopTrap', 'teleopFerry', 
-                     'endgamePark', 'endgameOnstage', 'endgameSpotlit', 'endgameHarmony', 'died', 
-                     'defense', 'comments', 'timestamp'])
+    writer.writerow(['scoutName', 'matchNumber', 'teamNumberBlue', 'teamNumberRed', 'redAlgae', 'blueAlgae', 
+                     'died', 'defense', 'comments', 'timestamp'])
     
     # Process each entry
     for entry in data:
         # Parse metadata
         metadata = parse_json_string(entry['01metaData'])
         scout_name = metadata['scoutName']
-        team_number = metadata['teamNumber']
         match_number = metadata['matchNumber']
+        team_number_blue = metadata['teamNumberBlue']
+        team_number_red =['teamNumberRed']
         
         # Parse starting location
         starting_location = parse_json_string(entry['02startingLocation'])['name']
@@ -52,7 +51,10 @@ with open('output.csv', mode='w', newline='', encoding='utf-8-sig') as file:
         teleop_amp = teleop_metrics.get('Amp', 0)
         teleop_trap = teleop_metrics.get('Trap', 0)
         teleop_ferry = teleop_metrics.get('Ferry', 0)
-        
+
+        red_algae = teleop_metrics.get('redAlgae', 0)
+        blue_algae = teleop_metrics.get('blueAlgae', 0)
+
         # Parse endgame metrics
         endgame = parse_json_string(entry['05endgame'])
         endgame_park = 1 if endgame['Park'] == 'Successful' else 0
@@ -70,9 +72,7 @@ with open('output.csv', mode='w', newline='', encoding='utf-8-sig') as file:
         timestamp = entry['timestamp']
         
         # Write row to CSV
-        writer.writerow([scout_name, team_number, match_number, starting_location, auto_speaker, auto_amp, 
-                         auto_intentional_drop, teleop_speaker, teleop_amp, teleop_trap, teleop_ferry, 
-                         endgame_park, endgame_onstage, endgame_spotlit, endgame_harmony, died, defense, 
-                         comments, timestamp])
+        writer.writerow([scout_name, match_number, team_number_blue, team_number_red, red_algae, blue_algae,
+                         died, defense, comments, timestamp])
 
 print("CSV file has been successfully generated!")
