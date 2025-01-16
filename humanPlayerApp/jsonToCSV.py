@@ -24,7 +24,7 @@ with open('output.csv', mode='w', newline='', encoding='utf-8-sig') as file:
     writer = csv.writer(file)
     
     # Write header
-    writer.writerow(['scoutName', 'matchNumber', 'teamNumberBlue', 'teamNumberRed', 'redAlgae', 'blueAlgae', 
+    writer.writerow(['scoutName', 'matchNumber', 'teamNumberBlueInput', 'teamNumberRedInput', 'redAlgae', 'blueAlgae', 
                      'Algae Left in Red Processor', 'Algae Left in Blue Processor', 'Algae in Net', 'comments', 'timestamp'])
     
     # Process each entry
@@ -33,8 +33,8 @@ with open('output.csv', mode='w', newline='', encoding='utf-8-sig') as file:
         metadata = parse_json_string(entry['01metaData'])
         scout_name = metadata['scoutName']
         match_number = metadata['matchNumber']
-        team_number_blue = metadata['teamNumberBlue']
-        team_number_red = metadata['teamNumberRed']
+        team_number_blue = metadata['teamNumberBlueInput']
+        team_number_red = metadata['teamNumberRedInput']
         
         # Parse starting location
         starting_location = parse_json_string(entry['02startingLocation'])['name']
