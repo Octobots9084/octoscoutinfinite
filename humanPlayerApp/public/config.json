@@ -92,16 +92,17 @@
   "commentsEnabled": true,
   "extraOptions": [
     {
-      "name": "Died",
-      "possibleResults": [{ "name": "False" }, { "name": "True" }]
+      "name": "Algae Left in Blue Processor",
+      "possibleResults": [{ "name": "0" }, { "name": "1" }, { "name": "2" }, { "name": "3" }, { "name": "4" }, { "name": "5" }]
     },
     {
-      "name": "Defense",
-      "possibleResults": [{ "name": "None" }, { "name": "Good" }, { "name": "Poor" }]
+      "name": "Algae left in Red Processor",
+      "possibleResults": [{ "name": "0" }, { "name": "1" }, { "name": "2" }, { "name": "3" }, { "name": "4" }, { "name": "5" }]
     },
     {
-      "name": "Driver Quality",
-      "possibleResults": [{ "name": "Good" }, { "name": "Average" }, { "name": "Bad" }]
+      "name": "Algae in Net",
+      "possibleResults": [{ "name": "0" }, { "name": "1" }, { "name": "2" }, { "name": "3" }, { "name": "4" }, { "name": "5" },
+                          { "name": "6" }, { "name": "7" }, { "name": "8" }, { "name": "9" }, { "name": "10" }]
     }
   ]
 }

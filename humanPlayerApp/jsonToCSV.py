@@ -25,7 +25,7 @@ with open('output.csv', mode='w', newline='', encoding='utf-8-sig') as file:
     
     # Write header
     writer.writerow(['scoutName', 'matchNumber', 'teamNumberBlue', 'teamNumberRed', 'redAlgae', 'blueAlgae', 
-                     'died', 'defense', 'comments', 'timestamp'])
+                     'Algae Left in Red Processor', 'Algae Left in Blue Processor', 'Algae in Net', 'comments', 'timestamp'])
     
     # Process each entry
     for entry in data:
@@ -34,7 +34,7 @@ with open('output.csv', mode='w', newline='', encoding='utf-8-sig') as file:
         scout_name = metadata['scoutName']
         match_number = metadata['matchNumber']
         team_number_blue = metadata['teamNumberBlue']
-        team_number_red =['teamNumberRed']
+        team_number_red = metadata['teamNumberRed']
         
         # Parse starting location
         starting_location = parse_json_string(entry['02startingLocation'])['name']
@@ -46,7 +46,7 @@ with open('output.csv', mode='w', newline='', encoding='utf-8-sig') as file:
         auto_intentional_drop = auto_metrics.get('Intentional Drop', 0)
         
         # Extract teleop metrics
-        teleop_metrics = extract_metrics(entry['04teleop'], ["Speaker", "Amp", "Trap", "Ferry"])
+        teleop_metrics = extract_metrics(entry['04teleop'], ["Speaker", "Amp", "Trap", "Ferry", "redAlgae", "blueAlgae"])
         teleop_speaker = teleop_metrics.get('Speaker', 0)
         teleop_amp = teleop_metrics.get('Amp', 0)
         teleop_trap = teleop_metrics.get('Trap', 0)
@@ -64,8 +64,9 @@ with open('output.csv', mode='w', newline='', encoding='utf-8-sig') as file:
         
         # Parse extra data
         extra = parse_json_string(entry['06extra'])
-        died = extra['Died']
-        defense = extra['Defense']
+        algae_left_blue = extra['Algae Left in Blue Processor']
+        algae_left_red = extra['Algae Left in red Processor']
+        algae_in_net = extra['Algae in Net']
         comments = extra['Comments']
         
         # Timestamp
@@ -73,6 +74,6 @@ with open('output.csv', mode='w', newline='', encoding='utf-8-sig') as file:
         
         # Write row to CSV
         writer.writerow([scout_name, match_number, team_number_blue, team_number_red, red_algae, blue_algae,
-                         died, defense, comments, timestamp])
+                         algae_left_blue, algae_left_red, algae_in_net, comments])
 
 print("CSV file has been successfully generated!")
