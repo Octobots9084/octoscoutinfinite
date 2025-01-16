@@ -10,7 +10,7 @@
   ],
   "gamePieces": [
     {
-      "name": "Blue Algae",
+      "name": "blueAlgae",
       "blueAutoCollectionLocations": [
         
       ],
@@ -23,7 +23,7 @@
       "autoFieldImageLocation": "autoField.png",
       "teleopCollectionLocations": [
         
-        { "name": "BlueHumanPlayer", "x": 6.650, "y": 0.0 }
+        { "name": "BlueHumanPlayer", "x": 8.25, "y": -1.0 }
       ],
       "teleopFieldImageLocation": "teleopField.png",
       "autoPossibleResults": [
@@ -37,7 +37,7 @@
       ]
     },
     {
-      "name": "Red Algae",
+      "name": "redAlgae",
       "blueAutoCollectionLocations": [
         
       ],
@@ -49,7 +49,7 @@
       ],
       "autoFieldImageLocation": "autoField.png",
       "teleopCollectionLocations": [
-        { "name": "redHumanPlayer", "x": 10.65, "y": 8.2 }
+        { "name": "redHumanPlayer", "x": 8.25, "y": 9.2 }
       ],
       "teleopFieldImageLocation": "teleopField.png",
       "autoPossibleResults": [
