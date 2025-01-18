@@ -1,40 +1,42 @@
 {
   "startingLocations": [
     { "name": "noShow", "x": 0, "y": 0 },
-    { "name": "blueMiddle", "x": 1.4, "y": 5.5 },
-    { "name": "blueTop", "x": 1, "y": 7.2 },
-    { "name": "blueBottom", "x": 1, "y": 3.3 },
-    { "name": "redMiddle", "x": 15.2, "y": 5.5 },
-    { "name": "redTop", "x": 15.6, "y": 7.2 },
-    { "name": "redBottom", "x": 15.6, "y": 3.3 }
+    { "name": "blueMiddle", "x": 6.7, "y": 4 },
+    { "name": "blueLeft", "x": 6.7, "y": 6.8 },
+    { "name": "blueRight", "x": 6.7, "y": 1.2 },
+    { "name": "redMiddle", "x": 10.4, "y": 4 },
+    { "name": "redLeft", "x": 10.4, "y": 6.8},
+    { "name": "redRight", "x": 10.4, "y": 1.2 }
   ],
   "gamePieces": [
     {
       "name": "Coral",
       "blueAutoCollectionLocations": [
-        { "name": "blue1", "x": 2.9, "y": 7 },
-        { "name": "blue2", "x": 2.9, "y": 5.55 },
-        { "name": "blue3", "x": 2.9, "y": 4.1 }
+        { "name": "sourceRight", "x": 0.8, "y": 8 },
+        { "name": "sourceLeft", "x": 0.8, "y": 0.2 },
+        { "name": "floorLeft", "x": -0.2, "y": 5.8 },
+        { "name": "floorMiddle", "x": -0.2, "y": 4 },
+        { "name": "floorRight", "x": -0.2, "y": 2.2 }
       ],
       "redAutoCollectionLocations": [
-        { "name": "red1", "x": 13.65, "y": 7 },
-        { "name": "red2", "x": 13.65, "y": 5.55 },
-        { "name": "red3", "x": 13.65, "y": 4.1 }
+        { "name": "sourceRight", "x": 15.7, "y": 0.2 },
+        { "name": "sourceLeft", "x": 15.7, "y": 8 },
+        { "name": "floorMiddle", "x": 16.7, "y": 4},
+        { "name": "floorLeft", "x": 16.7, "y": 5.8},
+        { "name": "floorRight", "x": 16.7, "y": 2.2 }
+        
+
       ],
       "neutralAutoCollectionLocations": [
-        { "name": "preLoad", "x": 0, "y": 0 },
-        { "name": "center1", "x": 8.3, "y": 7.45 },
-        { "name": "center2", "x": 8.3, "y": 5.8 },
-        { "name": "center3", "x": 8.3, "y": 4.1 },
-        { "name": "center4", "x": 8.3, "y": 2.45 },
-        { "name": "center5", "x": 8.3, "y": 0.8 }
       ],
       "autoFieldImageLocation": "autoField.png",
       "teleopCollectionLocations": [
-        { "name": "preLoad", "x": 0, "y": 0 },
-        { "name": "blueWing", "x": 2.9, "y": 4.1 },
-        { "name": "center", "x": 8.3, "y": 4.1 },
-        { "name": "redWing", "x": 13.65, "y": 4.1 }
+        { "name": "blueSource", "x": 0.8, "y": 0.2 },
+        { "name": "blueTrough", "x": 4.25, "y": 3 },
+        { "name": "blueFloor", "x": 1, "y": 4 },
+        { "name": "redSource", "x": 15.7, "y": 8 },
+        { "name": "redTrough", "x": 12.25, "y": 5.25 },
+        { "name": "redFloor", "x": 15.5, "y": 4.1 }
       ],
       "teleopFieldImageLocation": "teleopField.png",
       "autoPossibleResults": [
@@ -61,29 +63,35 @@
     {
       "name": "Algae",
       "blueAutoCollectionLocations": [
-        { "name": "blue1", "x": 2.9, "y": 7 },
-        { "name": "blue2", "x": 2.9, "y": 5.55 },
-        { "name": "blue3", "x": 2.9, "y": 4.1 }
+        { "name": "blue1", "x": 5.5, "y": 5.5 },
+        { "name": "blue2", "x": 4, "y": 5.5 },
+        { "name": "blue3", "x": 3.25, "y": 4 },
+        { "name": "blue4", "x": 4, "y": 2.5 },
+        { "name": "blue5", "x": 5.5, "y": 2.5 },
+        { "name": "blue6", "x": 6.25, "y": 4 },
+        { "name": "floorLeft", "x": 1, "y": 5.8 },
+        { "name": "floorMiddle", "x": 1, "y": 4 },
+        { "name": "floorRight", "x": 1, "y": 2.2 }
       ],
       "redAutoCollectionLocations": [
-        { "name": "red1", "x": 13.65, "y": 7 },
-        { "name": "red2", "x": 13.65, "y": 5.55 },
-        { "name": "red3", "x": 13.65, "y": 4.1 }
+        { "name": "red1", "x": 12.5, "y": 5.5 },
+        { "name": "red2", "x": 11, "y": 5.5 },
+        { "name": "red3", "x": 10.25, "y": 4 },
+        { "name": "red4", "x": 11, "y": 2.5 },
+        { "name": "red5", "x": 12.5, "y": 2.5 },
+        { "name": "red6", "x": 13.25, "y": 4 },
+        { "name": "floorMiddle", "x": 15.5, "y": 4},
+        { "name": "floorLeft", "x": 15.5, "y": 5.8},
+        { "name": "floorRight", "x": 15.5, "y": 2.2 }
       ],
       "neutralAutoCollectionLocations": [
-        { "name": "preLoad", "x": 0, "y": 0 },
-        { "name": "center1", "x": 8.3, "y": 7.45 },
-        { "name": "center2", "x": 8.3, "y": 5.8 },
-        { "name": "center3", "x": 8.3, "y": 4.1 },
-        { "name": "center4", "x": 8.3, "y": 2.45 },
-        { "name": "center5", "x": 8.3, "y": 0.8 }
       ],
       "autoFieldImageLocation": "autoField.png",
       "teleopCollectionLocations": [
-        { "name": "preLoad", "x": 0, "y": 0 },
-        { "name": "blueWing", "x": 2.9, "y": 4.1 },
-        { "name": "center", "x": 8.3, "y": 4.1 },
-        { "name": "redWing", "x": 13.65, "y": 4.1 }
+        { "name": "blueReef", "x": 4.25, "y": 5 },
+        { "name": "blueFloor", "x": 1, "y": 5.75 },
+        { "name": "redReef", "x": 12.25, "y": 3 },
+        { "name": "redFloor", "x": 15.5, "y": 2.25 }
       ],
       "teleopFieldImageLocation": "teleopField.png",
       "autoPossibleResults": [
