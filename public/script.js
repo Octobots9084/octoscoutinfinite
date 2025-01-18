@@ -1,3 +1,8 @@
+import {
+  getJSONConfig
+} from "/util.js";
+let JSONConfig = await getJSONConfig();
+document.title = JSONConfig.pageTitle; 
 let scoutNameInput = document.getElementById("scoutNameInput");
 let teamNumberInput = document.getElementById("teamNumberInput");
 let matchNumberInput = document.getElementById("matchNumberInput");

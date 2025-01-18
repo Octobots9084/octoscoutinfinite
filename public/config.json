@@ -1,4 +1,6 @@
-{
+{    
+  "pageTitle": "OctoScout 2025",
+  
   "startingLocations": [
     { "name": "noShow", "x": 0, "y": 0 },
     { "name": "blueMiddle", "x": 6.7, "y": 4 },
