@@ -53,7 +53,7 @@
         { "name": "B-L4 (Top)" },
         { "name": "B-Missed into Trough" },
         { "name": "B-Missed onto Floor" },
-        { "name": "Failed Pickup"}
+        { "name": "Failed Coral Pickup"}
       ],
       "teleopPossibleResults": [
         { "name": "No Result" },
@@ -101,26 +101,26 @@
       ],
       "teleopFieldImageLocation": "teleopField.png",
       "autoPossibleResults": [
-        { "name": "No Result" },
+        { "name": "Algae-No Result" },
         { "name": "Processor" },
         { "name": "Net" },
-        { "name": "Failed" },
-        { "name": "Failed Pickup" },
-        { "name": "Failed Placement" }
+        { "name": "Failed Algae" },
+        { "name": "Failed Algae Pickup" },
+        { "name": "Failed Algae Placement" }
       ],
       "teleopPossibleResults": [
         { "name": "No Result" },
         { "name": "Processor" },
         { "name": "Net" },
-        { "name": "Failed" },
-        { "name": "Failed Pickup" },
-        { "name": "Failed Placement" }
+        { "name": "Failed Algae" },
+        { "name": "Failed Algae Pickup" },
+        { "name": "Failed Algae Placement" }
       ]
     }
   ],
   "endgameOptions": [
     {
-      "name": "Climb Deep (Low)",
+      "name": "Deep",
       "possibleResults": [
         { "name": "No Attempt" },
         { "name": "Failed" },
@@ -128,7 +128,7 @@
       ]
     },
     {
-      "name": "Climb Shallow (High)",
+      "name": "Shallow",
       "possibleResults": [
         { "name": "No Attempt" },
         { "name": "Failed" },
@@ -136,7 +136,7 @@
       ]
     },
     {
-      "name": "Park in Barge Area",
+      "name": "Park",
       "possibleResults": [
         { "name": "No Attempt" },
         { "name": "Failed" },
