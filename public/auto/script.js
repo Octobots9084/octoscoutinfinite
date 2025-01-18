@@ -167,6 +167,7 @@ function updateGamePieceViewer() {
       gamePieces[i].result = gamePieceResultSelector.value;
     };
     gamePieceResultSelector.classList.add("gamePieceResultSelector");
+    gamePieceResultSelector.classList.add(gamePieces[i].name);
 
     for (var j = 0; j < possibleResults.length; j++) {
       var option = document.createElement("option");
@@ -201,4 +202,10 @@ function updateGamePieceViewer() {
 window.saveData = saveData;
 function saveData() {
   localStorage.setItem("03auto", JSON.stringify(gamePieces));
+}
+
+function placeCoral(){
+  $('#image').click(function() {
+    $('#foo').addClass('myClass');
+  });
 }
