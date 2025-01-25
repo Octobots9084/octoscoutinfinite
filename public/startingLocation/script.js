@@ -7,6 +7,7 @@ import {
 } from "/util.js";
 
 let JSONConfig = await getJSONConfig();
+document.title = JSONConfig.pageTitle; 
 let fieldContainer = document.getElementById("fieldContainer");
 let fieldImage = document.getElementById("fieldImage");
 let isBlue = JSON.parse(localStorage.getItem("01metaData")).teamColor == "Blue";

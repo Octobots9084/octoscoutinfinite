@@ -2743,5 +2743,23 @@
     "05endgame": "{\"Park\":\"No Attempt\",\"Onstage\":\"No Attempt\",\"Spotlit\":\"No Attempt\",\"Harmony\":\"No Attempt\"}",
     "06extra": "{\"Died\":\"False\",\"Defense\":\"False\",\"Comments\":\"\"}",
     "timestamp": "2025-01-11T21:55:14.399Z"
+  },
+  {
+    "04teleop": "[]",
+    "02startingLocation": "{\"name\":\"noShow\",\"x\":0,\"y\":0}",
+    "01metaData": "{\"scoutName\":\"\",\"teamNumber\":\"\",\"matchNumber\":\"\",\"teamColor\":\"Red\"}",
+    "03auto": "[]",
+    "05endgame": "{\"Climb Deep (Low)\":\"Successful\",\"Climb Shallow (High)\":\"No Attempt\",\"Park in Barge Area\":\"No Attempt\"}",
+    "06extra": "{\"Died\":\"False\",\"Defense\":\"Good\",\"Driver Quality\":\"Average\",\"Comments\":\"ari cant program\"}",
+    "timestamp": "2025-01-18T23:32:23.775Z"
+  },
+  {
+    "04teleop": "[{\"collectionLocation\":{\"name\":\"blueFloor\",\"x\":15.5,\"y\":2.4499999999999993},\"name\":\"Algae\",\"color\":\"rgb(0,0,101.25)\",\"result\":\"Processor\"},{\"collectionLocation\":{\"name\":\"blueReef\",\"x\":12.25,\"y\":3.1999999999999993},\"name\":\"Algae\",\"color\":\"rgb(0,0,50)\",\"result\":\"Processor\"}]",
+    "02startingLocation": "{\"name\":\"redLeft\",\"x\":6.1,\"y\":1.3999999999999995}",
+    "01metaData": "{\"scoutName\":\"ari sucks\",\"teamNumber\":\"4\",\"matchNumber\":\"9098090\",\"teamColor\":\"Blue\"}",
+    "03auto": "[{\"collectionLocation\":{\"name\":\"floorLeft\",\"x\":15.5,\"y\":2.3999999999999995},\"name\":\"Algae\",\"color\":\"rgb(0,0,186.66666666666663)\",\"result\":\"Processor\"},{\"collectionLocation\":{\"name\":\"floorMiddle\",\"x\":16.7,\"y\":4.199999999999999},\"name\":\"Coral\",\"color\":\"rgb(0,0,173)\",\"result\":\"B-L4 (Top)\"}]",
+    "05endgame": "{\"Climb Deep (Low)\":\"Failed\",\"Climb Shallow (High)\":\"Failed\",\"Park in Barge Area\":\"Failed\"}",
+    "06extra": "{\"Died\":\"True\",\"Defense\":\"Poor\",\"Driver Quality\":\"Bad\",\"Comments\":\"\"}",
+    "timestamp": "2025-01-18T23:34:02.438Z"
   }
 ]

@@ -1,6 +1,7 @@
 import { getJSONConfig } from "/util.js";
 
 let JSONConfig = await getJSONConfig();
+document.title = JSONConfig.pageTitle; 
 let extraOptions = JSONConfig.extraOptions;
 let extraSelectsContainer = document.getElementById("extraSelectsContainer");
 let commentInput = document.getElementById("commentInput");
