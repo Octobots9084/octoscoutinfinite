@@ -109,7 +109,7 @@
         { "name": "Failed Algae Placement" }
       ],
       "teleopPossibleResults": [
-        { "name": "No Result" },
+        { "name": "Algae-No Result" },
         { "name": "Processor" },
         { "name": "Net" },
         { "name": "Failed Algae" },
