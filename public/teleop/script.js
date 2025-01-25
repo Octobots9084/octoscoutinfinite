@@ -22,10 +22,11 @@ generateCollectionButtons();
 loadStoredData();
 
 class GamePiece {
-  constructor(collectionLocation, name, color) {
+  constructor(collectionLocation, name, color,time) {
     this.collectionLocation = collectionLocation;
     this.name = name;
     this.color = color;
+    this.time=time;
   }
 }
 
@@ -101,7 +102,7 @@ function addCollectionClickableImage(
 
 // Creates a game piece object to represent a collected game piece and updates the viewer
 function collectPiece(location, gamePieceName, buttonColor) {
-  gamePieces.push(new GamePiece(location, gamePieceName, buttonColor));
+  gamePieces.push(new GamePiece(location, gamePieceName, buttonColor,seconds));
   updateGamePieceViewer();
 }
 
@@ -174,3 +175,15 @@ window.saveData = saveData;
 function saveData() {
   localStorage.setItem("04teleop", JSON.stringify(gamePieces));
 }
+let timer;
+let seconds = localStorage.getItem('timer') ? parseInt(localStorage.getItem('timer')) : 0;
+if(seconds<15){
+  seconds=15;
+}
+function updateTimer(){
+  seconds++;
+  localStorage.setItem('timer', seconds);
+  console.log(seconds);
+  //timerDisplay.textContent = `Time: ${seconds}s`;
+}
+setInterval(updateTimer,1000);

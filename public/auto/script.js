@@ -21,10 +21,11 @@ if (!isBlue) {
 generateCollectionButtons();
 loadStoredData();
 class GamePiece {
-  constructor(collectionLocation, name, color) {
+  constructor(collectionLocation, name, color,time) {
     this.collectionLocation = collectionLocation;
     this.name = name;
     this.color = color;
+    this.time=time;
   }
 }
 
@@ -102,8 +103,8 @@ function addCollectionClickableImage(
   let clickableImageSideLength = 4; // In units of vh
   clickableImage.onclick = function () {
     collectPiece(collectionLocation, gamePieceName, imageBackgroundColor);
+    startTimer();
   };
-
   clickableImage.classList.add("clickableImage");
 
   // Computing the correct position for the button to be at
@@ -130,7 +131,7 @@ function addCollectionClickableImage(
 
 // Creates a game piece object to represent a collected game piece and updates the viewer
 function collectPiece(location, gamePieceName, buttonColor) {
-  gamePieces.push(new GamePiece(location, gamePieceName, buttonColor));
+  gamePieces.push(new GamePiece(location, gamePieceName, buttonColor,seconds));
   updateGamePieceViewer();
 }
 
@@ -205,8 +206,19 @@ function saveData() {
   localStorage.setItem("03auto", JSON.stringify(gamePieces));
 }
 
-function placeCoral(){
-  $('#image').click(function() {
-    $('#foo').addClass('myClass');
-  });
+let timer;
+let seconds = localStorage.getItem('timer') ? parseInt(localStorage.getItem('timer')) : 0;
+let isTimerRunning=false;
+function startTimer(){
+  console.log(isTimerRunning)
+  if(!isTimerRunning){
+    isTimerRunning=true;
+  }
+  timer = setInterval(updateTimer, 1000);
+}
+function updateTimer(){
+    seconds++;
+    localStorage.setItem('timer', seconds);
+    console.log(seconds);
+    //timerDisplay.textContent = `Time: ${seconds}s`;
 }
