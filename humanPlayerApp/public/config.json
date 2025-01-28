@@ -10,59 +10,55 @@
   ],
   "gamePieces": [
     {
-      "name": "blueAlgae",
+      "name": "Algae",
       "blueAutoCollectionLocations": [
         
       ],
       "redAutoCollectionLocations": [
-        
+        { "name": "redHumanPlayer", "x": 8.25, "y": -1 }
       ],
       "neutralAutoCollectionLocations": [
-        
+       
       ],
       "autoFieldImageLocation": "autoField.png",
       "teleopCollectionLocations": [
-        
-        { "name": "BlueHumanPlayer", "x": 8.25, "y": -1.0 }
       ],
       "teleopFieldImageLocation": "teleopField.png",
       "autoPossibleResults": [
-       
-      ],
-      "teleopPossibleResults": [
         { "name": "No Result" },
         { "name": "Scored in Net" },
         { "name": "Missed -> Field" },
         { "name": "Missed -> Out of Field" }
+      ],
+      "teleopPossibleResults": [
+        
       ]
     },
     {
-      "name": "redAlgae",
+      "name": "AlgaeLeft",
       "blueAutoCollectionLocations": [
-        
+       
       ],
       "redAutoCollectionLocations": [
-       
+        
       ],
       "neutralAutoCollectionLocations": [
-       
+        
       ],
       "autoFieldImageLocation": "autoField.png",
       "teleopCollectionLocations": [
-        { "name": "redHumanPlayer", "x": 8.25, "y": 9.2 }
+        { "name": "redProcessor", "x": 8.25, "y": -1 }
       ],
       "teleopFieldImageLocation": "teleopField.png",
       "autoPossibleResults": [
         
       ],
       "teleopPossibleResults": [
-        { "name": "No Result" },
-        { "name": "Scored in Net" },
-        { "name": "Missed -> Field" },
-        { "name": "Missed -> Out of Field" }
+        { "name": "Left in Processor" }
       ]
     }
   ],
+
   "endgameOptions": [
     {
       "name": "Climb Deep (Low)",
@@ -91,18 +87,6 @@
   ],
   "commentsEnabled": true,
   "extraOptions": [
-    {
-      "name": "Algae Left in Blue Processor",
-      "possibleResults": [{ "name": "0" }, { "name": "1" }, { "name": "2" }, { "name": "3" }, { "name": "4" }, { "name": "5" }]
-    },
-    {
-      "name": "Algae left in Red Processor",
-      "possibleResults": [{ "name": "0" }, { "name": "1" }, { "name": "2" }, { "name": "3" }, { "name": "4" }, { "name": "5" }]
-    },
-    {
-      "name": "Algae in Net",
-      "possibleResults": [{ "name": "0" }, { "name": "1" }, { "name": "2" }, { "name": "3" }, { "name": "4" }, { "name": "5" },
-                          { "name": "6" }, { "name": "7" }, { "name": "8" }, { "name": "9" }, { "name": "10" }]
-    }
+ 
   ]
 }

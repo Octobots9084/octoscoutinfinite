@@ -1,252 +1,26 @@
 {
   "Overall": [
     {
-      "graphName": "Controlled Notes",
+      "graphName": "Scored in Net",
       "metrics": [
-        { "path": "$['03auto'][?(@.result == 'Speaker')]", "weight": 1 },
-        { "path": "$['03auto'][?(@.result == 'Amp')]", "weight": 1 },
-        {
-          "path": "$['03auto'][?(@.result == 'Intentional Drop')]",
-          "weight": 1
-        },
-        { "path": "$['04teleop'][?(@.result == 'Speaker')]", "weight": 1 },
-        { "path": "$['04teleop'][?(@.result == 'Amp')]", "weight": 1 },
-        {
-          "path": "$['04teleop'][?(@.result == 'Trap')]",
-          "weight": 1
-        },
-        {
-          "path": "$['04teleop'][?(@.result == 'Ferry')]",
-          "weight": 1
-        }
+        { "path": "$['03auto'][?(@.result == 'Scored in Net')]", "weight": 1 }
       ],
-      "units": "Notes"
+      "units": "Algae"
     },
     {
-      "graphName": "Ramsey's Metric",
+      "graphName": "Left in Processor",
       "metrics": [
-        { "path": "$['03auto'][?(@.result == 'Speaker')]", "weight": 0.2 },
-        { "path": "$['03auto'][?(@.result == 'Amp')]", "weight": 0 },
-        {
-          "path": "$['03auto'][?(@.result == 'Intentional Drop')]",
-          "weight": 0
-        },
-        { "path": "$['04teleop'][?(@.result == 'Speaker')]", "weight": 0.35 },
-        { "path": "$['04teleop'][?(@.result == 'Amp')]", "weight": 0.25 },
-        {
-          "path": "$['04teleop'][?(@.result == 'Trap')]",
-          "weight": 0.05
-        },
-        {
-          "path": "$['04teleop'][?(@.result == 'Ferry')]",
-          "weight": 0.15
-        }
+        { "path": "$['04teleop'][?(@.result == 'Left in Processor')]", "weight": 1 }
       ],
-      "units": "Arbitrary Units"
-    }
-  ],
-  "Teleop": [
-    {
-      "graphName": "Controlled Notes",
-      "metrics": [
-        { "path": "$['04teleop'][?(@.result == 'Speaker')]", "weight": 1 },
-        { "path": "$['04teleop'][?(@.result == 'Amp')]", "weight": 1 },
-        {
-          "path": "$['04teleop'][?(@.result == 'Amplified Speaker')]",
-          "weight": 1
-        },
-        {
-          "path": "$['04teleop'][?(@.result == 'Trap')]",
-          "weight": 1
-        },
-        {
-          "path": "$['04teleop'][?(@.result == 'Ferry')]",
-          "weight": 1
-        }
-      ],
-      "units": "Notes"
+      "units": "Algae"
     },
     {
-      "graphName": "Speaker Notes",
+      "graphName": "Missed",
       "metrics": [
-        { "path": "$['04teleop'][?(@.result == 'Speaker')]", "weight": 1 }
+        { "path": "$['03auto'][?(@.result == 'Missed -> Field')]", "weight": 1 },
+        { "path": "$['03auto'][?(@.result == 'Missed -> Out of Field')]", "weight": 1 }
       ],
-      "units": "Notes"
-    },
-    {
-      "graphName": "Amp Notes",
-      "metrics": [
-        { "path": "$['04teleop'][?(@.result == 'Amp')]", "weight": 1 }
-      ],
-      "units": "Notes"
-    },
-    {
-      "graphName": "Amplified Speaker Notes",
-      "metrics": [
-        {
-          "path": "$['04teleop'][?(@.result == 'Amplified Speaker')]",
-          "weight": 1
-        }
-      ],
-      "units": "Notes"
-    },
-    {
-      "graphName": "Trap Notes",
-      "metrics": [
-        {
-          "path": "$['04teleop'][?(@.result == 'Trap')]",
-          "weight": 1
-        }
-      ],
-      "units": "Notes"
-    },
-    {
-      "graphName": "Ferry Notes",
-      "metrics": [
-        {
-          "path": "$['04teleop'][?(@.result == 'Ferry')]",
-          "weight": 1
-        }
-      ],
-      "units": "Notes"
-    }
-  ],
-  "Auto": [
-    {
-      "graphName": "Controlled Notes",
-      "metrics": [
-        { "path": "$['03auto'][?(@.result == 'Speaker')]", "weight": 1 },
-        { "path": "$['03auto'][?(@.result == 'Amp')]", "weight": 1 },
-        {
-          "path": "$['03auto'][?(@.result == 'Intentional Drop')]",
-          "weight": 1
-        }
-      ],
-      "units": "Notes"
-    },
-    {
-      "graphName": "Speaker Notes",
-      "metrics": [
-        { "path": "$['03auto'][?(@.result == 'Speaker')]", "weight": 1 }
-      ],
-      "units": "Notes"
-    },
-    {
-      "graphName": "Amp Notes",
-      "metrics": [{ "path": "$['03auto'][?(@.result == 'Amp')]", "weight": 1 }],
-      "units": "Notes"
-    },
-    {
-      "graphName": "Intentional Drop Notes",
-      "metrics": [
-        {
-          "path": "$['03auto'][?(@.result == 'Intentional Drop')]",
-          "weight": 1
-        }
-      ],
-      "units": "Notes"
-    }
-  ],
-  "Endgame": [
-    {
-      "graphName": "Park",
-      "metrics": [
-        {
-          "path": "$[?(@.Park == 'Successful')]",
-          "weight": 1
-        }
-      ],
-      "units": "Parks"
-    },
-    {
-      "graphName": "Onstage",
-      "metrics": [
-        {
-          "path": "$[?(@.Onstage == 'Successful')]",
-          "weight": 1
-        }
-      ],
-      "units": "Onstages"
-    },
-    {
-      "graphName": "Spotlit",
-      "metrics": [
-        {
-          "path": "$[?(@.Spotlit == 'Successful')]",
-          "weight": 1
-        }
-      ],
-      "units": "Spotlights"
-    },
-    {
-      "graphName": "Harmony",
-      "metrics": [
-        {
-          "path": "$[?(@.Harmony == 'Successful')]",
-          "weight": 1
-        }
-      ],
-      "units": "Harmonies"
-    }
-  ],
-  "Comparison": [
-    {
-      "graphName": "Overall Controlled Notes",
-      "metrics": [
-        { "path": "$['03auto'][?(@.result == 'Speaker')]", "weight": 1 },
-        { "path": "$['03auto'][?(@.result == 'Amp')]", "weight": 1 },
-        {
-          "path": "$['03auto'][?(@.result == 'Intentional Drop')]",
-          "weight": 1
-        },
-        { "path": "$['04teleop'][?(@.result == 'Speaker')]", "weight": 1 },
-        { "path": "$['04teleop'][?(@.result == 'Amp')]", "weight": 1 },
-        {
-          "path": "$['04teleop'][?(@.result == 'Amplified Speaker')]",
-          "weight": 1
-        },
-        {
-          "path": "$['04teleop'][?(@.result == 'Trap')]",
-          "weight": 1
-        },
-        {
-          "path": "$['04teleop'][?(@.result == 'Ferry')]",
-          "weight": 1
-        }
-      ],
-      "units": "Notes"
-    },
-    {
-      "graphName": "Auto Controlled Notes",
-      "metrics": [
-        { "path": "$['03auto'][?(@.result == 'Speaker')]", "weight": 1 },
-        { "path": "$['03auto'][?(@.result == 'Amp')]", "weight": 1 },
-        {
-          "path": "$['03auto'][?(@.result == 'Intentional Drop')]",
-          "weight": 1
-        }
-      ],
-      "units": "Notes"
-    },
-    {
-      "graphName": "Teleop Controlled Notes",
-      "metrics": [
-        { "path": "$['04teleop'][?(@.result == 'Speaker')]", "weight": 1 },
-        { "path": "$['04teleop'][?(@.result == 'Amp')]", "weight": 1 },
-        {
-          "path": "$['04teleop'][?(@.result == 'Amplified Speaker')]",
-          "weight": 1
-        },
-        {
-          "path": "$['04teleop'][?(@.result == 'Trap')]",
-          "weight": 1
-        },
-        {
-          "path": "$['04teleop'][?(@.result == 'Ferry')]",
-          "weight": 1
-        }
-      ],
-      "units": "Notes"
+      "units": "Algae"
     }
   ]
 }

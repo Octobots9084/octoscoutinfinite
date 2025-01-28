@@ -1,7 +1,6 @@
 let scoutNameInput = document.getElementById("scoutNameInput");
 let matchNumberInput = document.getElementById("matchNumberInput");
-let teamNumberRedInput = document.getElementById("teamNumberRedInput");
-let teamNumberBlueInput = document.getElementById("teamNumberBlueInput");
+let teamNumberInput = document.getElementById("teamNumberInput");
 
 function loadStoredData() {
   let data = localStorage.getItem("01metaData");
@@ -15,8 +14,7 @@ function saveData() {
   let metaData = {};
   metaData.scoutName = scoutNameInput.value;
   metaData.matchNumber = matchNumberInput.value;
-  metaData.teamNumberRed = teamNumberRedInput.value;
-  metaData.teamNumberBlue = teamNumberBlueInput.value;
+  metaData.teamNumber = teamNumberInput.value;
   localStorage.setItem("01metaData", JSON.stringify(metaData));
 }
 
