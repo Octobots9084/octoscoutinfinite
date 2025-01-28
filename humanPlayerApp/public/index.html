@@ -20,9 +20,15 @@
       <h3 class="inputLabel">Team Number</h3>
       <input id="teamNumberInput" placeholder="Team Number"></input>
     </div>
-    
+    <div class="inputContainer">
+      <h3 class="inputLabel">Team Color</h3>
+      <select id="teamColorInput" class="textInput">
+        <option value="Red">Red</option>
+        <option value="Blue">Blue</option>
+      </select>
+    </div>
     <button class="backButton" id="analysisButton" onclick="saveData();window.location.href = '/analysis'">Analysis</button>
-    <button class="nextButton" onclick="saveData();window.location.href = '/teleop'">Next</button>
+    <button class="nextButton" onclick="saveData();window.location.href = '/auto'">Next</button>
     
 
     

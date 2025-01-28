@@ -19,5 +19,12 @@
     "04teleop": "[]",
     "03auto": "[{\"collectionLocation\":{\"name\":\"redHumanPlayer\",\"x\":8.25,\"y\":-1},\"name\":\"Algae\",\"color\":\"rgb(50,0,0)\",\"result\":\"No Result\"},{\"collectionLocation\":{\"name\":\"redHumanPlayer\",\"x\":8.25,\"y\":-1},\"name\":\"Algae\",\"color\":\"rgb(50,0,0)\",\"result\":\"Scored in Net\"},{\"collectionLocation\":{\"name\":\"redHumanPlayer\",\"x\":8.25,\"y\":-1},\"name\":\"Algae\",\"color\":\"rgb(50,0,0)\",\"result\":\"Scored in Net\"}]",
     "timestamp": "2025-01-28T04:02:40.339Z"
+  },
+  {
+    "01metaData": "{\"scoutName\":\"ethan\",\"matchNumber\":\"\",\"teamNumber\":\"\",\"teamColor\":\"Blue\"}",
+    "06extra": "{\"Comments\":\"thrtergdfsragbfdgsefgdfhgfgs\"}",
+    "03auto": "[{\"collectionLocation\":{\"name\":\"redHumanPlayer\",\"x\":8.25,\"y\":9.2},\"name\":\"Algae\",\"color\":\"rgb(50,0,0)\",\"result\":\"Scored in Net\"},{\"collectionLocation\":{\"name\":\"redHumanPlayer\",\"x\":8.25,\"y\":9.2},\"name\":\"Algae\",\"color\":\"rgb(50,0,0)\",\"result\":\"Scored in Net\"}]",
+    "04teleop": "[{\"collectionLocation\":{\"name\":\"redProcessor\",\"x\":8.25,\"y\":9.2},\"name\":\"AlgaeLeft\",\"color\":\"rgb(0,0,50)\",\"result\":\"Left in Processor\"},{\"collectionLocation\":{\"name\":\"redProcessor\",\"x\":8.25,\"y\":9.2},\"name\":\"AlgaeLeft\",\"color\":\"rgb(0,0,50)\",\"result\":\"Left in Processor\"},{\"collectionLocation\":{\"name\":\"redProcessor\",\"x\":8.25,\"y\":9.2},\"name\":\"AlgaeLeft\",\"color\":\"rgb(0,0,50)\",\"result\":\"Left in Processor\"},{\"collectionLocation\":{\"name\":\"redProcessor\",\"x\":8.25,\"y\":9.2},\"name\":\"AlgaeLeft\",\"color\":\"rgb(0,0,50)\",\"result\":\"Left in Processor\"}]",
+    "timestamp": "2025-01-28T04:10:58.433Z"
   }
 ]
