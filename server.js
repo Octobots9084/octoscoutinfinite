@@ -10,7 +10,7 @@ app.use(
   })
 );
 app.use(express.static("public"));
-
+const JSONConfig = require('./public/config.json');
 const retryOptions = {
   retries: {
     retries: 5,
@@ -39,10 +39,43 @@ app.get("/output.json", async (req, res) => {
   // Send JSON data as response
   res.send(data);
 });
+function isDateInRange(dateToCheck, startDate, endDate) {
+  // Convert all dates to timestamps to ensure proper comparison
+  const timestampToCheck = new Date(dateToCheck).getTime();
+  const timestampStart = new Date(startDate).getTime();
+  const timestampEnd = new Date(endDate).getTime();
+  console.log(timestampToCheck);
+  console.log(timestampStart)
+  console.log(timestampEnd)
 
+  // Check if the date to check is between the start and end dates
+  return timestampToCheck >= timestampStart && timestampToCheck <= timestampEnd;
+}
 async function writeDataToJSON(data) {
   const filePath = "./output.json";
   data.timestamp = new Date();
+  console.log(JSONConfig.eventDates)
+  for(i=0; i<JSONConfig.eventDates.length; i++){
+    let eventDate = JSONConfig.eventDates[i];
+
+    // Use getFullYear() and ensure proper month indexing (months are 0-based)
+    let startDate = new Date(data.timestamp.getFullYear(), eventDate.startDate.month - 1, eventDate.startDate.day);
+    let endDate = new Date(data.timestamp.getFullYear(), eventDate.endDate.month - 1, eventDate.endDate.day);
+
+    // Check if the timestamp is in range
+    let inRange = (data.timestamp >= startDate && data.timestamp <= endDate);
+
+    console.log(data.timestamp);
+    console.log(startDate);
+    console.log(endDate);
+    console.log(inRange);
+
+    // Use isDateInRange function (if necessary)
+    if (isDateInRange(data.timestamp, startDate, endDate)) {
+      data.eventID = eventDate.eventID;
+    }
+  }
+
   await fileLock.lock(filePath, retryOptions).then((release) => {
     // Read existing file content
     const fileContent = fs.readFileSync(filePath, "utf8");

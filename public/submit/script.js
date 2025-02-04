@@ -63,6 +63,7 @@ async function submitData() {
     confirm("Are you sure you want to submit a duplicate match?")
   ) {
     matchSubmitted = true;
+
     let response = await fetch("../submitData", {
       method: "POST",
       headers: {

@@ -1,6 +1,10 @@
 {    
   "pageTitle": "Octoscout 2025",
-  
+  "eventDates":[
+      {"startDate":{"month":3,"day":6},"endDate":{"month":3,"day":9}, "eventID": "2025cave"},
+      {"startDate":{"month":3,"day":20},"endDate":{"month":3,"day":23}, "eventID": "2025casd"},
+      {"startDate":{"month":1,"day":1},"endDate":{"month":2,"day":5}, "eventID": "2025epic"}
+  ],
   "startingLocations": [
     { "name": "noShow", "x": 0, "y": 0 },
     { "name": "blueMiddle", "x": 6.7, "y": 4 },
