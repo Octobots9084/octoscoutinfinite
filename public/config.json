@@ -106,7 +106,6 @@
         { "name": "Algae-No Result" },
         { "name": "Processor" },
         { "name": "Net" },
-        { "name": "Failed Algae" },
         { "name": "Failed Algae Pickup" },
         { "name": "Failed Algae Placement" }
       ],
@@ -114,7 +113,6 @@
         { "name": "Algae-No Result" },
         { "name": "Processor" },
         { "name": "Net" },
-        { "name": "Failed Algae" },
         { "name": "Failed Algae Pickup" },
         { "name": "Failed Algae Placement" }
       ]

@@ -54,13 +54,6 @@
       "units": "Notes"
     },
     {
-      "graphName": "Failed Algae",
-      "metrics": [
-        { "path": "$['04teleop'][?(@.result == 'Failed Algae')]", "weight": 1 }
-      ],
-      "units": "Algae"
-    },
-    {
       "graphName": "Processor Algae",
       "metrics": [
         { "path": "$['04teleop'][?(@.result == 'Processor')]", "weight": 1 }
