@@ -34,6 +34,8 @@ function drawGraph(dataPoints, meanPoints, chartName, yLabel, graphContainer) {
     axisY: {
       title: yLabel,
     },
+    width: 700,
+    height: 10000,
     dataPointMaxWidth: 5,
     data: [
       {

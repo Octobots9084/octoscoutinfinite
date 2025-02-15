@@ -1,2 +1,11 @@
 [
+  {
+    "04teleop": "[]",
+    "02startingLocation": "{\"name\":\"blueLeft\",\"x\":6.7,\"y\":6.8}",
+    "01metaData": "{\"scoutName\":\"\",\"teamNumber\":\"9084\",\"matchNumber\":\"\",\"teamColor\":\"Red\"}",
+    "03auto": "[{\"collectionLocation\":{\"name\":\"red1\",\"x\":12.5,\"y\":5.5},\"name\":\"Algae\",\"color\":\"rgb(50,0,0)\",\"result\":\"Processor\"},{\"collectionLocation\":{\"name\":\"sourceLeft\",\"x\":15.7,\"y\":8},\"name\":\"Coral\",\"color\":\"rgb(91,0,0)\",\"result\":\"A-L3\"},{\"collectionLocation\":{\"name\":\"sourceRight\",\"x\":15.7,\"y\":0.2},\"name\":\"Coral\",\"color\":\"rgb(50,0,0)\",\"result\":\"A-Missed into Trough\"},{\"collectionLocation\":{\"name\":\"red1\",\"x\":12.5,\"y\":5.5},\"name\":\"Algae\",\"color\":\"rgb(50,0,0)\",\"result\":\"Processor\"}]",
+    "05endgame": "{\"Deep\":\"No Attempt\",\"Shallow\":\"No Attempt\",\"Park\":\"No Attempt\"}",
+    "06extra": "{\"Died\":\"False\",\"Defense\":\"None\",\"Driver Quality\":\"Good\",\"Comments\":\"\"}",
+    "timestamp": "2025-02-15T04:34:27.431Z"
+  }
 ]

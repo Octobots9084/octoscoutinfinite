@@ -51,7 +51,7 @@
         { "path": "$['04teleop'][?(@.result == 'Fell onto Floor')]", "weight": 1 },
         { "path": "$['04teleop'][?(@.result == 'Failed Pickup')]", "weight": 1}
       ],
-      "units": "Notes"
+      "units": "Coral"
     },
     {
       "graphName": "Processor Algae",
@@ -241,63 +241,182 @@
     }
   ],
   "Comparison": [
+      {
+        "graphName": "Teleop Controlled Algae",
+        "metrics":[
+          { "path": "$['04teleop'][?(@.result == 'Processor')]", "weight": 1 },
+          { "path": "$['04teleop'][?(@.result == 'Net')]", "weight": 1 }
+        ],
+        "units": "Algae"
+      },
+     {
+        "graphName": "Teleop Controlled Coral",
+        "metrics": [
+          { "path": "$['04teleop'][?(@.result == 'No Result')]", "weight": 1 },
+          { "path": "$['04teleop'][?(@.result == 'L1 (Trough)')]", "weight": 1 },
+          { "path": "$['04teleop'][?(@.result == 'L2')]", "weight": 1 },
+          { "path": "$['04teleop'][?(@.result == 'L3')]", "weight": 1 },
+          { "path": "$['04teleop'][?(@.result == 'L4 (Top)')]", "weight": 1 },
+          { "path": "$['04teleop'][?(@.result == 'Fell into Trough')]", "weight": 1 },
+          { "path": "$['04teleop'][?(@.result == 'Fell onto Floor')]", "weight": 1 },
+          { "path": "$['04teleop'][?(@.result == 'Failed Pickup')]", "weight": 1}
+        ],
+        "units": "Coral"
+      },
+      {
+        "graphName": "Teleop Processor Algae",
+        "metrics": [
+          { "path": "$['04teleop'][?(@.result == 'Processor')]", "weight": 1 }
+        ],
+        "units": "Algae"
+      },
+      {
+        "graphName": "Teleop Net Algae",
+        "metrics": [
+          { "path": "$['04teleop'][?(@.result == 'Net')]", "weight": 1 }
+        ],
+        "units": "Algae"
+      },
+      {
+        "graphName": "Teleop Resultless Algae",
+        "metrics": [
+          {
+            "path": "$['04teleop'][?(@.result == 'Algae-No Result')]",
+            "weight": 1
+          }
+        ],
+        "units": "Algae"
+      },
+      {
+        "graphName": "Teleop Failed Pickup Algae",
+        "metrics": [
+          {
+            "path": "$['04teleop'][?(@.result == 'Failed Algae Pickup')]",
+            "weight": 1
+          }
+        ],
+        "units": "Algae"
+      },
+      {
+        "graphName": "Teleop Failed Placement Algae",
+        "metrics": [
+          {
+            "path": "$['04teleop'][?(@.result == 'Failed Algae Placement')]",
+            "weight": 1
+          }
+        ],
+        "units": "Algae"
+      },
+      {
+        "graphName": "Teleop Coral-L1 (Trough)",
+        "metrics": [
+          { "path": "$['04teleop'][?(@.result == 'L1 (Trough)')]", "weight": 1 }
+        ],
+        "units": "Coral"
+      },
+      {
+        "graphName": "Teleop Coral-L2",
+        "metrics": [{ "path": "$['04teleop'][?(@.result == 'L2')]", "weight": 1 }],
+        "units": "Coral"
+      },
+      {
+        "graphName": "Teleop Coral-L3",
+        "metrics": [
+          {"path": "$['04teleop'][?(@.result == 'L3')]","weight": 1  }
+        ],
+        "units": "Coral"
+      },
+      {
+        "graphName": "Teleop Coral-L4 (Top)",
+        "metrics": [
+          {"path": "$['04teleop'][?(@.result == 'L4 (Top)')]","weight": 1  }
+        ],
+        "units": "Coral"
+      },
     {
-      "graphName": "Overall Controlled Notes",
+      "graphName": "Auto Controlled Algae",
       "metrics": [
-        { "path": "$['03auto'][?(@.result == 'Speaker')]", "weight": 1 },
-        { "path": "$['03auto'][?(@.result == 'Amp')]", "weight": 1 },
-        {
-          "path": "$['03auto'][?(@.result == 'Intentional Drop')]",
-          "weight": 1
-        },
-        { "path": "$['04teleop'][?(@.result == 'Speaker')]", "weight": 1 },
-        { "path": "$['04teleop'][?(@.result == 'Amp')]", "weight": 1 },
-        {
-          "path": "$['04teleop'][?(@.result == 'Amplified Speaker')]",
-          "weight": 1
-        },
-        {
-          "path": "$['04teleop'][?(@.result == 'Trap')]",
-          "weight": 1
-        },
-        {
-          "path": "$['04teleop'][?(@.result == 'Ferry')]",
-          "weight": 1
-        }
+        { "path": "$['03auto'][?(@.result == 'Processor')]", "weight": 1 },
+        { "path": "$['03auto'][?(@.result == 'Net')]", "weight": 1 }
       ],
-      "units": "Notes"
+      "units": "Algae"
     },
     {
-      "graphName": "Auto Controlled Notes",
+      "graphName": "Auto Processor Algae",
       "metrics": [
-        { "path": "$['03auto'][?(@.result == 'Speaker')]", "weight": 1 },
-        { "path": "$['03auto'][?(@.result == 'Amp')]", "weight": 1 },
-        {
-          "path": "$['03auto'][?(@.result == 'Intentional Drop')]",
-          "weight": 1
-        }
+        { "path": "$['03auto'][?(@.result == 'Processor')]", "weight": 1 }
       ],
-      "units": "Notes"
+      "units": "Algae"
     },
     {
-      "graphName": "Teleop Controlled Notes",
+      "graphName": "Auto Net Algae",
       "metrics": [
-        { "path": "$['04teleop'][?(@.result == 'Speaker')]", "weight": 1 },
-        { "path": "$['04teleop'][?(@.result == 'Amp')]", "weight": 1 },
+        { "path": "$['03auto'][?(@.result == 'Net')]", "weight": 1 }
+      ],
+      "units": "Algae"
+    },
+    {
+      "graphName": "Auto Resultless Algae",
+      "metrics": [
         {
-          "path": "$['04teleop'][?(@.result == 'Amplified Speaker')]",
-          "weight": 1
-        },
-        {
-          "path": "$['04teleop'][?(@.result == 'Trap')]",
-          "weight": 1
-        },
-        {
-          "path": "$['04teleop'][?(@.result == 'Ferry')]",
+          "path": "$['03auto'][?(@.result == 'Algae-No Result')]",
           "weight": 1
         }
       ],
-      "units": "Notes"
+      "units": "Algae"
+    },
+    {
+      "graphName": "Auto Failed Pickup Algae",
+      "metrics": [
+        {
+          "path": "$['03auto'][?(@.result == 'Failed Algae Pickup')]",
+          "weight": 1
+        }
+      ],
+      "units": "Algae"
+    },
+    {
+      "graphName": "Auto Failed Placement Algae",
+      "metrics": [
+        {
+          "path": "$['03auto'][?(@.result == 'Failed Algae Placement')]",
+          "weight": 1
+        }
+      ],
+      "units": "Algae"
+    },
+    {
+      "graphName": "Auto Coral-L1 (Trough)",
+      "metrics": [
+        { "path": "$['03auto'][?(@.result == 'A-L1 (Trough)')]", "weight": 1 },
+        { "path": "$['03auto'][?(@.result == 'B-L1 (Trough)')]", "weight": 1 }
+      ],
+      "units": "Coral"
+    },
+    {
+      "graphName": "Auto Coral-L2",
+      "metrics": [{ "path": "$['03auto'][?(@.result == 'A-L2')]", "weight": 1 },
+      { "path": "$['03auto'][?(@.result == 'B-L2')]", "weight": 1 }],
+      "units": "Coral"
+    },
+    {
+      "graphName": "Auto Coral-L3",
+      "metrics": [
+        {"path": "$['03auto'][?(@.result == 'A-L3')]","weight": 1  },
+        {"path": "$['03auto'][?(@.result == 'B-L3')]","weight": 1  }
+      ],
+      "units": "Coral"
+    },
+    {
+      "graphName": "Auto Coral-L4 (Top)",
+      "metrics": [
+        {"path": "$['03auto'][?(@.result == 'A-L4 (Top)')]","weight": 1  },
+        {"path": "$['03auto'][?(@.result == 'B-L4 (Top)')]","weight": 1  }
+      ],
+      "units": "Coral"
     }
   ]
+  
 }
+
+  
