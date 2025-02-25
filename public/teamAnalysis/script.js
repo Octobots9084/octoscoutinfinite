@@ -18,6 +18,9 @@ let queryString = window.location.search;
 
 let urlParams = new URLSearchParams(queryString);
 let teamNumber = urlParams.get("team");
+if (teamNumber==undefined) {
+  teamNumber = 0;
+}
 
 // Function to draw a graph to the screen
 function drawGraph(dataPoints, chartName, yLabel, graphContainer) {
@@ -89,6 +92,19 @@ function drawGraphs() {
   );
 }
 
+function addExtraData(){
+  let matchNumbers = [];
+    // Getting matches of the team
+    let matchesOfTeam = parsedJSONOutput.filter((obj) => {
+      const metaData = obj["01metaData"];
+      if (metaData.teamNumber === teamNumber) {
+        matchNumbers.push(obj["01metaData"].matchNumber);
+        return true;
+      }
+      return false;
+    });
+    
+}
 // Function to get data from the json file, and
 function getDataAndCreateGraph(
   graphCategory,
@@ -150,4 +166,10 @@ function updateTeamNumber(input) {
 let teamNumberInput = document.getElementById("teamNumberInput");
 teamNumberInput.value = teamNumber;
 teamNumberInput.focus();
+teamNumberInput.addEventListener("keydown", function(event) {
+  if (event.key === "Enter") {
+    updateTeamNumber(teamNumberInput);
+  }
+})
 drawGraphs();
+addExtraData();
