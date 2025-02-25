@@ -1,5 +1,5 @@
 {    
-  "pageTitle": "Ooogly woooggly",
+  "pageTitle": "Octo Scout 2025",
   
   "startingLocations": [
     { "name": "noShow", "x": 0, "y": 0 },
@@ -44,18 +44,12 @@
       "teleopFieldImageLocation": "teleopField.png",
       "autoPossibleResults": [
         { "name": "No Result" },
-        { "name": "A-L1 (Trough)" },
-        { "name": "A-L2" },
-        { "name": "A-L3" },
-        { "name": "A-L4 (Top)" },
-        { "name": "A-Missed into Trough" },
-        { "name": "A-Missed onto Floor" },
-        { "name": "B-L1 (Trough)" },
-        { "name": "B-L2" },
-        { "name": "B-L3" },
-        { "name": "B-L4 (Top)" },
-        { "name": "B-Missed into Trough" },
-        { "name": "B-Missed onto Floor" },
+        { "name": "L1 (Trough)" },
+        { "name": "L2" },
+        { "name": "L3" },
+        { "name": "L4 (Top)" },
+        { "name": "Missed into Trough" },
+        { "name": "Missed onto Floor" },
         { "name": "Failed Coral Pickup"}
       ],
       "teleopPossibleResults": [
