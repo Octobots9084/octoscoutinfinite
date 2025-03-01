@@ -18,7 +18,7 @@ let queryString = window.location.search;
 
 let urlParams = new URLSearchParams(queryString);
 let teamNumber = urlParams.get("team");
-if (teamNumber==undefined) {
+if (teamNumber == undefined) {
   teamNumber = 0;
 }
 
@@ -91,19 +91,35 @@ function drawGraphs() {
     "Endgame"
   );
 }
-
-function addExtraData(){
-  let matchNumbers = [];
-    // Getting matches of the team
-    let matchesOfTeam = parsedJSONOutput.filter((obj) => {
-      const metaData = obj["01metaData"];
-      if (metaData.teamNumber === teamNumber) {
-        matchNumbers.push(obj["01metaData"].matchNumber);
-        return true;
-      }
-      return false;
-    });
-    
+//upate the average quality of the drivers
+function addDriverData() {
+  let driverQualities = [];
+  // Getting matches of the team
+  let matchesOfTeam = parsedJSONOutput.filter((obj) => {
+    const metaData = obj["01metaData"];
+    const extra = obj["06extra"];
+    if (metaData.teamNumber === teamNumber) {
+      driverQualities.push(extra["Driver Quality"]);
+      return true;
+    }
+    return false;
+  });
+  let totalDriverQuality = 0;
+  for (let i of driverQualities) {
+    if (i == "Bad") {
+      totalDriverQuality++;
+    }
+    if (i == "Average") {
+      totalDriverQuality += 2;
+    }
+    if (i == "Good") {
+      totalDriverQuality += 3;
+    }
+  }
+  //get average driver quality as a number (out of 3)
+  let avgDriverQuality = totalDriverQuality / driverQualities.length;
+  //get average driver quality as a word (bad-good)
+  let driverQuality;
 }
 // Function to get data from the json file, and
 function getDataAndCreateGraph(
@@ -166,10 +182,10 @@ function updateTeamNumber(input) {
 let teamNumberInput = document.getElementById("teamNumberInput");
 teamNumberInput.value = teamNumber;
 teamNumberInput.focus();
-teamNumberInput.addEventListener("keydown", function(event) {
+teamNumberInput.addEventListener("keydown", function (event) {
   if (event.key === "Enter") {
     updateTeamNumber(teamNumberInput);
   }
-})
+});
 drawGraphs();
-addExtraData();
+addDriverData();
