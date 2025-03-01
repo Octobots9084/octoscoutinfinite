@@ -1,5 +1,5 @@
-let fieldWidth = 8.2;
-let fieldHeight = 16.5;
+let fieldWidth = 16.4;
+let fieldHeight = 19.5;
 
 async function getJSONConfig() {
   try {

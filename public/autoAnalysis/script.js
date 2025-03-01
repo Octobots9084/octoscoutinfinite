@@ -56,10 +56,10 @@ function drawAutoPath(pieces, matchNumber) {
   // Drawing field image
   ctx.drawImage(
     document.getElementById("fieldImage"),
-    0,
-    0,
-    fieldWidth * fieldSizeMultiplier,
-    fieldHeight * fieldSizeMultiplier
+    (fieldWidth * fieldSizeMultiplier) / 4,
+    75,
+    (fieldWidth * fieldSizeMultiplier) / 2,
+    (fieldHeight * fieldSizeMultiplier) / 1.18
   );
 
   // Setting color iterators for lines between collections
@@ -81,12 +81,14 @@ function drawAutoPath(pieces, matchNumber) {
 
     ctx.beginPath();
     ctx.moveTo(
-      pieces[i].collectionLocation.y * fieldSizeMultiplier,
-      pieces[i].collectionLocation.x * fieldSizeMultiplier
+      pieces[i].collectionLocation.y * fieldSizeMultiplier +
+        (fieldWidth * fieldSizeMultiplier) / 4,
+      pieces[i].collectionLocation.x * fieldSizeMultiplier + 75
     );
     ctx.lineTo(
-      pieces[i + 1].collectionLocation.y * fieldSizeMultiplier,
-      pieces[i + 1].collectionLocation.x * fieldSizeMultiplier
+      pieces[i + 1].collectionLocation.y * fieldSizeMultiplier +
+        (fieldWidth * fieldSizeMultiplier) / 4,
+      pieces[i + 1].collectionLocation.x * fieldSizeMultiplier + 75
     );
     ctx.stroke();
   }
@@ -103,9 +105,11 @@ function drawAutoPath(pieces, matchNumber) {
       // Drawing a background square
       ctx.fillRect(
         (pieces[i].collectionLocation.y - gamePieceBoxDimension / 2) *
-          fieldSizeMultiplier,
+          fieldSizeMultiplier +
+          (fieldWidth * fieldSizeMultiplier) / 4,
         (pieces[i].collectionLocation.x - gamePieceBoxDimension / 2) *
-          fieldSizeMultiplier,
+          fieldSizeMultiplier +
+          75,
         gamePieceBoxDimension * fieldSizeMultiplier,
         gamePieceBoxDimension * fieldSizeMultiplier
       );
@@ -114,9 +118,11 @@ function drawAutoPath(pieces, matchNumber) {
       ctx.drawImage(
         img,
         (pieces[i].collectionLocation.y - gamePieceDimension / 2) *
-          fieldSizeMultiplier,
+          fieldSizeMultiplier +
+          (fieldWidth * fieldSizeMultiplier) / 4,
         (pieces[i].collectionLocation.x - gamePieceDimension / 2) *
-          fieldSizeMultiplier,
+          fieldSizeMultiplier +
+          75,
         gamePieceDimension * fieldSizeMultiplier,
         gamePieceDimension * fieldSizeMultiplier
       );
@@ -126,8 +132,9 @@ function drawAutoPath(pieces, matchNumber) {
       // Drawing the piece result
       ctx.fillText(
         pieces[i].result,
-        pieces[i].collectionLocation.y * fieldSizeMultiplier,
-        pieces[i].collectionLocation.x * fieldSizeMultiplier
+        pieces[i].collectionLocation.y * fieldSizeMultiplier +
+          (fieldWidth * fieldSizeMultiplier) / 4,
+        pieces[i].collectionLocation.x * fieldSizeMultiplier + 75
       );
     };
   }
@@ -175,10 +182,10 @@ function updateTeamNumber(input) {
 let teamNumberInput = document.getElementById("teamNumberInput");
 teamNumberInput.value = teamNumber;
 teamNumberInput.focus();
-teamNumberInput.addEventListener("keydown", function(event) {
+teamNumberInput.addEventListener("keydown", function (event) {
   if (event.key === "Enter") {
     updateTeamNumber(teamNumberInput);
   }
-})
+});
 
 getDataAndDrawAutoPaths();
