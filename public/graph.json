@@ -23,9 +23,75 @@
         { "path": "$['03auto'][?(@.result == 'Net')]", "weight": 1 }
       ],
       "units": "Pieces"
+    },
+    {
+      "graphName": "Points scored",
+      "metrics": [
+        { "path": "$['03auto'][?(@.result == 'L1 (Trough)')]", "weight": 3 },
+        { "path": "$['03auto'][?(@.result == 'L2')]", "weight": 4 },
+        {
+          "path": "$['03auto'][?(@.result == 'L3')]",
+          "weight": 6
+        },
+        {
+          "path": "$['03auto'][?(@.result == 'L4 (Top)')]",
+          "weight": 7
+        },
+        {
+          "path": "$['03auto'][?(@.result == 'Processor')]",
+          "weight": 6
+        },
+        {
+          "path": "$['03auto'][?(@.result == 'Net')]",
+          "weight": 4
+        },
+        { "path": "$['04teleop'][?(@.result == 'L1 (Trough)')]", "weight": 3 },
+        { "path": "$['04teleop'][?(@.result == 'L2')]", "weight": 4 },
+        {
+          "path": "$['04teleop'][?(@.result == 'L3')]",
+          "weight": 6
+        },
+        {
+          "path": "$['04teleop'][?(@.result == 'L4 (Top)')]",
+          "weight": 7
+        },
+        {
+          "path": "$['04teleop'][?(@.result == 'Processor')]",
+          "weight": 6
+        },
+        {
+          "path": "$['04teleop'][?(@.result == 'Net')]",
+          "weight": 4
+        }
+      ],
+      "units": "Points"
     }
   ],
   "Teleop": [
+    {
+      "graphName": "Points scored",
+      "metrics": [
+        { "path": "$['04teleop'][?(@.result == 'L1 (Trough)')]", "weight": 3 },
+        { "path": "$['04teleop'][?(@.result == 'L2')]", "weight": 4 },
+        {
+          "path": "$['04teleop'][?(@.result == 'L3')]",
+          "weight": 6
+        },
+        {
+          "path": "$['04teleop'][?(@.result == 'L4 (Top)')]",
+          "weight": 7
+        },
+        {
+          "path": "$['04teleop'][?(@.result == 'Processor')]",
+          "weight": 6
+        },
+        {
+          "path": "$['04teleop'][?(@.result == 'Net')]",
+          "weight": 4
+        }
+      ],
+      "units": "Points"
+    },
     {
       "graphName":"Controlled Algae",
       "metrics":[
@@ -47,6 +113,31 @@
         { "path": "$['04teleop'][?(@.result == 'Failed Pickup')]", "weight": 1}
       ],
       "units": "Notes"
+    },{
+      "graphName": "Coral-L1 (Trough)",
+      "metrics": [
+        { "path": "$['04teleop'][?(@.result == 'L1 (Trough)')]", "weight": 1 }
+      ],
+      "units": "Coral"
+    },
+    {
+      "graphName": "Coral-L2",
+      "metrics": [{ "path": "$['04teleop'][?(@.result == 'L2')]", "weight": 1 }],
+      "units": "Coral"
+    },
+    {
+      "graphName": "Coral-L3",
+      "metrics": [
+        {"path": "$['04teleop'][?(@.result == 'L3')]","weight": 1  }
+      ],
+      "units": "Coral"
+    },
+    {
+      "graphName": "Coral-L4 (Top)",
+      "metrics": [
+        {"path": "$['04teleop'][?(@.result == 'L4 (Top)')]","weight": 1  }
+      ],
+      "units": "Coral"
     },
     {
       "graphName": "Processor Algae",
@@ -81,35 +172,60 @@
         }
       ],
       "units": "Algae"
+    }
+    
+  ],
+  "Auto": [
+    {
+      "graphName": "Points scored",
+      "metrics": [
+        { "path": "$['03auto'][?(@.result == 'L1 (Trough)')]", "weight": 3 },
+        { "path": "$['03auto'][?(@.result == 'L2')]", "weight": 4 },
+        {
+          "path": "$['03auto'][?(@.result == 'L3')]",
+          "weight": 6
+        },
+        {
+          "path": "$['03auto'][?(@.result == 'L4 (Top)')]",
+          "weight": 7
+        },
+        {
+          "path": "$['03auto'][?(@.result == 'Processor')]",
+          "weight": 6
+        },
+        {
+          "path": "$['03auto'][?(@.result == 'Net')]",
+          "weight": 4
+        }
+      ],
+      "units": "Points"
     },
     {
       "graphName": "Coral-L1 (Trough)",
       "metrics": [
-        { "path": "$['04teleop'][?(@.result == 'L1 (Trough)')]", "weight": 1 }
+        { "path": "$['03auto'][?(@.result == 'L1 (Trough)')]", "weight": 1 }
       ],
       "units": "Coral"
     },
     {
       "graphName": "Coral-L2",
-      "metrics": [{ "path": "$['04teleop'][?(@.result == 'L2')]", "weight": 1 }],
+      "metrics": [{ "path": "$['03auto'][?(@.result == 'L2')]", "weight": 1 }],
       "units": "Coral"
     },
     {
       "graphName": "Coral-L3",
       "metrics": [
-        {"path": "$['04teleop'][?(@.result == 'L3')]","weight": 1  }
+        {"path": "$['03auto'][?(@.result == 'L3')]","weight": 1  }
       ],
       "units": "Coral"
     },
     {
       "graphName": "Coral-L4 (Top)",
       "metrics": [
-        {"path": "$['04teleop'][?(@.result == 'L4 (Top)')]","weight": 1  }
+        {"path": "$['03auto'][?(@.result == 'L4 (Top)')]","weight": 1  }
       ],
       "units": "Coral"
-    }
-  ],
-  "Auto": [
+    },
     {
       "graphName": "Controlled Algae",
       "metrics": [
@@ -151,33 +267,8 @@
         }
       ],
       "units": "Algae"
-    },
-    {
-      "graphName": "Coral-L1 (Trough)",
-      "metrics": [
-        { "path": "$['03auto'][?(@.result == 'L1 (Trough)')]", "weight": 1 }
-      ],
-      "units": "Coral"
-    },
-    {
-      "graphName": "Coral-L2",
-      "metrics": [{ "path": "$['03auto'][?(@.result == 'L2')]", "weight": 1 }],
-      "units": "Coral"
-    },
-    {
-      "graphName": "Coral-L3",
-      "metrics": [
-        {"path": "$['03auto'][?(@.result == 'L3')]","weight": 1  }
-      ],
-      "units": "Coral"
-    },
-    {
-      "graphName": "Coral-L4 (Top)",
-      "metrics": [
-        {"path": "$['03auto'][?(@.result == 'L4 (Top)')]","weight": 1  }
-      ],
-      "units": "Coral"
     }
+    
   ],
   "Endgame": [
     {
@@ -191,20 +282,20 @@
       "units": "Parks"
     },
     {
-      "graphName": "Deep Climbs",
+      "graphName": "Shallow Climbs",
       "metrics": [
         {
-          "path": "$[?(@.Deep == 'Successful')]",
+          "path": "$[?(@.Shallow== 'Successful')]",
           "weight": 1
         }
       ],
       "units": "Climbs"
     },
     {
-      "graphName": "Shallow Climbs",
+      "graphName": "Deep Climbs",
       "metrics": [
         {
-          "path": "$[?(@.Shallow== 'Successful')]",
+          "path": "$[?(@.Deep == 'Successful')]",
           "weight": 1
         }
       ],
@@ -233,62 +324,70 @@
   ],
   "Comparison": [
     {
-      "graphName": "Overall Controlled Notes",
+      "graphName": "Controlled Game Pieces",
       "metrics": [
-        { "path": "$['03auto'][?(@.result == 'Speaker')]", "weight": 1 },
-        { "path": "$['03auto'][?(@.result == 'Amp')]", "weight": 1 },
-        {
-          "path": "$['03auto'][?(@.result == 'Intentional Drop')]",
-          "weight": 1
-        },
-        { "path": "$['04teleop'][?(@.result == 'Speaker')]", "weight": 1 },
-        { "path": "$['04teleop'][?(@.result == 'Amp')]", "weight": 1 },
-        {
-          "path": "$['04teleop'][?(@.result == 'Amplified Speaker')]",
-          "weight": 1
-        },
-        {
-          "path": "$['04teleop'][?(@.result == 'Trap')]",
-          "weight": 1
-        },
-        {
-          "path": "$['04teleop'][?(@.result == 'Ferry')]",
-          "weight": 1
-        }
+        { "path": "$['03auto'][?(@.result == 'No Result')]", "weight": 1 },
+        { "path": "$['03auto'][?(@.result == 'L1 (Trough)')]", "weight": 1 },
+        { "path": "$['03auto'][?(@.result == 'L2')]", "weight": 1 },
+        { "path": "$['03auto'][?(@.result == 'L3')]", "weight": 1 },
+        { "path": "$['03auto'][?(@.result == 'L4')]", "weight": 1 },
+        { "path": "$['03auto'][?(@.result == 'Missed into Trough')]", "weight": 1 },
+        { "path": "$['03auto'][?(@.result == 'Missed onto Floor')]", "weight": 1 },
+        { "path": "$['04teleop'][?(@.result == 'Processor')]", "weight": 1 },
+        { "path": "$['04teleop'][?(@.result == 'Net')]", "weight": 1 },
+        { "path": "$['04teleop'][?(@.result == 'No Result')]", "weight": 1 },
+        { "path": "$['04teleop'][?(@.result == 'L1 (Trough)')]", "weight": 1 },
+        { "path": "$['04teleop'][?(@.result == 'L2')]", "weight": 1 },
+        { "path": "$['04teleop'][?(@.result == 'L3')]", "weight": 1 },
+        { "path": "$['04teleop'][?(@.result == 'L4')]", "weight": 1 },
+        { "path": "$['04teleop'][?(@.result == 'Missed into Trough')]", "weight": 1 },
+        { "path": "$['04teleop'][?(@.result == 'Missed onto Floor')]", "weight": 1 },
+        { "path": "$['03auto'][?(@.result == 'Processor')]", "weight": 1 },
+        { "path": "$['03auto'][?(@.result == 'Net')]", "weight": 1 }
       ],
-      "units": "Notes"
+      "units": "Pieces"
     },
     {
-      "graphName": "Auto Controlled Notes",
+      "graphName": "Points scored",
       "metrics": [
-        { "path": "$['03auto'][?(@.result == 'Speaker')]", "weight": 1 },
-        { "path": "$['03auto'][?(@.result == 'Amp')]", "weight": 1 },
+        { "path": "$['03auto'][?(@.result == 'L1 (Trough)')]", "weight": 3 },
+        { "path": "$['03auto'][?(@.result == 'L2']", "weight": 4 },
         {
-          "path": "$['03auto'][?(@.result == 'Intentional Drop')]",
-          "weight": 1
-        }
-      ],
-      "units": "Notes"
-    },
-    {
-      "graphName": "Teleop Controlled Notes",
-      "metrics": [
-        { "path": "$['04teleop'][?(@.result == 'Speaker')]", "weight": 1 },
-        { "path": "$['04teleop'][?(@.result == 'Amp')]", "weight": 1 },
-        {
-          "path": "$['04teleop'][?(@.result == 'Amplified Speaker')]",
-          "weight": 1
+          "path": "$['03auto'][?(@.result == 'L3')]",
+          "weight": 6
         },
         {
-          "path": "$['04teleop'][?(@.result == 'Trap')]",
-          "weight": 1
+          "path": "$['03auto'][?(@.result == 'L4 (Top)')]",
+          "weight": 7
         },
         {
-          "path": "$['04teleop'][?(@.result == 'Ferry')]",
-          "weight": 1
+          "path": "$['03auto'][?(@.result == 'Processor')]",
+          "weight": 6
+        },
+        {
+          "path": "$['03auto'][?(@.result == 'Net')]",
+          "weight": 4
+        },
+        { "path": "$['04teleop'][?(@.result == 'L1 (Trough)')]", "weight": 3 },
+        { "path": "$['04teleop'][?(@.result == 'L2']", "weight": 4 },
+        {
+          "path": "$['04teleop'][?(@.result == 'L3')]",
+          "weight": 6
+        },
+        {
+          "path": "$['04teleop'][?(@.result == 'L4 (Top)')]",
+          "weight": 7
+        },
+        {
+          "path": "$['04teleop'][?(@.result == 'Processor')]",
+          "weight": 6
+        },
+        {
+          "path": "$['04teleop'][?(@.result == 'Net')]",
+          "weight": 4
         }
       ],
-      "units": "Notes"
+      "units": "Points"
     }
   ]
 }
