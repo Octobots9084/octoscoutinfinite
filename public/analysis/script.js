@@ -97,11 +97,11 @@ getDataAndCreateGraph(
   "Endgame"
 );
 //creating driver quality graph
-let driverQualityGraphs = graphConfig.Quality;
+let driverQualityGraphs = graphConfig.Driver;
 getDataAndCreateGraph(
   driverQualityGraphs,
   document.getElementById("driverQualityGraphContainer"),
-  "Quality"
+  "Driver"
 );
 
 // Function to get data from the json file, and

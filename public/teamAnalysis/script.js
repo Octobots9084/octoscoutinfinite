@@ -90,12 +90,49 @@ function drawGraphs() {
     document.getElementById("endgameGraphContainer"),
     "Endgame"
   );
-  let driverQualityGraphs = graphConfig.Quality;
+  let driverQualityGraphs = graphConfig.Driver;
+
   getDataAndCreateGraph(
     driverQualityGraphs,
     document.getElementById("driverQualityGraphContainer"),
-    "Quality"
+    "Driver"
   );
+}
+//upate the average quality of the drivers
+function addDefenseData() {
+  let defenseQualities = [];
+  // Getting matches of the team
+  let matchesOfTeam = parsedJSONOutput.filter((obj) => {
+    const metaData = obj["01metaData"];
+    const extra = obj["06extra"];
+    if (metaData.teamNumber === teamNumber) {
+      defenseQualities.push(extra["Defense"]);
+      return true;
+    }
+    return false;
+  });
+  let defenses = 0;
+  let totalDefenseQuality = 0;
+  for (let i of defenseQualities) {
+    if (i == "Poor") {
+      totalDefenseQuality++;
+      defenses++;
+    }
+    if (i == "Good") {
+      totalDefenseQuality += 3;
+      defenses++;
+    }
+  }
+  //get average defense quality as a number (out of 3)
+  let avgDefenseQuality;
+  let defenseDisplay = document.getElementById("defense");
+  if (avgDefenseQuality == 0 || defenses == 0) {
+    defenseDisplay.innerHTML = "No Defense";
+  } else {
+    avgDefenseQuality = totalDefenseQuality / defenses;
+    //gets number rounded to the hundredth
+    defenseDisplay.innerHTML = Math.round(avgDefenseQuality * 100) / 100 + "/3";
+  }
 }
 // Function to get data from the json file, and
 function getDataAndCreateGraph(
@@ -127,9 +164,6 @@ function getDataAndCreateGraph(
       }
       values.push({ label: "Match " + matchNumbers[i], y: totalForMatch });
     }
-    console.log(graphCategoryName);
-    console.log(graphConfig[graphCategoryName]);
-    console.log(k);
     // Drawing graph
     drawGraph(
       values,
@@ -166,3 +200,4 @@ teamNumberInput.addEventListener("keydown", function (event) {
   }
 });
 drawGraphs();
+addDefenseData();

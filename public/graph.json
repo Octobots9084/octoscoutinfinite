@@ -211,9 +211,9 @@
       "units": "Climbs"
     }
   ],
-  "Quality": [
+  "Driver": [
     {
-      "graphName": "Driver",
+      "graphName": "Quality",
       "metrics": [
         {
           "path": "$[?(@.Driver_Quality== 'Bad')]",
@@ -229,19 +229,6 @@
         }
       ],
       "units": "Quality"
-    },
-    {
-      "graphName": "Defense",
-      "metrics": [
-        {
-          "path": "$[?(@.Defense=='Poor')]",
-          "weight": 1
-        },
-        {
-          "path": "$[?(@.Defense=='Good')]",
-          "weight": 2
-        }
-      ]
     }
   ],
   "Comparison": [
