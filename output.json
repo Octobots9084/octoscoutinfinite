@@ -5,7 +5,7 @@
     "01metaData": "{\"scoutName\":\"\",\"teamNumber\":\"9084\",\"matchNumber\":\"4\",\"teamColor\":\"Red\"}",
     "03auto": "[{\"collectionLocation\":{\"name\":\"blue6\",\"x\":6.25,\"y\":4},\"name\":\"Algae\",\"color\":\"rgb(0,0,163.88888888888886)\",\"result\":\"Failed Algae Pickup\"},{\"collectionLocation\":{\"name\":\"sourceLeft\",\"x\":15.7,\"y\":8},\"name\":\"Coral\",\"color\":\"rgb(91,0,0)\",\"result\":\"L4 (Top)\"},{\"collectionLocation\":{\"name\":\"startingCoral\",\"x\":7,\"y\":10},\"name\":\"Coral\",\"color\":\"rgb(0,50,0)\",\"result\":\"L3\"}]",
     "05endgame": "{\"Deep\":\"Failed\",\"Shallow\":\"No Attempt\",\"Park\":\"Successful\"}",
-    "06extra": "{\"Died\":\"False\",\"Defense\":\"None\",\"Driver Quality\":\"Bad\",\"Comments\":\"\"}",
+    "06extra": "{\"Died\":\"False\",\"Defense\":\"None\",\"Driver_Quality\":\"Bad\",\"Comments\":\"\"}",
     "timestamp": "2025-02-25T04:07:50.192Z",
     "eventID": "2024isde1"
   },
@@ -15,7 +15,7 @@
     "01metaData": "{\"scoutName\":\"uma\",\"teamNumber\":\"9084\",\"matchNumber\":\"45\",\"teamColor\":\"Red\"}",
     "03auto": "[{\"collectionLocation\":{\"name\":\"startingCoral\",\"x\":7,\"y\":10},\"name\":\"Coral\",\"color\":\"rgb(0,50,0)\",\"result\":\"L1 (Trough)\"},{\"collectionLocation\":{\"name\":\"red3\",\"x\":10.25,\"y\":4},\"name\":\"Algae\",\"color\":\"rgb(95.55555555555554,0,0)\",\"result\":\"Net\"}]",
     "05endgame": "{\"Deep\":\"No Attempt\",\"Shallow\":\"Failed\",\"Park\":\"Successful\"}",
-    "06extra": "{\"Died\":\"True\",\"Defense\":\"None\",\"Driver Quality\":\"Bad\",\"Comments\":\"bad\"}",
+    "06extra": "{\"Died\":\"True\",\"Defense\":\"None\",\"Driver_Quality\":\"Bad\",\"Comments\":\"bad\"}",
     "timestamp": "2025-02-25T04:13:32.234Z",
     "eventID": "2024isde1"
   }

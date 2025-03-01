@@ -90,37 +90,14 @@ function drawGraphs() {
     document.getElementById("endgameGraphContainer"),
     "Endgame"
   );
+  let driverQualityGraphs = graphConfig.Drivers;
+  getDataAndCreateGraph(
+    driverQualityGraphs,
+    document.getElementById("driverQualityGraphContainer"),
+    "Drivers"
+  );
 }
 //upate the average quality of the drivers
-function addDriverData() {
-  let driverQualities = [];
-  // Getting matches of the team
-  let matchesOfTeam = parsedJSONOutput.filter((obj) => {
-    const metaData = obj["01metaData"];
-    const extra = obj["06extra"];
-    if (metaData.teamNumber === teamNumber) {
-      driverQualities.push(extra["Driver Quality"]);
-      return true;
-    }
-    return false;
-  });
-  let totalDriverQuality = 0;
-  for (let i of driverQualities) {
-    if (i == "Bad") {
-      totalDriverQuality++;
-    }
-    if (i == "Average") {
-      totalDriverQuality += 2;
-    }
-    if (i == "Good") {
-      totalDriverQuality += 3;
-    }
-  }
-  //get average driver quality as a number (out of 3)
-  let avgDriverQuality = totalDriverQuality / driverQualities.length;
-  //get average driver quality as a word (bad-good)
-  let driverQuality;
-}
 // Function to get data from the json file, and
 function getDataAndCreateGraph(
   graphCategory,
@@ -151,7 +128,9 @@ function getDataAndCreateGraph(
       }
       values.push({ label: "Match " + matchNumbers[i], y: totalForMatch });
     }
-
+    console.log(graphCategoryName);
+    console.log(graphConfig[graphCategoryName]);
+    console.log(k);
     // Drawing graph
     drawGraph(
       values,
@@ -188,4 +167,3 @@ teamNumberInput.addEventListener("keydown", function (event) {
   }
 });
 drawGraphs();
-addDriverData();
