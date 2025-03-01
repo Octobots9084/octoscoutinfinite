@@ -175,5 +175,10 @@ function updateTeamNumber(input) {
 let teamNumberInput = document.getElementById("teamNumberInput");
 teamNumberInput.value = teamNumber;
 teamNumberInput.focus();
+teamNumberInput.addEventListener("keydown", function(event) {
+  if (event.key === "Enter") {
+    updateTeamNumber(teamNumberInput);
+  }
+})
 
 getDataAndDrawAutoPaths();

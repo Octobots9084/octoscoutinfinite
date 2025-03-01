@@ -63,16 +63,6 @@
       "units": "Algae"
     },
     {
-      "graphName": "Resultless Algae",
-      "metrics": [
-        {
-          "path": "$['04teleop'][?(@.result == 'Algae-No Result')]",
-          "weight": 1
-        }
-      ],
-      "units": "Algae"
-    },
-    {
       "graphName": "Failed Pickup Algae",
       "metrics": [
         {
@@ -139,16 +129,6 @@
       "graphName": "Net Algae",
       "metrics": [
         { "path": "$['03auto'][?(@.result == 'Net')]", "weight": 1 }
-      ],
-      "units": "Algae"
-    },
-    {
-      "graphName": "Resultless Algae",
-      "metrics": [
-        {
-          "path": "$['03auto'][?(@.result == 'Algae-No Result')]",
-          "weight": 1
-        }
       ],
       "units": "Algae"
     },
@@ -229,6 +209,26 @@
         }
       ],
       "units": "Climbs"
+    }
+  ],
+  "Driver": [
+    {
+      "graphName": "Quality",
+      "metrics": [
+        {
+          "path": "$[?(@.Driver_Quality== 'Bad')]",
+           "weight": 1
+        },
+        {
+          "path": "$[?(@.Driver_Quality== 'Average')]",
+          "weight": 2
+        },
+        {
+          "path":"$[?(@.Driver_Quality== 'Good')]",
+          "weight":3
+        }
+      ],
+      "units": "Quality"
     }
   ],
   "Comparison": [
