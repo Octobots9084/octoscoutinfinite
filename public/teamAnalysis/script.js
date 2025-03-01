@@ -90,14 +90,13 @@ function drawGraphs() {
     document.getElementById("endgameGraphContainer"),
     "Endgame"
   );
-  let driverQualityGraphs = graphConfig.Drivers;
+  let driverQualityGraphs = graphConfig.Quality;
   getDataAndCreateGraph(
     driverQualityGraphs,
     document.getElementById("driverQualityGraphContainer"),
-    "Drivers"
+    "Quality"
   );
 }
-//upate the average quality of the drivers
 // Function to get data from the json file, and
 function getDataAndCreateGraph(
   graphCategory,
