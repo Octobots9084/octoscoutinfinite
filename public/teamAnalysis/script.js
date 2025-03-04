@@ -18,6 +18,9 @@ let queryString = window.location.search;
 
 let urlParams = new URLSearchParams(queryString);
 let teamNumber = urlParams.get("team");
+if (teamNumber == undefined) {
+  teamNumber = 0;
+}
 
 // Function to draw a graph to the screen
 function drawGraph(dataPoints, chartName, yLabel, graphContainer) {
@@ -87,8 +90,50 @@ function drawGraphs() {
     document.getElementById("endgameGraphContainer"),
     "Endgame"
   );
-}
+  let driverQualityGraphs = graphConfig.Driver;
 
+  getDataAndCreateGraph(
+    driverQualityGraphs,
+    document.getElementById("driverQualityGraphContainer"),
+    "Driver"
+  );
+}
+//upate the average quality of the drivers
+function addDefenseData() {
+  let defenseQualities = [];
+  // Getting matches of the team
+  let matchesOfTeam = parsedJSONOutput.filter((obj) => {
+    const metaData = obj["01metaData"];
+    const extra = obj["06extra"];
+    if (metaData.teamNumber === teamNumber) {
+      defenseQualities.push(extra["Defense"]);
+      return true;
+    }
+    return false;
+  });
+  let defenses = 0;
+  let totalDefenseQuality = 0;
+  for (let i of defenseQualities) {
+    if (i == "Poor") {
+      totalDefenseQuality++;
+      defenses++;
+    }
+    if (i == "Good") {
+      totalDefenseQuality += 3;
+      defenses++;
+    }
+  }
+  //get average defense quality as a number (out of 3)
+  let avgDefenseQuality;
+  let defenseDisplay = document.getElementById("defense");
+  if (avgDefenseQuality == 0 || defenses == 0) {
+    defenseDisplay.innerHTML = "No Defense";
+  } else {
+    avgDefenseQuality = totalDefenseQuality / defenses;
+    //gets number rounded to the hundredth
+    defenseDisplay.innerHTML = Math.round(avgDefenseQuality * 100) / 100 + "/3";
+  }
+}
 // Function to get data from the json file, and
 function getDataAndCreateGraph(
   graphCategory,
@@ -119,7 +164,6 @@ function getDataAndCreateGraph(
       }
       values.push({ label: "Match " + matchNumbers[i], y: totalForMatch });
     }
-
     // Drawing graph
     drawGraph(
       values,
@@ -150,4 +194,10 @@ function updateTeamNumber(input) {
 let teamNumberInput = document.getElementById("teamNumberInput");
 teamNumberInput.value = teamNumber;
 teamNumberInput.focus();
+teamNumberInput.addEventListener("keydown", function (event) {
+  if (event.key === "Enter") {
+    updateTeamNumber(teamNumberInput);
+  }
+});
 drawGraphs();
+addDefenseData();
