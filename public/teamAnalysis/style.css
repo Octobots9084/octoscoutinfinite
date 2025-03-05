@@ -11,7 +11,13 @@
   align-items: center;
   flex-direction: column;
 }
-
+.wordsContainer {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
 #header {
   color: white;
 }
@@ -39,4 +45,16 @@
 }
 #defense{
   color: white;
+}
+#comment{
+  color: white;
+}
+#commentContainer{
+margin: 5px;
+}
+.commentSeperator{
+  color: white;
+  height: 2px;
+  border: none;
+  background-color: white;
 }
