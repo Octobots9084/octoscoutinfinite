@@ -7,7 +7,7 @@ import {
 } from "/util.js";
 
 let JSONConfig = await getJSONConfig();
-document.title = JSONConfig.pageTitle; 
+document.title = JSONConfig.pageTitle;
 let fieldContainer = document.getElementById("fieldContainer");
 let fieldImage = document.getElementById("fieldImage");
 let isBlue = JSON.parse(localStorage.getItem("01metaData")).teamColor == "Blue";
@@ -35,7 +35,17 @@ function addStartingLocationButton(startingLocation) {
   let button = document.createElement("button");
   button.onclick = function () {
     selectPosition(startingLocation);
-    window.location.href = "/auto";
+    if (startingLocation.name === "noShow") {
+      window.location.href = "/submit";
+      localStorage.setItem("03auto", JSON.stringify([]));
+      localStorage.setItem("04teleop", JSON.stringify([]));
+      localStorage.setItem(
+        "05endgame",
+        '{"Deep":"No Attempt","Shallow":"No Attempt","Park":"No Attempt"}'
+      );
+    } else {
+      window.location.href = "/auto";
+    }
   };
 
   button.classList.add("positionButton");
