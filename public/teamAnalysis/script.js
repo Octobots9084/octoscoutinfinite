@@ -134,6 +134,44 @@ function addDefenseData() {
     defenseDisplay.innerHTML = Math.round(avgDefenseQuality * 100) / 100 + "/3";
   }
 }
+//Function to add comments
+function addComments() {
+  let comments = [];
+  let scoutNames = [];
+  let matchNumbers = [];
+  // Getting matches of the team
+  let matchesOfTeam = parsedJSONOutput.filter((obj) => {
+    const metaData = obj["01metaData"];
+    const extra = obj["06extra"];
+    if (metaData.teamNumber === teamNumber) {
+      comments.push(extra["Comments"]);
+      scoutNames.push(metaData["scoutName"]);
+      matchNumbers.push(metaData["matchNumber"]);
+      return true;
+    }
+    return false;
+  });
+  console.log(comments);
+  console.log(scoutNames);
+  console.log(matchNumbers);
+  let commentsWrapper = document.getElementById("commentContainer");
+  for (let i = 0; i < comments.length; i++) {
+    let comment = document.createElement("div");
+    commentsWrapper.appendChild(comment);
+    comment.id = "comment";
+
+    let commentPreface = document.createElement("h3");
+    comment.appendChild(commentPreface);
+    commentPreface.innerHTML =
+      "Scout: " + scoutNames[i] + " | Match #: " + matchNumbers[i];
+    commentPreface.id = "commentPreface";
+
+    let commentText = document.createElement("h2");
+    comment.appendChild(commentText);
+    commentText.innerHTML = comments[i];
+    commentText.id = "commentText";
+  }
+}
 // Function to get data from the json file, and
 function getDataAndCreateGraph(
   graphCategory,
@@ -201,3 +239,4 @@ teamNumberInput.addEventListener("keydown", function (event) {
 });
 drawGraphs();
 addDefenseData();
+addComments();
