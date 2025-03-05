@@ -127,7 +127,7 @@ function addDefenseData() {
   let avgDefenseQuality;
   let defenseDisplay = document.getElementById("defense");
   if (avgDefenseQuality == 0 || defenses == 0) {
-    defenseDisplay.innerHTML = "No Defense";
+    defenseDisplay.innerHTML = "Did not Defense";
   } else {
     avgDefenseQuality = totalDefenseQuality / defenses;
     //gets number rounded to the hundredth
@@ -170,6 +170,10 @@ function addComments() {
     comment.appendChild(commentText);
     commentText.innerHTML = comments[i];
     commentText.id = "commentText";
+
+    let bar = document.createElement("hr");
+    comment.appendChild(bar);
+    bar.classList.add("commentSeperator");
   }
 }
 // Function to get data from the json file, and

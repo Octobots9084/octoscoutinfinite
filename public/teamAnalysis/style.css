@@ -49,3 +49,12 @@
 #comment{
   color: white;
 }
+#commentContainer{
+margin: 5px;
+}
+.commentSeperator{
+  color: white;
+  height: 2px;
+  border: none;
+  background-color: white;
+}
