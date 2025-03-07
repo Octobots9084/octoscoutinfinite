@@ -50,7 +50,8 @@
         { "name": "L4 (Top)" },
         { "name": "Missed into Trough" },
         { "name": "Missed onto Floor" },
-        { "name": "Failed Coral Pickup"}
+        { "name": "Failed Coral Pickup"},
+        { "name":  "Intentional Coral Drop"}
       ],
       "teleopPossibleResults": [
         { "name": "No Result" },
@@ -60,7 +61,8 @@
         { "name": "L4 (Top)" },
         { "name": "Fell in Trough" },
         { "name": "Fell on Floor" },
-        { "name": "Failed pickup" }
+        { "name": "Failed pickup" },
+        { "name": "Intentional Coral Drop"}
       ]
     },
     {
@@ -105,14 +107,16 @@
         { "name": "Processor" },
         { "name": "Net" },
         { "name": "Failed Algae Pickup" },
-        { "name": "Failed Algae Placement" }
+        { "name": "Failed Algae Placement" },
+        { "name": "Intentional Algae Drop" }
       ],
       "teleopPossibleResults": [
         { "name": "Algae-No Result" },
         { "name": "Processor" },
         { "name": "Net" },
         { "name": "Failed Algae Pickup" },
-        { "name": "Failed Algae Placement" }
+        { "name": "Failed Algae Placement" },
+        { "name": "Intentional Algae Drop"}
       ]
     }
   ],
