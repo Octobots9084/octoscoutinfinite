@@ -154,16 +154,6 @@
       "units": "Algae"
     },
     {
-      "graphName": "Failed Pickup Algae",
-      "metrics": [
-        {
-          "path": "$['04teleop'][?(@.result == 'Failed Algae Pickup')]",
-          "weight": 1
-        }
-      ],
-      "units": "Algae"
-    },
-    {
       "graphName": "Failed Placement Algae",
       "metrics": [
         {
@@ -245,16 +235,6 @@
       "graphName": "Net Algae",
       "metrics": [
         { "path": "$['03auto'][?(@.result == 'Net')]", "weight": 1 }
-      ],
-      "units": "Algae"
-    },
-    {
-      "graphName": "Failed Pickup Algae",
-      "metrics": [
-        {
-          "path": "$['03auto'][?(@.result == 'Failed Algae Pickup')]",
-          "weight": 1
-        }
       ],
       "units": "Algae"
     },
