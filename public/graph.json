@@ -21,6 +21,7 @@
         { "path": "$['04teleop'][?(@.result == 'Missed onto Floor')]", "weight": 1 },
         { "path": "$['03auto'][?(@.result == 'Processor')]", "weight": 1 },
         { "path": "$['03auto'][?(@.result == 'Net')]", "weight": 1 }
+      
       ],
       "units": "Pieces"
     },
@@ -45,6 +46,10 @@
           "path": "$['03auto'][?(@.result == 'Net')]",
           "weight": 4
         },
+        {
+          "path": "$['03auto'][?(@.result == 'Missed into Trough')]",
+          "weight": 3
+        },
         { "path": "$['04teleop'][?(@.result == 'L1 (Trough)')]", "weight": 3 },
         { "path": "$['04teleop'][?(@.result == 'L2')]", "weight": 4 },
         {
@@ -62,6 +67,22 @@
         {
           "path": "$['04teleop'][?(@.result == 'Net')]",
           "weight": 4
+        },
+        {
+          "path": "$['04teleop'][?(@.result == 'Fell into Trough')]",
+          "weight": 3
+        },
+        {
+          "path": "$[?(@.Park == 'Successful')]",
+          "weight": 2
+        },
+        {
+          "path": "$[?(@.Shallow== 'Successful')]",
+          "weight": 6
+        },
+        {
+          "path": "$[?(@.Deep == 'Successful')]",
+          "weight": 12
         }
       ],
       "units": "Points"
@@ -91,6 +112,28 @@
         }
       ],
       "units": "Coral"
+    },
+    {
+      "graphName": "Algae scored",
+      "metrics": [
+        {
+          "path": "$['03auto'][?(@.result == 'Processor')]",
+          "weight": 1
+        },
+        {
+          "path": "$['03auto'][?(@.result == 'Net')]",
+          "weight": 1
+        },
+        {
+          "path": "$['04teleop'][?(@.result == 'Processor')]",
+          "weight": 1
+        },
+        {
+          "path": "$['04teleop'][?(@.result == 'Net')]",
+          "weight": 1
+        }
+      ],
+      "units": "Algae"
     }
 
   ],
@@ -115,7 +158,12 @@
         {
           "path": "$['04teleop'][?(@.result == 'Net')]",
           "weight": 4
-        }
+        },
+        {
+          "path": "$['04teleop'][?(@.result == 'Fell into Trough')]",
+          "weight": 3
+        },
+
       ],
       "units": "Points"
     },
@@ -157,6 +205,20 @@
       ],
       "units": "Coral"
     },
+    {
+      "graphName": "Algae scored",
+      "metrics": [
+        {
+          "path": "$['04teleop'][?(@.result == 'Processor')]",
+          "weight": 1
+        },
+        {
+          "path": "$['04teleop'][?(@.result == 'Net')]",
+          "weight": 1
+        }
+      ],
+      "units": "Algae"
+    }
     {
       "graphName": "Coral-L1 (Trough)",
       "metrics": [
@@ -230,9 +292,47 @@
         {
           "path": "$['03auto'][?(@.result == 'Net')]",
           "weight": 4
+        },
+        {
+          "path": "$['03auto'][?(@.result == 'Missed into Trough')]",
+          "weight": 3
         }
       ],
       "units": "Points"
+    },
+    {
+      "graphName": "Coral scored",
+      "metrics": [
+        { "path": "$['03auto'][?(@.result == 'L1 (Trough)')]", "weight": 1 },
+        { "path": "$['03auto'][?(@.result == 'L2')]", "weight": 1 },
+        {
+          "path": "$['03auto'][?(@.result == 'L3')]",
+          "weight": 1
+        },
+        {
+          "path": "$['03auto'][?(@.result == 'L4 (Top)')]",
+          "weight": 1
+        },
+        {
+          "path": "$['03auto'][?(@.result == 'Missed into Trough')]",
+          "weight": 1
+        }
+      ],
+      "units": "Coral"
+    },
+    {
+      "graphName": "Algae scored",
+      "metrics": [
+        {
+          "path": "$['03auto'][?(@.result == 'Processor')]",
+          "weight": 1
+        },
+        {
+          "path": "$['03auto'][?(@.result == 'Net')]",
+          "weight": 1
+        }
+      ],
+      "units": "Algae"
     },
     {
       "graphName": "Coral-L1 (Trough)",
