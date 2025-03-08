@@ -1,4 +1,4 @@
-import { getJSONOutput, fieldWidth, fieldHeight } from "/util.js";
+import { getJSONOutput, autoFieldHeight, autoFieldWidth } from "/util.js";
 let JSONOutput = await getJSONOutput();
 
 // Parse JSON strings in data
@@ -45,10 +45,10 @@ function drawAutoPath(pieces, matchNumber) {
   canvasDiv.appendChild(canvas);
 
   // Setting canvas properties
-  canvas.style.height = fieldHeight * fieldSizeMultiplier + "px";
-  canvas.style.width = fieldWidth * fieldSizeMultiplier + "px";
-  canvas.height = fieldHeight * fieldSizeMultiplier;
-  canvas.width = fieldWidth * fieldSizeMultiplier;
+  canvas.style.height = autoFieldHeight * fieldSizeMultiplier + "px";
+  canvas.style.width = autoFieldWidth * fieldSizeMultiplier + "px";
+  canvas.height = autoFieldHeight * fieldSizeMultiplier;
+  canvas.width = autoFieldWidth * fieldSizeMultiplier;
   ctx.font = "bold 12px serif";
   ctx.textAlign = "center";
   ctx.lineWidth = 15;
@@ -56,10 +56,10 @@ function drawAutoPath(pieces, matchNumber) {
   // Drawing field image
   ctx.drawImage(
     document.getElementById("fieldImage"),
-    (fieldWidth * fieldSizeMultiplier) / 4,
+    (autoFieldWidth * fieldSizeMultiplier) / 4,
     75,
-    (fieldWidth * fieldSizeMultiplier) / 2,
-    (fieldHeight * fieldSizeMultiplier) / 1.18
+    (autoFieldWidth * fieldSizeMultiplier) / 2,
+    (autoFieldHeight * fieldSizeMultiplier) / 1.18
   );
 
   // Setting color iterators for lines between collections
@@ -82,12 +82,12 @@ function drawAutoPath(pieces, matchNumber) {
     ctx.beginPath();
     ctx.moveTo(
       pieces[i].collectionLocation.y * fieldSizeMultiplier +
-        (fieldWidth * fieldSizeMultiplier) / 4,
+        (autoFieldWidth * fieldSizeMultiplier) / 4,
       pieces[i].collectionLocation.x * fieldSizeMultiplier + 75
     );
     ctx.lineTo(
       pieces[i + 1].collectionLocation.y * fieldSizeMultiplier +
-        (fieldWidth * fieldSizeMultiplier) / 4,
+        (autoFieldWidth * fieldSizeMultiplier) / 4,
       pieces[i + 1].collectionLocation.x * fieldSizeMultiplier + 75
     );
     ctx.stroke();
@@ -106,7 +106,7 @@ function drawAutoPath(pieces, matchNumber) {
       ctx.fillRect(
         (pieces[i].collectionLocation.y - gamePieceBoxDimension / 2) *
           fieldSizeMultiplier +
-          (fieldWidth * fieldSizeMultiplier) / 4,
+          (autoFieldWidth * fieldSizeMultiplier) / 4,
         (pieces[i].collectionLocation.x - gamePieceBoxDimension / 2) *
           fieldSizeMultiplier +
           75,
@@ -119,7 +119,7 @@ function drawAutoPath(pieces, matchNumber) {
         img,
         (pieces[i].collectionLocation.y - gamePieceDimension / 2) *
           fieldSizeMultiplier +
-          (fieldWidth * fieldSizeMultiplier) / 4,
+          (autoFieldWidth * fieldSizeMultiplier) / 4,
         (pieces[i].collectionLocation.x - gamePieceDimension / 2) *
           fieldSizeMultiplier +
           75,
@@ -133,7 +133,7 @@ function drawAutoPath(pieces, matchNumber) {
       ctx.fillText(
         pieces[i].result,
         pieces[i].collectionLocation.y * fieldSizeMultiplier +
-          (fieldWidth * fieldSizeMultiplier) / 4,
+          (autoFieldWidth * fieldSizeMultiplier) / 4,
         pieces[i].collectionLocation.x * fieldSizeMultiplier + 75
       );
     };
