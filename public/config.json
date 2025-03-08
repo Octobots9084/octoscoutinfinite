@@ -160,7 +160,7 @@
     },
     {
       "name": "Driver_Quality",
-      "possibleResults": [{ "name": "Good" }, { "name": "Average" }, { "name": "Bad" }]
+      "possibleResults": [{ "name": "Average" }, { "name": "Good" }, { "name": "Bad" }]
     }
   ]
 }
