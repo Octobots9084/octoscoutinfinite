@@ -112,7 +112,7 @@
         { "path": "$['04teleop'][?(@.result == 'Fell onto Floor')]", "weight": 1 },
         { "path": "$['04teleop'][?(@.result == 'Failed Pickup')]", "weight": 1}
       ],
-      "units": "Notes"
+      "units": "Coral"
     },{
       "graphName": "Coral-L1 (Trough)",
       "metrics": [
