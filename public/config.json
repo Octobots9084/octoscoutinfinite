@@ -33,12 +33,14 @@
       ],
       "autoFieldImageLocation": "autoField.png",
       "teleopCollectionLocations": [
-        { "name": "blueSource", "x": 0.8, "y": 0.2 },
+        { "name": "blueSource1", "x": 0.8, "y": 0.2 },
+        { "name": "blueSource2", "x": 15.7, "y": 0.2 },
         { "name": "blueTrough", "x": 4.25, "y": 3 },
-        { "name": "blueFloor", "x": 1, "y": 4 },
-        { "name": "redSource", "x": 15.7, "y": 8 },
+        { "name": "blueFloor", "x": 1, "y": 3 },
+        { "name": "redSource1", "x": 15.7, "y": 8 },
+        { "name": "redSource2", "x": 0.8, "y": 8 },
         { "name": "redTrough", "x": 12.25, "y": 5.25 },
-        { "name": "redFloor", "x": 15.5, "y": 4.1 },
+        { "name": "redFloor", "x": 15.5, "y": 5 },
         { "name": "startingCoral", "x": 7, "y":10}
       ],
       "teleopFieldImageLocation": "teleopField.png",
@@ -96,9 +98,9 @@
       "autoFieldImageLocation": "autoField.png",
       "teleopCollectionLocations": [
         { "name": "blueReef", "x": 4.25, "y": 5 },
-        { "name": "blueFloor", "x": 1, "y": 5.75 },
+        { "name": "blueFloor", "x": 1, "y": 5 },
         { "name": "redReef", "x": 12.25, "y": 3 },
-        { "name": "redFloor", "x": 15.5, "y": 2.25 },
+        { "name": "redFloor", "x": 15.5, "y": 3 },
         { "name": "startingAlgae", "x": 9, "y":10}
       ],
       "teleopFieldImageLocation": "teleopField.png",
