@@ -20,7 +20,11 @@
         { "path": "$['04teleop'][?(@.result == 'Missed into Trough')]", "weight": 1 },
         { "path": "$['04teleop'][?(@.result == 'Missed onto Floor')]", "weight": 1 },
         { "path": "$['03auto'][?(@.result == 'Processor')]", "weight": 1 },
-        { "path": "$['03auto'][?(@.result == 'Net')]", "weight": 1 }
+        { "path": "$['03auto'][?(@.result == 'Net')]", "weight": 1 },
+        { "path": "$['03auto'][?(@.result == 'Intentional Coral Drop')]", "weight": 1 },
+        { "path": "$['04teleop'][?(@.result == 'Intentional Coral Drop')]", "weight": 1 },
+        { "path": "$['04auto'][?(@.result == 'Intentional Algae Drop')]", "weight": 1 },
+        { "path": "$['03auto'][?(@.result == 'Intentional Algae Drop')]", "weight": 1 }
       
       ],
       "units": "Pieces"
@@ -171,7 +175,8 @@
       "graphName":"Controlled Algae",
       "metrics":[
         { "path": "$['04teleop'][?(@.result == 'Processor')]", "weight": 1 },
-        { "path": "$['04teleop'][?(@.result == 'Net')]", "weight": 1 }
+        { "path": "$['04teleop'][?(@.result == 'Net')]", "weight": 1 },
+        { "path": "$['04teleop'][?(@.result == 'Intentional Algae Drop')]", "weight": 1  }
       ],
       "units": "Algae"
     },
@@ -185,7 +190,7 @@
         { "path": "$['04teleop'][?(@.result == 'L4 (Top)')]", "weight": 1 },
         { "path": "$['04teleop'][?(@.result == 'Fell into Trough')]", "weight": 1 },
         { "path": "$['04teleop'][?(@.result == 'Fell onto Floor')]", "weight": 1 },
-        { "path": "$['04teleop'][?(@.result == 'Failed Pickup')]", "weight": 1}
+        { "path": "$['04teleop'][?(@.result == 'Intentional Coral Drop')]", "weight": 1}
       ],
       "units": "Coral"
     },
@@ -364,9 +369,24 @@
       "graphName": "Controlled Algae",
       "metrics": [
         { "path": "$['03auto'][?(@.result == 'Processor')]", "weight": 1 },
-        { "path": "$['03auto'][?(@.result == 'Net')]", "weight": 1 }
+        { "path": "$['03auto'][?(@.result == 'Net')]", "weight": 1 },
+        { "path": "$['03auto'][?(@.result == 'Intentional Algae Drop')]", "weight": 1 }
       ],
       "units": "Algae"
+    },
+    {
+      "graphName": "Controlled Coral",
+      "metrics": [
+        { "path": "$['03auto'][?(@.result == 'No Result')]", "weight": 1 },
+        { "path": "$['03auto'][?(@.result == 'L1 (Trough)')]", "weight": 1 },
+        { "path": "$['03auto'][?(@.result == 'L2')]", "weight": 1 },
+        { "path": "$['03auto'][?(@.result == 'L3')]", "weight": 1 },
+        { "path": "$['03auto'][?(@.result == 'L4 (Top)')]", "weight": 1 },
+        { "path": "$['03auto'][?(@.result == 'Fell into Trough')]", "weight": 1 },
+        { "path": "$['03auto'][?(@.result == 'Fell onto Floor')]", "weight": 1 },
+        { "path": "$['03auto'][?(@.result == 'Intentional Coral Drop')]", "weight": 1}
+      ],
+      "units": "Coral"
     },
     {
       "graphName": "Processor Algae",

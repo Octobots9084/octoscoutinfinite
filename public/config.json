@@ -53,7 +53,7 @@
         { "name": "Missed into Trough" },
         { "name": "Missed onto Floor" },
         { "name": "Failed Coral Intake"},
-        { "name":  "Intentional Coral Drop"}
+        { "name": "Intentional Coral Drop"}
       ],
       "teleopPossibleResults": [
         { "name": "No Result" },
