@@ -1,7 +1,7 @@
 import { getJSONConfig } from "/util.js";
 
 let JSONConfig = await getJSONConfig();
-document.title = JSONConfig.pageTitle; 
+document.title = JSONConfig.pageTitle;
 let extraOptions = JSONConfig.extraOptions;
 let extraSelectsContainer = document.getElementById("extraSelectsContainer");
 let commentInput = document.getElementById("commentInput");
@@ -28,13 +28,14 @@ function generateSelects() {
     let label = document.createElement("h3");
     label.innerHTML = extraOptions[i].name;
     let possibleResults = extraOptions[i].possibleResults;
+
     for (var j = 0; j < possibleResults.length; j++) {
       var option = document.createElement("option");
       option.value = possibleResults[j].name;
       option.text = possibleResults[j].name;
+
       extraSelects[extraSelects.length - 1].appendChild(option);
     }
-
     label.classList.add("inputLabel");
     container.classList.add("inputContainer");
     container.appendChild(label);
