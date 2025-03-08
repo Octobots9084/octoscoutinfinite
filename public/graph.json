@@ -7,7 +7,7 @@
         { "path": "$['03auto'][?(@.result == 'L1 (Trough)')]", "weight": 1 },
         { "path": "$['03auto'][?(@.result == 'L2')]", "weight": 1 },
         { "path": "$['03auto'][?(@.result == 'L3')]", "weight": 1 },
-        { "path": "$['03auto'][?(@.result == 'L4')]", "weight": 1 },
+        { "path": "$['03auto'][?(@.result == 'L4 (Top)')]", "weight": 1 },
         { "path": "$['03auto'][?(@.result == 'Missed into Trough')]", "weight": 1 },
         { "path": "$['03auto'][?(@.result == 'Missed onto Floor')]", "weight": 1 },
         { "path": "$['04teleop'][?(@.result == 'Processor')]", "weight": 1 },
@@ -16,7 +16,7 @@
         { "path": "$['04teleop'][?(@.result == 'L1 (Trough)')]", "weight": 1 },
         { "path": "$['04teleop'][?(@.result == 'L2')]", "weight": 1 },
         { "path": "$['04teleop'][?(@.result == 'L3')]", "weight": 1 },
-        { "path": "$['04teleop'][?(@.result == 'L4')]", "weight": 1 },
+        { "path": "$['04teleop'][?(@.result == 'L4 (Top)')]", "weight": 1 },
         { "path": "$['04teleop'][?(@.result == 'Missed into Trough')]", "weight": 1 },
         { "path": "$['04teleop'][?(@.result == 'Missed onto Floor')]", "weight": 1 },
         { "path": "$['03auto'][?(@.result == 'Processor')]", "weight": 1 },
@@ -65,6 +65,32 @@
         }
       ],
       "units": "Points"
+    },
+    {
+      "graphName": "Coral scored",
+      "metrics": [
+        { "path": "$['03auto'][?(@.result == 'L1 (Trough)')]", "weight": 1 },
+        { "path": "$['03auto'][?(@.result == 'L2')]", "weight": 1 },
+        {
+          "path": "$['03auto'][?(@.result == 'L3')]",
+          "weight": 1
+        },
+        {
+          "path": "$['03auto'][?(@.result == 'L4 (Top)')]",
+          "weight": 1
+        },
+        { "path": "$['04teleop'][?(@.result == 'L1 (Trough)')]", "weight": 1 },
+        { "path": "$['04teleop'][?(@.result == 'L2')]", "weight": 1 },
+        {
+          "path": "$['04teleop'][?(@.result == 'L3')]",
+          "weight": 1
+        },
+        {
+          "path": "$['04teleop'][?(@.result == 'L4 (Top)')]",
+          "weight": 1
+        }
+      ],
+      "units": "Coral"
     }
 
   ],
@@ -114,7 +140,24 @@
         { "path": "$['04teleop'][?(@.result == 'Failed Pickup')]", "weight": 1}
       ],
       "units": "Coral"
-    },{
+    },
+    {
+      "graphName": "Coral scored",
+      "metrics": [
+        { "path": "$['04teleop'][?(@.result == 'L1 (Trough)')]", "weight": 1 },
+        { "path": "$['04teleop'][?(@.result == 'L2')]", "weight": 1 },
+        {
+          "path": "$['04teleop'][?(@.result == 'L3')]",
+          "weight": 1
+        },
+        {
+          "path": "$['04teleop'][?(@.result == 'L4 (Top)')]",
+          "weight": 1
+        }
+      ],
+      "units": "Coral"
+    },
+    {
       "graphName": "Coral-L1 (Trough)",
       "metrics": [
         { "path": "$['04teleop'][?(@.result == 'L1 (Trough)')]", "weight": 1 }
