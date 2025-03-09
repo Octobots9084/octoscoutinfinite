@@ -66,8 +66,8 @@
   top: 0px;
 }
 #teamNum{
-  position: relative;
+  position: absolute;
   color: white;
-  margin-top: 90vh;
+  top: 56vh;
   
 }
