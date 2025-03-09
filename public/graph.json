@@ -54,15 +54,15 @@
           "path": "$['03auto'][?(@.result == 'Missed into Trough')]",
           "weight": 3
         },
-        { "path": "$['04teleop'][?(@.result == 'L1 (Trough)')]", "weight": 3 },
-        { "path": "$['04teleop'][?(@.result == 'L2')]", "weight": 4 },
+        { "path": "$['04teleop'][?(@.result == 'L1 (Trough)')]", "weight": 2 },
+        { "path": "$['04teleop'][?(@.result == 'L2')]", "weight": 3 },
         {
           "path": "$['04teleop'][?(@.result == 'L3')]",
-          "weight": 6
+          "weight": 4
         },
         {
           "path": "$['04teleop'][?(@.result == 'L4 (Top)')]",
-          "weight": 7
+          "weight": 5
         },
         {
           "path": "$['04teleop'][?(@.result == 'Processor')]",
@@ -74,7 +74,7 @@
         },
         {
           "path": "$['04teleop'][?(@.result == 'Fell into Trough')]",
-          "weight": 3
+          "weight": 2
         },
         {
           "path": "$[?(@.Park == 'Successful')]",
@@ -145,15 +145,15 @@
     {
       "graphName": "Points scored",
       "metrics": [
-        { "path": "$['04teleop'][?(@.result == 'L1 (Trough)')]", "weight": 3 },
-        { "path": "$['04teleop'][?(@.result == 'L2')]", "weight": 4 },
+        { "path": "$['04teleop'][?(@.result == 'L1 (Trough)')]", "weight": 2 },
+        { "path": "$['04teleop'][?(@.result == 'L2')]", "weight": 3 },
         {
           "path": "$['04teleop'][?(@.result == 'L3')]",
-          "weight": 6
+          "weight": 4
         },
         {
           "path": "$['04teleop'][?(@.result == 'L4 (Top)')]",
-          "weight": 7
+          "weight": 5
         },
         {
           "path": "$['04teleop'][?(@.result == 'Processor')]",
@@ -165,7 +165,7 @@
         },
         {
           "path": "$['04teleop'][?(@.result == 'Fell into Trough')]",
-          "weight": 3
+          "weight": 2
         }
 
       ],
