@@ -15,6 +15,8 @@ if (!isBlue) {
   fieldImage.src = "../images/blankFieldRed.png";
 }
 generateStartingLocationButtons();
+document.getElementById("teamNum").innerHTML =
+  "Team #: " + JSON.parse(localStorage.getItem("01metaData")).teamNumber;
 
 // Dynamically generating buttons to select starting location
 function generateStartingLocationButtons() {
@@ -24,7 +26,6 @@ function generateStartingLocationButtons() {
     addStartingLocationButton(startingLocations[i]);
   }
 }
-
 // Adding a button to select a starting location
 function addStartingLocationButton(startingLocation) {
   if (isBlue) {

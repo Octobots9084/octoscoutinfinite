@@ -7,7 +7,7 @@ import {
 } from "/util.js";
 
 let JSONConfig = await getJSONConfig();
-document.title = JSONConfig.pageTitle; 
+document.title = JSONConfig.pageTitle;
 let fieldContainer = document.getElementById("fieldContainer");
 let fieldImage = document.getElementById("fieldImage");
 let gamePieceContainer = document.getElementById("gamePieceContainer");
@@ -17,6 +17,8 @@ let isBlue = JSON.parse(localStorage.getItem("01metaData")).teamColor == "Blue";
 if (!isBlue) {
   fieldImage.src = "../images/autoFieldRed.png";
 }
+document.getElementById("teamNum").innerHTML =
+  "Team #: " + JSON.parse(localStorage.getItem("01metaData")).teamNumber;
 
 generateCollectionButtons();
 loadStoredData();
@@ -178,7 +180,6 @@ function updateGamePieceViewer() {
     }
 
     gamePieceResultSelector.value = gamePieces[i].result;
-    
 
     let clickableDeleteImage = document.createElement("img");
     clickableDeleteImage.src = "/images/deleteImage.png";
@@ -205,8 +206,8 @@ function saveData() {
   localStorage.setItem("03auto", JSON.stringify(gamePieces));
 }
 
-function placeCoral(){
-  $('#image').click(function() {
-    $('#foo').addClass('myClass');
+function placeCoral() {
+  $("#image").click(function () {
+    $("#foo").addClass("myClass");
   });
 }
