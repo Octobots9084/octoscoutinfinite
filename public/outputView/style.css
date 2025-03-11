@@ -1,0 +1,30 @@
+
+#header {
+  color: white;
+}
+
+#backButton {
+  width: 10vh;
+  height: 5vh;
+  position: absolute;
+  left: 5vh;
+}
+#dataContainer {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+#singleTeamButton {
+  width: 10vh;
+  height: 5vh;
+  position: absolute;
+  right: 5vh;
+}
+.dataWrapper{
+  height: 100px;
+  width: 50vh;
+  background-color: #bb9839;
+  margin-top: 5px;
+}
