@@ -11,12 +11,12 @@
       <h3 class="inputLabel">Scout Name</h3>
       <input id="scoutNameInput" placeholder="Scout Name" type="text"></input>
     </div>
-    <div class="inputContainer">
+    <div class="inputContainer" id="matchInputContainer">
       <h3 class="inputLabel">Match Number</h3>
-      <select id="matchNumberInput" name="Match Number">
+      
     </select>
     </div>
-    <div class="inputContainer">
+    <div class="inputContainer" id="teamInputContainer">
       <h3 class="inputLabel">Team Number</h3>
       <select id="teamNumberInput" name="Robot">
         <option value="Blue1">Blue 1</option>
@@ -33,6 +33,9 @@
         <option value="Red">Red</option>
         <option value="Blue">Blue</option>
       </select>
+    </div>
+    <div class="input inputContainer">
+      <button id="manualButton" onclick="setManual()">Manual Input</button>
     </div>
     <button class="backButton" id="analysisButton" onclick="saveData();window.location.href = '/analysis'">Analysis</button>
     <button class="nextButton" onclick="saveData();window.location.href = '/startingLocation'">Next</button>
