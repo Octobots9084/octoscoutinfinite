@@ -107,6 +107,14 @@ function saveData() {
   metaData.teamColor = teamColorInput.value;
   localStorage.setItem("01metaData", JSON.stringify(metaData));
 }
+function saveDataAnalysis() {
+  let metaData = {};
+  metaData.scoutName = scoutNameInput.value;
+  teamNumberInput = document.getElementById("teamNumberInput");
+  metaData.teamNumber = teamNumberInput.value;
+  metaData.teamColor = teamColorInput.value;
+  localStorage.setItem("01metaData", JSON.stringify(metaData));
+}
 function setManual() {
   manualInput = true;
   //create typable input for team
