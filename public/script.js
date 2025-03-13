@@ -1,7 +1,8 @@
 const eventKey = "demo7228";
 const apiUrl = `https://frc.nexus/api/v1/event/${eventKey}`;
-
-const teamInputs = ["Blue 1"];
+let manualInput = false;
+let teams = [];
+let nexusData;
 function getNexusMatches() {
   //get nexus api
   fetch(apiUrl, {
@@ -19,6 +20,7 @@ function getNexusMatches() {
       return response.json(); // Parse the response as JSON
     })
     .then((data) => {
+      nexusData = data;
       //create dropdown menu for match number
       const matchSelector = document.createElement("select");
       const container = document.getElementById("matchInputContainer");
@@ -32,14 +34,14 @@ function getNexusMatches() {
             data.matches[i - 2].status != "Queuing soon"
           ) {
             let match = document.createElement("option");
-            match.value = i + 1;
+            match.value = data.matches[i].label;
             match.innerHTML = data.matches[i].label;
             matchSelector.appendChild(match);
           }
         } catch (error) {
           if (data.matches[i].status != "Queuing soon" && i >= 2) {
             let match = document.createElement("option");
-            match.value = i + 1;
+            match.value = data.matches[i].label;
             match.innerHTML = data.matches[i].label;
             matchSelector.appendChild(match);
           } else if (data.matches[i + 2].status != "On field") {
@@ -52,6 +54,7 @@ function getNexusMatches() {
       }
     })
     .catch((error) => {
+      manualInput = true;
       console.error("There was a problem with the fetch operation:", error); // Handle any errors
       //create typable input for team
       let oldteamSelector = document.getElementById("teamNumberInput");
@@ -81,14 +84,30 @@ function loadStoredData() {
 }
 
 function saveData() {
+  let match;
   let metaData = {};
   metaData.scoutName = scoutNameInput.value;
-  metaData.teamNumber = teamNumberInput.value;
+  if (!manualInput) {
+    for (let i = 0; i < nexusData.matches.length; i++) {
+      if (nexusData.matches[i].label == matchNumberInput.value) {
+        match = nexusData.matches[i];
+      }
+    }
+    teams = match.blueTeams.concat(match.redTeams);
+    console.log(teams);
+    console.log(teamNumberInput.value);
+    console.log(teams[teamNumberInput.value]);
+    metaData.teamNumber = teams[teamNumberInput.value];
+  } else {
+    metaData.teamNumber = teamNumberInput.value;
+  }
+
   metaData.matchNumber = matchNumberInput.value;
   metaData.teamColor = teamColorInput.value;
   localStorage.setItem("01metaData", JSON.stringify(metaData));
 }
 function setManual() {
+  manualInput = true;
   //create typable input for team
   let oldteamSelector = document.getElementById("teamNumberInput");
   oldteamSelector.remove();
@@ -110,7 +129,7 @@ function setManual() {
 getNexusMatches();
 let scoutNameInput = document.getElementById("scoutNameInput");
 let teamNumberInput = document.getElementById("teamNumberInput");
-
 let teamColorInput = document.getElementById("teamColorInput");
+localStorage.setItem("alerted", false);
 loadStoredData();
 localStorage.clear();
