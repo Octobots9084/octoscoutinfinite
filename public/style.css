@@ -25,3 +25,7 @@ select {
   width: 10vh;
   left: 5vh;
 }
+#manualButton{
+  width: auto;
+  height: 5vh;
+}
