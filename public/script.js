@@ -1,4 +1,4 @@
-const eventKey = "demo7228";
+const eventKey = "demo728";
 const apiUrl = `https://frc.nexus/api/v1/event/${eventKey}`;
 let manualInput = false;
 let teams = [];
@@ -99,6 +99,7 @@ function saveData() {
     console.log(teams[teamNumberInput.value]);
     metaData.teamNumber = teams[teamNumberInput.value];
   } else {
+    teamNumberInput = document.getElementById("teamNumberInput");
     metaData.teamNumber = teamNumberInput.value;
   }
 
@@ -115,6 +116,7 @@ function setManual() {
   const teamcontainer = document.getElementById("teamInputContainer");
   teamSelector.placeholder = "Team Number";
   teamSelector.id = "teamNumberInput";
+  teamSelector.name = "teamNumberInput";
   teamcontainer.appendChild(teamSelector);
 
   //create typable input for match
