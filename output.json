@@ -2932,5 +2932,1031 @@
     "05endgame": "{\"Deep\":\"No Attempt\",\"Shallow\":\"No Attempt\",\"Park\":\"Successful\"}",
     "06extra": "{\"Died\":\"False\",\"Defense\":\"None\",\"Driver_Quality\":\"Good\",\"Comments\":\"Fast bot inconsistent scoring, pretty fine but shooting is precarious \"}",
     "timestamp": "2025-03-09T02:12:01.209Z"
+  },
+  {
+    "02startingLocation": "{\"name\":\"blueLeft\",\"x\":9.8,\"y\":1.3999999999999995}",
+    "01metaData": "{\"scoutName\":\"Saga\",\"teamNumber\":\"5869\",\"matchNumber\":\"56\",\"teamColor\":\"Blue\"}",
+    "03auto": "[]",
+    "05endgame": "{\"Deep\":\"No Attempt\",\"Shallow\":\"No Attempt\",\"Park\":\"Successful\"}",
+    "06extra": "{\"Died\":\"False\",\"Defense\":\"Good\",\"Driver_Quality\":\"Average\",\"Comments\":\"got an algae stuck on opposing robot\"}",
+    "04teleop": "[]",
+    "timestamp": "2025-03-09T16:00:34.766Z"
+  },
+  {
+    "02startingLocation": "{\"name\":\"redMiddle\",\"x\":10.4,\"y\":4}",
+    "01metaData": "{\"scoutName\":\"Rui\",\"teamNumber\":\"6000\",\"matchNumber\":\"56\",\"teamColor\":\"Red\"}",
+    "03auto": "[{\"collectionLocation\":{\"name\":\"startingCoral\",\"x\":7,\"y\":10},\"name\":\"Coral\",\"color\":\"rgb(0,50,0)\",\"result\":\"No Result\"}]",
+    "05endgame": "{\"Deep\":\"No Attempt\",\"Shallow\":\"No Attempt\",\"Park\":\"Successful\"}",
+    "06extra": "{\"Died\":\"False\",\"Defense\":\"None\",\"Driver_Quality\":\"Bad\",\"Comments\":\"Dident die but couldn’t move (mechanical failure?)\"}",
+    "04teleop": "[]",
+    "timestamp": "2025-03-09T16:00:43.212Z"
+  },
+  {
+    "02startingLocation": "{\"name\":\"redLeft\",\"x\":10.4,\"y\":6.8}",
+    "01metaData": "{\"scoutName\":\"Ethan c\",\"teamNumber\":\"4123\",\"matchNumber\":\"56\",\"teamColor\":\"Red\"}",
+    "03auto": "[{\"collectionLocation\":{\"name\":\"startingCoral\",\"x\":7,\"y\":10},\"name\":\"Coral\",\"color\":\"rgb(0,50,0)\",\"result\":\"L4 (Top)\"},{\"collectionLocation\":{\"name\":\"sourceLeft\",\"x\":15.7,\"y\":8},\"name\":\"Coral\",\"color\":\"rgb(91,0,0)\",\"result\":\"L4 (Top)\"}]",
+    "05endgame": "{\"Deep\":\"Failed\",\"Shallow\":\"No Attempt\",\"Park\":\"No Attempt\"}",
+    "06extra": "{\"Died\":\"False\",\"Defense\":\"None\",\"Driver_Quality\":\"Average\",\"Comments\":\"Algae got stuck\"}",
+    "04teleop": "[{\"collectionLocation\":{\"name\":\"redReef\",\"x\":12.25,\"y\":3},\"name\":\"Algae\",\"color\":\"rgb(0,0,132)\",\"result\":\"Algae-No Result\"}]",
+    "timestamp": "2025-03-09T16:00:50.769Z"
+  },
+  {
+    "04teleop": "[{\"collectionLocation\":{\"name\":\"blueFloor\",\"x\":15.5,\"y\":3.1999999999999993},\"name\":\"Algae\",\"color\":\"rgb(0,0,91)\",\"result\":\"Failed Algae Pickup\"}]",
+    "02startingLocation": "{\"name\":\"blueMiddle\",\"x\":9.8,\"y\":4.199999999999999}",
+    "01metaData": "{\"scoutName\":\"Michael shinn \",\"teamNumber\":\"10166\",\"matchNumber\":\"56\",\"teamColor\":\"Blue\"}",
+    "03auto": "[]",
+    "05endgame": "{\"Deep\":\"No Attempt\",\"Shallow\":\"No Attempt\",\"Park\":\"No Attempt\"}",
+    "06extra": "{\"Died\":\"False\",\"Defense\":\"None\",\"Driver_Quality\":\"Bad\",\"Comments\":\"It's bumper literally came off, and it was kinda just like a dying fish even before that\"}",
+    "timestamp": "2025-03-09T16:01:05.747Z"
+  },
+  {
+    "04teleop": "[]",
+    "02startingLocation": "{\"name\":\"noShow\",\"x\":16.5,\"y\":8.2}",
+    "01metaData": "{\"scoutName\":\"Michael shinn \",\"teamNumber\":\"1868\",\"matchNumber\":\"56\",\"teamColor\":\"Blue\"}",
+    "03auto": "[]",
+    "05endgame": "{\"Deep\":\"No Attempt\",\"Shallow\":\"No Attempt\",\"Park\":\"No Attempt\"}",
+    "06extra": "{\"Died\":\"False\",\"Defense\":\"None\",\"Driver_Quality\":\"Average\",\"Comments\":\"Probably not accepted by clip board dudes, left before match started\"}",
+    "timestamp": "2025-03-09T16:11:45.711Z"
+  },
+  {
+    "02startingLocation": "{\"name\":\"blueMiddle\",\"x\":9.8,\"y\":4.199999999999999}",
+    "01metaData": "{\"scoutName\":\"Saga\",\"teamNumber\":\"9084\",\"matchNumber\":\"57\",\"teamColor\":\"Blue\"}",
+    "03auto": "[{\"collectionLocation\":{\"name\":\"startingCoral\",\"x\":9.5,\"y\":-1.8000000000000007},\"name\":\"Coral\",\"color\":\"rgb(0,50,0)\",\"result\":\"L4 (Top)\"},{\"collectionLocation\":{\"name\":\"sourceLeft\",\"x\":15.7,\"y\":7.999999999999999},\"name\":\"Coral\",\"color\":\"rgb(0,0,91)\",\"result\":\"L4 (Top)\"},{\"collectionLocation\":{\"name\":\"sourceLeft\",\"x\":15.7,\"y\":7.999999999999999},\"name\":\"Coral\",\"color\":\"rgb(0,0,91)\",\"result\":\"No Result\"}]",
+    "05endgame": "{\"Deep\":\"No Attempt\",\"Shallow\":\"No Attempt\",\"Park\":\"No Attempt\"}",
+    "06extra": "{\"Died\":\"True\",\"Defense\":\"None\",\"Driver_Quality\":\"Average\",\"Comments\":\"\"}",
+    "04teleop": "[{\"collectionLocation\":{\"name\":\"startingCoral\",\"x\":9.5,\"y\":-1.8000000000000007},\"name\":\"Coral\",\"color\":\"rgb(0,0,232.22222222222217)\",\"result\":\"Fell on Floor\"},{\"collectionLocation\":{\"name\":\"blueReef\",\"x\":12.25,\"y\":3.1999999999999993},\"name\":\"Algae\",\"color\":\"rgb(0,0,50)\",\"result\":\"Intentional Algae Drop\"}]",
+    "timestamp": "2025-03-09T16:13:43.481Z"
+  },
+  {
+    "02startingLocation": "{\"name\":\"redRight\",\"x\":10.4,\"y\":1.2}",
+    "01metaData": "{\"scoutName\":\"Ethan c\",\"teamNumber\":\"3863\",\"matchNumber\":\"57\",\"teamColor\":\"Red\"}",
+    "03auto": "[{\"collectionLocation\":{\"name\":\"red4\",\"x\":11,\"y\":2.5},\"name\":\"Algae\",\"color\":\"rgb(118.33333333333331,0,0)\",\"result\":\"Intentional Algae Drop\"},{\"collectionLocation\":{\"name\":\"startingCoral\",\"x\":7,\"y\":10},\"name\":\"Coral\",\"color\":\"rgb(0,50,0)\",\"result\":\"L3\"}]",
+    "05endgame": "{\"Deep\":\"Successful\",\"Shallow\":\"No Attempt\",\"Park\":\"No Attempt\"}",
+    "06extra": "{\"Died\":\"False\",\"Defense\":\"None\",\"Driver_Quality\":\"Good\",\"Comments\":\"\"}",
+    "04teleop": "[{\"collectionLocation\":{\"name\":\"blueSource2\",\"x\":15.7,\"y\":0.2},\"name\":\"Coral\",\"color\":\"rgb(0,0,72.77777777777777)\",\"result\":\"L3\"},{\"collectionLocation\":{\"name\":\"blueSource2\",\"x\":15.7,\"y\":0.2},\"name\":\"Coral\",\"color\":\"rgb(0,0,72.77777777777777)\",\"result\":\"L3\"},{\"collectionLocation\":{\"name\":\"blueSource2\",\"x\":15.7,\"y\":0.2},\"name\":\"Coral\",\"color\":\"rgb(0,0,72.77777777777777)\",\"result\":\"L3\"},{\"collectionLocation\":{\"name\":\"blueSource2\",\"x\":15.7,\"y\":0.2},\"name\":\"Coral\",\"color\":\"rgb(0,0,72.77777777777777)\",\"result\":\"L3\"},{\"collectionLocation\":{\"name\":\"blueSource2\",\"x\":15.7,\"y\":0.2},\"name\":\"Coral\",\"color\":\"rgb(0,0,72.77777777777777)\",\"result\":\"L3\"},{\"collectionLocation\":{\"name\":\"blueSource2\",\"x\":15.7,\"y\":0.2},\"name\":\"Coral\",\"color\":\"rgb(0,0,72.77777777777777)\",\"result\":\"L3\"},{\"collectionLocation\":{\"name\":\"redReef\",\"x\":12.25,\"y\":3},\"name\":\"Algae\",\"color\":\"rgb(0,0,132)\",\"result\":\"Intentional Algae Drop\"},{\"collectionLocation\":{\"name\":\"blueSource2\",\"x\":15.7,\"y\":0.2},\"name\":\"Coral\",\"color\":\"rgb(0,0,72.77777777777777)\",\"result\":\"L3\"},{\"collectionLocation\":{\"name\":\"blueSource2\",\"x\":15.7,\"y\":0.2},\"name\":\"Coral\",\"color\":\"rgb(0,0,72.77777777777777)\",\"result\":\"L3\"},{\"collectionLocation\":{\"name\":\"blueSource2\",\"x\":15.7,\"y\":0.2},\"name\":\"Coral\",\"color\":\"rgb(0,0,72.77777777777777)\",\"result\":\"L2\"},{\"collectionLocation\":{\"name\":\"blueSource2\",\"x\":15.7,\"y\":0.2},\"name\":\"Coral\",\"color\":\"rgb(0,0,72.77777777777777)\",\"result\":\"Fell on Floor\"},{\"collectionLocation\":{\"name\":\"blueSource2\",\"x\":15.7,\"y\":0.2},\"name\":\"Coral\",\"color\":\"rgb(0,0,72.77777777777777)\",\"result\":\"L2\"},{\"collectionLocation\":{\"name\":\"blueSource2\",\"x\":15.7,\"y\":0.2},\"name\":\"Coral\",\"color\":\"rgb(0,0,72.77777777777777)\",\"result\":\"L2\"}]",
+    "timestamp": "2025-03-09T16:13:47.952Z"
+  },
+  {
+    "02startingLocation": "{\"name\":\"redLeft\",\"x\":10.4,\"y\":6.8}",
+    "01metaData": "{\"scoutName\":\"Rui\",\"teamNumber\":\"10698\",\"matchNumber\":\"56\",\"teamColor\":\"Red\"}",
+    "03auto": "[{\"collectionLocation\":{\"name\":\"startingCoral\",\"x\":7,\"y\":10},\"name\":\"Coral\",\"color\":\"rgb(0,50,0)\",\"result\":\"No Result\"}]",
+    "05endgame": "{\"Deep\":\"Successful\",\"Shallow\":\"No Attempt\",\"Park\":\"No Attempt\"}",
+    "06extra": "{\"Died\":\"False\",\"Defense\":\"None\",\"Driver_Quality\":\"Average\",\"Comments\":\"They where pretty slow\"}",
+    "04teleop": "[{\"collectionLocation\":{\"name\":\"redReef\",\"x\":12.25,\"y\":3},\"name\":\"Algae\",\"color\":\"rgb(0,0,132)\",\"result\":\"Intentional Algae Drop\"},{\"collectionLocation\":{\"name\":\"blueSource2\",\"x\":15.7,\"y\":0.2},\"name\":\"Coral\",\"color\":\"rgb(0,0,72.77777777777777)\",\"result\":\"L4 (Top)\"},{\"collectionLocation\":{\"name\":\"blueSource2\",\"x\":15.7,\"y\":0.2},\"name\":\"Coral\",\"color\":\"rgb(0,0,72.77777777777777)\",\"result\":\"L4 (Top)\"}]",
+    "timestamp": "2025-03-09T16:14:07.827Z"
+  },
+  {
+    "02startingLocation": "{\"name\":\"redLeft\",\"x\":10.4,\"y\":6.8}",
+    "01metaData": "{\"scoutName\":\"Ethan c\",\"teamNumber\":\"3925\",\"matchNumber\":\"58\",\"teamColor\":\"Red\"}",
+    "03auto": "[{\"collectionLocation\":{\"name\":\"startingCoral\",\"x\":7,\"y\":10},\"name\":\"Coral\",\"color\":\"rgb(0,50,0)\",\"result\":\"No Result\"}]",
+    "05endgame": "{\"Deep\":\"No Attempt\",\"Shallow\":\"No Attempt\",\"Park\":\"Successful\"}",
+    "06extra": "{\"Died\":\"False\",\"Defense\":\"None\",\"Driver_Quality\":\"Bad\",\"Comments\":\"\"}",
+    "04teleop": "[{\"collectionLocation\":{\"name\":\"startingCoral\",\"x\":7,\"y\":10},\"name\":\"Coral\",\"color\":\"rgb(0,0,232.22222222222217)\",\"result\":\"L2\"},{\"collectionLocation\":{\"name\":\"redSource1\",\"x\":15.7,\"y\":8},\"name\":\"Coral\",\"color\":\"rgb(0,0,141.1111111111111)\",\"result\":\"Fell on Floor\"},{\"collectionLocation\":{\"name\":\"redSource1\",\"x\":15.7,\"y\":8},\"name\":\"Coral\",\"color\":\"rgb(0,0,141.1111111111111)\",\"result\":\"L1 (Trough)\"}]",
+    "timestamp": "2025-03-09T16:20:58.294Z"
+  },
+  {
+    "04teleop": "[{\"collectionLocation\":{\"name\":\"blueReef\",\"x\":12.25,\"y\":3.1999999999999993},\"name\":\"Algae\",\"color\":\"rgb(0,0,50)\",\"result\":\"Intentional Algae Drop\"},{\"collectionLocation\":{\"name\":\"blueReef\",\"x\":12.25,\"y\":3.1999999999999993},\"name\":\"Algae\",\"color\":\"rgb(0,0,50)\",\"result\":\"Net\"}]",
+    "02startingLocation": "{\"name\":\"blueRight\",\"x\":9.8,\"y\":6.999999999999999}",
+    "01metaData": "{\"scoutName\":\"Michael shinn \",\"teamNumber\":\"9772\",\"matchNumber\":\"58\",\"teamColor\":\"Blue\"}",
+    "03auto": "[]",
+    "05endgame": "{\"Deep\":\"No Attempt\",\"Shallow\":\"No Attempt\",\"Park\":\"Successful\"}",
+    "06extra": "{\"Died\":\"False\",\"Defense\":\"None\",\"Driver_Quality\":\"Average\",\"Comments\":\"Kinda ass, also getting constantly meat ridden by a defense bot that was stronger and pushed him\"}",
+    "timestamp": "2025-03-09T16:21:26.577Z"
+  },
+  {
+    "02startingLocation": "{\"name\":\"redRight\",\"x\":10.4,\"y\":1.2}",
+    "01metaData": "{\"scoutName\":\"Rui\",\"teamNumber\":\"1622\",\"matchNumber\":\"58\",\"teamColor\":\"Red\"}",
+    "03auto": "[]",
+    "05endgame": "{\"Deep\":\"No Attempt\",\"Shallow\":\"No Attempt\",\"Park\":\"Successful\"}",
+    "06extra": "{\"Died\":\"False\",\"Defense\":\"None\",\"Driver_Quality\":\"Bad\",\"Comments\":\"Exclusively used the prossesor\"}",
+    "04teleop": "[{\"collectionLocation\":{\"name\":\"redFloor\",\"x\":15.5,\"y\":3},\"name\":\"Algae\",\"color\":\"rgb(0,0,173)\",\"result\":\"Processor\"},{\"collectionLocation\":{\"name\":\"redFloor\",\"x\":15.5,\"y\":3},\"name\":\"Algae\",\"color\":\"rgb(0,0,173)\",\"result\":\"Processor\"},{\"collectionLocation\":{\"name\":\"redFloor\",\"x\":15.5,\"y\":3},\"name\":\"Algae\",\"color\":\"rgb(0,0,173)\",\"result\":\"Processor\"},{\"collectionLocation\":{\"name\":\"redReef\",\"x\":12.25,\"y\":3},\"name\":\"Algae\",\"color\":\"rgb(0,0,132)\",\"result\":\"Processor\"},{\"collectionLocation\":{\"name\":\"blueFloor\",\"x\":1,\"y\":5},\"name\":\"Algae\",\"color\":\"rgb(0,0,91)\",\"result\":\"Processor\"}]",
+    "timestamp": "2025-03-09T16:21:29.665Z"
+  },
+  {
+    "02startingLocation": "{\"name\":\"blueLeft\",\"x\":9.8,\"y\":1.3999999999999995}",
+    "01metaData": "{\"scoutName\":\"Saga\",\"teamNumber\":\"6553\",\"matchNumber\":\"58\",\"teamColor\":\"Blue\"}",
+    "03auto": "[{\"collectionLocation\":{\"name\":\"startingCoral\",\"x\":9.5,\"y\":-1.8000000000000007},\"name\":\"Coral\",\"color\":\"rgb(0,50,0)\",\"result\":\"Intentional Coral Drop\"}]",
+    "05endgame": "{\"Deep\":\"No Attempt\",\"Shallow\":\"No Attempt\",\"Park\":\"Successful\"}",
+    "06extra": "{\"Died\":\"False\",\"Defense\":\"None\",\"Driver_Quality\":\"Average\",\"Comments\":\"drivers and human player lowkey stupid: they had a piece of coral stuck and they were still loading coral onto their bot and attempting to score\"}",
+    "04teleop": "[{\"collectionLocation\":{\"name\":\"redSource2\",\"x\":15.7,\"y\":0.1999999999999993},\"name\":\"Coral\",\"color\":\"rgb(0,0,163.88888888888886)\",\"result\":\"Fell on Floor\"},{\"collectionLocation\":{\"name\":\"blueSource1\",\"x\":15.7,\"y\":7.999999999999999},\"name\":\"Coral\",\"color\":\"rgb(0,0,50)\",\"result\":\"L2\"},{\"collectionLocation\":{\"name\":\"redSource2\",\"x\":15.7,\"y\":0.1999999999999993},\"name\":\"Coral\",\"color\":\"rgb(0,0,163.88888888888886)\",\"result\":\"Fell in Trough\"},{\"collectionLocation\":{\"name\":\"blueSource1\",\"x\":15.7,\"y\":7.999999999999999},\"name\":\"Coral\",\"color\":\"rgb(0,0,50)\",\"result\":\"Fell on Floor\"}]",
+    "timestamp": "2025-03-09T16:21:32.147Z"
+  },
+  {
+    "02startingLocation": "{\"name\":\"blueLeft\",\"x\":9.8,\"y\":1.3999999999999995}",
+    "01metaData": "{\"scoutName\":\"Saga\",\"teamNumber\":\"5514\",\"matchNumber\":\"59\",\"teamColor\":\"Blue\"}",
+    "03auto": "[{\"collectionLocation\":{\"name\":\"startingCoral\",\"x\":9.5,\"y\":-1.8000000000000007},\"name\":\"Coral\",\"color\":\"rgb(0,50,0)\",\"result\":\"Intentional Coral Drop\"}]",
+    "05endgame": "{\"Deep\":\"No Attempt\",\"Shallow\":\"Successful\",\"Park\":\"No Attempt\"}",
+    "06extra": "{\"Died\":\"False\",\"Defense\":\"None\",\"Driver_Quality\":\"Average\",\"Comments\":\"\"}",
+    "04teleop": "[{\"collectionLocation\":{\"name\":\"redSource2\",\"x\":15.7,\"y\":0.1999999999999993},\"name\":\"Coral\",\"color\":\"rgb(0,0,163.88888888888886)\",\"result\":\"Failed Intake\"},{\"collectionLocation\":{\"name\":\"blueFloor\",\"x\":15.5,\"y\":3.1999999999999993},\"name\":\"Algae\",\"color\":\"rgb(0,0,91)\",\"result\":\"Processor\"},{\"collectionLocation\":{\"name\":\"blueFloor\",\"x\":15.5,\"y\":3.1999999999999993},\"name\":\"Algae\",\"color\":\"rgb(0,0,91)\",\"result\":\"Intentional Algae Drop\"}]",
+    "timestamp": "2025-03-09T16:30:57.688Z"
+  },
+  {
+    "02startingLocation": "{\"name\":\"redLeft\",\"x\":10.4,\"y\":6.8}",
+    "01metaData": "{\"scoutName\":\"Ethan c\",\"teamNumber\":\"5026\",\"matchNumber\":\"59\",\"teamColor\":\"Red\"}",
+    "03auto": "[{\"collectionLocation\":{\"name\":\"startingCoral\",\"x\":7,\"y\":10},\"name\":\"Coral\",\"color\":\"rgb(0,50,0)\",\"result\":\"L4 (Top)\"},{\"collectionLocation\":{\"name\":\"sourceLeft\",\"x\":15.7,\"y\":8},\"name\":\"Coral\",\"color\":\"rgb(91,0,0)\",\"result\":\"L4 (Top)\"},{\"collectionLocation\":{\"name\":\"sourceLeft\",\"x\":15.7,\"y\":8},\"name\":\"Coral\",\"color\":\"rgb(91,0,0)\",\"result\":\"Missed onto Floor\"}]",
+    "05endgame": "{\"Deep\":\"Successful\",\"Shallow\":\"No Attempt\",\"Park\":\"No Attempt\"}",
+    "06extra": "{\"Died\":\"False\",\"Defense\":\"None\",\"Driver_Quality\":\"Average\",\"Comments\":\"\"}",
+    "04teleop": "[{\"collectionLocation\":{\"name\":\"redSource1\",\"x\":15.7,\"y\":8},\"name\":\"Coral\",\"color\":\"rgb(0,0,141.1111111111111)\",\"result\":\"L2\"},{\"collectionLocation\":{\"name\":\"redSource1\",\"x\":15.7,\"y\":8},\"name\":\"Coral\",\"color\":\"rgb(0,0,141.1111111111111)\",\"result\":\"L2\"},{\"collectionLocation\":{\"name\":\"redSource1\",\"x\":15.7,\"y\":8},\"name\":\"Coral\",\"color\":\"rgb(0,0,141.1111111111111)\",\"result\":\"L2\"},{\"collectionLocation\":{\"name\":\"redSource1\",\"x\":15.7,\"y\":8},\"name\":\"Coral\",\"color\":\"rgb(0,0,141.1111111111111)\",\"result\":\"L2\"},{\"collectionLocation\":{\"name\":\"redSource1\",\"x\":15.7,\"y\":8},\"name\":\"Coral\",\"color\":\"rgb(0,0,141.1111111111111)\",\"result\":\"L2\"},{\"collectionLocation\":{\"name\":\"redSource1\",\"x\":15.7,\"y\":8},\"name\":\"Coral\",\"color\":\"rgb(0,0,141.1111111111111)\",\"result\":\"L3\"},{\"collectionLocation\":{\"name\":\"redSource1\",\"x\":15.7,\"y\":8},\"name\":\"Coral\",\"color\":\"rgb(0,0,141.1111111111111)\",\"result\":\"L4 (Top)\"},{\"collectionLocation\":{\"name\":\"redSource1\",\"x\":15.7,\"y\":8},\"name\":\"Coral\",\"color\":\"rgb(0,0,141.1111111111111)\",\"result\":\"L2\"},{\"collectionLocation\":{\"name\":\"redSource1\",\"x\":15.7,\"y\":8},\"name\":\"Coral\",\"color\":\"rgb(0,0,141.1111111111111)\",\"result\":\"L4 (Top)\"},{\"collectionLocation\":{\"name\":\"redSource1\",\"x\":15.7,\"y\":8},\"name\":\"Coral\",\"color\":\"rgb(0,0,141.1111111111111)\",\"result\":\"L3\"},{\"collectionLocation\":{\"name\":\"redSource1\",\"x\":15.7,\"y\":8},\"name\":\"Coral\",\"color\":\"rgb(0,0,141.1111111111111)\",\"result\":\"L2\"}]",
+    "timestamp": "2025-03-09T16:30:57.879Z"
+  },
+  {
+    "04teleop": "[{\"collectionLocation\":{\"name\":\"startingCoral\",\"x\":9.5,\"y\":-1.8000000000000007},\"name\":\"Coral\",\"color\":\"rgb(0,0,232.22222222222217)\",\"result\":\"L2\"},{\"collectionLocation\":{\"name\":\"blueSource1\",\"x\":15.7,\"y\":7.999999999999999},\"name\":\"Coral\",\"color\":\"rgb(0,0,50)\",\"result\":\"No Result\"}]",
+    "02startingLocation": "{\"name\":\"blueMiddle\",\"x\":9.8,\"y\":4.199999999999999}",
+    "01metaData": "{\"scoutName\":\"Michael shinn \",\"teamNumber\":\"8060\",\"matchNumber\":\"59\",\"teamColor\":\"Blue\"}",
+    "03auto": "[{\"collectionLocation\":{\"name\":\"startingCoral\",\"x\":9.5,\"y\":-1.8000000000000007},\"name\":\"Coral\",\"color\":\"rgb(0,50,0)\",\"result\":\"No Result\"}]",
+    "05endgame": "{\"Deep\":\"No Attempt\",\"Shallow\":\"No Attempt\",\"Park\":\"Successful\"}",
+    "06extra": "{\"Died\":\"False\",\"Defense\":\"None\",\"Driver_Quality\":\"Bad\",\"Comments\":\"SUPER slow \"}",
+    "timestamp": "2025-03-09T16:31:20.652Z"
+  },
+  {
+    "02startingLocation": "{\"name\":\"redMiddle\",\"x\":10.4,\"y\":4}",
+    "01metaData": "{\"scoutName\":\"Rui\",\"teamNumber\":\"2637\",\"matchNumber\":\"59\",\"teamColor\":\"Red\"}",
+    "03auto": "[{\"collectionLocation\":{\"name\":\"startingCoral\",\"x\":7,\"y\":10},\"name\":\"Coral\",\"color\":\"rgb(0,50,0)\",\"result\":\"L4 (Top)\"},{\"collectionLocation\":{\"name\":\"sourceRight\",\"x\":15.7,\"y\":0.2},\"name\":\"Coral\",\"color\":\"rgb(50,0,0)\",\"result\":\"No Result\"}]",
+    "05endgame": "{\"Deep\":\"No Attempt\",\"Shallow\":\"Failed\",\"Park\":\"Successful\"}",
+    "06extra": "{\"Died\":\"False\",\"Defense\":\"None\",\"Driver_Quality\":\"Bad\",\"Comments\":\"Removed algae instead of climbing\"}",
+    "04teleop": "[{\"collectionLocation\":{\"name\":\"startingCoral\",\"x\":7,\"y\":10},\"name\":\"Coral\",\"color\":\"rgb(0,0,232.22222222222217)\",\"result\":\"L4 (Top)\"},{\"collectionLocation\":{\"name\":\"blueSource2\",\"x\":15.7,\"y\":0.2},\"name\":\"Coral\",\"color\":\"rgb(0,0,72.77777777777777)\",\"result\":\"L4 (Top)\"},{\"collectionLocation\":{\"name\":\"redReef\",\"x\":12.25,\"y\":3},\"name\":\"Algae\",\"color\":\"rgb(0,0,132)\",\"result\":\"Intentional Algae Drop\"},{\"collectionLocation\":{\"name\":\"blueSource2\",\"x\":15.7,\"y\":0.2},\"name\":\"Coral\",\"color\":\"rgb(0,0,72.77777777777777)\",\"result\":\"Fell on Floor\"},{\"collectionLocation\":{\"name\":\"blueSource2\",\"x\":15.7,\"y\":0.2},\"name\":\"Coral\",\"color\":\"rgb(0,0,72.77777777777777)\",\"result\":\"Fell in Trough\"},{\"collectionLocation\":{\"name\":\"blueSource2\",\"x\":15.7,\"y\":0.2},\"name\":\"Coral\",\"color\":\"rgb(0,0,72.77777777777777)\",\"result\":\"Fell on Floor\"},{\"collectionLocation\":{\"name\":\"blueSource2\",\"x\":15.7,\"y\":0.2},\"name\":\"Coral\",\"color\":\"rgb(0,0,72.77777777777777)\",\"result\":\"Fell in Trough\"},{\"collectionLocation\":{\"name\":\"redFloor\",\"x\":15.5,\"y\":3},\"name\":\"Algae\",\"color\":\"rgb(0,0,173)\",\"result\":\"Intentional Algae Drop\"},{\"collectionLocation\":{\"name\":\"blueSource2\",\"x\":15.7,\"y\":0.2},\"name\":\"Coral\",\"color\":\"rgb(0,0,72.77777777777777)\",\"result\":\"L2\"},{\"collectionLocation\":{\"name\":\"redReef\",\"x\":12.25,\"y\":3},\"name\":\"Algae\",\"color\":\"rgb(0,0,132)\",\"result\":\"Intentional Algae Drop\"}]",
+    "timestamp": "2025-03-09T16:31:47.895Z"
+  },
+  {
+    "02startingLocation": "{\"name\":\"redMiddle\",\"x\":10.4,\"y\":4}",
+    "01metaData": "{\"scoutName\":\"Ethan c\",\"teamNumber\":\"7323\",\"matchNumber\":\"60\",\"teamColor\":\"Red\"}",
+    "03auto": "[{\"collectionLocation\":{\"name\":\"startingCoral\",\"x\":7,\"y\":10},\"name\":\"Coral\",\"color\":\"rgb(0,50,0)\",\"result\":\"No Result\"}]",
+    "05endgame": "{\"Deep\":\"Successful\",\"Shallow\":\"No Attempt\",\"Park\":\"No Attempt\"}",
+    "06extra": "{\"Died\":\"False\",\"Defense\":\"None\",\"Driver_Quality\":\"Average\",\"Comments\":\"Coral stuck\"}",
+    "04teleop": "[{\"collectionLocation\":{\"name\":\"startingCoral\",\"x\":7,\"y\":10},\"name\":\"Coral\",\"color\":\"rgb(0,0,232.22222222222217)\",\"result\":\"L4 (Top)\"},{\"collectionLocation\":{\"name\":\"redSource1\",\"x\":15.7,\"y\":8},\"name\":\"Coral\",\"color\":\"rgb(0,0,141.1111111111111)\",\"result\":\"L3\"},{\"collectionLocation\":{\"name\":\"redSource1\",\"x\":15.7,\"y\":8},\"name\":\"Coral\",\"color\":\"rgb(0,0,141.1111111111111)\",\"result\":\"No Result\"}]",
+    "timestamp": "2025-03-09T16:38:29.102Z"
+  },
+  {
+    "02startingLocation": "{\"name\":\"blueRight\",\"x\":9.8,\"y\":6.999999999999999}",
+    "01metaData": "{\"scoutName\":\"Saga\",\"teamNumber\":\"7426\",\"matchNumber\":\"60\",\"teamColor\":\"Blue\"}",
+    "03auto": "[{\"collectionLocation\":{\"name\":\"startingCoral\",\"x\":9.5,\"y\":-1.8000000000000007},\"name\":\"Coral\",\"color\":\"rgb(0,50,0)\",\"result\":\"Missed into Trough\"},{\"collectionLocation\":{\"name\":\"sourceLeft\",\"x\":15.7,\"y\":7.999999999999999},\"name\":\"Coral\",\"color\":\"rgb(0,0,91)\",\"result\":\"Missed into Trough\"}]",
+    "05endgame": "{\"Deep\":\"Successful\",\"Shallow\":\"No Attempt\",\"Park\":\"No Attempt\"}",
+    "06extra": "{\"Died\":\"False\",\"Defense\":\"None\",\"Driver_Quality\":\"Good\",\"Comments\":\"\"}",
+    "04teleop": "[{\"collectionLocation\":{\"name\":\"blueSource1\",\"x\":15.7,\"y\":7.999999999999999},\"name\":\"Coral\",\"color\":\"rgb(0,0,50)\",\"result\":\"L1 (Trough)\"},{\"collectionLocation\":{\"name\":\"blueSource1\",\"x\":15.7,\"y\":7.999999999999999},\"name\":\"Coral\",\"color\":\"rgb(0,0,50)\",\"result\":\"L1 (Trough)\"},{\"collectionLocation\":{\"name\":\"redSource2\",\"x\":15.7,\"y\":0.1999999999999993},\"name\":\"Coral\",\"color\":\"rgb(0,0,163.88888888888886)\",\"result\":\"L1 (Trough)\"},{\"collectionLocation\":{\"name\":\"redSource2\",\"x\":15.7,\"y\":0.1999999999999993},\"name\":\"Coral\",\"color\":\"rgb(0,0,163.88888888888886)\",\"result\":\"L2\"},{\"collectionLocation\":{\"name\":\"blueReef\",\"x\":12.25,\"y\":3.1999999999999993},\"name\":\"Algae\",\"color\":\"rgb(0,0,50)\",\"result\":\"Intentional Algae Drop\"},{\"collectionLocation\":{\"name\":\"redSource2\",\"x\":15.7,\"y\":0.1999999999999993},\"name\":\"Coral\",\"color\":\"rgb(0,0,163.88888888888886)\",\"result\":\"Fell on Floor\"},{\"collectionLocation\":{\"name\":\"redSource2\",\"x\":15.7,\"y\":0.1999999999999993},\"name\":\"Coral\",\"color\":\"rgb(0,0,163.88888888888886)\",\"result\":\"Fell on Floor\"},{\"collectionLocation\":{\"name\":\"redSource2\",\"x\":15.7,\"y\":0.1999999999999993},\"name\":\"Coral\",\"color\":\"rgb(0,0,163.88888888888886)\",\"result\":\"L2\"},{\"collectionLocation\":{\"name\":\"redSource2\",\"x\":15.7,\"y\":0.1999999999999993},\"name\":\"Coral\",\"color\":\"rgb(0,0,163.88888888888886)\",\"result\":\"L2\"},{\"collectionLocation\":{\"name\":\"redSource2\",\"x\":15.7,\"y\":0.1999999999999993},\"name\":\"Coral\",\"color\":\"rgb(0,0,163.88888888888886)\",\"result\":\"L2\"},{\"collectionLocation\":{\"name\":\"redSource2\",\"x\":15.7,\"y\":0.1999999999999993},\"name\":\"Coral\",\"color\":\"rgb(0,0,163.88888888888886)\",\"result\":\"L2\"},{\"collectionLocation\":{\"name\":\"redSource2\",\"x\":15.7,\"y\":0.1999999999999993},\"name\":\"Coral\",\"color\":\"rgb(0,0,163.88888888888886)\",\"result\":\"Fell on Floor\"},{\"collectionLocation\":{\"name\":\"redSource2\",\"x\":15.7,\"y\":0.1999999999999993},\"name\":\"Coral\",\"color\":\"rgb(0,0,163.88888888888886)\",\"result\":\"Fell on Floor\"}]",
+    "timestamp": "2025-03-09T16:38:35.552Z"
+  },
+  {
+    "04teleop": "[{\"collectionLocation\":{\"name\":\"blueSource1\",\"x\":15.7,\"y\":7.999999999999999},\"name\":\"Coral\",\"color\":\"rgb(0,0,50)\",\"result\":\"L1 (Trough)\"},{\"collectionLocation\":{\"name\":\"blueSource1\",\"x\":15.7,\"y\":7.999999999999999},\"name\":\"Coral\",\"color\":\"rgb(0,0,50)\",\"result\":\"L1 (Trough)\"},{\"collectionLocation\":{\"name\":\"blueSource1\",\"x\":15.7,\"y\":7.999999999999999},\"name\":\"Coral\",\"color\":\"rgb(0,0,50)\",\"result\":\"Fell on Floor\"}]",
+    "02startingLocation": "{\"name\":\"blueMiddle\",\"x\":9.8,\"y\":4.199999999999999}",
+    "01metaData": "{\"scoutName\":\"Michael shinn \",\"teamNumber\":\"4019\",\"matchNumber\":\"60\",\"teamColor\":\"Blue\"}",
+    "03auto": "[]",
+    "05endgame": "{\"Deep\":\"No Attempt\",\"Shallow\":\"No Attempt\",\"Park\":\"No Attempt\"}",
+    "06extra": "{\"Died\":\"False\",\"Defense\":\"None\",\"Driver_Quality\":\"Bad\",\"Comments\":\"Super slow, barely able to intake\"}",
+    "timestamp": "2025-03-09T16:38:42.262Z"
+  },
+  {
+    "02startingLocation": "{\"name\":\"redLeft\",\"x\":10.4,\"y\":6.8}",
+    "01metaData": "{\"scoutName\":\"Rui\",\"teamNumber\":\"7419\",\"matchNumber\":\"59\",\"teamColor\":\"Red\"}",
+    "03auto": "[{\"collectionLocation\":{\"name\":\"startingCoral\",\"x\":7,\"y\":10},\"name\":\"Coral\",\"color\":\"rgb(0,50,0)\",\"result\":\"Missed onto Floor\"}]",
+    "05endgame": "{\"Deep\":\"Failed\",\"Shallow\":\"No Attempt\",\"Park\":\"Successful\"}",
+    "06extra": "{\"Died\":\"False\",\"Defense\":\"None\",\"Driver_Quality\":\"Bad\",\"Comments\":\"Dident give the selfs time to park and dident score there last coral intake failed menu times\"}",
+    "04teleop": "[{\"collectionLocation\":{\"name\":\"redReef\",\"x\":12.25,\"y\":3},\"name\":\"Algae\",\"color\":\"rgb(0,0,132)\",\"result\":\"Processor\"},{\"collectionLocation\":{\"name\":\"redReef\",\"x\":12.25,\"y\":3},\"name\":\"Algae\",\"color\":\"rgb(0,0,132)\",\"result\":\"Failed Algae Pickup\"},{\"collectionLocation\":{\"name\":\"redReef\",\"x\":12.25,\"y\":3},\"name\":\"Algae\",\"color\":\"rgb(0,0,132)\",\"result\":\"Processor\"},{\"collectionLocation\":{\"name\":\"redSource1\",\"x\":15.7,\"y\":8},\"name\":\"Coral\",\"color\":\"rgb(0,0,141.1111111111111)\",\"result\":\"L4 (Top)\"},{\"collectionLocation\":{\"name\":\"redSource1\",\"x\":15.7,\"y\":8},\"name\":\"Coral\",\"color\":\"rgb(0,0,141.1111111111111)\",\"result\":\"Fell on Floor\"},{\"collectionLocation\":{\"name\":\"redSource1\",\"x\":15.7,\"y\":8},\"name\":\"Coral\",\"color\":\"rgb(0,0,141.1111111111111)\",\"result\":\"Fell on Floor\"},{\"collectionLocation\":{\"name\":\"redSource1\",\"x\":15.7,\"y\":8},\"name\":\"Coral\",\"color\":\"rgb(0,0,141.1111111111111)\",\"result\":\"L4 (Top)\"},{\"collectionLocation\":{\"name\":\"redSource1\",\"x\":15.7,\"y\":8},\"name\":\"Coral\",\"color\":\"rgb(0,0,141.1111111111111)\",\"result\":\"L4 (Top)\"},{\"collectionLocation\":{\"name\":\"redSource1\",\"x\":15.7,\"y\":8},\"name\":\"Coral\",\"color\":\"rgb(0,0,141.1111111111111)\",\"result\":\"No Result\"}]",
+    "timestamp": "2025-03-09T16:39:26.441Z"
+  },
+  {
+    "02startingLocation": "{\"name\":\"blueLeft\",\"x\":9.8,\"y\":1.3999999999999995}",
+    "01metaData": "{\"scoutName\":\"Saga\",\"teamNumber\":\"5805\",\"matchNumber\":\"61\",\"teamColor\":\"Blue\"}",
+    "03auto": "[{\"collectionLocation\":{\"name\":\"startingCoral\",\"x\":9.5,\"y\":-1.8000000000000007},\"name\":\"Coral\",\"color\":\"rgb(0,50,0)\",\"result\":\"Missed onto Floor\"}]",
+    "05endgame": "{\"Deep\":\"Successful\",\"Shallow\":\"No Attempt\",\"Park\":\"No Attempt\"}",
+    "06extra": "{\"Died\":\"False\",\"Defense\":\"None\",\"Driver_Quality\":\"Average\",\"Comments\":\"\"}",
+    "04teleop": "[{\"collectionLocation\":{\"name\":\"redSource2\",\"x\":15.7,\"y\":0.1999999999999993},\"name\":\"Coral\",\"color\":\"rgb(0,0,163.88888888888886)\",\"result\":\"L2\"},{\"collectionLocation\":{\"name\":\"redSource2\",\"x\":15.7,\"y\":0.1999999999999993},\"name\":\"Coral\",\"color\":\"rgb(0,0,163.88888888888886)\",\"result\":\"L2\"},{\"collectionLocation\":{\"name\":\"redSource2\",\"x\":15.7,\"y\":0.1999999999999993},\"name\":\"Coral\",\"color\":\"rgb(0,0,163.88888888888886)\",\"result\":\"L3\"},{\"collectionLocation\":{\"name\":\"redSource2\",\"x\":15.7,\"y\":0.1999999999999993},\"name\":\"Coral\",\"color\":\"rgb(0,0,163.88888888888886)\",\"result\":\"Fell on Floor\"},{\"collectionLocation\":{\"name\":\"redSource2\",\"x\":15.7,\"y\":0.1999999999999993},\"name\":\"Coral\",\"color\":\"rgb(0,0,163.88888888888886)\",\"result\":\"Fell in Trough\"},{\"collectionLocation\":{\"name\":\"redSource2\",\"x\":15.7,\"y\":0.1999999999999993},\"name\":\"Coral\",\"color\":\"rgb(0,0,163.88888888888886)\",\"result\":\"L3\"},{\"collectionLocation\":{\"name\":\"blueSource1\",\"x\":15.7,\"y\":7.999999999999999},\"name\":\"Coral\",\"color\":\"rgb(0,0,50)\",\"result\":\"Fell on Floor\"},{\"collectionLocation\":{\"name\":\"blueSource1\",\"x\":15.7,\"y\":7.999999999999999},\"name\":\"Coral\",\"color\":\"rgb(0,0,50)\",\"result\":\"L2\"},{\"collectionLocation\":{\"name\":\"blueSource1\",\"x\":15.7,\"y\":7.999999999999999},\"name\":\"Coral\",\"color\":\"rgb(0,0,50)\",\"result\":\"L4 (Top)\"}]",
+    "timestamp": "2025-03-09T16:47:03.185Z"
+  },
+  {
+    "02startingLocation": "{\"name\":\"redRight\",\"x\":10.4,\"y\":1.2}",
+    "01metaData": "{\"scoutName\":\"Ethan c\",\"teamNumber\":\"3256\",\"matchNumber\":\"61\",\"teamColor\":\"Red\"}",
+    "03auto": "[{\"collectionLocation\":{\"name\":\"startingCoral\",\"x\":7,\"y\":10},\"name\":\"Coral\",\"color\":\"rgb(0,50,0)\",\"result\":\"No Result\"}]",
+    "05endgame": "{\"Deep\":\"No Attempt\",\"Shallow\":\"No Attempt\",\"Park\":\"No Attempt\"}",
+    "06extra": "{\"Died\":\"False\",\"Defense\":\"None\",\"Driver_Quality\":\"Average\",\"Comments\":\"\"}",
+    "04teleop": "[{\"collectionLocation\":{\"name\":\"startingCoral\",\"x\":7,\"y\":10},\"name\":\"Coral\",\"color\":\"rgb(0,0,232.22222222222217)\",\"result\":\"L3\"},{\"collectionLocation\":{\"name\":\"redSource1\",\"x\":15.7,\"y\":8},\"name\":\"Coral\",\"color\":\"rgb(0,0,141.1111111111111)\",\"result\":\"Fell in Trough\"},{\"collectionLocation\":{\"name\":\"redSource1\",\"x\":15.7,\"y\":8},\"name\":\"Coral\",\"color\":\"rgb(0,0,141.1111111111111)\",\"result\":\"L3\"},{\"collectionLocation\":{\"name\":\"redReef\",\"x\":12.25,\"y\":3},\"name\":\"Algae\",\"color\":\"rgb(0,0,132)\",\"result\":\"Failed Algae Placement\"},{\"collectionLocation\":{\"name\":\"redSource1\",\"x\":15.7,\"y\":8},\"name\":\"Coral\",\"color\":\"rgb(0,0,141.1111111111111)\",\"result\":\"L3\"},{\"collectionLocation\":{\"name\":\"redSource1\",\"x\":15.7,\"y\":8},\"name\":\"Coral\",\"color\":\"rgb(0,0,141.1111111111111)\",\"result\":\"L1 (Trough)\"},{\"collectionLocation\":{\"name\":\"redSource1\",\"x\":15.7,\"y\":8},\"name\":\"Coral\",\"color\":\"rgb(0,0,141.1111111111111)\",\"result\":\"Fell on Floor\"},{\"collectionLocation\":{\"name\":\"redReef\",\"x\":12.25,\"y\":3},\"name\":\"Algae\",\"color\":\"rgb(0,0,132)\",\"result\":\"Failed Algae Pickup\"},{\"collectionLocation\":{\"name\":\"redSource1\",\"x\":15.7,\"y\":8},\"name\":\"Coral\",\"color\":\"rgb(0,0,141.1111111111111)\",\"result\":\"Fell on Floor\"}]",
+    "timestamp": "2025-03-09T16:47:12.777Z"
+  },
+  {
+    "02startingLocation": "{\"name\":\"redMiddle\",\"x\":10.4,\"y\":4}",
+    "01metaData": "{\"scoutName\":\"Rui\",\"teamNumber\":\"589\",\"matchNumber\":\"61\",\"teamColor\":\"Red\"}",
+    "03auto": "[{\"collectionLocation\":{\"name\":\"startingCoral\",\"x\":7,\"y\":10},\"name\":\"Coral\",\"color\":\"rgb(0,50,0)\",\"result\":\"L1 (Trough)\"}]",
+    "05endgame": "{\"Deep\":\"Successful\",\"Shallow\":\"No Attempt\",\"Park\":\"No Attempt\"}",
+    "06extra": "{\"Died\":\"False\",\"Defense\":\"Good\",\"Driver_Quality\":\"Good\",\"Comments\":\"Good defense bot\"}",
+    "04teleop": "[]",
+    "timestamp": "2025-03-09T16:47:13.343Z"
+  },
+  {
+    "04teleop": "[{\"collectionLocation\":{\"name\":\"startingCoral\",\"x\":9.5,\"y\":-1.8000000000000007},\"name\":\"Coral\",\"color\":\"rgb(0,0,232.22222222222217)\",\"result\":\"L4 (Top)\"},{\"collectionLocation\":{\"name\":\"blueSource1\",\"x\":15.7,\"y\":7.999999999999999},\"name\":\"Coral\",\"color\":\"rgb(0,0,50)\",\"result\":\"Fell on Floor\"},{\"collectionLocation\":{\"name\":\"redSource2\",\"x\":15.7,\"y\":0.1999999999999993},\"name\":\"Coral\",\"color\":\"rgb(0,0,163.88888888888886)\",\"result\":\"L4 (Top)\"},{\"collectionLocation\":{\"name\":\"blueSource1\",\"x\":15.7,\"y\":7.999999999999999},\"name\":\"Coral\",\"color\":\"rgb(0,0,50)\",\"result\":\"No Result\"}]",
+    "02startingLocation": "{\"name\":\"blueRight\",\"x\":9.8,\"y\":6.999999999999999}",
+    "01metaData": "{\"scoutName\":\"Michael shinn \",\"teamNumber\":\"4183\",\"matchNumber\":\"61\",\"teamColor\":\"Blue\"}",
+    "03auto": "[{\"collectionLocation\":{\"name\":\"startingCoral\",\"x\":9.5,\"y\":-1.8000000000000007},\"name\":\"Coral\",\"color\":\"rgb(0,50,0)\",\"result\":\"No Result\"}]",
+    "05endgame": "{\"Deep\":\"No Attempt\",\"Shallow\":\"No Attempt\",\"Park\":\"No Attempt\"}",
+    "06extra": "{\"Died\":\"False\",\"Defense\":\"None\",\"Driver_Quality\":\"Bad\",\"Comments\":\"Pretty slow, decent L4 if they align a bit better\"}",
+    "timestamp": "2025-03-09T16:47:56.406Z"
+  },
+  {
+    "02startingLocation": "{\"name\":\"redLeft\",\"x\":10.4,\"y\":6.8}",
+    "01metaData": "{\"scoutName\":\"Lauren\",\"teamNumber\":\"6934\",\"matchNumber\":\"62\",\"teamColor\":\"Red\"}",
+    "03auto": "[{\"collectionLocation\":{\"name\":\"startingCoral\",\"x\":7,\"y\":10},\"name\":\"Coral\",\"color\":\"rgb(0,50,0)\",\"result\":\"Missed onto Floor\"},{\"collectionLocation\":{\"name\":\"sourceLeft\",\"x\":15.7,\"y\":8},\"name\":\"Coral\",\"color\":\"rgb(91,0,0)\",\"result\":\"Failed Coral Intake\"}]",
+    "05endgame": "{\"Deep\":\"Failed\",\"Shallow\":\"No Attempt\",\"Park\":\"Successful\"}",
+    "06extra": "{\"Died\":\"False\",\"Defense\":\"None\",\"Driver_Quality\":\"Average\",\"Comments\":\"Terrible placement \"}",
+    "04teleop": "[{\"collectionLocation\":{\"name\":\"blueSource2\",\"x\":15.7,\"y\":0.2},\"name\":\"Coral\",\"color\":\"rgb(0,0,72.77777777777777)\",\"result\":\"Fell on Floor\"},{\"collectionLocation\":{\"name\":\"redSource1\",\"x\":15.7,\"y\":8},\"name\":\"Coral\",\"color\":\"rgb(0,0,141.1111111111111)\",\"result\":\"L3\"}]",
+    "timestamp": "2025-03-09T16:54:48.852Z"
+  },
+  {
+    "04teleop": "[]",
+    "02startingLocation": "{\"name\":\"redRight\",\"x\":10.4,\"y\":1.2}",
+    "01metaData": "{\"scoutName\":\"Stellan\",\"teamNumber\":\"4711\",\"matchNumber\":\"62\",\"teamColor\":\"Red\"}",
+    "03auto": "[]",
+    "05endgame": "{\"Deep\":\"No Attempt\",\"Shallow\":\"No Attempt\",\"Park\":\"Successful\"}",
+    "06extra": "{\"Died\":\"False\",\"Defense\":\"Poor\",\"Driver_Quality\":\"Bad\",\"Comments\":\"Defense bot, no climb - Do Not Pick\"}",
+    "timestamp": "2025-03-09T16:54:51.896Z"
+  },
+  {
+    "02startingLocation": "{\"name\":\"blueMiddle\",\"x\":6.7,\"y\":4}",
+    "01metaData": "{\"scoutName\":\"Sophie \",\"teamNumber\":\"5869\",\"matchNumber\":\"62\",\"teamColor\":\"Red\"}",
+    "03auto": "[{\"collectionLocation\":{\"name\":\"red5\",\"x\":12.5,\"y\":2.5},\"name\":\"Algae\",\"color\":\"rgb(141.1111111111111,0,0)\",\"result\":\"Failed Algae Placement\"}]",
+    "05endgame": "{\"Deep\":\"No Attempt\",\"Shallow\":\"No Attempt\",\"Park\":\"No Attempt\"}",
+    "06extra": "{\"Died\":\"False\",\"Defense\":\"Poor\",\"Driver_Quality\":\"Bad\",\"Comments\":\"They didn’t do anything and their defense was horrible \"}",
+    "04teleop": "[]",
+    "timestamp": "2025-03-09T16:55:06.477Z"
+  },
+  {
+    "02startingLocation": "{\"name\":\"blueLeft\",\"x\":9.8,\"y\":1.3999999999999995}",
+    "01metaData": "{\"scoutName\":\"Alyssa \",\"teamNumber\":\"6060\",\"matchNumber\":\"62\",\"teamColor\":\"Blue\"}",
+    "03auto": "[]",
+    "05endgame": "{\"Deep\":\"No Attempt\",\"Shallow\":\"No Attempt\",\"Park\":\"No Attempt\"}",
+    "06extra": "{\"Died\":\"False\",\"Defense\":\"Good\",\"Driver_Quality\":\"Average\",\"Comments\":\"Robot played defense for the round. Did not park. Auto just went to the front of the reef.\"}",
+    "04teleop": "[]",
+    "timestamp": "2025-03-09T16:56:13.637Z"
+  },
+  {
+    "04teleop": "[{\"collectionLocation\":{\"name\":\"blueSource1\",\"x\":15.7,\"y\":7.999999999999999},\"name\":\"Coral\",\"color\":\"rgb(0,0,50)\",\"result\":\"L4 (Top)\"},{\"collectionLocation\":{\"name\":\"blueSource1\",\"x\":15.7,\"y\":7.999999999999999},\"name\":\"Coral\",\"color\":\"rgb(0,0,50)\",\"result\":\"L4 (Top)\"},{\"collectionLocation\":{\"name\":\"blueSource1\",\"x\":15.7,\"y\":7.999999999999999},\"name\":\"Coral\",\"color\":\"rgb(0,0,50)\",\"result\":\"L4 (Top)\"},{\"collectionLocation\":{\"name\":\"blueReef\",\"x\":12.25,\"y\":3.1999999999999993},\"name\":\"Algae\",\"color\":\"rgb(0,0,50)\",\"result\":\"Intentional Algae Drop\"}]",
+    "02startingLocation": "{\"name\":\"blueRight\",\"x\":9.8,\"y\":6.999999999999999}",
+    "01metaData": "{\"scoutName\":\"Rudy\",\"teamNumber\":\"10698\",\"matchNumber\":\"62\",\"teamColor\":\"Blue\"}",
+    "03auto": "[{\"collectionLocation\":{\"name\":\"startingCoral\",\"x\":9.5,\"y\":-1.8000000000000007},\"name\":\"Coral\",\"color\":\"rgb(0,50,0)\",\"result\":\"L4 (Top)\"}]",
+    "05endgame": "{\"Deep\":\"Failed\",\"Shallow\":\"No Attempt\",\"Park\":\"No Attempt\"}",
+    "06extra": "{\"Died\":\"False\",\"Defense\":\"None\",\"Driver_Quality\":\"Average\",\"Comments\":\"\"}",
+    "timestamp": "2025-03-09T16:57:05.004Z"
+  },
+  {
+    "02startingLocation": "{\"name\":\"redLeft\",\"x\":10.4,\"y\":6.8}",
+    "01metaData": "{\"scoutName\":\"Uma\",\"teamNumber\":\"3512\",\"matchNumber\":\"61\",\"teamColor\":\"Red\"}",
+    "03auto": "[{\"collectionLocation\":{\"name\":\"startingCoral\",\"x\":7,\"y\":10},\"name\":\"Coral\",\"color\":\"rgb(0,50,0)\",\"result\":\"No Result\"}]",
+    "05endgame": "{\"Deep\":\"Successful\",\"Shallow\":\"No Attempt\",\"Park\":\"No Attempt\"}",
+    "06extra": "{\"Died\":\"False\",\"Defense\":\"None\",\"Driver_Quality\":\"Average\",\"Comments\":\"Robot and alignment is slow \"}",
+    "04teleop": "[{\"collectionLocation\":{\"name\":\"startingCoral\",\"x\":7,\"y\":10},\"name\":\"Coral\",\"color\":\"rgb(0,0,232.22222222222217)\",\"result\":\"L4 (Top)\"},{\"collectionLocation\":{\"name\":\"blueSource2\",\"x\":15.7,\"y\":0.2},\"name\":\"Coral\",\"color\":\"rgb(0,0,72.77777777777777)\",\"result\":\"L4 (Top)\"},{\"collectionLocation\":{\"name\":\"blueSource2\",\"x\":15.7,\"y\":0.2},\"name\":\"Coral\",\"color\":\"rgb(0,0,72.77777777777777)\",\"result\":\"Failed Intake\"},{\"collectionLocation\":{\"name\":\"blueSource2\",\"x\":15.7,\"y\":0.2},\"name\":\"Coral\",\"color\":\"rgb(0,0,72.77777777777777)\",\"result\":\"Failed Intake\"},{\"collectionLocation\":{\"name\":\"blueSource2\",\"x\":15.7,\"y\":0.2},\"name\":\"Coral\",\"color\":\"rgb(0,0,72.77777777777777)\",\"result\":\"L4 (Top)\"},{\"collectionLocation\":{\"name\":\"blueSource2\",\"x\":15.7,\"y\":0.2},\"name\":\"Coral\",\"color\":\"rgb(0,0,72.77777777777777)\",\"result\":\"L4 (Top)\"},{\"collectionLocation\":{\"name\":\"blueSource2\",\"x\":15.7,\"y\":0.2},\"name\":\"Coral\",\"color\":\"rgb(0,0,72.77777777777777)\",\"result\":\"L4 (Top)\"},{\"collectionLocation\":{\"name\":\"blueSource2\",\"x\":15.7,\"y\":0.2},\"name\":\"Coral\",\"color\":\"rgb(0,0,72.77777777777777)\",\"result\":\"L4 (Top)\"},{\"collectionLocation\":{\"name\":\"blueSource2\",\"x\":15.7,\"y\":0.2},\"name\":\"Coral\",\"color\":\"rgb(0,0,72.77777777777777)\",\"result\":\"Fell on Floor\"},{\"collectionLocation\":{\"name\":\"blueSource2\",\"x\":15.7,\"y\":0.2},\"name\":\"Coral\",\"color\":\"rgb(0,0,72.77777777777777)\",\"result\":\"L4 (Top)\"},{\"collectionLocation\":{\"name\":\"redFloor\",\"x\":15.5,\"y\":3},\"name\":\"Algae\",\"color\":\"rgb(0,0,173)\",\"result\":\"Intentional Algae Drop\"}]",
+    "timestamp": "2025-03-09T16:58:18.087Z"
+  },
+  {
+    "04teleop": "[]",
+    "02startingLocation": "{\"name\":\"blueRight\",\"x\":9.8,\"y\":6.999999999999999}",
+    "01metaData": "{\"scoutName\":\"Rudy\",\"teamNumber\":\"7327\",\"matchNumber\":\"63\",\"teamColor\":\"Blue\"}",
+    "03auto": "[{\"collectionLocation\":{\"name\":\"startingCoral\",\"x\":9.5,\"y\":-1.8000000000000007},\"name\":\"Coral\",\"color\":\"rgb(0,50,0)\",\"result\":\"Missed onto Floor\"}]",
+    "05endgame": "{\"Deep\":\"No Attempt\",\"Shallow\":\"No Attempt\",\"Park\":\"Failed\"}",
+    "06extra": "{\"Died\":\"False\",\"Defense\":\"Poor\",\"Driver_Quality\":\"Average\",\"Comments\":\"\"}",
+    "timestamp": "2025-03-09T17:05:50.334Z"
+  },
+  {
+    "02startingLocation": "{\"name\":\"blueMiddle\",\"x\":6.7,\"y\":4}",
+    "01metaData": "{\"scoutName\":\"Sophie \",\"teamNumber\":\"3880\",\"matchNumber\":\"63\",\"teamColor\":\"Red\"}",
+    "03auto": "[{\"collectionLocation\":{\"name\":\"floorLeft\",\"x\":1,\"y\":5.8},\"name\":\"Algae\",\"color\":\"rgb(0,0,186.66666666666663)\",\"result\":\"Intentional Algae Drop\"},{\"collectionLocation\":{\"name\":\"floorMiddle\",\"x\":1,\"y\":4},\"name\":\"Algae\",\"color\":\"rgb(0,0,209.4444444444444)\",\"result\":\"Intentional Algae Drop\"},{\"collectionLocation\":{\"name\":\"floorRight\",\"x\":1,\"y\":2.2},\"name\":\"Algae\",\"color\":\"rgb(0,0,232.22222222222217)\",\"result\":\"Intentional Algae Drop\"}]",
+    "05endgame": "{\"Deep\":\"No Attempt\",\"Shallow\":\"No Attempt\",\"Park\":\"Successful\"}",
+    "06extra": "{\"Died\":\"False\",\"Defense\":\"Good\",\"Driver_Quality\":\"Average\",\"Comments\":\"They stopped moving for like a solid 30 sec but did good defense \"}",
+    "04teleop": "[]",
+    "timestamp": "2025-03-09T17:06:10.388Z"
+  },
+  {
+    "04teleop": "[{\"collectionLocation\":{\"name\":\"redReef\",\"x\":12.25,\"y\":3},\"name\":\"Algae\",\"color\":\"rgb(0,0,132)\",\"result\":\"Intentional Algae Drop\"},{\"collectionLocation\":{\"name\":\"redSource1\",\"x\":15.7,\"y\":8},\"name\":\"Coral\",\"color\":\"rgb(0,0,141.1111111111111)\",\"result\":\"L4 (Top)\"},{\"collectionLocation\":{\"name\":\"redSource1\",\"x\":15.7,\"y\":8},\"name\":\"Coral\",\"color\":\"rgb(0,0,141.1111111111111)\",\"result\":\"L4 (Top)\"},{\"collectionLocation\":{\"name\":\"redSource1\",\"x\":15.7,\"y\":8},\"name\":\"Coral\",\"color\":\"rgb(0,0,141.1111111111111)\",\"result\":\"L4 (Top)\"},{\"collectionLocation\":{\"name\":\"redReef\",\"x\":12.25,\"y\":3},\"name\":\"Algae\",\"color\":\"rgb(0,0,132)\",\"result\":\"Intentional Algae Drop\"},{\"collectionLocation\":{\"name\":\"blueSource2\",\"x\":15.7,\"y\":0.2},\"name\":\"Coral\",\"color\":\"rgb(0,0,72.77777777777777)\",\"result\":\"L4 (Top)\"},{\"collectionLocation\":{\"name\":\"redSource1\",\"x\":15.7,\"y\":8},\"name\":\"Coral\",\"color\":\"rgb(0,0,141.1111111111111)\",\"result\":\"L4 (Top)\"},{\"collectionLocation\":{\"name\":\"redSource1\",\"x\":15.7,\"y\":8},\"name\":\"Coral\",\"color\":\"rgb(0,0,141.1111111111111)\",\"result\":\"L4 (Top)\"},{\"collectionLocation\":{\"name\":\"redSource1\",\"x\":15.7,\"y\":8},\"name\":\"Coral\",\"color\":\"rgb(0,0,141.1111111111111)\",\"result\":\"L3\"},{\"collectionLocation\":{\"name\":\"redSource1\",\"x\":15.7,\"y\":8},\"name\":\"Coral\",\"color\":\"rgb(0,0,141.1111111111111)\",\"result\":\"L3\"},{\"collectionLocation\":{\"name\":\"redSource1\",\"x\":15.7,\"y\":8},\"name\":\"Coral\",\"color\":\"rgb(0,0,141.1111111111111)\",\"result\":\"L3\"},{\"collectionLocation\":{\"name\":\"redSource1\",\"x\":15.7,\"y\":8},\"name\":\"Coral\",\"color\":\"rgb(0,0,141.1111111111111)\",\"result\":\"L2\"},{\"collectionLocation\":{\"name\":\"redSource1\",\"x\":15.7,\"y\":8},\"name\":\"Coral\",\"color\":\"rgb(0,0,141.1111111111111)\",\"result\":\"L2\"}]",
+    "02startingLocation": "{\"name\":\"redLeft\",\"x\":10.4,\"y\":6.8}",
+    "01metaData": "{\"scoutName\":\"Stellan\",\"teamNumber\":\"4079\",\"matchNumber\":\"63\",\"teamColor\":\"Red\"}",
+    "03auto": "[{\"collectionLocation\":{\"name\":\"startingCoral\",\"x\":7,\"y\":10},\"name\":\"Coral\",\"color\":\"rgb(0,50,0)\",\"result\":\"L4 (Top)\"},{\"collectionLocation\":{\"name\":\"sourceLeft\",\"x\":15.7,\"y\":8},\"name\":\"Coral\",\"color\":\"rgb(91,0,0)\",\"result\":\"L4 (Top)\"},{\"collectionLocation\":{\"name\":\"sourceLeft\",\"x\":15.7,\"y\":8},\"name\":\"Coral\",\"color\":\"rgb(91,0,0)\",\"result\":\"Missed into Trough\"}]",
+    "05endgame": "{\"Deep\":\"No Attempt\",\"Shallow\":\"No Attempt\",\"Park\":\"No Attempt\"}",
+    "06extra": "{\"Died\":\"False\",\"Defense\":\"None\",\"Driver_Quality\":\"Good\",\"Comments\":\"Good at cycling coral, can pick off algae but not score it, and alignment is pretty good\"}",
+    "timestamp": "2025-03-09T17:06:17.615Z"
+  },
+  {
+    "02startingLocation": "{\"name\":\"blueMiddle\",\"x\":9.8,\"y\":4.199999999999999}",
+    "01metaData": "{\"scoutName\":\"Alyssa \",\"teamNumber\":\"1138\",\"matchNumber\":\"63\",\"teamColor\":\"Blue\"}",
+    "03auto": "[{\"collectionLocation\":{\"name\":\"startingCoral\",\"x\":9.5,\"y\":-1.8000000000000007},\"name\":\"Coral\",\"color\":\"rgb(0,50,0)\",\"result\":\"L4 (Top)\"}]",
+    "05endgame": "{\"Deep\":\"Successful\",\"Shallow\":\"No Attempt\",\"Park\":\"Successful\"}",
+    "06extra": "{\"Died\":\"False\",\"Defense\":\"None\",\"Driver_Quality\":\"Average\",\"Comments\":\"Intake was accurate. Bit of Trouble with L2. Climb was efficient \"}",
+    "04teleop": "[{\"collectionLocation\":{\"name\":\"blueSource1\",\"x\":15.7,\"y\":7.999999999999999},\"name\":\"Coral\",\"color\":\"rgb(0,0,50)\",\"result\":\"L4 (Top)\"},{\"collectionLocation\":{\"name\":\"blueReef\",\"x\":12.25,\"y\":3.1999999999999993},\"name\":\"Algae\",\"color\":\"rgb(0,0,50)\",\"result\":\"Intentional Algae Drop\"},{\"collectionLocation\":{\"name\":\"blueSource1\",\"x\":15.7,\"y\":7.999999999999999},\"name\":\"Coral\",\"color\":\"rgb(0,0,50)\",\"result\":\"L4 (Top)\"},{\"collectionLocation\":{\"name\":\"blueSource1\",\"x\":15.7,\"y\":7.999999999999999},\"name\":\"Coral\",\"color\":\"rgb(0,0,50)\",\"result\":\"L4 (Top)\"},{\"collectionLocation\":{\"name\":\"blueSource1\",\"x\":15.7,\"y\":7.999999999999999},\"name\":\"Coral\",\"color\":\"rgb(0,0,50)\",\"result\":\"L4 (Top)\"},{\"collectionLocation\":{\"name\":\"blueSource1\",\"x\":15.7,\"y\":7.999999999999999},\"name\":\"Coral\",\"color\":\"rgb(0,0,50)\",\"result\":\"L4 (Top)\"},{\"collectionLocation\":{\"name\":\"blueSource1\",\"x\":15.7,\"y\":7.999999999999999},\"name\":\"Coral\",\"color\":\"rgb(0,0,50)\",\"result\":\"Fell on Floor\"},{\"collectionLocation\":{\"name\":\"blueSource1\",\"x\":15.7,\"y\":7.999999999999999},\"name\":\"Coral\",\"color\":\"rgb(0,0,50)\",\"result\":\"L3\"},{\"collectionLocation\":{\"name\":\"blueSource1\",\"x\":15.7,\"y\":7.999999999999999},\"name\":\"Coral\",\"color\":\"rgb(0,0,50)\",\"result\":\"L3\"},{\"collectionLocation\":{\"name\":\"blueReef\",\"x\":12.25,\"y\":3.1999999999999993},\"name\":\"Algae\",\"color\":\"rgb(0,0,50)\",\"result\":\"Intentional Algae Drop\"},{\"collectionLocation\":{\"name\":\"blueSource1\",\"x\":15.7,\"y\":7.999999999999999},\"name\":\"Coral\",\"color\":\"rgb(0,0,50)\",\"result\":\"L3\"},{\"collectionLocation\":{\"name\":\"blueSource1\",\"x\":15.7,\"y\":7.999999999999999},\"name\":\"Coral\",\"color\":\"rgb(0,0,50)\",\"result\":\"L3\"},{\"collectionLocation\":{\"name\":\"blueSource1\",\"x\":15.7,\"y\":7.999999999999999},\"name\":\"Coral\",\"color\":\"rgb(0,0,50)\",\"result\":\"Fell on Floor\"}]",
+    "timestamp": "2025-03-09T17:07:00.157Z"
+  },
+  {
+    "02startingLocation": "{\"name\":\"redLeft\",\"x\":10.4,\"y\":6.8}",
+    "01metaData": "{\"scoutName\":\"Lauren\",\"teamNumber\":\"9772\",\"matchNumber\":\"64\",\"teamColor\":\"Red\"}",
+    "03auto": "[{\"collectionLocation\":{\"name\":\"startingCoral\",\"x\":7,\"y\":10},\"name\":\"Coral\",\"color\":\"rgb(0,50,0)\",\"result\":\"No Result\"}]",
+    "05endgame": "{\"Deep\":\"No Attempt\",\"Shallow\":\"No Attempt\",\"Park\":\"Successful\"}",
+    "06extra": "{\"Died\":\"False\",\"Defense\":\"Good\",\"Driver_Quality\":\"Average\",\"Comments\":\"Drove around aimlessly for a while then played defense\"}",
+    "04teleop": "[{\"collectionLocation\":{\"name\":\"startingCoral\",\"x\":7,\"y\":10},\"name\":\"Coral\",\"color\":\"rgb(0,0,232.22222222222217)\",\"result\":\"Fell on Floor\"}]",
+    "timestamp": "2025-03-09T17:12:40.372Z"
+  },
+  {
+    "04teleop": "[]",
+    "02startingLocation": "{\"name\":\"blueMiddle\",\"x\":9.8,\"y\":4.199999999999999}",
+    "01metaData": "{\"scoutName\":\"Rudy\",\"teamNumber\":\"1868\",\"matchNumber\":\"64\",\"teamColor\":\"Blue\"}",
+    "03auto": "[{\"collectionLocation\":{\"name\":\"startingCoral\",\"x\":9.5,\"y\":-1.8000000000000007},\"name\":\"Coral\",\"color\":\"rgb(0,50,0)\",\"result\":\"Missed onto Floor\"}]",
+    "05endgame": "{\"Deep\":\"No Attempt\",\"Shallow\":\"No Attempt\",\"Park\":\"No Attempt\"}",
+    "06extra": "{\"Died\":\"False\",\"Defense\":\"Poor\",\"Driver_Quality\":\"Average\",\"Comments\":\"With fifty seconds left in the match the robot got stuck on an algae.\"}",
+    "timestamp": "2025-03-09T17:12:47.942Z"
+  },
+  {
+    "04teleop": "[]",
+    "02startingLocation": "{\"name\":\"redMiddle\",\"x\":10.4,\"y\":4}",
+    "01metaData": "{\"scoutName\":\"Stellan\",\"teamNumber\":\"10166\",\"matchNumber\":\"64\",\"teamColor\":\"Red\"}",
+    "03auto": "[]",
+    "05endgame": "{\"Deep\":\"No Attempt\",\"Shallow\":\"No Attempt\",\"Park\":\"Successful\"}",
+    "06extra": "{\"Died\":\"False\",\"Defense\":\"Poor\",\"Driver_Quality\":\"Bad\",\"Comments\":\"Defense bot - Do Not Pick\"}",
+    "timestamp": "2025-03-09T17:12:48.559Z"
+  },
+  {
+    "02startingLocation": "{\"name\":\"blueRight\",\"x\":9.8,\"y\":6.999999999999999}",
+    "01metaData": "{\"scoutName\":\"Alyssa \",\"teamNumber\":\"5700\",\"matchNumber\":\"64\",\"teamColor\":\"Blue\"}",
+    "03auto": "[{\"collectionLocation\":{\"name\":\"startingCoral\",\"x\":9.5,\"y\":-1.8000000000000007},\"name\":\"Coral\",\"color\":\"rgb(0,50,0)\",\"result\":\"No Result\"}]",
+    "05endgame": "{\"Deep\":\"No Attempt\",\"Shallow\":\"No Attempt\",\"Park\":\"Failed\"}",
+    "06extra": "{\"Died\":\"False\",\"Defense\":\"None\",\"Driver_Quality\":\"Average\",\"Comments\":\"Took a bit of time to align the net. \"}",
+    "04teleop": "[{\"collectionLocation\":{\"name\":\"startingCoral\",\"x\":9.5,\"y\":-1.8000000000000007},\"name\":\"Coral\",\"color\":\"rgb(0,0,232.22222222222217)\",\"result\":\"L4 (Top)\"},{\"collectionLocation\":{\"name\":\"blueReef\",\"x\":12.25,\"y\":3.1999999999999993},\"name\":\"Algae\",\"color\":\"rgb(0,0,50)\",\"result\":\"Net\"},{\"collectionLocation\":{\"name\":\"blueReef\",\"x\":12.25,\"y\":3.1999999999999993},\"name\":\"Algae\",\"color\":\"rgb(0,0,50)\",\"result\":\"Net\"},{\"collectionLocation\":{\"name\":\"blueReef\",\"x\":12.25,\"y\":3.1999999999999993},\"name\":\"Algae\",\"color\":\"rgb(0,0,50)\",\"result\":\"Net\"},{\"collectionLocation\":{\"name\":\"blueReef\",\"x\":12.25,\"y\":3.1999999999999993},\"name\":\"Algae\",\"color\":\"rgb(0,0,50)\",\"result\":\"Net\"}]",
+    "timestamp": "2025-03-09T17:13:42.195Z"
+  },
+  {
+    "04teleop": "[]",
+    "02startingLocation": "{\"name\":\"blueRight\",\"x\":9.8,\"y\":6.999999999999999}",
+    "01metaData": "{\"scoutName\":\"Rudy\",\"teamNumber\":\"4019\",\"matchNumber\":\"65\",\"teamColor\":\"Blue\"}",
+    "03auto": "[{\"collectionLocation\":{\"name\":\"startingCoral\",\"x\":9.5,\"y\":-1.8000000000000007},\"name\":\"Coral\",\"color\":\"rgb(0,50,0)\",\"result\":\"No Result\"}]",
+    "05endgame": "{\"Deep\":\"No Attempt\",\"Shallow\":\"No Attempt\",\"Park\":\"No Attempt\"}",
+    "06extra": "{\"Died\":\"True\",\"Defense\":\"None\",\"Driver_Quality\":\"Average\",\"Comments\":\"\"}",
+    "timestamp": "2025-03-09T17:20:55.094Z"
+  },
+  {
+    "02startingLocation": "{\"name\":\"redRight\",\"x\":10.4,\"y\":1.2}",
+    "01metaData": "{\"scoutName\":\"Lauren\",\"teamNumber\":\"5012\",\"matchNumber\":\"65\",\"teamColor\":\"Red\"}",
+    "03auto": "[{\"collectionLocation\":{\"name\":\"startingCoral\",\"x\":7,\"y\":10},\"name\":\"Coral\",\"color\":\"rgb(0,50,0)\",\"result\":\"Missed onto Floor\"}]",
+    "05endgame": "{\"Deep\":\"Successful\",\"Shallow\":\"No Attempt\",\"Park\":\"No Attempt\"}",
+    "06extra": "{\"Died\":\"False\",\"Defense\":\"None\",\"Driver_Quality\":\"Average\",\"Comments\":\"Reliable just slow placement \"}",
+    "04teleop": "[{\"collectionLocation\":{\"name\":\"blueSource2\",\"x\":15.7,\"y\":0.2},\"name\":\"Coral\",\"color\":\"rgb(0,0,72.77777777777777)\",\"result\":\"L4 (Top)\"},{\"collectionLocation\":{\"name\":\"blueSource2\",\"x\":15.7,\"y\":0.2},\"name\":\"Coral\",\"color\":\"rgb(0,0,72.77777777777777)\",\"result\":\"L4 (Top)\"},{\"collectionLocation\":{\"name\":\"blueSource2\",\"x\":15.7,\"y\":0.2},\"name\":\"Coral\",\"color\":\"rgb(0,0,72.77777777777777)\",\"result\":\"L4 (Top)\"},{\"collectionLocation\":{\"name\":\"blueSource2\",\"x\":15.7,\"y\":0.2},\"name\":\"Coral\",\"color\":\"rgb(0,0,72.77777777777777)\",\"result\":\"L4 (Top)\"},{\"collectionLocation\":{\"name\":\"blueSource2\",\"x\":15.7,\"y\":0.2},\"name\":\"Coral\",\"color\":\"rgb(0,0,72.77777777777777)\",\"result\":\"L4 (Top)\"},{\"collectionLocation\":{\"name\":\"blueSource2\",\"x\":15.7,\"y\":0.2},\"name\":\"Coral\",\"color\":\"rgb(0,0,72.77777777777777)\",\"result\":\"Fell on Floor\"},{\"collectionLocation\":{\"name\":\"blueSource2\",\"x\":15.7,\"y\":0.2},\"name\":\"Coral\",\"color\":\"rgb(0,0,72.77777777777777)\",\"result\":\"L3\"},{\"collectionLocation\":{\"name\":\"blueSource2\",\"x\":15.7,\"y\":0.2},\"name\":\"Coral\",\"color\":\"rgb(0,0,72.77777777777777)\",\"result\":\"No Result\"}]",
+    "timestamp": "2025-03-09T17:21:06.699Z"
+  },
+  {
+    "04teleop": "[{\"collectionLocation\":{\"name\":\"startingCoral\",\"x\":7,\"y\":10},\"name\":\"Coral\",\"color\":\"rgb(0,0,232.22222222222217)\",\"result\":\"L4 (Top)\"},{\"collectionLocation\":{\"name\":\"redSource1\",\"x\":15.7,\"y\":8},\"name\":\"Coral\",\"color\":\"rgb(0,0,141.1111111111111)\",\"result\":\"L4 (Top)\"},{\"collectionLocation\":{\"name\":\"redSource1\",\"x\":15.7,\"y\":8},\"name\":\"Coral\",\"color\":\"rgb(0,0,141.1111111111111)\",\"result\":\"L4 (Top)\"},{\"collectionLocation\":{\"name\":\"redSource1\",\"x\":15.7,\"y\":8},\"name\":\"Coral\",\"color\":\"rgb(0,0,141.1111111111111)\",\"result\":\"L4 (Top)\"},{\"collectionLocation\":{\"name\":\"redSource1\",\"x\":15.7,\"y\":8},\"name\":\"Coral\",\"color\":\"rgb(0,0,141.1111111111111)\",\"result\":\"L4 (Top)\"},{\"collectionLocation\":{\"name\":\"redSource1\",\"x\":15.7,\"y\":8},\"name\":\"Coral\",\"color\":\"rgb(0,0,141.1111111111111)\",\"result\":\"L4 (Top)\"},{\"collectionLocation\":{\"name\":\"redSource1\",\"x\":15.7,\"y\":8},\"name\":\"Coral\",\"color\":\"rgb(0,0,141.1111111111111)\",\"result\":\"L2\"},{\"collectionLocation\":{\"name\":\"redSource1\",\"x\":15.7,\"y\":8},\"name\":\"Coral\",\"color\":\"rgb(0,0,141.1111111111111)\",\"result\":\"L2\"},{\"collectionLocation\":{\"name\":\"redSource1\",\"x\":15.7,\"y\":8},\"name\":\"Coral\",\"color\":\"rgb(0,0,141.1111111111111)\",\"result\":\"Fell on Floor\"},{\"collectionLocation\":{\"name\":\"redSource1\",\"x\":15.7,\"y\":8},\"name\":\"Coral\",\"color\":\"rgb(0,0,141.1111111111111)\",\"result\":\"L3\"},{\"collectionLocation\":{\"name\":\"redSource1\",\"x\":15.7,\"y\":8},\"name\":\"Coral\",\"color\":\"rgb(0,0,141.1111111111111)\",\"result\":\"L3\"},{\"collectionLocation\":{\"name\":\"redSource1\",\"x\":15.7,\"y\":8},\"name\":\"Coral\",\"color\":\"rgb(0,0,141.1111111111111)\",\"result\":\"L3\"},{\"collectionLocation\":{\"name\":\"redSource1\",\"x\":15.7,\"y\":8},\"name\":\"Coral\",\"color\":\"rgb(0,0,141.1111111111111)\",\"result\":\"L3\"},{\"collectionLocation\":{\"name\":\"redSource1\",\"x\":15.7,\"y\":8},\"name\":\"Coral\",\"color\":\"rgb(0,0,141.1111111111111)\",\"result\":\"Fell on Floor\"}]",
+    "02startingLocation": "{\"name\":\"redMiddle\",\"x\":10.4,\"y\":4}",
+    "01metaData": "{\"scoutName\":\"Stellan\",\"teamNumber\":\"2637\",\"matchNumber\":\"65\",\"teamColor\":\"Red\"}",
+    "03auto": "[{\"collectionLocation\":{\"name\":\"startingCoral\",\"x\":7,\"y\":10},\"name\":\"Coral\",\"color\":\"rgb(0,50,0)\",\"result\":\"L4 (Top)\"},{\"collectionLocation\":{\"name\":\"startingCoral\",\"x\":7,\"y\":10},\"name\":\"Coral\",\"color\":\"rgb(0,50,0)\",\"result\":\"No Result\"}]",
+    "05endgame": "{\"Deep\":\"No Attempt\",\"Shallow\":\"No Attempt\",\"Park\":\"Successful\"}",
+    "06extra": "{\"Died\":\"False\",\"Defense\":\"None\",\"Driver_Quality\":\"Good\",\"Comments\":\"Fast elevator but alignment is manual :(\"}",
+    "timestamp": "2025-03-09T17:21:10.102Z"
+  },
+  {
+    "02startingLocation": "{\"name\":\"blueLeft\",\"x\":6.7,\"y\":6.8}",
+    "01metaData": "{\"scoutName\":\"Sophie \",\"teamNumber\":\"8404\",\"matchNumber\":\"65\",\"teamColor\":\"Red\"}",
+    "03auto": "[{\"collectionLocation\":{\"name\":\"startingCoral\",\"x\":7,\"y\":10},\"name\":\"Coral\",\"color\":\"rgb(0,50,0)\",\"result\":\"L3\"},{\"collectionLocation\":{\"name\":\"red1\",\"x\":12.5,\"y\":5.5},\"name\":\"Algae\",\"color\":\"rgb(50,0,0)\",\"result\":\"Intentional Algae Drop\"},{\"collectionLocation\":{\"name\":\"red6\",\"x\":13.25,\"y\":4},\"name\":\"Algae\",\"color\":\"rgb(163.88888888888886,0,0)\",\"result\":\"Intentional Algae Drop\"}]",
+    "05endgame": "{\"Deep\":\"No Attempt\",\"Shallow\":\"No Attempt\",\"Park\":\"Successful\"}",
+    "06extra": "{\"Died\":\"False\",\"Defense\":\"None\",\"Driver_Quality\":\"Average\",\"Comments\":\"They didn’t seem to know what they were doing and their climb failed \"}",
+    "04teleop": "[]",
+    "timestamp": "2025-03-09T17:21:14.365Z"
+  },
+  {
+    "02startingLocation": "{\"name\":\"blueLeft\",\"x\":9.8,\"y\":1.3999999999999995}",
+    "01metaData": "{\"scoutName\":\"Alyssa \",\"teamNumber\":\"4\",\"matchNumber\":\"65\",\"teamColor\":\"Blue\"}",
+    "03auto": "[{\"collectionLocation\":{\"name\":\"startingCoral\",\"x\":9.5,\"y\":-1.8000000000000007},\"name\":\"Coral\",\"color\":\"rgb(0,50,0)\",\"result\":\"No Result\"}]",
+    "05endgame": "{\"Deep\":\"No Attempt\",\"Shallow\":\"No Attempt\",\"Park\":\"No Attempt\"}",
+    "06extra": "{\"Died\":\"True\",\"Defense\":\"None\",\"Driver_Quality\":\"Average\",\"Comments\":\"Robot never moved \"}",
+    "04teleop": "[{\"collectionLocation\":{\"name\":\"startingCoral\",\"x\":9.5,\"y\":-1.8000000000000007},\"name\":\"Coral\",\"color\":\"rgb(0,0,232.22222222222217)\",\"result\":\"No Result\"}]",
+    "timestamp": "2025-03-09T17:22:10.890Z"
+  },
+  {
+    "02startingLocation": "{\"name\":\"redLeft\",\"x\":10.4,\"y\":6.8}",
+    "01metaData": "{\"scoutName\":\"Sophia \",\"teamNumber\":\"5514\",\"matchNumber\":\"64\",\"teamColor\":\"Red\"}",
+    "03auto": "[{\"collectionLocation\":{\"name\":\"startingCoral\",\"x\":7,\"y\":10},\"name\":\"Coral\",\"color\":\"rgb(0,50,0)\",\"result\":\"L1 (Trough)\"},{\"collectionLocation\":{\"name\":\"sourceLeft\",\"x\":15.7,\"y\":8},\"name\":\"Coral\",\"color\":\"rgb(91,0,0)\",\"result\":\"L1 (Trough)\"},{\"collectionLocation\":{\"name\":\"sourceLeft\",\"x\":15.7,\"y\":8},\"name\":\"Coral\",\"color\":\"rgb(91,0,0)\",\"result\":\"L1 (Trough)\"}]",
+    "05endgame": "{\"Deep\":\"No Attempt\",\"Shallow\":\"No Attempt\",\"Park\":\"Successful\"}",
+    "06extra": "{\"Died\":\"False\",\"Defense\":\"None\",\"Driver_Quality\":\"Average\",\"Comments\":\"Not sure if able to reach L4, Repeatedly went for trough when they could have gone for L3 *although they did put some on L3) average driving/strategy for that reason only/primarily (otherwise pretty solid driving), carried team \"}",
+    "04teleop": "[{\"collectionLocation\":{\"name\":\"redSource1\",\"x\":15.7,\"y\":8},\"name\":\"Coral\",\"color\":\"rgb(0,0,141.1111111111111)\",\"result\":\"L3\"},{\"collectionLocation\":{\"name\":\"redSource1\",\"x\":15.7,\"y\":8},\"name\":\"Coral\",\"color\":\"rgb(0,0,141.1111111111111)\",\"result\":\"L3\"},{\"collectionLocation\":{\"name\":\"redSource1\",\"x\":15.7,\"y\":8},\"name\":\"Coral\",\"color\":\"rgb(0,0,141.1111111111111)\",\"result\":\"L3\"},{\"collectionLocation\":{\"name\":\"redSource1\",\"x\":15.7,\"y\":8},\"name\":\"Coral\",\"color\":\"rgb(0,0,141.1111111111111)\",\"result\":\"L1 (Trough)\"},{\"collectionLocation\":{\"name\":\"blueSource2\",\"x\":15.7,\"y\":0.2},\"name\":\"Coral\",\"color\":\"rgb(0,0,72.77777777777777)\",\"result\":\"L1 (Trough)\"},{\"collectionLocation\":{\"name\":\"blueSource2\",\"x\":15.7,\"y\":0.2},\"name\":\"Coral\",\"color\":\"rgb(0,0,72.77777777777777)\",\"result\":\"L1 (Trough)\"},{\"collectionLocation\":{\"name\":\"blueSource2\",\"x\":15.7,\"y\":0.2},\"name\":\"Coral\",\"color\":\"rgb(0,0,72.77777777777777)\",\"result\":\"L1 (Trough)\"}]",
+    "timestamp": "2025-03-09T17:25:29.685Z"
+  },
+  {
+    "02startingLocation": "{\"name\":\"blueRight\",\"x\":6.7,\"y\":1.2}",
+    "01metaData": "{\"scoutName\":\"Sophie \",\"teamNumber\":\"9084\",\"matchNumber\":\"66\",\"teamColor\":\"Red\"}",
+    "03auto": "[{\"collectionLocation\":{\"name\":\"floorLeft\",\"x\":16.7,\"y\":5.8},\"name\":\"Coral\",\"color\":\"rgb(173,0,0)\",\"result\":\"L4 (Top)\"},{\"collectionLocation\":{\"name\":\"floorRight\",\"x\":16.7,\"y\":2.2},\"name\":\"Coral\",\"color\":\"rgb(214,0,0)\",\"result\":\"L4 (Top)\"},{\"collectionLocation\":{\"name\":\"startingCoral\",\"x\":7,\"y\":10},\"name\":\"Coral\",\"color\":\"rgb(0,50,0)\",\"result\":\"L3\"},{\"collectionLocation\":{\"name\":\"floorRight\",\"x\":16.7,\"y\":2.2},\"name\":\"Coral\",\"color\":\"rgb(214,0,0)\",\"result\":\"L3\"},{\"collectionLocation\":{\"name\":\"floorRight\",\"x\":16.7,\"y\":2.2},\"name\":\"Coral\",\"color\":\"rgb(214,0,0)\",\"result\":\"L4 (Top)\"},{\"collectionLocation\":{\"name\":\"sourceLeft\",\"x\":15.7,\"y\":8},\"name\":\"Coral\",\"color\":\"rgb(91,0,0)\",\"result\":\"L4 (Top)\"}]",
+    "05endgame": "{\"Deep\":\"No Attempt\",\"Shallow\":\"No Attempt\",\"Park\":\"No Attempt\"}",
+    "06extra": "{\"Died\":\"False\",\"Defense\":\"None\",\"Driver_Quality\":\"Good\",\"Comments\":\"We stoped moving halfway through \"}",
+    "04teleop": "[{\"collectionLocation\":{\"name\":\"redFloor\",\"x\":15.5,\"y\":5},\"name\":\"Coral\",\"color\":\"rgb(0,0,209.4444444444444)\",\"result\":\"L4 (Top)\"}]",
+    "timestamp": "2025-03-09T17:28:30.841Z"
+  },
+  {
+    "02startingLocation": "{\"name\":\"redRight\",\"x\":10.4,\"y\":1.2}",
+    "01metaData": "{\"scoutName\":\"Lauren\",\"teamNumber\":\"4160\",\"matchNumber\":\"66\",\"teamColor\":\"Red\"}",
+    "03auto": "[]",
+    "05endgame": "{\"Deep\":\"No Attempt\",\"Shallow\":\"No Attempt\",\"Park\":\"Successful\"}",
+    "06extra": "{\"Died\":\"False\",\"Defense\":\"None\",\"Driver_Quality\":\"Bad\",\"Comments\":\"Didn’t really do much\"}",
+    "04teleop": "[{\"collectionLocation\":{\"name\":\"redReef\",\"x\":12.25,\"y\":3},\"name\":\"Algae\",\"color\":\"rgb(0,0,132)\",\"result\":\"Intentional Algae Drop\"},{\"collectionLocation\":{\"name\":\"redReef\",\"x\":12.25,\"y\":3},\"name\":\"Algae\",\"color\":\"rgb(0,0,132)\",\"result\":\"Intentional Algae Drop\"},{\"collectionLocation\":{\"name\":\"redReef\",\"x\":12.25,\"y\":3},\"name\":\"Algae\",\"color\":\"rgb(0,0,132)\",\"result\":\"Intentional Algae Drop\"},{\"collectionLocation\":{\"name\":\"redReef\",\"x\":12.25,\"y\":3},\"name\":\"Algae\",\"color\":\"rgb(0,0,132)\",\"result\":\"Intentional Algae Drop\"},{\"collectionLocation\":{\"name\":\"redReef\",\"x\":12.25,\"y\":3},\"name\":\"Algae\",\"color\":\"rgb(0,0,132)\",\"result\":\"Intentional Algae Drop\"},{\"collectionLocation\":{\"name\":\"redReef\",\"x\":12.25,\"y\":3},\"name\":\"Algae\",\"color\":\"rgb(0,0,132)\",\"result\":\"Intentional Algae Drop\"}]",
+    "timestamp": "2025-03-09T17:28:40.810Z"
+  },
+  {
+    "02startingLocation": "{\"name\":\"blueLeft\",\"x\":9.8,\"y\":1.3999999999999995}",
+    "01metaData": "{\"scoutName\":\"Alyssa \",\"teamNumber\":\"9421\",\"matchNumber\":\"66\",\"teamColor\":\"Blue\"}",
+    "03auto": "[]",
+    "05endgame": "{\"Deep\":\"No Attempt\",\"Shallow\":\"No Attempt\",\"Park\":\"No Attempt\"}",
+    "06extra": "{\"Died\":\"False\",\"Defense\":\"None\",\"Driver_Quality\":\"Average\",\"Comments\":\"Failed algae ground intake. On the other teams side chasing algae \"}",
+    "04teleop": "[{\"collectionLocation\":{\"name\":\"blueFloor\",\"x\":15.5,\"y\":3.1999999999999993},\"name\":\"Algae\",\"color\":\"rgb(0,0,91)\",\"result\":\"Processor\"},{\"collectionLocation\":{\"name\":\"blueFloor\",\"x\":15.5,\"y\":3.1999999999999993},\"name\":\"Algae\",\"color\":\"rgb(0,0,91)\",\"result\":\"Failed Algae Pickup\"},{\"collectionLocation\":{\"name\":\"blueFloor\",\"x\":15.5,\"y\":3.1999999999999993},\"name\":\"Algae\",\"color\":\"rgb(0,0,91)\",\"result\":\"Failed Algae Pickup\"},{\"collectionLocation\":{\"name\":\"blueReef\",\"x\":12.25,\"y\":3.1999999999999993},\"name\":\"Algae\",\"color\":\"rgb(0,0,50)\",\"result\":\"Failed Algae Pickup\"}]",
+    "timestamp": "2025-03-09T17:30:11.868Z"
+  },
+  {
+    "04teleop": "[{\"collectionLocation\":{\"name\":\"startingCoral\",\"x\":7,\"y\":10},\"name\":\"Coral\",\"color\":\"rgb(0,0,232.22222222222217)\",\"result\":\"L4 (Top)\"},{\"collectionLocation\":{\"name\":\"redSource1\",\"x\":15.7,\"y\":8},\"name\":\"Coral\",\"color\":\"rgb(0,0,141.1111111111111)\",\"result\":\"Fell in Trough\"},{\"collectionLocation\":{\"name\":\"redSource1\",\"x\":15.7,\"y\":8},\"name\":\"Coral\",\"color\":\"rgb(0,0,141.1111111111111)\",\"result\":\"L3\"},{\"collectionLocation\":{\"name\":\"redSource1\",\"x\":15.7,\"y\":8},\"name\":\"Coral\",\"color\":\"rgb(0,0,141.1111111111111)\",\"result\":\"L3\"}]",
+    "02startingLocation": "{\"name\":\"redMiddle\",\"x\":10.4,\"y\":4}",
+    "01metaData": "{\"scoutName\":\"Stellan\",\"teamNumber\":\"7323\",\"matchNumber\":\"66\",\"teamColor\":\"Red\"}",
+    "03auto": "[{\"collectionLocation\":{\"name\":\"startingCoral\",\"x\":7,\"y\":10},\"name\":\"Coral\",\"color\":\"rgb(0,50,0)\",\"result\":\"No Result\"}]",
+    "05endgame": "{\"Deep\":\"No Attempt\",\"Shallow\":\"No Attempt\",\"Park\":\"Successful\"}",
+    "06extra": "{\"Died\":\"False\",\"Defense\":\"None\",\"Driver_Quality\":\"Bad\",\"Comments\":\"Pretty fast driving but very slow manual coral alignment\"}",
+    "timestamp": "2025-03-09T17:30:22.542Z"
+  },
+  {
+    "04teleop": "[{\"collectionLocation\":{\"name\":\"blueReef\",\"x\":12.25,\"y\":3.1999999999999993},\"name\":\"Algae\",\"color\":\"rgb(0,0,50)\",\"result\":\"Intentional Algae Drop\"},{\"collectionLocation\":{\"name\":\"blueSource1\",\"x\":15.7,\"y\":7.999999999999999},\"name\":\"Coral\",\"color\":\"rgb(0,0,50)\",\"result\":\"L4 (Top)\"},{\"collectionLocation\":{\"name\":\"blueSource1\",\"x\":15.7,\"y\":7.999999999999999},\"name\":\"Coral\",\"color\":\"rgb(0,0,50)\",\"result\":\"L3\"},{\"collectionLocation\":{\"name\":\"blueSource1\",\"x\":15.7,\"y\":7.999999999999999},\"name\":\"Coral\",\"color\":\"rgb(0,0,50)\",\"result\":\"L3\"},{\"collectionLocation\":{\"name\":\"blueSource1\",\"x\":15.7,\"y\":7.999999999999999},\"name\":\"Coral\",\"color\":\"rgb(0,0,50)\",\"result\":\"L3\"},{\"collectionLocation\":{\"name\":\"blueSource1\",\"x\":15.7,\"y\":7.999999999999999},\"name\":\"Coral\",\"color\":\"rgb(0,0,50)\",\"result\":\"L3\"}]",
+    "02startingLocation": "{\"name\":\"blueMiddle\",\"x\":9.8,\"y\":4.199999999999999}",
+    "01metaData": "{\"scoutName\":\"Rudy\",\"teamNumber\":\"3512\",\"matchNumber\":\"66\",\"teamColor\":\"Blue\"}",
+    "03auto": "[{\"collectionLocation\":{\"name\":\"startingCoral\",\"x\":9.5,\"y\":-1.8000000000000007},\"name\":\"Coral\",\"color\":\"rgb(0,50,0)\",\"result\":\"No Result\"}]",
+    "05endgame": "{\"Deep\":\"Successful\",\"Shallow\":\"No Attempt\",\"Park\":\"No Attempt\"}",
+    "06extra": "{\"Died\":\"False\",\"Defense\":\"None\",\"Driver_Quality\":\"Average\",\"Comments\":\"\"}",
+    "timestamp": "2025-03-09T17:30:31.499Z"
+  },
+  {
+    "04teleop": "[{\"collectionLocation\":{\"name\":\"blueSource1\",\"x\":15.7,\"y\":7.999999999999999},\"name\":\"Coral\",\"color\":\"rgb(0,0,50)\",\"result\":\"L4 (Top)\"},{\"collectionLocation\":{\"name\":\"redSource2\",\"x\":15.7,\"y\":0.1999999999999993},\"name\":\"Coral\",\"color\":\"rgb(0,0,163.88888888888886)\",\"result\":\"L4 (Top)\"},{\"collectionLocation\":{\"name\":\"blueSource1\",\"x\":15.7,\"y\":7.999999999999999},\"name\":\"Coral\",\"color\":\"rgb(0,0,50)\",\"result\":\"L4 (Top)\"},{\"collectionLocation\":{\"name\":\"redSource2\",\"x\":15.7,\"y\":0.1999999999999993},\"name\":\"Coral\",\"color\":\"rgb(0,0,163.88888888888886)\",\"result\":\"L4 (Top)\"},{\"collectionLocation\":{\"name\":\"blueSource1\",\"x\":15.7,\"y\":7.999999999999999},\"name\":\"Coral\",\"color\":\"rgb(0,0,50)\",\"result\":\"L4 (Top)\"},{\"collectionLocation\":{\"name\":\"blueSource1\",\"x\":15.7,\"y\":7.999999999999999},\"name\":\"Coral\",\"color\":\"rgb(0,0,50)\",\"result\":\"Fell on Floor\"},{\"collectionLocation\":{\"name\":\"blueSource1\",\"x\":15.7,\"y\":7.999999999999999},\"name\":\"Coral\",\"color\":\"rgb(0,0,50)\",\"result\":\"Fell on Floor\"}]",
+    "02startingLocation": "{\"name\":\"blueRight\",\"x\":9.8,\"y\":6.999999999999999}",
+    "01metaData": "{\"scoutName\":\"Rudy\",\"teamNumber\":\"4123\",\"matchNumber\":\"67\",\"teamColor\":\"Blue\"}",
+    "03auto": "[{\"collectionLocation\":{\"name\":\"startingCoral\",\"x\":9.5,\"y\":-1.8000000000000007},\"name\":\"Coral\",\"color\":\"rgb(0,50,0)\",\"result\":\"L4 (Top)\"},{\"collectionLocation\":{\"name\":\"sourceLeft\",\"x\":15.7,\"y\":7.999999999999999},\"name\":\"Coral\",\"color\":\"rgb(0,0,91)\",\"result\":\"L4 (Top)\"}]",
+    "05endgame": "{\"Deep\":\"No Attempt\",\"Shallow\":\"No Attempt\",\"Park\":\"No Attempt\"}",
+    "06extra": "{\"Died\":\"False\",\"Defense\":\"None\",\"Driver_Quality\":\"Good\",\"Comments\":\"\"}",
+    "timestamp": "2025-03-09T17:36:02.338Z"
+  },
+  {
+    "02startingLocation": "{\"name\":\"blueMiddle\",\"x\":6.7,\"y\":4}",
+    "01metaData": "{\"scoutName\":\"Sophie \",\"teamNumber\":\"8006\",\"matchNumber\":\"67\",\"teamColor\":\"Red\"}",
+    "03auto": "[{\"collectionLocation\":{\"name\":\"floorMiddle\",\"x\":1,\"y\":4},\"name\":\"Algae\",\"color\":\"rgb(0,0,209.4444444444444)\",\"result\":\"Intentional Algae Drop\"},{\"collectionLocation\":{\"name\":\"red1\",\"x\":12.5,\"y\":5.5},\"name\":\"Algae\",\"color\":\"rgb(50,0,0)\",\"result\":\"Failed Algae Pickup\"}]",
+    "05endgame": "{\"Deep\":\"No Attempt\",\"Shallow\":\"No Attempt\",\"Park\":\"Successful\"}",
+    "06extra": "{\"Died\":\"False\",\"Defense\":\"Poor\",\"Driver_Quality\":\"Bad\",\"Comments\":\"They just did defense and did it badly \"}",
+    "04teleop": "[]",
+    "timestamp": "2025-03-09T17:36:15.450Z"
+  },
+  {
+    "04teleop": "[{\"collectionLocation\":{\"name\":\"redReef\",\"x\":12.25,\"y\":3},\"name\":\"Algae\",\"color\":\"rgb(0,0,132)\",\"result\":\"Intentional Algae Drop\"},{\"collectionLocation\":{\"name\":\"redSource1\",\"x\":15.7,\"y\":8},\"name\":\"Coral\",\"color\":\"rgb(0,0,141.1111111111111)\",\"result\":\"L3\"},{\"collectionLocation\":{\"name\":\"redSource1\",\"x\":15.7,\"y\":8},\"name\":\"Coral\",\"color\":\"rgb(0,0,141.1111111111111)\",\"result\":\"L3\"},{\"collectionLocation\":{\"name\":\"redSource1\",\"x\":15.7,\"y\":8},\"name\":\"Coral\",\"color\":\"rgb(0,0,141.1111111111111)\",\"result\":\"L1 (Trough)\"}]",
+    "02startingLocation": "{\"name\":\"redLeft\",\"x\":10.4,\"y\":6.8}",
+    "01metaData": "{\"scoutName\":\"Stellan\",\"teamNumber\":\"5136\",\"matchNumber\":\"67\",\"teamColor\":\"Red\"}",
+    "03auto": "[{\"collectionLocation\":{\"name\":\"startingCoral\",\"x\":7,\"y\":10},\"name\":\"Coral\",\"color\":\"rgb(0,50,0)\",\"result\":\"Missed onto Floor\"}]",
+    "05endgame": "{\"Deep\":\"No Attempt\",\"Shallow\":\"No Attempt\",\"Park\":\"No Attempt\"}",
+    "06extra": "{\"Died\":\"False\",\"Defense\":\"None\",\"Driver_Quality\":\"Bad\",\"Comments\":\"Died for the first half of the match but they aren't good anyway\"}",
+    "timestamp": "2025-03-09T17:36:23.439Z"
+  },
+  {
+    "02startingLocation": "{\"name\":\"redRight\",\"x\":10.4,\"y\":1.2}",
+    "01metaData": "{\"scoutName\":\"Lauren\",\"teamNumber\":\"5805\",\"matchNumber\":\"67\",\"teamColor\":\"Red\"}",
+    "03auto": "[{\"collectionLocation\":{\"name\":\"startingCoral\",\"x\":7,\"y\":10},\"name\":\"Coral\",\"color\":\"rgb(0,50,0)\",\"result\":\"Missed onto Floor\"},{\"collectionLocation\":{\"name\":\"sourceRight\",\"x\":15.7,\"y\":0.2},\"name\":\"Coral\",\"color\":\"rgb(50,0,0)\",\"result\":\"Missed onto Floor\"},{\"collectionLocation\":{\"name\":\"sourceRight\",\"x\":15.7,\"y\":0.2},\"name\":\"Coral\",\"color\":\"rgb(50,0,0)\",\"result\":\"Missed onto Floor\"}]",
+    "05endgame": "{\"Deep\":\"Failed\",\"Shallow\":\"No Attempt\",\"Park\":\"Successful\"}",
+    "06extra": "{\"Died\":\"False\",\"Defense\":\"None\",\"Driver_Quality\":\"Good\",\"Comments\":\"Pretty solid but sometimes inconsistent scoring in L1\"}",
+    "04teleop": "[{\"collectionLocation\":{\"name\":\"blueSource2\",\"x\":15.7,\"y\":0.2},\"name\":\"Coral\",\"color\":\"rgb(0,0,72.77777777777777)\",\"result\":\"L2\"},{\"collectionLocation\":{\"name\":\"blueSource2\",\"x\":15.7,\"y\":0.2},\"name\":\"Coral\",\"color\":\"rgb(0,0,72.77777777777777)\",\"result\":\"L2\"},{\"collectionLocation\":{\"name\":\"blueSource2\",\"x\":15.7,\"y\":0.2},\"name\":\"Coral\",\"color\":\"rgb(0,0,72.77777777777777)\",\"result\":\"L3\"},{\"collectionLocation\":{\"name\":\"redReef\",\"x\":12.25,\"y\":3},\"name\":\"Algae\",\"color\":\"rgb(0,0,132)\",\"result\":\"Intentional Algae Drop\"},{\"collectionLocation\":{\"name\":\"blueSource2\",\"x\":15.7,\"y\":0.2},\"name\":\"Coral\",\"color\":\"rgb(0,0,72.77777777777777)\",\"result\":\"L3\"},{\"collectionLocation\":{\"name\":\"redReef\",\"x\":12.25,\"y\":3},\"name\":\"Algae\",\"color\":\"rgb(0,0,132)\",\"result\":\"Intentional Algae Drop\"},{\"collectionLocation\":{\"name\":\"blueSource2\",\"x\":15.7,\"y\":0.2},\"name\":\"Coral\",\"color\":\"rgb(0,0,72.77777777777777)\",\"result\":\"L3\"},{\"collectionLocation\":{\"name\":\"blueSource2\",\"x\":15.7,\"y\":0.2},\"name\":\"Coral\",\"color\":\"rgb(0,0,72.77777777777777)\",\"result\":\"L3\"},{\"collectionLocation\":{\"name\":\"blueSource2\",\"x\":15.7,\"y\":0.2},\"name\":\"Coral\",\"color\":\"rgb(0,0,72.77777777777777)\",\"result\":\"Fell on Floor\"},{\"collectionLocation\":{\"name\":\"blueSource2\",\"x\":15.7,\"y\":0.2},\"name\":\"Coral\",\"color\":\"rgb(0,0,72.77777777777777)\",\"result\":\"Fell on Floor\"},{\"collectionLocation\":{\"name\":\"blueSource2\",\"x\":15.7,\"y\":0.2},\"name\":\"Coral\",\"color\":\"rgb(0,0,72.77777777777777)\",\"result\":\"L2\"},{\"collectionLocation\":{\"name\":\"blueSource2\",\"x\":15.7,\"y\":0.2},\"name\":\"Coral\",\"color\":\"rgb(0,0,72.77777777777777)\",\"result\":\"Fell on Floor\"},{\"collectionLocation\":{\"name\":\"blueSource2\",\"x\":15.7,\"y\":0.2},\"name\":\"Coral\",\"color\":\"rgb(0,0,72.77777777777777)\",\"result\":\"L4 (Top)\"},{\"collectionLocation\":{\"name\":\"blueSource2\",\"x\":15.7,\"y\":0.2},\"name\":\"Coral\",\"color\":\"rgb(0,0,72.77777777777777)\",\"result\":\"L4 (Top)\"}]",
+    "timestamp": "2025-03-09T17:36:23.781Z"
+  },
+  {
+    "02startingLocation": "{\"name\":\"blueLeft\",\"x\":9.8,\"y\":1.3999999999999995}",
+    "01metaData": "{\"scoutName\":\"Alyssa \",\"teamNumber\":\"6553\",\"matchNumber\":\"67\",\"teamColor\":\"Blue\"}",
+    "03auto": "[{\"collectionLocation\":{\"name\":\"startingCoral\",\"x\":9.5,\"y\":-1.8000000000000007},\"name\":\"Coral\",\"color\":\"rgb(0,50,0)\",\"result\":\"No Result\"}]",
+    "05endgame": "{\"Deep\":\"No Attempt\",\"Shallow\":\"No Attempt\",\"Park\":\"No Attempt\"}",
+    "06extra": "{\"Died\":\"False\",\"Defense\":\"None\",\"Driver_Quality\":\"Average\",\"Comments\":\"Missed a couple times, staggered movement around teams that are on defense \"}",
+    "04teleop": "[{\"collectionLocation\":{\"name\":\"startingCoral\",\"x\":9.5,\"y\":-1.8000000000000007},\"name\":\"Coral\",\"color\":\"rgb(0,0,232.22222222222217)\",\"result\":\"L1 (Trough)\"},{\"collectionLocation\":{\"name\":\"blueSource1\",\"x\":15.7,\"y\":7.999999999999999},\"name\":\"Coral\",\"color\":\"rgb(0,0,50)\",\"result\":\"Fell on Floor\"},{\"collectionLocation\":{\"name\":\"blueSource1\",\"x\":15.7,\"y\":7.999999999999999},\"name\":\"Coral\",\"color\":\"rgb(0,0,50)\",\"result\":\"L2\"},{\"collectionLocation\":{\"name\":\"blueSource1\",\"x\":15.7,\"y\":7.999999999999999},\"name\":\"Coral\",\"color\":\"rgb(0,0,50)\",\"result\":\"Fell on Floor\"},{\"collectionLocation\":{\"name\":\"blueSource1\",\"x\":15.7,\"y\":7.999999999999999},\"name\":\"Coral\",\"color\":\"rgb(0,0,50)\",\"result\":\"Fell on Floor\"},{\"collectionLocation\":{\"name\":\"blueSource1\",\"x\":15.7,\"y\":7.999999999999999},\"name\":\"Coral\",\"color\":\"rgb(0,0,50)\",\"result\":\"Failed Intake\"},{\"collectionLocation\":{\"name\":\"blueSource1\",\"x\":15.7,\"y\":7.999999999999999},\"name\":\"Coral\",\"color\":\"rgb(0,0,50)\",\"result\":\"Fell on Floor\"},{\"collectionLocation\":{\"name\":\"blueSource1\",\"x\":15.7,\"y\":7.999999999999999},\"name\":\"Coral\",\"color\":\"rgb(0,0,50)\",\"result\":\"L2\"},{\"collectionLocation\":{\"name\":\"blueSource1\",\"x\":15.7,\"y\":7.999999999999999},\"name\":\"Coral\",\"color\":\"rgb(0,0,50)\",\"result\":\"No Result\"}]",
+    "timestamp": "2025-03-09T17:38:44.811Z"
+  },
+  {
+    "04teleop": "[]",
+    "02startingLocation": "{\"name\":\"noShow\",\"x\":0,\"y\":0}",
+    "01metaData": "{\"scoutName\":\"Stellan\",\"teamNumber\":\"1280\",\"matchNumber\":\"68\",\"teamColor\":\"Red\"}",
+    "03auto": "[]",
+    "05endgame": "{\"Deep\":\"No Attempt\",\"Shallow\":\"No Attempt\",\"Park\":\"No Attempt\"}",
+    "06extra": "{\"Died\":\"False\",\"Defense\":\"None\",\"Driver_Quality\":\"Average\",\"Comments\":\"\"}",
+    "timestamp": "2025-03-09T17:40:08.324Z"
+  },
+  {
+    "02startingLocation": "{\"name\":\"redMiddle\",\"x\":10.4,\"y\":4}",
+    "01metaData": "{\"scoutName\":\"Lauren\",\"teamNumber\":\"589\",\"matchNumber\":\"68\",\"teamColor\":\"Red\"}",
+    "03auto": "[{\"collectionLocation\":{\"name\":\"startingCoral\",\"x\":7,\"y\":10},\"name\":\"Coral\",\"color\":\"rgb(0,50,0)\",\"result\":\"L1 (Trough)\"}]",
+    "05endgame": "{\"Deep\":\"Successful\",\"Shallow\":\"No Attempt\",\"Park\":\"No Attempt\"}",
+    "06extra": "{\"Died\":\"False\",\"Defense\":\"Good\",\"Driver_Quality\":\"Average\",\"Comments\":\"Climb mechanic is wild \"}",
+    "04teleop": "[]",
+    "timestamp": "2025-03-09T17:43:13.239Z"
+  },
+  {
+    "04teleop": "[{\"collectionLocation\":{\"name\":\"blueSource1\",\"x\":15.7,\"y\":7.999999999999999},\"name\":\"Coral\",\"color\":\"rgb(0,0,50)\",\"result\":\"L4 (Top)\"},{\"collectionLocation\":{\"name\":\"blueSource1\",\"x\":15.7,\"y\":7.999999999999999},\"name\":\"Coral\",\"color\":\"rgb(0,0,50)\",\"result\":\"L4 (Top)\"},{\"collectionLocation\":{\"name\":\"redSource2\",\"x\":15.7,\"y\":0.1999999999999993},\"name\":\"Coral\",\"color\":\"rgb(0,0,163.88888888888886)\",\"result\":\"L4 (Top)\"},{\"collectionLocation\":{\"name\":\"blueSource1\",\"x\":15.7,\"y\":7.999999999999999},\"name\":\"Coral\",\"color\":\"rgb(0,0,50)\",\"result\":\"L4 (Top)\"},{\"collectionLocation\":{\"name\":\"redSource2\",\"x\":15.7,\"y\":0.1999999999999993},\"name\":\"Coral\",\"color\":\"rgb(0,0,163.88888888888886)\",\"result\":\"L4 (Top)\"},{\"collectionLocation\":{\"name\":\"blueSource1\",\"x\":15.7,\"y\":7.999999999999999},\"name\":\"Coral\",\"color\":\"rgb(0,0,50)\",\"result\":\"L4 (Top)\"},{\"collectionLocation\":{\"name\":\"blueSource1\",\"x\":15.7,\"y\":7.999999999999999},\"name\":\"Coral\",\"color\":\"rgb(0,0,50)\",\"result\":\"L4 (Top)\"},{\"collectionLocation\":{\"name\":\"blueSource1\",\"x\":15.7,\"y\":7.999999999999999},\"name\":\"Coral\",\"color\":\"rgb(0,0,50)\",\"result\":\"L4 (Top)\"}]",
+    "02startingLocation": "{\"name\":\"blueRight\",\"x\":9.8,\"y\":6.999999999999999}",
+    "01metaData": "{\"scoutName\":\"Rudy\",\"teamNumber\":\"5026\",\"matchNumber\":\"68\",\"teamColor\":\"Blue\"}",
+    "03auto": "[{\"collectionLocation\":{\"name\":\"startingCoral\",\"x\":9.5,\"y\":-1.8000000000000007},\"name\":\"Coral\",\"color\":\"rgb(0,50,0)\",\"result\":\"L4 (Top)\"},{\"collectionLocation\":{\"name\":\"sourceLeft\",\"x\":15.7,\"y\":7.999999999999999},\"name\":\"Coral\",\"color\":\"rgb(0,0,91)\",\"result\":\"L4 (Top)\"},{\"collectionLocation\":{\"name\":\"sourceLeft\",\"x\":15.7,\"y\":7.999999999999999},\"name\":\"Coral\",\"color\":\"rgb(0,0,91)\",\"result\":\"L4 (Top)\"}]",
+    "05endgame": "{\"Deep\":\"Successful\",\"Shallow\":\"No Attempt\",\"Park\":\"No Attempt\"}",
+    "06extra": "{\"Died\":\"False\",\"Defense\":\"None\",\"Driver_Quality\":\"Good\",\"Comments\":\"\"}",
+    "timestamp": "2025-03-09T17:43:22.643Z"
+  },
+  {
+    "02startingLocation": "{\"name\":\"blueRight\",\"x\":6.7,\"y\":1.2}",
+    "01metaData": "{\"scoutName\":\"Sophie \",\"teamNumber\":\"7426\",\"matchNumber\":\"68\",\"teamColor\":\"Red\"}",
+    "03auto": "[{\"collectionLocation\":{\"name\":\"startingCoral\",\"x\":7,\"y\":10},\"name\":\"Coral\",\"color\":\"rgb(0,50,0)\",\"result\":\"L4 (Top)\"},{\"collectionLocation\":{\"name\":\"floorRight\",\"x\":16.7,\"y\":2.2},\"name\":\"Coral\",\"color\":\"rgb(214,0,0)\",\"result\":\"L4 (Top)\"},{\"collectionLocation\":{\"name\":\"sourceLeft\",\"x\":15.7,\"y\":8},\"name\":\"Coral\",\"color\":\"rgb(91,0,0)\",\"result\":\"L4 (Top)\"},{\"collectionLocation\":{\"name\":\"sourceRight\",\"x\":15.7,\"y\":0.2},\"name\":\"Coral\",\"color\":\"rgb(50,0,0)\",\"result\":\"L4 (Top)\"},{\"collectionLocation\":{\"name\":\"sourceLeft\",\"x\":15.7,\"y\":8},\"name\":\"Coral\",\"color\":\"rgb(91,0,0)\",\"result\":\"Failed Coral Intake\"},{\"collectionLocation\":{\"name\":\"floorLeft\",\"x\":16.7,\"y\":5.8},\"name\":\"Coral\",\"color\":\"rgb(173,0,0)\",\"result\":\"L4 (Top)\"},{\"collectionLocation\":{\"name\":\"floorRight\",\"x\":16.7,\"y\":2.2},\"name\":\"Coral\",\"color\":\"rgb(214,0,0)\",\"result\":\"L4 (Top)\"},{\"collectionLocation\":{\"name\":\"floorRight\",\"x\":16.7,\"y\":2.2},\"name\":\"Coral\",\"color\":\"rgb(214,0,0)\",\"result\":\"L4 (Top)\"},{\"collectionLocation\":{\"name\":\"floorLeft\",\"x\":16.7,\"y\":5.8},\"name\":\"Coral\",\"color\":\"rgb(173,0,0)\",\"result\":\"L4 (Top)\"},{\"collectionLocation\":{\"name\":\"floorRight\",\"x\":16.7,\"y\":2.2},\"name\":\"Coral\",\"color\":\"rgb(214,0,0)\",\"result\":\"L4 (Top)\"},{\"collectionLocation\":{\"name\":\"sourceRight\",\"x\":15.7,\"y\":0.2},\"name\":\"Coral\",\"color\":\"rgb(50,0,0)\",\"result\":\"Missed onto Floor\"},{\"collectionLocation\":{\"name\":\"floorRight\",\"x\":16.7,\"y\":2.2},\"name\":\"Coral\",\"color\":\"rgb(214,0,0)\",\"result\":\"L4 (Top)\"},{\"collectionLocation\":{\"name\":\"floorMiddle\",\"x\":16.7,\"y\":4},\"name\":\"Coral\",\"color\":\"rgb(132,0,0)\",\"result\":\"Missed onto Floor\"}]",
+    "05endgame": "{\"Deep\":\"Successful\",\"Shallow\":\"No Attempt\",\"Park\":\"No Attempt\"}",
+    "06extra": "{\"Died\":\"False\",\"Defense\":\"None\",\"Driver_Quality\":\"Good\",\"Comments\":\"Supper smooth and accurate \"}",
+    "04teleop": "[]",
+    "timestamp": "2025-03-09T17:43:24.793Z"
+  },
+  {
+    "02startingLocation": "{\"name\":\"blueMiddle\",\"x\":9.8,\"y\":4.199999999999999}",
+    "01metaData": "{\"scoutName\":\"Alyssa \",\"teamNumber\":\"6479\",\"matchNumber\":\"68\",\"teamColor\":\"Blue\"}",
+    "03auto": "[{\"collectionLocation\":{\"name\":\"startingCoral\",\"x\":9.5,\"y\":-1.8000000000000007},\"name\":\"Coral\",\"color\":\"rgb(0,50,0)\",\"result\":\"Missed onto Floor\"}]",
+    "05endgame": "{\"Deep\":\"No Attempt\",\"Shallow\":\"No Attempt\",\"Park\":\"No Attempt\"}",
+    "06extra": "{\"Died\":\"False\",\"Defense\":\"Good\",\"Driver_Quality\":\"Average\",\"Comments\":\"Robot played defense but stopped moving before round ended. Defense not that effective, only interfered with two intakes \"}",
+    "04teleop": "[{\"collectionLocation\":{\"name\":\"redFloor\",\"x\":1,\"y\":3.1999999999999993},\"name\":\"Coral\",\"color\":\"rgb(0,0,209.4444444444444)\",\"result\":\"Intentional Coral Drop\"},{\"collectionLocation\":{\"name\":\"redFloor\",\"x\":1,\"y\":5.199999999999999},\"name\":\"Algae\",\"color\":\"rgb(0,0,173)\",\"result\":\"Intentional Algae Drop\"}]",
+    "timestamp": "2025-03-09T17:44:44.482Z"
+  },
+  {
+    "02startingLocation": "{\"name\":\"redMiddle\",\"x\":10.4,\"y\":4}",
+    "01metaData": "{\"scoutName\":\"Uma\",\"teamNumber\":\"3749\",\"matchNumber\":\"69\",\"teamColor\":\"Red\"}",
+    "03auto": "[{\"collectionLocation\":{\"name\":\"startingCoral\",\"x\":7,\"y\":10},\"name\":\"Coral\",\"color\":\"rgb(0,50,0)\",\"result\":\"No Result\"}]",
+    "05endgame": "{\"Deep\":\"No Attempt\",\"Shallow\":\"No Attempt\",\"Park\":\"Successful\"}",
+    "06extra": "{\"Died\":\"False\",\"Defense\":\"Good\",\"Driver_Quality\":\"Average\",\"Comments\":\"\"}",
+    "04teleop": "[{\"collectionLocation\":{\"name\":\"startingCoral\",\"x\":7,\"y\":10},\"name\":\"Coral\",\"color\":\"rgb(0,0,232.22222222222217)\",\"result\":\"No Result\"}]",
+    "timestamp": "2025-03-09T17:51:30.684Z"
+  },
+  {
+    "02startingLocation": "{\"name\":\"redLeft\",\"x\":10.4,\"y\":6.8}",
+    "01metaData": "{\"scoutName\":\"Sinjin\",\"teamNumber\":\"1622\",\"matchNumber\":\"69\",\"teamColor\":\"Red\"}",
+    "03auto": "[]",
+    "05endgame": "{\"Deep\":\"No Attempt\",\"Shallow\":\"No Attempt\",\"Park\":\"Successful\"}",
+    "06extra": "{\"Died\":\"False\",\"Defense\":\"None\",\"Driver_Quality\":\"Average\",\"Comments\":\"\"}",
+    "04teleop": "[{\"collectionLocation\":{\"name\":\"redSource1\",\"x\":15.7,\"y\":8},\"name\":\"Coral\",\"color\":\"rgb(0,0,141.1111111111111)\",\"result\":\"L2\"},{\"collectionLocation\":{\"name\":\"blueSource2\",\"x\":15.7,\"y\":0.2},\"name\":\"Coral\",\"color\":\"rgb(0,0,72.77777777777777)\",\"result\":\"L2\"},{\"collectionLocation\":{\"name\":\"blueSource2\",\"x\":15.7,\"y\":0.2},\"name\":\"Coral\",\"color\":\"rgb(0,0,72.77777777777777)\",\"result\":\"L2\"},{\"collectionLocation\":{\"name\":\"blueSource2\",\"x\":15.7,\"y\":0.2},\"name\":\"Coral\",\"color\":\"rgb(0,0,72.77777777777777)\",\"result\":\"Fell on Floor\"},{\"collectionLocation\":{\"name\":\"blueSource2\",\"x\":15.7,\"y\":0.2},\"name\":\"Coral\",\"color\":\"rgb(0,0,72.77777777777777)\",\"result\":\"Fell in Trough\"}]",
+    "timestamp": "2025-03-09T17:51:40.317Z"
+  },
+  {
+    "02startingLocation": "{\"name\":\"blueMiddle\",\"x\":9.8,\"y\":4.199999999999999}",
+    "01metaData": "{\"scoutName\":\"Nate\",\"teamNumber\":\"6000\",\"matchNumber\":\"69\",\"teamColor\":\"Blue\"}",
+    "03auto": "[]",
+    "05endgame": "{\"Deep\":\"No Attempt\",\"Shallow\":\"No Attempt\",\"Park\":\"Successful\"}",
+    "06extra": "{\"Died\":\"False\",\"Defense\":\"None\",\"Driver_Quality\":\"Bad\",\"Comments\":\"Not sure what they were doing, they never even tried to intake, and there was a horribly screeching whenever they moved. \"}",
+    "04teleop": "[]",
+    "timestamp": "2025-03-09T17:52:31.813Z"
+  },
+  {
+    "02startingLocation": "{\"name\":\"redRight\",\"x\":10.4,\"y\":1.2}",
+    "01metaData": "{\"scoutName\":\"Rui\",\"teamNumber\":\"8533\",\"matchNumber\":\"59\",\"teamColor\":\"Red\"}",
+    "03auto": "[{\"collectionLocation\":{\"name\":\"startingCoral\",\"x\":7,\"y\":10},\"name\":\"Coral\",\"color\":\"rgb(0,50,0)\",\"result\":\"No Result\"}]",
+    "05endgame": "{\"Deep\":\"Failed\",\"Shallow\":\"No Attempt\",\"Park\":\"Successful\"}",
+    "06extra": "{\"Died\":\"False\",\"Defense\":\"None\",\"Driver_Quality\":\"Bad\",\"Comments\":\"THE WORST EVER. Abysmal intake failed ever trough\"}",
+    "04teleop": "[{\"collectionLocation\":{\"name\":\"startingCoral\",\"x\":7,\"y\":10},\"name\":\"Coral\",\"color\":\"rgb(0,0,232.22222222222217)\",\"result\":\"Fell on Floor\"},{\"collectionLocation\":{\"name\":\"redFloor\",\"x\":15.5,\"y\":5},\"name\":\"Coral\",\"color\":\"rgb(0,0,209.4444444444444)\",\"result\":\"Fell on Floor\"}]",
+    "timestamp": "2025-03-09T17:52:34.737Z"
+  },
+  {
+    "04teleop": "[{\"collectionLocation\":{\"name\":\"startingCoral\",\"x\":9.5,\"y\":-1.8000000000000007},\"name\":\"Coral\",\"color\":\"rgb(0,0,232.22222222222217)\",\"result\":\"No Result\"}]",
+    "02startingLocation": "{\"name\":\"blueLeft\",\"x\":9.8,\"y\":1.3999999999999995}",
+    "01metaData": "{\"scoutName\":\"Autumn Thibeault \",\"teamNumber\":\"3328\",\"matchNumber\":\"69\",\"teamColor\":\"Blue\"}",
+    "03auto": "[{\"collectionLocation\":{\"name\":\"startingCoral\",\"x\":9.5,\"y\":-1.8000000000000007},\"name\":\"Coral\",\"color\":\"rgb(0,50,0)\",\"result\":\"No Result\"}]",
+    "05endgame": "{\"Deep\":\"Failed\",\"Shallow\":\"No Attempt\",\"Park\":\"Successful\"}",
+    "06extra": "{\"Died\":\"False\",\"Defense\":\"Poor\",\"Driver_Quality\":\"Average\",\"Comments\":\"They just blocked the other teams coral giving starion (forgot what it was called lol)\"}",
+    "timestamp": "2025-03-09T17:52:40.124Z"
+  },
+  {
+    "02startingLocation": "{\"name\":\"blueMiddle\",\"x\":9.8,\"y\":4.199999999999999}",
+    "01metaData": "{\"scoutName\":\"Nate\",\"teamNumber\":\"3256\",\"matchNumber\":\"70\",\"teamColor\":\"Blue\"}",
+    "03auto": "[{\"collectionLocation\":{\"name\":\"startingCoral\",\"x\":9.5,\"y\":-1.8000000000000007},\"name\":\"Coral\",\"color\":\"rgb(0,50,0)\",\"result\":\"L4 (Top)\"},{\"collectionLocation\":{\"name\":\"blue3\",\"x\":13.25,\"y\":4.199999999999999},\"name\":\"Algae\",\"color\":\"rgb(0,0,95.55555555555554)\",\"result\":\"Algae-No Result\"}]",
+    "05endgame": "{\"Deep\":\"No Attempt\",\"Shallow\":\"No Attempt\",\"Park\":\"No Attempt\"}",
+    "06extra": "{\"Died\":\"False\",\"Defense\":\"None\",\"Driver_Quality\":\"Bad\",\"Comments\":\"\"}",
+    "04teleop": "[{\"collectionLocation\":{\"name\":\"startingAlgae\",\"x\":7.5,\"y\":-1.8000000000000007},\"name\":\"Algae\",\"color\":\"rgb(0,0,214)\",\"result\":\"Intentional Algae Drop\"},{\"collectionLocation\":{\"name\":\"blueSource1\",\"x\":15.7,\"y\":7.999999999999999},\"name\":\"Coral\",\"color\":\"rgb(0,0,50)\",\"result\":\"Failed Intake\"},{\"collectionLocation\":{\"name\":\"blueSource1\",\"x\":15.7,\"y\":7.999999999999999},\"name\":\"Coral\",\"color\":\"rgb(0,0,50)\",\"result\":\"Failed Intake\"},{\"collectionLocation\":{\"name\":\"blueSource1\",\"x\":15.7,\"y\":7.999999999999999},\"name\":\"Coral\",\"color\":\"rgb(0,0,50)\",\"result\":\"Failed Intake\"},{\"collectionLocation\":{\"name\":\"blueReef\",\"x\":12.25,\"y\":3.1999999999999993},\"name\":\"Algae\",\"color\":\"rgb(0,0,50)\",\"result\":\"Failed Algae Placement\"},{\"collectionLocation\":{\"name\":\"blueReef\",\"x\":12.25,\"y\":3.1999999999999993},\"name\":\"Algae\",\"color\":\"rgb(0,0,50)\",\"result\":\"Failed Algae Placement\"},{\"collectionLocation\":{\"name\":\"blueSource1\",\"x\":15.7,\"y\":7.999999999999999},\"name\":\"Coral\",\"color\":\"rgb(0,0,50)\",\"result\":\"L4 (Top)\"},{\"collectionLocation\":{\"name\":\"blueSource1\",\"x\":15.7,\"y\":7.999999999999999},\"name\":\"Coral\",\"color\":\"rgb(0,0,50)\",\"result\":\"Fell in Trough\"},{\"collectionLocation\":{\"name\":\"blueSource1\",\"x\":15.7,\"y\":7.999999999999999},\"name\":\"Coral\",\"color\":\"rgb(0,0,50)\",\"result\":\"No Result\"}]",
+    "timestamp": "2025-03-09T17:58:52.140Z"
+  },
+  {
+    "02startingLocation": "{\"name\":\"redMiddle\",\"x\":10.4,\"y\":4}",
+    "01metaData": "{\"scoutName\":\"Uma\",\"teamNumber\":\"2429\",\"matchNumber\":\"70\",\"teamColor\":\"Red\"}",
+    "03auto": "[{\"collectionLocation\":{\"name\":\"startingCoral\",\"x\":7,\"y\":10},\"name\":\"Coral\",\"color\":\"rgb(0,50,0)\",\"result\":\"No Result\"}]",
+    "05endgame": "{\"Deep\":\"No Attempt\",\"Shallow\":\"No Attempt\",\"Park\":\"No Attempt\"}",
+    "06extra": "{\"Died\":\"False\",\"Defense\":\"None\",\"Driver_Quality\":\"Average\",\"Comments\":\"\"}",
+    "04teleop": "[{\"collectionLocation\":{\"name\":\"redReef\",\"x\":12.25,\"y\":3},\"name\":\"Algae\",\"color\":\"rgb(0,0,132)\",\"result\":\"Failed Algae Pickup\"},{\"collectionLocation\":{\"name\":\"redSource1\",\"x\":15.7,\"y\":8},\"name\":\"Coral\",\"color\":\"rgb(0,0,141.1111111111111)\",\"result\":\"L4 (Top)\"},{\"collectionLocation\":{\"name\":\"redSource1\",\"x\":15.7,\"y\":8},\"name\":\"Coral\",\"color\":\"rgb(0,0,141.1111111111111)\",\"result\":\"L4 (Top)\"},{\"collectionLocation\":{\"name\":\"redSource1\",\"x\":15.7,\"y\":8},\"name\":\"Coral\",\"color\":\"rgb(0,0,141.1111111111111)\",\"result\":\"L4 (Top)\"},{\"collectionLocation\":{\"name\":\"blueSource2\",\"x\":15.7,\"y\":0.2},\"name\":\"Coral\",\"color\":\"rgb(0,0,72.77777777777777)\",\"result\":\"L4 (Top)\"},{\"collectionLocation\":{\"name\":\"blueSource2\",\"x\":15.7,\"y\":0.2},\"name\":\"Coral\",\"color\":\"rgb(0,0,72.77777777777777)\",\"result\":\"L4 (Top)\"}]",
+    "timestamp": "2025-03-09T17:58:54.554Z"
+  },
+  {
+    "02startingLocation": "{\"name\":\"redLeft\",\"x\":10.4,\"y\":6.8}",
+    "01metaData": "{\"scoutName\":\"Rui\",\"teamNumber\":\"10147\",\"matchNumber\":\"60\",\"teamColor\":\"Red\"}",
+    "03auto": "[{\"collectionLocation\":{\"name\":\"startingCoral\",\"x\":7,\"y\":10},\"name\":\"Coral\",\"color\":\"rgb(0,50,0)\",\"result\":\"L1 (Trough)\"}]",
+    "05endgame": "{\"Deep\":\"No Attempt\",\"Shallow\":\"No Attempt\",\"Park\":\"Successful\"}",
+    "06extra": "{\"Died\":\"False\",\"Defense\":\"None\",\"Driver_Quality\":\"Average\",\"Comments\":\"Kitbot being a kitbot\"}",
+    "04teleop": "[{\"collectionLocation\":{\"name\":\"redSource1\",\"x\":15.7,\"y\":8},\"name\":\"Coral\",\"color\":\"rgb(0,0,141.1111111111111)\",\"result\":\"L1 (Trough)\"},{\"collectionLocation\":{\"name\":\"redSource1\",\"x\":15.7,\"y\":8},\"name\":\"Coral\",\"color\":\"rgb(0,0,141.1111111111111)\",\"result\":\"L1 (Trough)\"},{\"collectionLocation\":{\"name\":\"redSource1\",\"x\":15.7,\"y\":8},\"name\":\"Coral\",\"color\":\"rgb(0,0,141.1111111111111)\",\"result\":\"L1 (Trough)\"},{\"collectionLocation\":{\"name\":\"redSource1\",\"x\":15.7,\"y\":8},\"name\":\"Coral\",\"color\":\"rgb(0,0,141.1111111111111)\",\"result\":\"L1 (Trough)\"},{\"collectionLocation\":{\"name\":\"blueSource2\",\"x\":15.7,\"y\":0.2},\"name\":\"Coral\",\"color\":\"rgb(0,0,72.77777777777777)\",\"result\":\"L1 (Trough)\"},{\"collectionLocation\":{\"name\":\"blueSource2\",\"x\":15.7,\"y\":0.2},\"name\":\"Coral\",\"color\":\"rgb(0,0,72.77777777777777)\",\"result\":\"L1 (Trough)\"},{\"collectionLocation\":{\"name\":\"blueSource2\",\"x\":15.7,\"y\":0.2},\"name\":\"Coral\",\"color\":\"rgb(0,0,72.77777777777777)\",\"result\":\"L1 (Trough)\"},{\"collectionLocation\":{\"name\":\"blueSource2\",\"x\":15.7,\"y\":0.2},\"name\":\"Coral\",\"color\":\"rgb(0,0,72.77777777777777)\",\"result\":\"L1 (Trough)\"}]",
+    "timestamp": "2025-03-09T17:59:25.693Z"
+  },
+  {
+    "04teleop": "[{\"collectionLocation\":{\"name\":\"redSource2\",\"x\":15.7,\"y\":0.1999999999999993},\"name\":\"Coral\",\"color\":\"rgb(0,0,163.88888888888886)\",\"result\":\"L4 (Top)\"},{\"collectionLocation\":{\"name\":\"blueReef\",\"x\":12.25,\"y\":3.1999999999999993},\"name\":\"Algae\",\"color\":\"rgb(0,0,50)\",\"result\":\"Intentional Algae Drop\"},{\"collectionLocation\":{\"name\":\"redSource2\",\"x\":15.7,\"y\":0.1999999999999993},\"name\":\"Coral\",\"color\":\"rgb(0,0,163.88888888888886)\",\"result\":\"L3\"},{\"collectionLocation\":{\"name\":\"blueReef\",\"x\":12.25,\"y\":3.1999999999999993},\"name\":\"Algae\",\"color\":\"rgb(0,0,50)\",\"result\":\"Intentional Algae Drop\"},{\"collectionLocation\":{\"name\":\"blueSource1\",\"x\":15.7,\"y\":7.999999999999999},\"name\":\"Coral\",\"color\":\"rgb(0,0,50)\",\"result\":\"L3\"},{\"collectionLocation\":{\"name\":\"redSource2\",\"x\":15.7,\"y\":0.1999999999999993},\"name\":\"Coral\",\"color\":\"rgb(0,0,163.88888888888886)\",\"result\":\"L3\"},{\"collectionLocation\":{\"name\":\"redSource2\",\"x\":15.7,\"y\":0.1999999999999993},\"name\":\"Coral\",\"color\":\"rgb(0,0,163.88888888888886)\",\"result\":\"L3\"},{\"collectionLocation\":{\"name\":\"redSource2\",\"x\":15.7,\"y\":0.1999999999999993},\"name\":\"Coral\",\"color\":\"rgb(0,0,163.88888888888886)\",\"result\":\"Fell on Floor\"},{\"collectionLocation\":{\"name\":\"redSource2\",\"x\":15.7,\"y\":0.1999999999999993},\"name\":\"Coral\",\"color\":\"rgb(0,0,163.88888888888886)\",\"result\":\"L3\"},{\"collectionLocation\":{\"name\":\"redSource2\",\"x\":15.7,\"y\":0.1999999999999993},\"name\":\"Coral\",\"color\":\"rgb(0,0,163.88888888888886)\",\"result\":\"L3\"}]",
+    "02startingLocation": "{\"name\":\"blueRight\",\"x\":9.8,\"y\":6.999999999999999}",
+    "01metaData": "{\"scoutName\":\"Autumn Thibeault \",\"teamNumber\":\"7419\",\"matchNumber\":\"70\",\"teamColor\":\"Blue\"}",
+    "03auto": "[{\"collectionLocation\":{\"name\":\"startingCoral\",\"x\":9.5,\"y\":-1.8000000000000007},\"name\":\"Coral\",\"color\":\"rgb(0,50,0)\",\"result\":\"L4 (Top)\"},{\"collectionLocation\":{\"name\":\"sourceLeft\",\"x\":15.7,\"y\":7.999999999999999},\"name\":\"Coral\",\"color\":\"rgb(0,0,91)\",\"result\":\"Missed into Trough\"}]",
+    "05endgame": "{\"Deep\":\"No Attempt\",\"Shallow\":\"No Attempt\",\"Park\":\"Successful\"}",
+    "06extra": "{\"Died\":\"False\",\"Defense\":\"None\",\"Driver_Quality\":\"Bad\",\"Comments\":\"Went to place and lined up with reef but changed their minds and went for a different level a couple of times. \"}",
+    "timestamp": "2025-03-09T17:59:28.145Z"
+  },
+  {
+    "02startingLocation": "{\"name\":\"redRight\",\"x\":10.4,\"y\":1.2}",
+    "01metaData": "{\"scoutName\":\"Sinjin\",\"teamNumber\":\"8060\",\"matchNumber\":\"70\",\"teamColor\":\"Red\"}",
+    "03auto": "[]",
+    "05endgame": "{\"Deep\":\"No Attempt\",\"Shallow\":\"No Attempt\",\"Park\":\"Successful\"}",
+    "06extra": "{\"Died\":\"False\",\"Defense\":\"Poor\",\"Driver_Quality\":\"Average\",\"Comments\":\"\"}",
+    "04teleop": "[]",
+    "timestamp": "2025-03-09T18:00:22.908Z"
+  },
+  {
+    "02startingLocation": "{\"name\":\"redLeft\",\"x\":10.4,\"y\":6.8}",
+    "01metaData": "{\"scoutName\":\"Sinjin\",\"teamNumber\":\"4414\",\"matchNumber\":\"71\",\"teamColor\":\"Red\"}",
+    "03auto": "[{\"collectionLocation\":{\"name\":\"startingCoral\",\"x\":7,\"y\":10},\"name\":\"Coral\",\"color\":\"rgb(0,50,0)\",\"result\":\"L4 (Top)\"},{\"collectionLocation\":{\"name\":\"sourceLeft\",\"x\":15.7,\"y\":8},\"name\":\"Coral\",\"color\":\"rgb(91,0,0)\",\"result\":\"L4 (Top)\"}]",
+    "05endgame": "{\"Deep\":\"Successful\",\"Shallow\":\"No Attempt\",\"Park\":\"No Attempt\"}",
+    "06extra": "{\"Died\":\"False\",\"Defense\":\"None\",\"Driver_Quality\":\"Average\",\"Comments\":\"\"}",
+    "04teleop": "[{\"collectionLocation\":{\"name\":\"redSource1\",\"x\":15.7,\"y\":8},\"name\":\"Coral\",\"color\":\"rgb(0,0,141.1111111111111)\",\"result\":\"L4 (Top)\"},{\"collectionLocation\":{\"name\":\"blueSource2\",\"x\":15.7,\"y\":0.2},\"name\":\"Coral\",\"color\":\"rgb(0,0,72.77777777777777)\",\"result\":\"L4 (Top)\"},{\"collectionLocation\":{\"name\":\"redFloor\",\"x\":15.5,\"y\":5},\"name\":\"Coral\",\"color\":\"rgb(0,0,209.4444444444444)\",\"result\":\"L4 (Top)\"},{\"collectionLocation\":{\"name\":\"redFloor\",\"x\":15.5,\"y\":5},\"name\":\"Coral\",\"color\":\"rgb(0,0,209.4444444444444)\",\"result\":\"L4 (Top)\"},{\"collectionLocation\":{\"name\":\"redReef\",\"x\":12.25,\"y\":3},\"name\":\"Algae\",\"color\":\"rgb(0,0,132)\",\"result\":\"Intentional Algae Drop\"},{\"collectionLocation\":{\"name\":\"redFloor\",\"x\":15.5,\"y\":5},\"name\":\"Coral\",\"color\":\"rgb(0,0,209.4444444444444)\",\"result\":\"L3\"},{\"collectionLocation\":{\"name\":\"redFloor\",\"x\":15.5,\"y\":5},\"name\":\"Coral\",\"color\":\"rgb(0,0,209.4444444444444)\",\"result\":\"L4 (Top)\"},{\"collectionLocation\":{\"name\":\"redFloor\",\"x\":15.5,\"y\":5},\"name\":\"Coral\",\"color\":\"rgb(0,0,209.4444444444444)\",\"result\":\"L4 (Top)\"},{\"collectionLocation\":{\"name\":\"redFloor\",\"x\":15.5,\"y\":5},\"name\":\"Coral\",\"color\":\"rgb(0,0,209.4444444444444)\",\"result\":\"L4 (Top)\"},{\"collectionLocation\":{\"name\":\"redFloor\",\"x\":15.5,\"y\":5},\"name\":\"Coral\",\"color\":\"rgb(0,0,209.4444444444444)\",\"result\":\"L4 (Top)\"},{\"collectionLocation\":{\"name\":\"redFloor\",\"x\":15.5,\"y\":5},\"name\":\"Coral\",\"color\":\"rgb(0,0,209.4444444444444)\",\"result\":\"L4 (Top)\"},{\"collectionLocation\":{\"name\":\"redFloor\",\"x\":15.5,\"y\":5},\"name\":\"Coral\",\"color\":\"rgb(0,0,209.4444444444444)\",\"result\":\"L4 (Top)\"},{\"collectionLocation\":{\"name\":\"redFloor\",\"x\":15.5,\"y\":5},\"name\":\"Coral\",\"color\":\"rgb(0,0,209.4444444444444)\",\"result\":\"L2\"},{\"collectionLocation\":{\"name\":\"redFloor\",\"x\":15.5,\"y\":5},\"name\":\"Coral\",\"color\":\"rgb(0,0,209.4444444444444)\",\"result\":\"L3\"},{\"collectionLocation\":{\"name\":\"redFloor\",\"x\":15.5,\"y\":5},\"name\":\"Coral\",\"color\":\"rgb(0,0,209.4444444444444)\",\"result\":\"L3\"}]",
+    "timestamp": "2025-03-09T18:06:49.042Z"
+  },
+  {
+    "02startingLocation": "{\"name\":\"redMiddle\",\"x\":10.4,\"y\":4}",
+    "01metaData": "{\"scoutName\":\"Uma\",\"teamNumber\":\"7327\",\"matchNumber\":\"71\",\"teamColor\":\"Red\"}",
+    "03auto": "[{\"collectionLocation\":{\"name\":\"startingCoral\",\"x\":7,\"y\":10},\"name\":\"Coral\",\"color\":\"rgb(0,50,0)\",\"result\":\"No Result\"}]",
+    "05endgame": "{\"Deep\":\"No Attempt\",\"Shallow\":\"No Attempt\",\"Park\":\"Successful\"}",
+    "06extra": "{\"Died\":\"False\",\"Defense\":\"None\",\"Driver_Quality\":\"Average\",\"Comments\":\"\"}",
+    "04teleop": "[{\"collectionLocation\":{\"name\":\"startingCoral\",\"x\":7,\"y\":10},\"name\":\"Coral\",\"color\":\"rgb(0,0,232.22222222222217)\",\"result\":\"Fell on Floor\"},{\"collectionLocation\":{\"name\":\"blueSource2\",\"x\":15.7,\"y\":0.2},\"name\":\"Coral\",\"color\":\"rgb(0,0,72.77777777777777)\",\"result\":\"L3\"},{\"collectionLocation\":{\"name\":\"redSource1\",\"x\":15.7,\"y\":8},\"name\":\"Coral\",\"color\":\"rgb(0,0,141.1111111111111)\",\"result\":\"Fell on Floor\"},{\"collectionLocation\":{\"name\":\"redSource1\",\"x\":15.7,\"y\":8},\"name\":\"Coral\",\"color\":\"rgb(0,0,141.1111111111111)\",\"result\":\"L3\"},{\"collectionLocation\":{\"name\":\"redSource1\",\"x\":15.7,\"y\":8},\"name\":\"Coral\",\"color\":\"rgb(0,0,141.1111111111111)\",\"result\":\"No Result\"}]",
+    "timestamp": "2025-03-09T18:07:02.601Z"
+  },
+  {
+    "02startingLocation": "{\"name\":\"blueMiddle\",\"x\":9.8,\"y\":4.199999999999999}",
+    "01metaData": "{\"scoutName\":\"Nate\",\"teamNumber\":\"5700\",\"matchNumber\":\"71\",\"teamColor\":\"Blue\"}",
+    "03auto": "[]",
+    "05endgame": "{\"Deep\":\"No Attempt\",\"Shallow\":\"No Attempt\",\"Park\":\"Successful\"}",
+    "06extra": "{\"Died\":\"False\",\"Defense\":\"Poor\",\"Driver_Quality\":\"Average\",\"Comments\":\"Went defense, but didn’t do a great job of it. \"}",
+    "04teleop": "[]",
+    "timestamp": "2025-03-09T18:07:12.246Z"
+  },
+  {
+    "04teleop": "[{\"collectionLocation\":{\"name\":\"redSource2\",\"x\":15.7,\"y\":0.1999999999999993},\"name\":\"Coral\",\"color\":\"rgb(0,0,163.88888888888886)\",\"result\":\"L4 (Top)\"},{\"collectionLocation\":{\"name\":\"redSource2\",\"x\":15.7,\"y\":0.1999999999999993},\"name\":\"Coral\",\"color\":\"rgb(0,0,163.88888888888886)\",\"result\":\"Failed Intake\"},{\"collectionLocation\":{\"name\":\"redSource2\",\"x\":15.7,\"y\":0.1999999999999993},\"name\":\"Coral\",\"color\":\"rgb(0,0,163.88888888888886)\",\"result\":\"Failed Intake\"},{\"collectionLocation\":{\"name\":\"redSource2\",\"x\":15.7,\"y\":0.1999999999999993},\"name\":\"Coral\",\"color\":\"rgb(0,0,163.88888888888886)\",\"result\":\"L4 (Top)\"},{\"collectionLocation\":{\"name\":\"redSource2\",\"x\":15.7,\"y\":0.1999999999999993},\"name\":\"Coral\",\"color\":\"rgb(0,0,163.88888888888886)\",\"result\":\"L4 (Top)\"},{\"collectionLocation\":{\"name\":\"redSource2\",\"x\":15.7,\"y\":0.1999999999999993},\"name\":\"Coral\",\"color\":\"rgb(0,0,163.88888888888886)\",\"result\":\"L4 (Top)\"},{\"collectionLocation\":{\"name\":\"redSource2\",\"x\":15.7,\"y\":0.1999999999999993},\"name\":\"Coral\",\"color\":\"rgb(0,0,163.88888888888886)\",\"result\":\"Fell in Trough\"},{\"collectionLocation\":{\"name\":\"redSource2\",\"x\":15.7,\"y\":0.1999999999999993},\"name\":\"Coral\",\"color\":\"rgb(0,0,163.88888888888886)\",\"result\":\"L4 (Top)\"},{\"collectionLocation\":{\"name\":\"redSource2\",\"x\":15.7,\"y\":0.1999999999999993},\"name\":\"Coral\",\"color\":\"rgb(0,0,163.88888888888886)\",\"result\":\"L4 (Top)\"},{\"collectionLocation\":{\"name\":\"redSource2\",\"x\":15.7,\"y\":0.1999999999999993},\"name\":\"Coral\",\"color\":\"rgb(0,0,163.88888888888886)\",\"result\":\"Failed Intake\"},{\"collectionLocation\":{\"name\":\"redSource2\",\"x\":15.7,\"y\":0.1999999999999993},\"name\":\"Coral\",\"color\":\"rgb(0,0,163.88888888888886)\",\"result\":\"L4 (Top)\"},{\"collectionLocation\":{\"name\":\"blueSource1\",\"x\":15.7,\"y\":7.999999999999999},\"name\":\"Coral\",\"color\":\"rgb(0,0,50)\",\"result\":\"L4 (Top)\"}]",
+    "02startingLocation": "{\"name\":\"blueLeft\",\"x\":9.8,\"y\":1.3999999999999995}",
+    "01metaData": "{\"scoutName\":\"Autumn Thibeault \",\"teamNumber\":\"2637\",\"matchNumber\":\"71\",\"teamColor\":\"Blue\"}",
+    "03auto": "[{\"collectionLocation\":{\"name\":\"startingCoral\",\"x\":9.5,\"y\":-1.8000000000000007},\"name\":\"Coral\",\"color\":\"rgb(0,50,0)\",\"result\":\"Missed into Trough\"}]",
+    "05endgame": "{\"Deep\":\"No Attempt\",\"Shallow\":\"No Attempt\",\"Park\":\"No Attempt\"}",
+    "06extra": "{\"Died\":\"False\",\"Defense\":\"None\",\"Driver_Quality\":\"Average\",\"Comments\":\"Was being bullied by a defence bot overall good and fast\"}",
+    "timestamp": "2025-03-09T18:07:52.967Z"
+  },
+  {
+    "02startingLocation": "{\"name\":\"redRight\",\"x\":10.4,\"y\":1.2}",
+    "01metaData": "{\"scoutName\":\"Rui\",\"teamNumber\":\"1868\",\"matchNumber\":\"61\",\"teamColor\":\"Red\"}",
+    "03auto": "[{\"collectionLocation\":{\"name\":\"startingCoral\",\"x\":7,\"y\":10},\"name\":\"Coral\",\"color\":\"rgb(0,50,0)\",\"result\":\"Missed into Trough\"}]",
+    "05endgame": "{\"Deep\":\"Successful\",\"Shallow\":\"No Attempt\",\"Park\":\"No Attempt\"}",
+    "06extra": "{\"Died\":\"False\",\"Defense\":\"Poor\",\"Driver_Quality\":\"Average\",\"Comments\":\"Failed l4 auto and went on defense\"}",
+    "04teleop": "[]",
+    "timestamp": "2025-03-09T18:08:57.535Z"
+  },
+  {
+    "02startingLocation": "{\"name\":\"redMiddle\",\"x\":10.4,\"y\":4}",
+    "01metaData": "{\"scoutName\":\"Rui\",\"teamNumber\":\"8006\",\"matchNumber\":\"72\",\"teamColor\":\"Red\"}",
+    "03auto": "[]",
+    "05endgame": "{\"Deep\":\"No Attempt\",\"Shallow\":\"No Attempt\",\"Park\":\"Successful\"}",
+    "06extra": "{\"Died\":\"False\",\"Defense\":\"None\",\"Driver_Quality\":\"Average\",\"Comments\":\"All 3 robots died or dident score/leave the starting Line.\"}",
+    "04teleop": "[]",
+    "timestamp": "2025-03-09T18:14:12.649Z"
+  },
+  {
+    "02startingLocation": "{\"name\":\"redRight\",\"x\":10.4,\"y\":1.2}",
+    "01metaData": "{\"scoutName\":\"Sinjin\",\"teamNumber\":\"5869\",\"matchNumber\":\"72\",\"teamColor\":\"Red\"}",
+    "03auto": "[]",
+    "05endgame": "{\"Deep\":\"No Attempt\",\"Shallow\":\"No Attempt\",\"Park\":\"No Attempt\"}",
+    "06extra": "{\"Died\":\"True\",\"Defense\":\"None\",\"Driver_Quality\":\"Average\",\"Comments\":\"\"}",
+    "04teleop": "[]",
+    "timestamp": "2025-03-09T18:14:14.314Z"
+  },
+  {
+    "02startingLocation": "{\"name\":\"redLeft\",\"x\":10.4,\"y\":6.8}",
+    "01metaData": "{\"scoutName\":\"Uma\",\"teamNumber\":\"6764\",\"matchNumber\":\"72\",\"teamColor\":\"Red\"}",
+    "03auto": "[]",
+    "05endgame": "{\"Deep\":\"No Attempt\",\"Shallow\":\"No Attempt\",\"Park\":\"No Attempt\"}",
+    "06extra": "{\"Died\":\"True\",\"Defense\":\"None\",\"Driver_Quality\":\"Average\",\"Comments\":\"Didn’t move\"}",
+    "04teleop": "[{\"collectionLocation\":{\"name\":\"startingCoral\",\"x\":7,\"y\":10},\"name\":\"Coral\",\"color\":\"rgb(0,0,232.22222222222217)\",\"result\":\"No Result\"}]",
+    "timestamp": "2025-03-09T18:14:19.266Z"
+  },
+  {
+    "02startingLocation": "{\"name\":\"blueLeft\",\"x\":9.8,\"y\":1.3999999999999995}",
+    "01metaData": "{\"scoutName\":\"Nate\",\"teamNumber\":\"8404\",\"matchNumber\":\"72\",\"teamColor\":\"Blue\"}",
+    "03auto": "[{\"collectionLocation\":{\"name\":\"startingCoral\",\"x\":9.5,\"y\":-1.8000000000000007},\"name\":\"Coral\",\"color\":\"rgb(0,50,0)\",\"result\":\"No Result\"}]",
+    "05endgame": "{\"Deep\":\"No Attempt\",\"Shallow\":\"No Attempt\",\"Park\":\"Successful\"}",
+    "06extra": "{\"Died\":\"False\",\"Defense\":\"None\",\"Driver_Quality\":\"Average\",\"Comments\":\"Coral fell in their belly pan\"}",
+    "04teleop": "[{\"collectionLocation\":{\"name\":\"startingCoral\",\"x\":9.5,\"y\":-1.8000000000000007},\"name\":\"Coral\",\"color\":\"rgb(0,0,232.22222222222217)\",\"result\":\"Fell on Floor\"}]",
+    "timestamp": "2025-03-09T18:14:29.034Z"
+  },
+  {
+    "04teleop": "[{\"collectionLocation\":{\"name\":\"blueFloor\",\"x\":15.5,\"y\":3.1999999999999993},\"name\":\"Algae\",\"color\":\"rgb(0,0,91)\",\"result\":\"Failed Algae Pickup\"},{\"collectionLocation\":{\"name\":\"blueFloor\",\"x\":15.5,\"y\":3.1999999999999993},\"name\":\"Algae\",\"color\":\"rgb(0,0,91)\",\"result\":\"Processor\"},{\"collectionLocation\":{\"name\":\"blueFloor\",\"x\":15.5,\"y\":3.1999999999999993},\"name\":\"Algae\",\"color\":\"rgb(0,0,91)\",\"result\":\"Processor\"},{\"collectionLocation\":{\"name\":\"blueFloor\",\"x\":15.5,\"y\":3.1999999999999993},\"name\":\"Algae\",\"color\":\"rgb(0,0,91)\",\"result\":\"Processor\"},{\"collectionLocation\":{\"name\":\"blueFloor\",\"x\":15.5,\"y\":3.1999999999999993},\"name\":\"Algae\",\"color\":\"rgb(0,0,91)\",\"result\":\"Processor\"}]",
+    "02startingLocation": "{\"name\":\"blueMiddle\",\"x\":9.8,\"y\":4.199999999999999}",
+    "01metaData": "{\"scoutName\":\"Autumn Thibeault \",\"teamNumber\":\"9421\",\"matchNumber\":\"72\",\"teamColor\":\"Blue\"}",
+    "03auto": "[]",
+    "05endgame": "{\"Deep\":\"No Attempt\",\"Shallow\":\"No Attempt\",\"Park\":\"Successful\"}",
+    "06extra": "{\"Died\":\"False\",\"Defense\":\"None\",\"Driver_Quality\":\"Average\",\"Comments\":\"Algae bot had alignment trouble on processor \"}",
+    "timestamp": "2025-03-09T18:14:41.412Z"
+  },
+  {
+    "02startingLocation": "{\"name\":\"redLeft\",\"x\":10.4,\"y\":6.8}",
+    "01metaData": "{\"scoutName\":\"Sophie \",\"teamNumber\":\"6764\",\"matchNumber\":\"72\",\"teamColor\":\"Red\"}",
+    "03auto": "[]",
+    "05endgame": "{\"Deep\":\"No Attempt\",\"Shallow\":\"No Attempt\",\"Park\":\"No Attempt\"}",
+    "06extra": "{\"Died\":\"True\",\"Defense\":\"None\",\"Driver_Quality\":\"Average\",\"Comments\":\"Didn’t do shit \"}",
+    "04teleop": "[]",
+    "timestamp": "2025-03-09T18:14:51.562Z"
+  },
+  {
+    "02startingLocation": "{\"name\":\"redLeft\",\"x\":10.4,\"y\":6.8}",
+    "01metaData": "{\"scoutName\":\"Sinjin\",\"teamNumber\":\"4123\",\"matchNumber\":\"73\",\"teamColor\":\"Red\"}",
+    "03auto": "[{\"collectionLocation\":{\"name\":\"startingCoral\",\"x\":7,\"y\":10},\"name\":\"Coral\",\"color\":\"rgb(0,50,0)\",\"result\":\"Missed onto Floor\"},{\"collectionLocation\":{\"name\":\"sourceLeft\",\"x\":15.7,\"y\":8},\"name\":\"Coral\",\"color\":\"rgb(91,0,0)\",\"result\":\"No Result\"}]",
+    "05endgame": "{\"Deep\":\"No Attempt\",\"Shallow\":\"No Attempt\",\"Park\":\"Successful\"}",
+    "06extra": "{\"Died\":\"False\",\"Defense\":\"None\",\"Driver_Quality\":\"Average\",\"Comments\":\"\"}",
+    "04teleop": "[{\"collectionLocation\":{\"name\":\"redSource1\",\"x\":15.7,\"y\":8},\"name\":\"Coral\",\"color\":\"rgb(0,0,141.1111111111111)\",\"result\":\"L4 (Top)\"},{\"collectionLocation\":{\"name\":\"redReef\",\"x\":12.25,\"y\":3},\"name\":\"Algae\",\"color\":\"rgb(0,0,132)\",\"result\":\"Intentional Algae Drop\"},{\"collectionLocation\":{\"name\":\"blueSource2\",\"x\":15.7,\"y\":0.2},\"name\":\"Coral\",\"color\":\"rgb(0,0,72.77777777777777)\",\"result\":\"L4 (Top)\"},{\"collectionLocation\":{\"name\":\"blueSource2\",\"x\":15.7,\"y\":0.2},\"name\":\"Coral\",\"color\":\"rgb(0,0,72.77777777777777)\",\"result\":\"Failed Intake\"},{\"collectionLocation\":{\"name\":\"blueSource2\",\"x\":15.7,\"y\":0.2},\"name\":\"Coral\",\"color\":\"rgb(0,0,72.77777777777777)\",\"result\":\"L4 (Top)\"},{\"collectionLocation\":{\"name\":\"redReef\",\"x\":12.25,\"y\":3},\"name\":\"Algae\",\"color\":\"rgb(0,0,132)\",\"result\":\"Net\"},{\"collectionLocation\":{\"name\":\"blueSource2\",\"x\":15.7,\"y\":0.2},\"name\":\"Coral\",\"color\":\"rgb(0,0,72.77777777777777)\",\"result\":\"L3\"},{\"collectionLocation\":{\"name\":\"blueSource2\",\"x\":15.7,\"y\":0.2},\"name\":\"Coral\",\"color\":\"rgb(0,0,72.77777777777777)\",\"result\":\"L4 (Top)\"},{\"collectionLocation\":{\"name\":\"redReef\",\"x\":12.25,\"y\":3},\"name\":\"Algae\",\"color\":\"rgb(0,0,132)\",\"result\":\"Intentional Algae Drop\"},{\"collectionLocation\":{\"name\":\"blueSource2\",\"x\":15.7,\"y\":0.2},\"name\":\"Coral\",\"color\":\"rgb(0,0,72.77777777777777)\",\"result\":\"Fell in Trough\"},{\"collectionLocation\":{\"name\":\"blueSource2\",\"x\":15.7,\"y\":0.2},\"name\":\"Coral\",\"color\":\"rgb(0,0,72.77777777777777)\",\"result\":\"Fell on Floor\"},{\"collectionLocation\":{\"name\":\"redReef\",\"x\":12.25,\"y\":3},\"name\":\"Algae\",\"color\":\"rgb(0,0,132)\",\"result\":\"Net\"},{\"collectionLocation\":{\"name\":\"blueSource2\",\"x\":15.7,\"y\":0.2},\"name\":\"Coral\",\"color\":\"rgb(0,0,72.77777777777777)\",\"result\":\"L4 (Top)\"}]",
+    "timestamp": "2025-03-09T18:20:52.108Z"
+  },
+  {
+    "02startingLocation": "{\"name\":\"blueLeft\",\"x\":9.8,\"y\":1.3999999999999995}",
+    "01metaData": "{\"scoutName\":\"Nate\",\"teamNumber\":\"3863\",\"matchNumber\":\"73\",\"teamColor\":\"Blue\"}",
+    "03auto": "[{\"collectionLocation\":{\"name\":\"startingCoral\",\"x\":9.5,\"y\":-1.8000000000000007},\"name\":\"Coral\",\"color\":\"rgb(0,50,0)\",\"result\":\"L3\"},{\"collectionLocation\":{\"name\":\"sourceRight\",\"x\":15.7,\"y\":0.1999999999999993},\"name\":\"Coral\",\"color\":\"rgb(0,0,50)\",\"result\":\"Missed onto Floor\"}]",
+    "05endgame": "{\"Deep\":\"Successful\",\"Shallow\":\"No Attempt\",\"Park\":\"No Attempt\"}",
+    "06extra": "{\"Died\":\"False\",\"Defense\":\"None\",\"Driver_Quality\":\"Good\",\"Comments\":\"\"}",
+    "04teleop": "[{\"collectionLocation\":{\"name\":\"blueReef\",\"x\":12.25,\"y\":3.1999999999999993},\"name\":\"Algae\",\"color\":\"rgb(0,0,50)\",\"result\":\"Intentional Algae Drop\"},{\"collectionLocation\":{\"name\":\"redSource2\",\"x\":15.7,\"y\":0.1999999999999993},\"name\":\"Coral\",\"color\":\"rgb(0,0,163.88888888888886)\",\"result\":\"L3\"},{\"collectionLocation\":{\"name\":\"redSource2\",\"x\":15.7,\"y\":0.1999999999999993},\"name\":\"Coral\",\"color\":\"rgb(0,0,163.88888888888886)\",\"result\":\"L3\"},{\"collectionLocation\":{\"name\":\"redSource2\",\"x\":15.7,\"y\":0.1999999999999993},\"name\":\"Coral\",\"color\":\"rgb(0,0,163.88888888888886)\",\"result\":\"L3\"},{\"collectionLocation\":{\"name\":\"blueSource1\",\"x\":15.7,\"y\":7.999999999999999},\"name\":\"Coral\",\"color\":\"rgb(0,0,50)\",\"result\":\"Fell on Floor\"},{\"collectionLocation\":{\"name\":\"blueSource1\",\"x\":15.7,\"y\":7.999999999999999},\"name\":\"Coral\",\"color\":\"rgb(0,0,50)\",\"result\":\"L3\"},{\"collectionLocation\":{\"name\":\"blueSource1\",\"x\":15.7,\"y\":7.999999999999999},\"name\":\"Coral\",\"color\":\"rgb(0,0,50)\",\"result\":\"L3\"},{\"collectionLocation\":{\"name\":\"blueSource1\",\"x\":15.7,\"y\":7.999999999999999},\"name\":\"Coral\",\"color\":\"rgb(0,0,50)\",\"result\":\"L3\"},{\"collectionLocation\":{\"name\":\"blueSource1\",\"x\":15.7,\"y\":7.999999999999999},\"name\":\"Coral\",\"color\":\"rgb(0,0,50)\",\"result\":\"L3\"},{\"collectionLocation\":{\"name\":\"blueSource1\",\"x\":15.7,\"y\":7.999999999999999},\"name\":\"Coral\",\"color\":\"rgb(0,0,50)\",\"result\":\"L3\"},{\"collectionLocation\":{\"name\":\"blueSource1\",\"x\":15.7,\"y\":7.999999999999999},\"name\":\"Coral\",\"color\":\"rgb(0,0,50)\",\"result\":\"L2\"},{\"collectionLocation\":{\"name\":\"redSource2\",\"x\":15.7,\"y\":0.1999999999999993},\"name\":\"Coral\",\"color\":\"rgb(0,0,163.88888888888886)\",\"result\":\"L2\"},{\"collectionLocation\":{\"name\":\"redSource2\",\"x\":15.7,\"y\":0.1999999999999993},\"name\":\"Coral\",\"color\":\"rgb(0,0,163.88888888888886)\",\"result\":\"Fell on Floor\"}]",
+    "timestamp": "2025-03-09T18:20:56.376Z"
+  },
+  {
+    "02startingLocation": "{\"name\":\"redMiddle\",\"x\":10.4,\"y\":4}",
+    "01metaData": "{\"scoutName\":\"Ethan\",\"teamNumber\":\"589\",\"matchNumber\":\"73\",\"teamColor\":\"Red\"}",
+    "03auto": "[{\"collectionLocation\":{\"name\":\"startingCoral\",\"x\":7,\"y\":10},\"name\":\"Coral\",\"color\":\"rgb(0,50,0)\",\"result\":\"Missed onto Floor\"}]",
+    "05endgame": "{\"Deep\":\"Successful\",\"Shallow\":\"No Attempt\",\"Park\":\"No Attempt\"}",
+    "06extra": "{\"Died\":\"False\",\"Defense\":\"Good\",\"Driver_Quality\":\"Good\",\"Comments\":\"\"}",
+    "04teleop": "[]",
+    "timestamp": "2025-03-09T18:21:00.148Z"
+  },
+  {
+    "02startingLocation": "{\"name\":\"blueRight\",\"x\":6.7,\"y\":1.2}",
+    "01metaData": "{\"scoutName\":\"Sophie \",\"teamNumber\":\"589\",\"matchNumber\":\"73\",\"teamColor\":\"Red\"}",
+    "03auto": "[{\"collectionLocation\":{\"name\":\"startingCoral\",\"x\":7,\"y\":10},\"name\":\"Coral\",\"color\":\"rgb(0,50,0)\",\"result\":\"Intentional Coral Drop\"},{\"collectionLocation\":{\"name\":\"floorRight\",\"x\":1,\"y\":2.2},\"name\":\"Algae\",\"color\":\"rgb(0,0,232.22222222222217)\",\"result\":\"Intentional Algae Drop\"},{\"collectionLocation\":{\"name\":\"floorMiddle\",\"x\":1,\"y\":4},\"name\":\"Algae\",\"color\":\"rgb(0,0,209.4444444444444)\",\"result\":\"Intentional Algae Drop\"},{\"collectionLocation\":{\"name\":\"floorLeft\",\"x\":1,\"y\":5.8},\"name\":\"Algae\",\"color\":\"rgb(0,0,186.66666666666663)\",\"result\":\"Intentional Algae Drop\"}]",
+    "05endgame": "{\"Deep\":\"Successful\",\"Shallow\":\"No Attempt\",\"Park\":\"No Attempt\"}",
+    "06extra": "{\"Died\":\"False\",\"Defense\":\"Good\",\"Driver_Quality\":\"Good\",\"Comments\":\"Great defense and can climb well \"}",
+    "04teleop": "[]",
+    "timestamp": "2025-03-09T18:21:08.320Z"
+  },
+  {
+    "04teleop": "[{\"collectionLocation\":{\"name\":\"redSource2\",\"x\":15.7,\"y\":0.1999999999999993},\"name\":\"Coral\",\"color\":\"rgb(0,0,163.88888888888886)\",\"result\":\"L4 (Top)\"},{\"collectionLocation\":{\"name\":\"redSource2\",\"x\":15.7,\"y\":0.1999999999999993},\"name\":\"Coral\",\"color\":\"rgb(0,0,163.88888888888886)\",\"result\":\"L4 (Top)\"},{\"collectionLocation\":{\"name\":\"redSource2\",\"x\":15.7,\"y\":0.1999999999999993},\"name\":\"Coral\",\"color\":\"rgb(0,0,163.88888888888886)\",\"result\":\"L4 (Top)\"},{\"collectionLocation\":{\"name\":\"redSource2\",\"x\":15.7,\"y\":0.1999999999999993},\"name\":\"Coral\",\"color\":\"rgb(0,0,163.88888888888886)\",\"result\":\"L4 (Top)\"},{\"collectionLocation\":{\"name\":\"redSource2\",\"x\":15.7,\"y\":0.1999999999999993},\"name\":\"Coral\",\"color\":\"rgb(0,0,163.88888888888886)\",\"result\":\"L4 (Top)\"},{\"collectionLocation\":{\"name\":\"redSource2\",\"x\":15.7,\"y\":0.1999999999999993},\"name\":\"Coral\",\"color\":\"rgb(0,0,163.88888888888886)\",\"result\":\"L4 (Top)\"},{\"collectionLocation\":{\"name\":\"redSource2\",\"x\":15.7,\"y\":0.1999999999999993},\"name\":\"Coral\",\"color\":\"rgb(0,0,163.88888888888886)\",\"result\":\"Failed Intake\"},{\"collectionLocation\":{\"name\":\"redSource2\",\"x\":15.7,\"y\":0.1999999999999993},\"name\":\"Coral\",\"color\":\"rgb(0,0,163.88888888888886)\",\"result\":\"Fell on Floor\"}]",
+    "02startingLocation": "{\"name\":\"blueMiddle\",\"x\":9.8,\"y\":4.199999999999999}",
+    "01metaData": "{\"scoutName\":\"Autumn Thibeault \",\"teamNumber\":\"1138\",\"matchNumber\":\"73\",\"teamColor\":\"Blue\"}",
+    "03auto": "[{\"collectionLocation\":{\"name\":\"startingCoral\",\"x\":9.5,\"y\":-1.8000000000000007},\"name\":\"Coral\",\"color\":\"rgb(0,50,0)\",\"result\":\"Missed into Trough\"}]",
+    "05endgame": "{\"Deep\":\"Successful\",\"Shallow\":\"No Attempt\",\"Park\":\"No Attempt\"}",
+    "06extra": "{\"Died\":\"False\",\"Defense\":\"None\",\"Driver_Quality\":\"Good\",\"Comments\":\"Manual alignment but good driver \"}",
+    "timestamp": "2025-03-09T18:21:18.757Z"
+  },
+  {
+    "02startingLocation": "{\"name\":\"redRight\",\"x\":10.4,\"y\":1.2}",
+    "01metaData": "{\"scoutName\":\"Rui\",\"teamNumber\":\"4160\",\"matchNumber\":\"73\",\"teamColor\":\"Red\"}",
+    "03auto": "[]",
+    "05endgame": "{\"Deep\":\"Failed\",\"Shallow\":\"No Attempt\",\"Park\":\"Successful\"}",
+    "06extra": "{\"Died\":\"False\",\"Defense\":\"None\",\"Driver_Quality\":\"Bad\",\"Comments\":\"Robot could not score but didn't play defense\"}",
+    "04teleop": "[]",
+    "timestamp": "2025-03-09T18:21:19.507Z"
+  },
+  {
+    "02startingLocation": "{\"name\":\"redRight\",\"x\":10.4,\"y\":1.2}",
+    "01metaData": "{\"scoutName\":\"Sinjin\",\"teamNumber\":\"4079\",\"matchNumber\":\"74\",\"teamColor\":\"Red\"}",
+    "03auto": "[{\"collectionLocation\":{\"name\":\"startingCoral\",\"x\":7,\"y\":10},\"name\":\"Coral\",\"color\":\"rgb(0,50,0)\",\"result\":\"No Result\"}]",
+    "05endgame": "{\"Deep\":\"No Attempt\",\"Shallow\":\"No Attempt\",\"Park\":\"Successful\"}",
+    "06extra": "{\"Died\":\"False\",\"Defense\":\"None\",\"Driver_Quality\":\"Average\",\"Comments\":\"looks like their swerve had a stroke\"}",
+    "04teleop": "[{\"collectionLocation\":{\"name\":\"startingCoral\",\"x\":7,\"y\":10},\"name\":\"Coral\",\"color\":\"rgb(0,0,232.22222222222217)\",\"result\":\"No Result\"}]",
+    "timestamp": "2025-03-09T18:31:37.537Z"
+  },
+  {
+    "02startingLocation": "{\"name\":\"redMiddle\",\"x\":10.4,\"y\":4}",
+    "01metaData": "{\"scoutName\":\"Ethan\",\"teamNumber\":\"3749\",\"matchNumber\":\"74\",\"teamColor\":\"Red\"}",
+    "03auto": "[{\"collectionLocation\":{\"name\":\"startingCoral\",\"x\":7,\"y\":10},\"name\":\"Coral\",\"color\":\"rgb(0,50,0)\",\"result\":\"No Result\"}]",
+    "05endgame": "{\"Deep\":\"No Attempt\",\"Shallow\":\"No Attempt\",\"Park\":\"Successful\"}",
+    "06extra": "{\"Died\":\"False\",\"Defense\":\"Good\",\"Driver_Quality\":\"Average\",\"Comments\":\"Shooter broke\"}",
+    "04teleop": "[]",
+    "timestamp": "2025-03-09T18:31:48.491Z"
+  },
+  {
+    "04teleop": "[{\"collectionLocation\":{\"name\":\"redSource2\",\"x\":15.7,\"y\":0.1999999999999993},\"name\":\"Coral\",\"color\":\"rgb(0,0,163.88888888888886)\",\"result\":\"L4 (Top)\"},{\"collectionLocation\":{\"name\":\"redSource2\",\"x\":15.7,\"y\":0.1999999999999993},\"name\":\"Coral\",\"color\":\"rgb(0,0,163.88888888888886)\",\"result\":\"L4 (Top)\"},{\"collectionLocation\":{\"name\":\"redSource2\",\"x\":15.7,\"y\":0.1999999999999993},\"name\":\"Coral\",\"color\":\"rgb(0,0,163.88888888888886)\",\"result\":\"L4 (Top)\"},{\"collectionLocation\":{\"name\":\"blueSource1\",\"x\":15.7,\"y\":7.999999999999999},\"name\":\"Coral\",\"color\":\"rgb(0,0,50)\",\"result\":\"L4 (Top)\"},{\"collectionLocation\":{\"name\":\"blueReef\",\"x\":12.25,\"y\":3.1999999999999993},\"name\":\"Algae\",\"color\":\"rgb(0,0,50)\",\"result\":\"Net\"},{\"collectionLocation\":{\"name\":\"blueSource1\",\"x\":15.7,\"y\":7.999999999999999},\"name\":\"Coral\",\"color\":\"rgb(0,0,50)\",\"result\":\"Failed Intake\"},{\"collectionLocation\":{\"name\":\"blueSource1\",\"x\":15.7,\"y\":7.999999999999999},\"name\":\"Coral\",\"color\":\"rgb(0,0,50)\",\"result\":\"L4 (Top)\"},{\"collectionLocation\":{\"name\":\"redSource2\",\"x\":15.7,\"y\":0.1999999999999993},\"name\":\"Coral\",\"color\":\"rgb(0,0,163.88888888888886)\",\"result\":\"L4 (Top)\"},{\"collectionLocation\":{\"name\":\"blueFloor\",\"x\":15.5,\"y\":3.1999999999999993},\"name\":\"Algae\",\"color\":\"rgb(0,0,91)\",\"result\":\"Net\"}]",
+    "02startingLocation": "{\"name\":\"blueLeft\",\"x\":9.8,\"y\":1.3999999999999995}",
+    "01metaData": "{\"scoutName\":\"Autumn Thibeault \",\"teamNumber\":\"971\",\"matchNumber\":\"74\",\"teamColor\":\"Blue\"}",
+    "03auto": "[{\"collectionLocation\":{\"name\":\"startingCoral\",\"x\":9.5,\"y\":-1.8000000000000007},\"name\":\"Coral\",\"color\":\"rgb(0,50,0)\",\"result\":\"L4 (Top)\"},{\"collectionLocation\":{\"name\":\"sourceRight\",\"x\":15.7,\"y\":0.1999999999999993},\"name\":\"Coral\",\"color\":\"rgb(0,0,50)\",\"result\":\"Failed Coral Intake\"},{\"collectionLocation\":{\"name\":\"sourceRight\",\"x\":15.7,\"y\":0.1999999999999993},\"name\":\"Coral\",\"color\":\"rgb(0,0,50)\",\"result\":\"Failed Coral Intake\"}]",
+    "05endgame": "{\"Deep\":\"Successful\",\"Shallow\":\"No Attempt\",\"Park\":\"No Attempt\"}",
+    "06extra": "{\"Died\":\"False\",\"Defense\":\"None\",\"Driver_Quality\":\"Good\",\"Comments\":\"Really nice climb run was pretty clean too\"}",
+    "timestamp": "2025-03-09T18:31:51.890Z"
+  },
+  {
+    "02startingLocation": "{\"name\":\"blueRight\",\"x\":9.8,\"y\":6.999999999999999}",
+    "01metaData": "{\"scoutName\":\"Nate\",\"teamNumber\":\"7323\",\"matchNumber\":\"74\",\"teamColor\":\"Blue\"}",
+    "03auto": "[{\"collectionLocation\":{\"name\":\"startingCoral\",\"x\":9.5,\"y\":-1.8000000000000007},\"name\":\"Coral\",\"color\":\"rgb(0,50,0)\",\"result\":\"No Result\"}]",
+    "05endgame": "{\"Deep\":\"No Attempt\",\"Shallow\":\"No Attempt\",\"Park\":\"Failed\"}",
+    "06extra": "{\"Died\":\"False\",\"Defense\":\"None\",\"Driver_Quality\":\"Average\",\"Comments\":\"Coral got stuck in the intake\"}",
+    "04teleop": "[{\"collectionLocation\":{\"name\":\"startingCoral\",\"x\":9.5,\"y\":-1.8000000000000007},\"name\":\"Coral\",\"color\":\"rgb(0,0,232.22222222222217)\",\"result\":\"L4 (Top)\"},{\"collectionLocation\":{\"name\":\"blueSource1\",\"x\":15.7,\"y\":7.999999999999999},\"name\":\"Coral\",\"color\":\"rgb(0,0,50)\",\"result\":\"L4 (Top)\"},{\"collectionLocation\":{\"name\":\"blueSource1\",\"x\":15.7,\"y\":7.999999999999999},\"name\":\"Coral\",\"color\":\"rgb(0,0,50)\",\"result\":\"L4 (Top)\"},{\"collectionLocation\":{\"name\":\"blueSource1\",\"x\":15.7,\"y\":7.999999999999999},\"name\":\"Coral\",\"color\":\"rgb(0,0,50)\",\"result\":\"Fell on Floor\"},{\"collectionLocation\":{\"name\":\"blueSource1\",\"x\":15.7,\"y\":7.999999999999999},\"name\":\"Coral\",\"color\":\"rgb(0,0,50)\",\"result\":\"L3\"},{\"collectionLocation\":{\"name\":\"blueSource1\",\"x\":15.7,\"y\":7.999999999999999},\"name\":\"Coral\",\"color\":\"rgb(0,0,50)\",\"result\":\"No Result\"}]",
+    "timestamp": "2025-03-09T18:31:52.409Z"
+  },
+  {
+    "02startingLocation": "{\"name\":\"blueLeft\",\"x\":6.7,\"y\":6.8}",
+    "01metaData": "{\"scoutName\":\"Sophie \",\"teamNumber\":\"3749\",\"matchNumber\":\"74\",\"teamColor\":\"Red\"}",
+    "03auto": "[{\"collectionLocation\":{\"name\":\"startingCoral\",\"x\":7,\"y\":10},\"name\":\"Coral\",\"color\":\"rgb(0,50,0)\",\"result\":\"Intentional Coral Drop\"}]",
+    "05endgame": "{\"Deep\":\"No Attempt\",\"Shallow\":\"No Attempt\",\"Park\":\"Successful\"}",
+    "06extra": "{\"Died\":\"False\",\"Defense\":\"Poor\",\"Driver_Quality\":\"Bad\",\"Comments\":\"They did defense but not well, wasted time \"}",
+    "04teleop": "[{\"collectionLocation\":{\"name\":\"redFloor\",\"x\":15.5,\"y\":3},\"name\":\"Algae\",\"color\":\"rgb(0,0,173)\",\"result\":\"Intentional Algae Drop\"},{\"collectionLocation\":{\"name\":\"redFloor\",\"x\":15.5,\"y\":5},\"name\":\"Coral\",\"color\":\"rgb(0,0,209.4444444444444)\",\"result\":\"Intentional Coral Drop\"}]",
+    "timestamp": "2025-03-09T18:32:09.925Z"
+  },
+  {
+    "02startingLocation": "{\"name\":\"redMiddle\",\"x\":10.4,\"y\":4}",
+    "01metaData": "{\"scoutName\":\"Rui\",\"teamNumber\":\"4160\",\"matchNumber\":\"73\",\"teamColor\":\"Red\"}",
+    "03auto": "[{\"collectionLocation\":{\"name\":\"startingCoral\",\"x\":7,\"y\":10},\"name\":\"Coral\",\"color\":\"rgb(0,50,0)\",\"result\":\"No Result\"}]",
+    "05endgame": "{\"Deep\":\"No Attempt\",\"Shallow\":\"No Attempt\",\"Park\":\"Successful\"}",
+    "06extra": "{\"Died\":\"True\",\"Defense\":\"Poor\",\"Driver_Quality\":\"Average\",\"Comments\":\"Died in autos\"}",
+    "04teleop": "[]",
+    "timestamp": "2025-03-09T18:32:53.471Z"
+  },
+  {
+    "02startingLocation": "{\"name\":\"redMiddle\",\"x\":10.4,\"y\":4}",
+    "01metaData": "{\"scoutName\":\"Sinjin\",\"teamNumber\":\"9084\",\"matchNumber\":\"75\",\"teamColor\":\"Red\"}",
+    "03auto": "[{\"collectionLocation\":{\"name\":\"startingCoral\",\"x\":7,\"y\":10},\"name\":\"Coral\",\"color\":\"rgb(0,50,0)\",\"result\":\"L4 (Top)\"},{\"collectionLocation\":{\"name\":\"sourceLeft\",\"x\":15.7,\"y\":8},\"name\":\"Coral\",\"color\":\"rgb(91,0,0)\",\"result\":\"L4 (Top)\"},{\"collectionLocation\":{\"name\":\"sourceLeft\",\"x\":15.7,\"y\":8},\"name\":\"Coral\",\"color\":\"rgb(91,0,0)\",\"result\":\"L4 (Top)\"}]",
+    "05endgame": "{\"Deep\":\"Failed\",\"Shallow\":\"No Attempt\",\"Park\":\"Successful\"}",
+    "06extra": "{\"Died\":\"False\",\"Defense\":\"None\",\"Driver_Quality\":\"Average\",\"Comments\":\"\"}",
+    "04teleop": "[{\"collectionLocation\":{\"name\":\"redSource1\",\"x\":15.7,\"y\":8},\"name\":\"Coral\",\"color\":\"rgb(0,0,141.1111111111111)\",\"result\":\"L4 (Top)\"},{\"collectionLocation\":{\"name\":\"redSource1\",\"x\":15.7,\"y\":8},\"name\":\"Coral\",\"color\":\"rgb(0,0,141.1111111111111)\",\"result\":\"L4 (Top)\"},{\"collectionLocation\":{\"name\":\"redSource1\",\"x\":15.7,\"y\":8},\"name\":\"Coral\",\"color\":\"rgb(0,0,141.1111111111111)\",\"result\":\"L4 (Top)\"},{\"collectionLocation\":{\"name\":\"redSource1\",\"x\":15.7,\"y\":8},\"name\":\"Coral\",\"color\":\"rgb(0,0,141.1111111111111)\",\"result\":\"L4 (Top)\"},{\"collectionLocation\":{\"name\":\"redSource1\",\"x\":15.7,\"y\":8},\"name\":\"Coral\",\"color\":\"rgb(0,0,141.1111111111111)\",\"result\":\"L4 (Top)\"},{\"collectionLocation\":{\"name\":\"blueSource2\",\"x\":15.7,\"y\":0.2},\"name\":\"Coral\",\"color\":\"rgb(0,0,72.77777777777777)\",\"result\":\"L4 (Top)\"},{\"collectionLocation\":{\"name\":\"redReef\",\"x\":12.25,\"y\":3},\"name\":\"Algae\",\"color\":\"rgb(0,0,132)\",\"result\":\"Intentional Algae Drop\"},{\"collectionLocation\":{\"name\":\"blueSource2\",\"x\":15.7,\"y\":0.2},\"name\":\"Coral\",\"color\":\"rgb(0,0,72.77777777777777)\",\"result\":\"L3\"}]",
+    "timestamp": "2025-03-09T18:39:31.378Z"
+  },
+  {
+    "02startingLocation": "{\"name\":\"redRight\",\"x\":10.4,\"y\":1.2}",
+    "01metaData": "{\"scoutName\":\"Ethan\",\"teamNumber\":\"1661\",\"matchNumber\":\"75\",\"teamColor\":\"Red\"}",
+    "03auto": "[{\"collectionLocation\":{\"name\":\"startingCoral\",\"x\":7,\"y\":10},\"name\":\"Coral\",\"color\":\"rgb(0,50,0)\",\"result\":\"L4 (Top)\"},{\"collectionLocation\":{\"name\":\"sourceRight\",\"x\":15.7,\"y\":0.2},\"name\":\"Coral\",\"color\":\"rgb(50,0,0)\",\"result\":\"L4 (Top)\"}]",
+    "05endgame": "{\"Deep\":\"No Attempt\",\"Shallow\":\"No Attempt\",\"Park\":\"No Attempt\"}",
+    "06extra": "{\"Died\":\"False\",\"Defense\":\"None\",\"Driver_Quality\":\"Good\",\"Comments\":\"\"}",
+    "04teleop": "[{\"collectionLocation\":{\"name\":\"redReef\",\"x\":12.25,\"y\":3},\"name\":\"Algae\",\"color\":\"rgb(0,0,132)\",\"result\":\"Intentional Algae Drop\"},{\"collectionLocation\":{\"name\":\"blueSource2\",\"x\":15.7,\"y\":0.2},\"name\":\"Coral\",\"color\":\"rgb(0,0,72.77777777777777)\",\"result\":\"L3\"},{\"collectionLocation\":{\"name\":\"blueSource2\",\"x\":15.7,\"y\":0.2},\"name\":\"Coral\",\"color\":\"rgb(0,0,72.77777777777777)\",\"result\":\"L3\"},{\"collectionLocation\":{\"name\":\"redReef\",\"x\":12.25,\"y\":3},\"name\":\"Algae\",\"color\":\"rgb(0,0,132)\",\"result\":\"Intentional Algae Drop\"},{\"collectionLocation\":{\"name\":\"blueSource2\",\"x\":15.7,\"y\":0.2},\"name\":\"Coral\",\"color\":\"rgb(0,0,72.77777777777777)\",\"result\":\"L3\"},{\"collectionLocation\":{\"name\":\"blueSource2\",\"x\":15.7,\"y\":0.2},\"name\":\"Coral\",\"color\":\"rgb(0,0,72.77777777777777)\",\"result\":\"L3\"},{\"collectionLocation\":{\"name\":\"redReef\",\"x\":12.25,\"y\":3},\"name\":\"Algae\",\"color\":\"rgb(0,0,132)\",\"result\":\"Intentional Algae Drop\"},{\"collectionLocation\":{\"name\":\"blueSource2\",\"x\":15.7,\"y\":0.2},\"name\":\"Coral\",\"color\":\"rgb(0,0,72.77777777777777)\",\"result\":\"L3\"},{\"collectionLocation\":{\"name\":\"blueSource2\",\"x\":15.7,\"y\":0.2},\"name\":\"Coral\",\"color\":\"rgb(0,0,72.77777777777777)\",\"result\":\"L2\"},{\"collectionLocation\":{\"name\":\"blueSource2\",\"x\":15.7,\"y\":0.2},\"name\":\"Coral\",\"color\":\"rgb(0,0,72.77777777777777)\",\"result\":\"Fell on Floor\"},{\"collectionLocation\":{\"name\":\"blueSource2\",\"x\":15.7,\"y\":0.2},\"name\":\"Coral\",\"color\":\"rgb(0,0,72.77777777777777)\",\"result\":\"L2\"},{\"collectionLocation\":{\"name\":\"blueSource2\",\"x\":15.7,\"y\":0.2},\"name\":\"Coral\",\"color\":\"rgb(0,0,72.77777777777777)\",\"result\":\"No Result\"}]",
+    "timestamp": "2025-03-09T18:39:39.400Z"
+  },
+  {
+    "04teleop": "[{\"collectionLocation\":{\"name\":\"startingCoral\",\"x\":9.5,\"y\":-1.8000000000000007},\"name\":\"Coral\",\"color\":\"rgb(0,0,232.22222222222217)\",\"result\":\"No Result\"}]",
+    "02startingLocation": "{\"name\":\"blueLeft\",\"x\":9.8,\"y\":1.3999999999999995}",
+    "01metaData": "{\"scoutName\":\"Autumn Thibeault \",\"teamNumber\":\"3328\",\"matchNumber\":\"75\",\"teamColor\":\"Blue\"}",
+    "03auto": "[{\"collectionLocation\":{\"name\":\"startingCoral\",\"x\":9.5,\"y\":-1.8000000000000007},\"name\":\"Coral\",\"color\":\"rgb(0,50,0)\",\"result\":\"No Result\"}]",
+    "05endgame": "{\"Deep\":\"No Attempt\",\"Shallow\":\"No Attempt\",\"Park\":\"Failed\"}",
+    "06extra": "{\"Died\":\"False\",\"Defense\":\"Poor\",\"Driver_Quality\":\"Average\",\"Comments\":\"Was chill by the other teams coral giving place \"}",
+    "timestamp": "2025-03-09T18:40:13.422Z"
+  },
+  {
+    "02startingLocation": "{\"name\":\"blueLeft\",\"x\":6.7,\"y\":6.8}",
+    "01metaData": "{\"scoutName\":\"Sophie \",\"teamNumber\":\"1661\",\"matchNumber\":\"75\",\"teamColor\":\"Red\"}",
+    "03auto": "[{\"collectionLocation\":{\"name\":\"startingCoral\",\"x\":7,\"y\":10},\"name\":\"Coral\",\"color\":\"rgb(0,50,0)\",\"result\":\"L4 (Top)\"},{\"collectionLocation\":{\"name\":\"sourceLeft\",\"x\":15.7,\"y\":8},\"name\":\"Coral\",\"color\":\"rgb(91,0,0)\",\"result\":\"L4 (Top)\"},{\"collectionLocation\":{\"name\":\"floorMiddle\",\"x\":16.7,\"y\":4},\"name\":\"Coral\",\"color\":\"rgb(132,0,0)\",\"result\":\"L4 (Top)\"},{\"collectionLocation\":{\"name\":\"sourceLeft\",\"x\":15.7,\"y\":8},\"name\":\"Coral\",\"color\":\"rgb(91,0,0)\",\"result\":\"L4 (Top)\"},{\"collectionLocation\":{\"name\":\"sourceLeft\",\"x\":15.7,\"y\":8},\"name\":\"Coral\",\"color\":\"rgb(91,0,0)\",\"result\":\"L3\"},{\"collectionLocation\":{\"name\":\"sourceRight\",\"x\":15.7,\"y\":0.2},\"name\":\"Coral\",\"color\":\"rgb(50,0,0)\",\"result\":\"L3\"},{\"collectionLocation\":{\"name\":\"red5\",\"x\":12.5,\"y\":2.5},\"name\":\"Algae\",\"color\":\"rgb(141.1111111111111,0,0)\",\"result\":\"Processor\"},{\"collectionLocation\":{\"name\":\"floorLeft\",\"x\":16.7,\"y\":5.8},\"name\":\"Coral\",\"color\":\"rgb(173,0,0)\",\"result\":\"L3\"},{\"collectionLocation\":{\"name\":\"sourceRight\",\"x\":15.7,\"y\":0.2},\"name\":\"Coral\",\"color\":\"rgb(50,0,0)\",\"result\":\"L3\"},{\"collectionLocation\":{\"name\":\"red5\",\"x\":12.5,\"y\":2.5},\"name\":\"Algae\",\"color\":\"rgb(141.1111111111111,0,0)\",\"result\":\"Intentional Algae Drop\"},{\"collectionLocation\":{\"name\":\"sourceLeft\",\"x\":15.7,\"y\":8},\"name\":\"Coral\",\"color\":\"rgb(91,0,0)\",\"result\":\"L3\"},{\"collectionLocation\":{\"name\":\"sourceLeft\",\"x\":15.7,\"y\":8},\"name\":\"Coral\",\"color\":\"rgb(91,0,0)\",\"result\":\"L2\"},{\"collectionLocation\":{\"name\":\"sourceLeft\",\"x\":15.7,\"y\":8},\"name\":\"Coral\",\"color\":\"rgb(91,0,0)\",\"result\":\"L2\"},{\"collectionLocation\":{\"name\":\"sourceLeft\",\"x\":15.7,\"y\":8},\"name\":\"Coral\",\"color\":\"rgb(91,0,0)\",\"result\":\"L2\"},{\"collectionLocation\":{\"name\":\"red1\",\"x\":12.5,\"y\":5.5},\"name\":\"Algae\",\"color\":\"rgb(50,0,0)\",\"result\":\"Failed Algae Pickup\"}]",
+    "05endgame": "{\"Deep\":\"No Attempt\",\"Shallow\":\"No Attempt\",\"Park\":\"No Attempt\"}",
+    "06extra": "{\"Died\":\"False\",\"Defense\":\"None\",\"Driver_Quality\":\"Good\",\"Comments\":\"Really fast and accurate, worked well with Octobots\"}",
+    "04teleop": "[]",
+    "timestamp": "2025-03-09T18:40:16.366Z"
+  },
+  {
+    "02startingLocation": "{\"name\":\"redLeft\",\"x\":10.4,\"y\":6.8}",
+    "01metaData": "{\"scoutName\":\"Rui\",\"teamNumber\":\"5012\",\"matchNumber\":\"73\",\"teamColor\":\"Red\"}",
+    "03auto": "[{\"collectionLocation\":{\"name\":\"startingCoral\",\"x\":7,\"y\":10},\"name\":\"Coral\",\"color\":\"rgb(0,50,0)\",\"result\":\"No Result\"}]",
+    "05endgame": "{\"Deep\":\"Successful\",\"Shallow\":\"No Attempt\",\"Park\":\"No Attempt\"}",
+    "06extra": "{\"Died\":\"False\",\"Defense\":\"Good\",\"Driver_Quality\":\"Average\",\"Comments\":\"Got stuck on and deflated an algae\"}",
+    "04teleop": "[]",
+    "timestamp": "2025-03-09T18:40:20.362Z"
+  },
+  {
+    "02startingLocation": "{\"name\":\"blueRight\",\"x\":9.8,\"y\":6.999999999999999}",
+    "01metaData": "{\"scoutName\":\"Nate\",\"teamNumber\":\"7426\",\"matchNumber\":\"75\",\"teamColor\":\"Blue\"}",
+    "03auto": "[{\"collectionLocation\":{\"name\":\"startingCoral\",\"x\":9.5,\"y\":-1.8000000000000007},\"name\":\"Coral\",\"color\":\"rgb(0,50,0)\",\"result\":\"Missed onto Floor\"},{\"collectionLocation\":{\"name\":\"sourceLeft\",\"x\":15.7,\"y\":7.999999999999999},\"name\":\"Coral\",\"color\":\"rgb(0,0,91)\",\"result\":\"Failed Coral Intake\"},{\"collectionLocation\":{\"name\":\"sourceLeft\",\"x\":15.7,\"y\":7.999999999999999},\"name\":\"Coral\",\"color\":\"rgb(0,0,91)\",\"result\":\"L3\"},{\"collectionLocation\":{\"name\":\"sourceRight\",\"x\":15.7,\"y\":0.1999999999999993},\"name\":\"Coral\",\"color\":\"rgb(0,0,50)\",\"result\":\"L3\"}]",
+    "05endgame": "{\"Deep\":\"Failed\",\"Shallow\":\"No Attempt\",\"Park\":\"Successful\"}",
+    "06extra": "{\"Died\":\"False\",\"Defense\":\"None\",\"Driver_Quality\":\"Average\",\"Comments\":\"\"}",
+    "04teleop": "[{\"collectionLocation\":{\"name\":\"blueSource1\",\"x\":15.7,\"y\":7.999999999999999},\"name\":\"Coral\",\"color\":\"rgb(0,0,50)\",\"result\":\"L3\"},{\"collectionLocation\":{\"name\":\"redSource2\",\"x\":15.7,\"y\":0.1999999999999993},\"name\":\"Coral\",\"color\":\"rgb(0,0,163.88888888888886)\",\"result\":\"L3\"},{\"collectionLocation\":{\"name\":\"redSource2\",\"x\":15.7,\"y\":0.1999999999999993},\"name\":\"Coral\",\"color\":\"rgb(0,0,163.88888888888886)\",\"result\":\"L3\"},{\"collectionLocation\":{\"name\":\"redSource2\",\"x\":15.7,\"y\":0.1999999999999993},\"name\":\"Coral\",\"color\":\"rgb(0,0,163.88888888888886)\",\"result\":\"L2\"},{\"collectionLocation\":{\"name\":\"redSource2\",\"x\":15.7,\"y\":0.1999999999999993},\"name\":\"Coral\",\"color\":\"rgb(0,0,163.88888888888886)\",\"result\":\"L2\"},{\"collectionLocation\":{\"name\":\"redSource2\",\"x\":15.7,\"y\":0.1999999999999993},\"name\":\"Coral\",\"color\":\"rgb(0,0,163.88888888888886)\",\"result\":\"L2\"},{\"collectionLocation\":{\"name\":\"redSource2\",\"x\":15.7,\"y\":0.1999999999999993},\"name\":\"Coral\",\"color\":\"rgb(0,0,163.88888888888886)\",\"result\":\"L2\"},{\"collectionLocation\":{\"name\":\"blueSource1\",\"x\":15.7,\"y\":7.999999999999999},\"name\":\"Coral\",\"color\":\"rgb(0,0,50)\",\"result\":\"Failed Intake\"}]",
+    "timestamp": "2025-03-09T18:40:33.421Z"
+  },
+  {
+    "04teleop": "[]",
+    "02startingLocation": "{\"name\":\"noShow\",\"x\":16.5,\"y\":8.2}",
+    "01metaData": "{\"scoutName\":\"Rudy\",\"teamNumber\":\"1280\",\"matchNumber\":\"76\",\"teamColor\":\"Blue\"}",
+    "03auto": "[]",
+    "05endgame": "{\"Deep\":\"No Attempt\",\"Shallow\":\"No Attempt\",\"Park\":\"No Attempt\"}",
+    "06extra": "{\"Died\":\"False\",\"Defense\":\"None\",\"Driver_Quality\":\"Average\",\"Comments\":\"1280 Did not show up!\"}",
+    "timestamp": "2025-03-09T18:45:08.868Z"
+  },
+  {
+    "02startingLocation": "{\"name\":\"blueRight\",\"x\":9.8,\"y\":6.999999999999999}",
+    "01metaData": "{\"scoutName\":\"Lauren\",\"teamNumber\":\"5026\",\"matchNumber\":\"76\",\"teamColor\":\"Blue\"}",
+    "03auto": "[{\"collectionLocation\":{\"name\":\"startingCoral\",\"x\":9.5,\"y\":-1.8000000000000007},\"name\":\"Coral\",\"color\":\"rgb(0,50,0)\",\"result\":\"L4 (Top)\"},{\"collectionLocation\":{\"name\":\"sourceLeft\",\"x\":15.7,\"y\":7.999999999999999},\"name\":\"Coral\",\"color\":\"rgb(0,0,91)\",\"result\":\"L4 (Top)\"}]",
+    "05endgame": "{\"Deep\":\"No Attempt\",\"Shallow\":\"No Attempt\",\"Park\":\"Successful\"}",
+    "06extra": "{\"Died\":\"False\",\"Defense\":\"None\",\"Driver_Quality\":\"Good\",\"Comments\":\"They tipped their own teammate by accident and got a coral stuck in them\"}",
+    "04teleop": "[{\"collectionLocation\":{\"name\":\"blueSource1\",\"x\":15.7,\"y\":7.999999999999999},\"name\":\"Coral\",\"color\":\"rgb(0,0,50)\",\"result\":\"L4 (Top)\"},{\"collectionLocation\":{\"name\":\"redSource2\",\"x\":15.7,\"y\":0.1999999999999993},\"name\":\"Coral\",\"color\":\"rgb(0,0,163.88888888888886)\",\"result\":\"L4 (Top)\"},{\"collectionLocation\":{\"name\":\"blueSource1\",\"x\":15.7,\"y\":7.999999999999999},\"name\":\"Coral\",\"color\":\"rgb(0,0,50)\",\"result\":\"L4 (Top)\"},{\"collectionLocation\":{\"name\":\"blueSource1\",\"x\":15.7,\"y\":7.999999999999999},\"name\":\"Coral\",\"color\":\"rgb(0,0,50)\",\"result\":\"L4 (Top)\"},{\"collectionLocation\":{\"name\":\"redSource2\",\"x\":15.7,\"y\":0.1999999999999993},\"name\":\"Coral\",\"color\":\"rgb(0,0,163.88888888888886)\",\"result\":\"No Result\"}]",
+    "timestamp": "2025-03-09T18:47:00.968Z"
+  },
+  {
+    "02startingLocation": "{\"name\":\"blueLeft\",\"x\":6.7,\"y\":6.8}",
+    "01metaData": "{\"scoutName\":\"Sophie \",\"teamNumber\":\"6553\",\"matchNumber\":\"76\",\"teamColor\":\"Red\"}",
+    "03auto": "[{\"collectionLocation\":{\"name\":\"startingCoral\",\"x\":7,\"y\":10},\"name\":\"Coral\",\"color\":\"rgb(0,50,0)\",\"result\":\"Intentional Coral Drop\"}]",
+    "05endgame": "{\"Deep\":\"No Attempt\",\"Shallow\":\"No Attempt\",\"Park\":\"No Attempt\"}",
+    "06extra": "{\"Died\":\"False\",\"Defense\":\"Poor\",\"Driver_Quality\":\"Bad\",\"Comments\":\"Their robot got really slow for the last 30 sec of the match idk if it was intentional or not but it didn’t seem like it \"}",
+    "04teleop": "[]",
+    "timestamp": "2025-03-09T18:47:09.988Z"
+  },
+  {
+    "02startingLocation": "{\"name\":\"redRight\",\"x\":10.4,\"y\":1.2}",
+    "01metaData": "{\"scoutName\":\"Sophie \",\"teamNumber\":\"8533\",\"matchNumber\":\"77\",\"teamColor\":\"Red\"}",
+    "03auto": "[{\"collectionLocation\":{\"name\":\"floorRight\",\"x\":15.5,\"y\":2.2},\"name\":\"Algae\",\"color\":\"rgb(232.22222222222217,0,0)\",\"result\":\"Intentional Algae Drop\"},{\"collectionLocation\":{\"name\":\"floorMiddle\",\"x\":15.5,\"y\":4},\"name\":\"Algae\",\"color\":\"rgb(186.66666666666663,0,0)\",\"result\":\"Intentional Algae Drop\"},{\"collectionLocation\":{\"name\":\"floorLeft\",\"x\":15.5,\"y\":5.8},\"name\":\"Algae\",\"color\":\"rgb(209.4444444444444,0,0)\",\"result\":\"Intentional Algae Drop\"},{\"collectionLocation\":{\"name\":\"floorRight\",\"x\":16.7,\"y\":2.2},\"name\":\"Coral\",\"color\":\"rgb(214,0,0)\",\"result\":\"Intentional Coral Drop\"}]",
+    "05endgame": "{\"Deep\":\"No Attempt\",\"Shallow\":\"No Attempt\",\"Park\":\"Successful\"}",
+    "06extra": "{\"Died\":\"False\",\"Defense\":\"Poor\",\"Driver_Quality\":\"Average\",\"Comments\":\"Defense was not effective \"}",
+    "04teleop": "[]",
+    "timestamp": "2025-03-09T18:53:37.129Z"
+  },
+  {
+    "02startingLocation": "{\"name\":\"blueLeft\",\"x\":9.8,\"y\":1.3999999999999995}",
+    "01metaData": "{\"scoutName\":\"Lauren\",\"teamNumber\":\"4711\",\"matchNumber\":\"77\",\"teamColor\":\"Blue\"}",
+    "03auto": "[]",
+    "05endgame": "{\"Deep\":\"No Attempt\",\"Shallow\":\"No Attempt\",\"Park\":\"Successful\"}",
+    "06extra": "{\"Died\":\"False\",\"Defense\":\"Good\",\"Driver_Quality\":\"Average\",\"Comments\":\"Just defense\"}",
+    "04teleop": "[]",
+    "timestamp": "2025-03-09T18:53:39.273Z"
+  },
+  {
+    "04teleop": "[{\"collectionLocation\":{\"name\":\"blueSource1\",\"x\":15.7,\"y\":7.999999999999999},\"name\":\"Coral\",\"color\":\"rgb(0,0,50)\",\"result\":\"L3\"},{\"collectionLocation\":{\"name\":\"blueSource1\",\"x\":15.7,\"y\":7.999999999999999},\"name\":\"Coral\",\"color\":\"rgb(0,0,50)\",\"result\":\"Failed Intake\"},{\"collectionLocation\":{\"name\":\"blueSource1\",\"x\":15.7,\"y\":7.999999999999999},\"name\":\"Coral\",\"color\":\"rgb(0,0,50)\",\"result\":\"L3\"},{\"collectionLocation\":{\"name\":\"blueSource1\",\"x\":15.7,\"y\":7.999999999999999},\"name\":\"Coral\",\"color\":\"rgb(0,0,50)\",\"result\":\"No Result\"}]",
+    "02startingLocation": "{\"name\":\"blueRight\",\"x\":9.8,\"y\":6.999999999999999}",
+    "01metaData": "{\"scoutName\":\"Rudy\",\"teamNumber\":\"8060\",\"matchNumber\":\"77\",\"teamColor\":\"Blue\"}",
+    "03auto": "[{\"collectionLocation\":{\"name\":\"startingCoral\",\"x\":9.5,\"y\":-1.8000000000000007},\"name\":\"Coral\",\"color\":\"rgb(0,50,0)\",\"result\":\"No Result\"}]",
+    "05endgame": "{\"Deep\":\"No Attempt\",\"Shallow\":\"No Attempt\",\"Park\":\"No Attempt\"}",
+    "06extra": "{\"Died\":\"False\",\"Defense\":\"None\",\"Driver_Quality\":\"Bad\",\"Comments\":\"The driver and and the elevator were very slow.\"}",
+    "timestamp": "2025-03-09T18:54:20.077Z"
+  },
+  {
+    "02startingLocation": "{\"name\":\"blueLeft\",\"x\":9.8,\"y\":1.3999999999999995}",
+    "01metaData": "{\"scoutName\":\"Lauren\",\"teamNumber\":\"10698\",\"matchNumber\":\"78\",\"teamColor\":\"Blue\"}",
+    "03auto": "[{\"collectionLocation\":{\"name\":\"startingCoral\",\"x\":9.5,\"y\":-1.8000000000000007},\"name\":\"Coral\",\"color\":\"rgb(0,50,0)\",\"result\":\"No Result\"}]",
+    "05endgame": "{\"Deep\":\"Successful\",\"Shallow\":\"No Attempt\",\"Park\":\"No Attempt\"}",
+    "06extra": "{\"Died\":\"False\",\"Defense\":\"None\",\"Driver_Quality\":\"Bad\",\"Comments\":\"Poor placement \"}",
+    "04teleop": "[{\"collectionLocation\":{\"name\":\"startingCoral\",\"x\":9.5,\"y\":-1.8000000000000007},\"name\":\"Coral\",\"color\":\"rgb(0,0,232.22222222222217)\",\"result\":\"L4 (Top)\"},{\"collectionLocation\":{\"name\":\"redSource2\",\"x\":15.7,\"y\":0.1999999999999993},\"name\":\"Coral\",\"color\":\"rgb(0,0,163.88888888888886)\",\"result\":\"L4 (Top)\"},{\"collectionLocation\":{\"name\":\"redSource2\",\"x\":15.7,\"y\":0.1999999999999993},\"name\":\"Coral\",\"color\":\"rgb(0,0,163.88888888888886)\",\"result\":\"L4 (Top)\"},{\"collectionLocation\":{\"name\":\"redSource2\",\"x\":15.7,\"y\":0.1999999999999993},\"name\":\"Coral\",\"color\":\"rgb(0,0,163.88888888888886)\",\"result\":\"L4 (Top)\"}]",
+    "timestamp": "2025-03-09T18:59:45.282Z"
+  },
+  {
+    "02startingLocation": "{\"name\":\"blueRight\",\"x\":6.7,\"y\":1.2}",
+    "01metaData": "{\"scoutName\":\"Sophie \",\"teamNumber\":\"6000\",\"matchNumber\":\"78\",\"teamColor\":\"Red\"}",
+    "03auto": "[]",
+    "05endgame": "{\"Deep\":\"No Attempt\",\"Shallow\":\"No Attempt\",\"Park\":\"Successful\"}",
+    "06extra": "{\"Died\":\"False\",\"Defense\":\"Poor\",\"Driver_Quality\":\"Bad\",\"Comments\":\"Bad defense and only got themselves penalty points didn’t help their team\"}",
+    "04teleop": "[]",
+    "timestamp": "2025-03-09T18:59:51.763Z"
+  },
+  {
+    "04teleop": "[{\"collectionLocation\":{\"name\":\"blueSource1\",\"x\":15.7,\"y\":7.999999999999999},\"name\":\"Coral\",\"color\":\"rgb(0,0,50)\",\"result\":\"L1 (Trough)\"},{\"collectionLocation\":{\"name\":\"blueSource1\",\"x\":15.7,\"y\":7.999999999999999},\"name\":\"Coral\",\"color\":\"rgb(0,0,50)\",\"result\":\"L1 (Trough)\"},{\"collectionLocation\":{\"name\":\"blueReef\",\"x\":12.25,\"y\":3.1999999999999993},\"name\":\"Algae\",\"color\":\"rgb(0,0,50)\",\"result\":\"Intentional Algae Drop\"},{\"collectionLocation\":{\"name\":\"blueSource1\",\"x\":15.7,\"y\":7.999999999999999},\"name\":\"Coral\",\"color\":\"rgb(0,0,50)\",\"result\":\"L3\"},{\"collectionLocation\":{\"name\":\"blueSource1\",\"x\":15.7,\"y\":7.999999999999999},\"name\":\"Coral\",\"color\":\"rgb(0,0,50)\",\"result\":\"L3\"},{\"collectionLocation\":{\"name\":\"blueSource1\",\"x\":15.7,\"y\":7.999999999999999},\"name\":\"Coral\",\"color\":\"rgb(0,0,50)\",\"result\":\"L1 (Trough)\"}]",
+    "02startingLocation": "{\"name\":\"blueRight\",\"x\":9.8,\"y\":6.999999999999999}",
+    "01metaData": "{\"scoutName\":\"Rudy\",\"teamNumber\":\"5514\",\"matchNumber\":\"78\",\"teamColor\":\"Blue\"}",
+    "03auto": "[{\"collectionLocation\":{\"name\":\"startingCoral\",\"x\":9.5,\"y\":-1.8000000000000007},\"name\":\"Coral\",\"color\":\"rgb(0,50,0)\",\"result\":\"L1 (Trough)\"},{\"collectionLocation\":{\"name\":\"sourceLeft\",\"x\":15.7,\"y\":7.999999999999999},\"name\":\"Coral\",\"color\":\"rgb(0,0,91)\",\"result\":\"L1 (Trough)\"}]",
+    "05endgame": "{\"Deep\":\"No Attempt\",\"Shallow\":\"No Attempt\",\"Park\":\"Failed\"}",
+    "06extra": "{\"Died\":\"False\",\"Defense\":\"None\",\"Driver_Quality\":\"Average\",\"Comments\":\"The driver often spun the bot around in circles.\"}",
+    "timestamp": "2025-03-09T18:59:58.982Z"
+  },
+  {
+    "02startingLocation": "{\"name\":\"redRight\",\"x\":10.4,\"y\":1.2}",
+    "01metaData": "{\"scoutName\":\"Alyssa \",\"teamNumber\":\"5805\",\"matchNumber\":\"78\",\"teamColor\":\"Red\"}",
+    "03auto": "[{\"collectionLocation\":{\"name\":\"sourceRight\",\"x\":15.7,\"y\":0.2},\"name\":\"Coral\",\"color\":\"rgb(50,0,0)\",\"result\":\"Failed Coral Intake\"},{\"collectionLocation\":{\"name\":\"sourceRight\",\"x\":15.7,\"y\":0.2},\"name\":\"Coral\",\"color\":\"rgb(50,0,0)\",\"result\":\"Failed Coral Intake\"}]",
+    "05endgame": "{\"Deep\":\"Successful\",\"Shallow\":\"No Attempt\",\"Park\":\"Successful\"}",
+    "06extra": "{\"Died\":\"False\",\"Defense\":\"None\",\"Driver_Quality\":\"Average\",\"Comments\":\"Accurate coral placement, auto attempted two coral, efficient climb \"}",
+    "04teleop": "[{\"collectionLocation\":{\"name\":\"blueSource2\",\"x\":15.7,\"y\":0.2},\"name\":\"Coral\",\"color\":\"rgb(0,0,72.77777777777777)\",\"result\":\"L2\"},{\"collectionLocation\":{\"name\":\"redReef\",\"x\":12.25,\"y\":3},\"name\":\"Algae\",\"color\":\"rgb(0,0,132)\",\"result\":\"Intentional Algae Drop\"},{\"collectionLocation\":{\"name\":\"redSource1\",\"x\":15.7,\"y\":8},\"name\":\"Coral\",\"color\":\"rgb(0,0,141.1111111111111)\",\"result\":\"L2\"},{\"collectionLocation\":{\"name\":\"redSource1\",\"x\":15.7,\"y\":8},\"name\":\"Coral\",\"color\":\"rgb(0,0,141.1111111111111)\",\"result\":\"Failed Intake\"},{\"collectionLocation\":{\"name\":\"blueSource2\",\"x\":15.7,\"y\":0.2},\"name\":\"Coral\",\"color\":\"rgb(0,0,72.77777777777777)\",\"result\":\"L3\"},{\"collectionLocation\":{\"name\":\"redReef\",\"x\":12.25,\"y\":3},\"name\":\"Algae\",\"color\":\"rgb(0,0,132)\",\"result\":\"Intentional Algae Drop\"},{\"collectionLocation\":{\"name\":\"redSource1\",\"x\":15.7,\"y\":8},\"name\":\"Coral\",\"color\":\"rgb(0,0,141.1111111111111)\",\"result\":\"L3\"},{\"collectionLocation\":{\"name\":\"blueSource2\",\"x\":15.7,\"y\":0.2},\"name\":\"Coral\",\"color\":\"rgb(0,0,72.77777777777777)\",\"result\":\"L3\"},{\"collectionLocation\":{\"name\":\"redSource1\",\"x\":15.7,\"y\":8},\"name\":\"Coral\",\"color\":\"rgb(0,0,141.1111111111111)\",\"result\":\"L3\"}]",
+    "timestamp": "2025-03-09T19:01:26.610Z"
+  },
+  {
+    "02startingLocation": "{\"name\":\"redLeft\",\"x\":10.4,\"y\":6.8}",
+    "01metaData": "{\"scoutName\":\"Sophia \",\"teamNumber\":\"7419\",\"matchNumber\":\"78\",\"teamColor\":\"Red\"}",
+    "03auto": "[{\"collectionLocation\":{\"name\":\"startingCoral\",\"x\":7,\"y\":10},\"name\":\"Coral\",\"color\":\"rgb(0,50,0)\",\"result\":\"Missed onto Floor\"},{\"collectionLocation\":{\"name\":\"sourceLeft\",\"x\":15.7,\"y\":8},\"name\":\"Coral\",\"color\":\"rgb(91,0,0)\",\"result\":\"L4 (Top)\"}]",
+    "05endgame": "{\"Deep\":\"No Attempt\",\"Shallow\":\"No Attempt\",\"Park\":\"Successful\"}",
+    "06extra": "{\"Died\":\"False\",\"Defense\":\"None\",\"Driver_Quality\":\"Good\",\"Comments\":\"Algae removal. Consistent/relatively fast coral placement. Only dropped coral b/c rammed into \"}",
+    "04teleop": "[{\"collectionLocation\":{\"name\":\"blueSource2\",\"x\":15.7,\"y\":0.2},\"name\":\"Coral\",\"color\":\"rgb(0,0,72.77777777777777)\",\"result\":\"L3\"},{\"collectionLocation\":{\"name\":\"redSource1\",\"x\":15.7,\"y\":8},\"name\":\"Coral\",\"color\":\"rgb(0,0,141.1111111111111)\",\"result\":\"L3\"},{\"collectionLocation\":{\"name\":\"redSource1\",\"x\":15.7,\"y\":8},\"name\":\"Coral\",\"color\":\"rgb(0,0,141.1111111111111)\",\"result\":\"Fell on Floor\"},{\"collectionLocation\":{\"name\":\"redSource1\",\"x\":15.7,\"y\":8},\"name\":\"Coral\",\"color\":\"rgb(0,0,141.1111111111111)\",\"result\":\"L4 (Top)\"},{\"collectionLocation\":{\"name\":\"blueSource2\",\"x\":15.7,\"y\":0.2},\"name\":\"Coral\",\"color\":\"rgb(0,0,72.77777777777777)\",\"result\":\"L3\"},{\"collectionLocation\":{\"name\":\"blueSource2\",\"x\":15.7,\"y\":0.2},\"name\":\"Coral\",\"color\":\"rgb(0,0,72.77777777777777)\",\"result\":\"L3\"},{\"collectionLocation\":{\"name\":\"blueSource2\",\"x\":15.7,\"y\":0.2},\"name\":\"Coral\",\"color\":\"rgb(0,0,72.77777777777777)\",\"result\":\"L4 (Top)\"},{\"collectionLocation\":{\"name\":\"blueSource2\",\"x\":15.7,\"y\":0.2},\"name\":\"Coral\",\"color\":\"rgb(0,0,72.77777777777777)\",\"result\":\"No Result\"}]",
+    "timestamp": "2025-03-09T19:05:06.630Z"
+  },
+  {
+    "04teleop": "[{\"collectionLocation\":{\"name\":\"redSource2\",\"x\":15.7,\"y\":0.1999999999999993},\"name\":\"Coral\",\"color\":\"rgb(0,0,163.88888888888886)\",\"result\":\"Fell in Trough\"},{\"collectionLocation\":{\"name\":\"redSource2\",\"x\":15.7,\"y\":0.1999999999999993},\"name\":\"Coral\",\"color\":\"rgb(0,0,163.88888888888886)\",\"result\":\"L4 (Top)\"},{\"collectionLocation\":{\"name\":\"redSource2\",\"x\":15.7,\"y\":0.1999999999999993},\"name\":\"Coral\",\"color\":\"rgb(0,0,163.88888888888886)\",\"result\":\"L4 (Top)\"},{\"collectionLocation\":{\"name\":\"redSource2\",\"x\":15.7,\"y\":0.1999999999999993},\"name\":\"Coral\",\"color\":\"rgb(0,0,163.88888888888886)\",\"result\":\"L4 (Top)\"},{\"collectionLocation\":{\"name\":\"redSource2\",\"x\":15.7,\"y\":0.1999999999999993},\"name\":\"Coral\",\"color\":\"rgb(0,0,163.88888888888886)\",\"result\":\"L4 (Top)\"},{\"collectionLocation\":{\"name\":\"redSource2\",\"x\":15.7,\"y\":0.1999999999999993},\"name\":\"Coral\",\"color\":\"rgb(0,0,163.88888888888886)\",\"result\":\"Failed Intake\"},{\"collectionLocation\":{\"name\":\"redSource2\",\"x\":15.7,\"y\":0.1999999999999993},\"name\":\"Coral\",\"color\":\"rgb(0,0,163.88888888888886)\",\"result\":\"Failed Intake\"},{\"collectionLocation\":{\"name\":\"redSource2\",\"x\":15.7,\"y\":0.1999999999999993},\"name\":\"Coral\",\"color\":\"rgb(0,0,163.88888888888886)\",\"result\":\"Fell in Trough\"},{\"collectionLocation\":{\"name\":\"redSource2\",\"x\":15.7,\"y\":0.1999999999999993},\"name\":\"Coral\",\"color\":\"rgb(0,0,163.88888888888886)\",\"result\":\"L4 (Top)\"},{\"collectionLocation\":{\"name\":\"redSource2\",\"x\":15.7,\"y\":0.1999999999999993},\"name\":\"Coral\",\"color\":\"rgb(0,0,163.88888888888886)\",\"result\":\"L4 (Top)\"},{\"collectionLocation\":{\"name\":\"redSource2\",\"x\":15.7,\"y\":0.1999999999999993},\"name\":\"Coral\",\"color\":\"rgb(0,0,163.88888888888886)\",\"result\":\"L4 (Top)\"},{\"collectionLocation\":{\"name\":\"redSource2\",\"x\":15.7,\"y\":0.1999999999999993},\"name\":\"Coral\",\"color\":\"rgb(0,0,163.88888888888886)\",\"result\":\"L4 (Top)\"},{\"collectionLocation\":{\"name\":\"redSource2\",\"x\":15.7,\"y\":0.1999999999999993},\"name\":\"Coral\",\"color\":\"rgb(0,0,163.88888888888886)\",\"result\":\"L4 (Top)\"},{\"collectionLocation\":{\"name\":\"redSource2\",\"x\":15.7,\"y\":0.1999999999999993},\"name\":\"Coral\",\"color\":\"rgb(0,0,163.88888888888886)\",\"result\":\"Failed Intake\"},{\"collectionLocation\":{\"name\":\"redSource2\",\"x\":15.7,\"y\":0.1999999999999993},\"name\":\"Coral\",\"color\":\"rgb(0,0,163.88888888888886)\",\"result\":\"Fell in Trough\"},{\"collectionLocation\":{\"name\":\"redSource2\",\"x\":15.7,\"y\":0.1999999999999993},\"name\":\"Coral\",\"color\":\"rgb(0,0,163.88888888888886)\",\"result\":\"No Result\"}]",
+    "02startingLocation": "{\"name\":\"blueMiddle\",\"x\":9.8,\"y\":4.199999999999999}",
+    "01metaData": "{\"scoutName\":\"Ari\",\"teamNumber\":\"2637\",\"matchNumber\":\"P1\",\"teamColor\":\"Blue\"}",
+    "03auto": "[{\"collectionLocation\":{\"name\":\"startingCoral\",\"x\":9.5,\"y\":-1.8000000000000007},\"name\":\"Coral\",\"color\":\"rgb(0,50,0)\",\"result\":\"Missed onto Floor\"},{\"collectionLocation\":{\"name\":\"sourceRight\",\"x\":15.7,\"y\":0.1999999999999993},\"name\":\"Coral\",\"color\":\"rgb(0,0,50)\",\"result\":\"No Result\"}]",
+    "05endgame": "{\"Deep\":\"No Attempt\",\"Shallow\":\"No Attempt\",\"Park\":\"No Attempt\"}",
+    "06extra": "{\"Died\":\"False\",\"Defense\":\"None\",\"Driver_Quality\":\"Average\",\"Comments\":\"Had on field repairs, delaying match by around 5 mins.\"}",
+    "timestamp": "2025-03-09T20:35:03.033Z"
+  },
+  {
+    "04teleop": "[{\"collectionLocation\":{\"name\":\"redSource2\",\"x\":15.7,\"y\":0.1999999999999993},\"name\":\"Coral\",\"color\":\"rgb(0,0,163.88888888888886)\",\"result\":\"L4 (Top)\"},{\"collectionLocation\":{\"name\":\"redSource2\",\"x\":15.7,\"y\":0.1999999999999993},\"name\":\"Coral\",\"color\":\"rgb(0,0,163.88888888888886)\",\"result\":\"L4 (Top)\"},{\"collectionLocation\":{\"name\":\"blueFloor\",\"x\":15.5,\"y\":3.1999999999999993},\"name\":\"Algae\",\"color\":\"rgb(0,0,91)\",\"result\":\"Failed Algae Placement\"},{\"collectionLocation\":{\"name\":\"redSource2\",\"x\":15.7,\"y\":0.1999999999999993},\"name\":\"Coral\",\"color\":\"rgb(0,0,163.88888888888886)\",\"result\":\"Fell on Floor\"},{\"collectionLocation\":{\"name\":\"blueSource1\",\"x\":15.7,\"y\":7.999999999999999},\"name\":\"Coral\",\"color\":\"rgb(0,0,50)\",\"result\":\"L4 (Top)\"},{\"collectionLocation\":{\"name\":\"redSource2\",\"x\":15.7,\"y\":0.1999999999999993},\"name\":\"Coral\",\"color\":\"rgb(0,0,163.88888888888886)\",\"result\":\"L3\"},{\"collectionLocation\":{\"name\":\"blueSource1\",\"x\":15.7,\"y\":7.999999999999999},\"name\":\"Coral\",\"color\":\"rgb(0,0,50)\",\"result\":\"L3\"},{\"collectionLocation\":{\"name\":\"blueReef\",\"x\":12.25,\"y\":3.1999999999999993},\"name\":\"Algae\",\"color\":\"rgb(0,0,50)\",\"result\":\"Failed Algae Pickup\"},{\"collectionLocation\":{\"name\":\"redSource2\",\"x\":15.7,\"y\":0.1999999999999993},\"name\":\"Coral\",\"color\":\"rgb(0,0,163.88888888888886)\",\"result\":\"L3\"},{\"collectionLocation\":{\"name\":\"blueSource1\",\"x\":15.7,\"y\":7.999999999999999},\"name\":\"Coral\",\"color\":\"rgb(0,0,50)\",\"result\":\"L3\"},{\"collectionLocation\":{\"name\":\"redSource2\",\"x\":15.7,\"y\":0.1999999999999993},\"name\":\"Coral\",\"color\":\"rgb(0,0,163.88888888888886)\",\"result\":\"L3\"},{\"collectionLocation\":{\"name\":\"blueReef\",\"x\":12.25,\"y\":3.1999999999999993},\"name\":\"Algae\",\"color\":\"rgb(0,0,50)\",\"result\":\"Failed Algae Pickup\"},{\"collectionLocation\":{\"name\":\"blueSource1\",\"x\":15.7,\"y\":7.999999999999999},\"name\":\"Coral\",\"color\":\"rgb(0,0,50)\",\"result\":\"L4 (Top)\"},{\"collectionLocation\":{\"name\":\"redSource2\",\"x\":15.7,\"y\":0.1999999999999993},\"name\":\"Coral\",\"color\":\"rgb(0,0,163.88888888888886)\",\"result\":\"No Result\"}]",
+    "02startingLocation": "{\"name\":\"blueRight\",\"x\":9.8,\"y\":6.999999999999999}",
+    "01metaData": "{\"scoutName\":\"Ari\",\"teamNumber\":\"971\",\"matchNumber\":\"P3\",\"teamColor\":\"Blue\"}",
+    "03auto": "[{\"collectionLocation\":{\"name\":\"startingCoral\",\"x\":9.5,\"y\":-1.8000000000000007},\"name\":\"Coral\",\"color\":\"rgb(0,50,0)\",\"result\":\"L4 (Top)\"},{\"collectionLocation\":{\"name\":\"sourceLeft\",\"x\":15.7,\"y\":7.999999999999999},\"name\":\"Coral\",\"color\":\"rgb(0,0,91)\",\"result\":\"L4 (Top)\"},{\"collectionLocation\":{\"name\":\"sourceLeft\",\"x\":15.7,\"y\":7.999999999999999},\"name\":\"Coral\",\"color\":\"rgb(0,0,91)\",\"result\":\"L4 (Top)\"}]",
+    "05endgame": "{\"Deep\":\"Failed\",\"Shallow\":\"No Attempt\",\"Park\":\"Successful\"}",
+    "06extra": "{\"Died\":\"False\",\"Defense\":\"None\",\"Driver_Quality\":\"Good\",\"Comments\":\"Very fast. Kept failing algae intake but very consistent coral intake \"}",
+    "timestamp": "2025-03-09T20:50:24.973Z"
+  },
+  {
+    "04teleop": "[{\"collectionLocation\":{\"name\":\"startingCoral\",\"x\":9.5,\"y\":-1.8000000000000007},\"name\":\"Coral\",\"color\":\"rgb(0,0,232.22222222222217)\",\"result\":\"No Result\"}]",
+    "02startingLocation": "{\"name\":\"blueLeft\",\"x\":9.8,\"y\":1.3999999999999995}",
+    "01metaData": "{\"scoutName\":\"Ari\",\"teamNumber\":\"3512\",\"matchNumber\":\"P4\",\"teamColor\":\"Blue\"}",
+    "03auto": "[{\"collectionLocation\":{\"name\":\"startingCoral\",\"x\":9.5,\"y\":-1.8000000000000007},\"name\":\"Coral\",\"color\":\"rgb(0,50,0)\",\"result\":\"No Result\"}]",
+    "05endgame": "{\"Deep\":\"No Attempt\",\"Shallow\":\"No Attempt\",\"Park\":\"No Attempt\"}",
+    "06extra": "{\"Died\":\"True\",\"Defense\":\"None\",\"Driver_Quality\":\"Average\",\"Comments\":\"Moved off of starting line in auto then died\"}",
+    "timestamp": "2025-03-09T20:58:34.545Z"
+  },
+  {
+    "04teleop": "[{\"collectionLocation\":{\"name\":\"blueSource1\",\"x\":15.7,\"y\":7.999999999999999},\"name\":\"Coral\",\"color\":\"rgb(0,0,50)\",\"result\":\"Fell on Floor\"},{\"collectionLocation\":{\"name\":\"blueSource1\",\"x\":15.7,\"y\":7.999999999999999},\"name\":\"Coral\",\"color\":\"rgb(0,0,50)\",\"result\":\"Fell on Floor\"},{\"collectionLocation\":{\"name\":\"blueSource1\",\"x\":15.7,\"y\":7.999999999999999},\"name\":\"Coral\",\"color\":\"rgb(0,0,50)\",\"result\":\"L4 (Top)\"},{\"collectionLocation\":{\"name\":\"blueSource1\",\"x\":15.7,\"y\":7.999999999999999},\"name\":\"Coral\",\"color\":\"rgb(0,0,50)\",\"result\":\"Failed Intake\"},{\"collectionLocation\":{\"name\":\"blueSource1\",\"x\":15.7,\"y\":7.999999999999999},\"name\":\"Coral\",\"color\":\"rgb(0,0,50)\",\"result\":\"Failed Intake\"},{\"collectionLocation\":{\"name\":\"blueSource1\",\"x\":15.7,\"y\":7.999999999999999},\"name\":\"Coral\",\"color\":\"rgb(0,0,50)\",\"result\":\"Failed Intake\"}]",
+    "02startingLocation": "{\"name\":\"blueRight\",\"x\":9.8,\"y\":6.999999999999999}",
+    "01metaData": "{\"scoutName\":\"Ari\",\"teamNumber\":\"5012\",\"matchNumber\":\"P5\",\"teamColor\":\"Blue\"}",
+    "03auto": "[{\"collectionLocation\":{\"name\":\"startingCoral\",\"x\":9.5,\"y\":-1.8000000000000007},\"name\":\"Coral\",\"color\":\"rgb(0,50,0)\",\"result\":\"Missed onto Floor\"}]",
+    "05endgame": "{\"Deep\":\"Successful\",\"Shallow\":\"No Attempt\",\"Park\":\"No Attempt\"}",
+    "06extra": "{\"Died\":\"False\",\"Defense\":\"Good\",\"Driver_Quality\":\"Average\",\"Comments\":\"Kept failing l4, then failed a few intakes then decided to go on defense \"}",
+    "timestamp": "2025-03-09T21:08:11.187Z"
+  },
+  {
+    "04teleop": "[{\"collectionLocation\":{\"name\":\"blueReef\",\"x\":12.25,\"y\":3.1999999999999993},\"name\":\"Algae\",\"color\":\"rgb(0,0,50)\",\"result\":\"Net\"},{\"collectionLocation\":{\"name\":\"redSource2\",\"x\":15.7,\"y\":0.1999999999999993},\"name\":\"Coral\",\"color\":\"rgb(0,0,163.88888888888886)\",\"result\":\"Fell on Floor\"},{\"collectionLocation\":{\"name\":\"blueReef\",\"x\":12.25,\"y\":3.1999999999999993},\"name\":\"Algae\",\"color\":\"rgb(0,0,50)\",\"result\":\"Net\"},{\"collectionLocation\":{\"name\":\"redSource2\",\"x\":15.7,\"y\":0.1999999999999993},\"name\":\"Coral\",\"color\":\"rgb(0,0,163.88888888888886)\",\"result\":\"L4 (Top)\"},{\"collectionLocation\":{\"name\":\"redSource2\",\"x\":15.7,\"y\":0.1999999999999993},\"name\":\"Coral\",\"color\":\"rgb(0,0,163.88888888888886)\",\"result\":\"L4 (Top)\"},{\"collectionLocation\":{\"name\":\"blueReef\",\"x\":12.25,\"y\":3.1999999999999993},\"name\":\"Algae\",\"color\":\"rgb(0,0,50)\",\"result\":\"Net\"},{\"collectionLocation\":{\"name\":\"blueSource1\",\"x\":15.7,\"y\":7.999999999999999},\"name\":\"Coral\",\"color\":\"rgb(0,0,50)\",\"result\":\"Fell on Floor\"},{\"collectionLocation\":{\"name\":\"blueSource1\",\"x\":15.7,\"y\":7.999999999999999},\"name\":\"Coral\",\"color\":\"rgb(0,0,50)\",\"result\":\"L4 (Top)\"},{\"collectionLocation\":{\"name\":\"redSource2\",\"x\":15.7,\"y\":0.1999999999999993},\"name\":\"Coral\",\"color\":\"rgb(0,0,163.88888888888886)\",\"result\":\"L4 (Top)\"},{\"collectionLocation\":{\"name\":\"redSource2\",\"x\":15.7,\"y\":0.1999999999999993},\"name\":\"Coral\",\"color\":\"rgb(0,0,163.88888888888886)\",\"result\":\"L3\"},{\"collectionLocation\":{\"name\":\"redSource2\",\"x\":15.7,\"y\":0.1999999999999993},\"name\":\"Coral\",\"color\":\"rgb(0,0,163.88888888888886)\",\"result\":\"Failed Intake\"},{\"collectionLocation\":{\"name\":\"redSource2\",\"x\":15.7,\"y\":0.1999999999999993},\"name\":\"Coral\",\"color\":\"rgb(0,0,163.88888888888886)\",\"result\":\"Fell on Floor\"},{\"collectionLocation\":{\"name\":\"redSource2\",\"x\":15.7,\"y\":0.1999999999999993},\"name\":\"Coral\",\"color\":\"rgb(0,0,163.88888888888886)\",\"result\":\"Fell in Trough\"},{\"collectionLocation\":{\"name\":\"redSource2\",\"x\":15.7,\"y\":0.1999999999999993},\"name\":\"Coral\",\"color\":\"rgb(0,0,163.88888888888886)\",\"result\":\"L2\"},{\"collectionLocation\":{\"name\":\"redSource2\",\"x\":15.7,\"y\":0.1999999999999993},\"name\":\"Coral\",\"color\":\"rgb(0,0,163.88888888888886)\",\"result\":\"L2\"}]",
+    "02startingLocation": "{\"name\":\"blueRight\",\"x\":9.8,\"y\":6.999999999999999}",
+    "01metaData": "{\"scoutName\":\"Ari\",\"teamNumber\":\"4123\",\"matchNumber\":\"P6\",\"teamColor\":\"Blue\"}",
+    "03auto": "[{\"collectionLocation\":{\"name\":\"startingCoral\",\"x\":9.5,\"y\":-1.8000000000000007},\"name\":\"Coral\",\"color\":\"rgb(0,50,0)\",\"result\":\"L4 (Top)\"},{\"collectionLocation\":{\"name\":\"sourceLeft\",\"x\":15.7,\"y\":7.999999999999999},\"name\":\"Coral\",\"color\":\"rgb(0,0,91)\",\"result\":\"Missed onto Floor\"}]",
+    "05endgame": "{\"Deep\":\"No Attempt\",\"Shallow\":\"No Attempt\",\"Park\":\"Failed\"}",
+    "06extra": "{\"Died\":\"False\",\"Defense\":\"None\",\"Driver_Quality\":\"Good\",\"Comments\":\"Holding algae and coral at the same time\"}",
+    "timestamp": "2025-03-09T21:16:25.335Z"
   }
 ]
