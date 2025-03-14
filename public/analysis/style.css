@@ -41,3 +41,9 @@
   position: absolute;
   right: 20vh;
 }
+#outputButton {
+  width: 10vh;
+  height: 5vh;
+  position: absolute;
+  right: 50vh;
+}
