@@ -23,8 +23,43 @@
   right: 5vh;
 }
 .dataWrapper{
-  height: 100px;
-  width: 50vh;
+  height: fit-content;
+  width: 70vh;
   background-color: #bb9839;
-  margin-top: 5px;
+  margin-top: 3vh;
+}
+.dataHolder{
+  margin: auto;
+  margin-top: 0.5vh;
+  margin-bottom: 0.5vh;
+  background-color: #1a2d43;
+  width: 95%;
+  height: fit-content;
+  color: white;
+  font-size:medium;
+  text-align: center;
+}
+.content {
+  padding: 0 18px;
+  display: none;
+  overflow: hidden;
+}
+.active, .collapsible:hover {
+  background-color: #0f1c2b;
+}
+.pieceImage{
+  width: 5%;
+}
+.collapsible{
+  cursor: pointer;
+}
+.gamePiece :not(.child){
+  float: left;
+}
+.gamePiece{
+  margin: auto;
+  margin-top: 3px;
+  background-color: #bb9839;
+  font-size: large;
+  width: 90%;
 }
