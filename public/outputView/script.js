@@ -132,7 +132,7 @@ function createDataBlocks() {
     let commentDisplay = document.createElement("div");
     commentDisplay.classList.add("dataHolder");
     wrapper.appendChild(commentDisplay);
-    extraDisplay.innerHTML = "Comment : " + extra.Comments;
+    commentDisplay.innerHTML = "Comment : " + extra.Comments;
   }
 }
 function createCollapsibleElements() {
