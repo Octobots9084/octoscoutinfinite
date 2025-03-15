@@ -1,25 +1,30 @@
 import { getJSONOutput, getJSONConfig } from "/util.js";
-let JSONOutput = await getJSONOutput();
-// Parse JSON strings in data
-const parsedJSONOutput = JSONOutput.map((item) => {
-  const parsedItem = { ...item };
-  Object.keys(item).forEach((key) => {
-    try {
-      parsedItem[key] = JSON.parse(item[key]);
-    } catch (error) {
-      // Ignore if it's not a JSON string
-    }
+let parsedJSONOutput;
+async function updateJSON() {
+  let JSONOutput = await getJSONOutput();
+  // Parse JSON strings in data
+  parsedJSONOutput = JSONOutput.map((item) => {
+    const parsedItem = { ...item };
+    Object.keys(item).forEach((key) => {
+      try {
+        parsedItem[key] = JSON.parse(item[key]);
+      } catch (error) {
+        // Ignore if it's not a JSON string
+      }
+    });
+    return parsedItem;
   });
-  return parsedItem;
-});
-function createDataBlocks() {
+}
+async function createDataBlocks() {
+  await updateJSON();
   let container = document.getElementById("dataContainer");
-
+  container.innerHTML = "";
   for (let i = 0; i < parsedJSONOutput.length; i++) {
     //create container
     let wrapper = document.createElement("div");
     wrapper.classList.add("dataWrapper");
     container.appendChild(wrapper);
+
     //show important data
     let metaData = parsedJSONOutput[i]["01metaData"];
     let metaDataDisplay = document.createElement("div");
@@ -41,23 +46,28 @@ function createDataBlocks() {
     startingLocationDisplay.innerHTML =
       "Starting Location: " + startingLocation.name;
     //show autonomous results
+
     let auto = parsedJSONOutput[i]["03auto"];
     let autoDisplay = document.createElement("div");
     autoDisplay.classList.add("dataHolder", "collapsible");
     wrapper.appendChild(autoDisplay);
     autoDisplay.innerHTML = "Click to View Auto Data";
     autoDisplay.style.paddingBottom = "5px";
+
     for (let j = 0; j < auto.length; j++) {
       //creating the cointainer for the piece
+
       let piece = auto[j];
       let pieceContainer = document.createElement("div");
       pieceContainer.classList.add("gamePiece", "content");
       //creating the image of the piece
+
       let pieceImage = document.createElement("img");
       pieceImage.classList.add("pieceImage");
       pieceImage.setAttribute("src", "../images/" + piece.name + ".png");
       pieceContainer.appendChild(pieceImage);
       autoDisplay.appendChild(pieceContainer);
+
       //showing data about the piece
       let pieceInfo = document.createElement("div");
       pieceContainer.appendChild(pieceInfo);
@@ -68,10 +78,12 @@ function createDataBlocks() {
         " | Result: " +
         piece.result;
     }
+
     if (auto.length == 0) {
       autoDisplay.innerHTML = "No Auto Data";
       autoDisplay.classList.remove("collapsible");
     }
+
     //show teleoperated results
     let teleop = parsedJSONOutput[i]["04teleop"];
     let teleopDisplay = document.createElement("div");
@@ -79,17 +91,20 @@ function createDataBlocks() {
     wrapper.appendChild(teleopDisplay);
     teleopDisplay.innerHTML = "Click to View Teleop Data";
     teleopDisplay.style.paddingBottom = "5px";
+
     for (let j = 0; j < teleop.length; j++) {
       //creating the cointainer for the piece
       let piece = teleop[j];
       let pieceContainer = document.createElement("div");
       pieceContainer.classList.add("gamePiece", "content");
+
       //creating the image of the piece
       let pieceImage = document.createElement("img");
       pieceImage.classList.add("pieceImage");
       pieceImage.setAttribute("src", "../images/" + piece.name + ".png");
       pieceContainer.appendChild(pieceImage);
       teleopDisplay.appendChild(pieceContainer);
+
       //showing data about the piece
       let pieceInfo = document.createElement("div");
       pieceContainer.appendChild(pieceInfo);
@@ -100,10 +115,12 @@ function createDataBlocks() {
         " | Result: " +
         piece.result;
     }
+
     if (teleop.length == 0) {
       teleopDisplay.innerHTML = "No Teleop Data";
       teleopDisplay.classList.remove("collapsible");
     }
+
     //show endgame data
     let endgame = parsedJSONOutput[i]["05endgame"];
     let endgameDisplay = document.createElement("div");
@@ -116,6 +133,7 @@ function createDataBlocks() {
       endgame.Shallow +
       " | Park: " +
       endgame.Park;
+
     //show extra data
     let extra = parsedJSONOutput[i]["06extra"];
     let extraDisplay = document.createElement("div");
@@ -128,11 +146,35 @@ function createDataBlocks() {
       extra.Defense +
       " | Driver Quality: " +
       extra.Driver_Quality;
+
     //show comments
+
     let commentDisplay = document.createElement("div");
     commentDisplay.classList.add("dataHolder");
     wrapper.appendChild(commentDisplay);
     commentDisplay.innerHTML = "Comment : " + extra.Comments;
+    let clickableDeleteImage = document.createElement("img");
+    clickableDeleteImage.src = "/images/deleteImage.png";
+    clickableDeleteImage.classList.add("deleteButton");
+    clickableDeleteImage.onclick = () => {
+      console.log(i);
+      removeData(i);
+      createDataBlocks();
+    };
+    wrapper.appendChild(clickableDeleteImage);
+  }
+}
+async function removeData(index) {
+  let response = await fetch("../removeData", {
+    method: "POST",
+    headers: {
+      "Content-Type": "text/html",
+    },
+    body: index,
+  });
+
+  if (response.status == 200) {
+    alert("Match Removed");
   }
 }
 function createCollapsibleElements() {
