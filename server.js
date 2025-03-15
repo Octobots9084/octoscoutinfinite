@@ -3,6 +3,7 @@ const path = require("path");
 const app = express();
 const fs = require("fs");
 const fileLock = require("proper-lockfile");
+const { json } = require("stream/consumers");
 app.use(express.json());
 app.use(
   express.urlencoded({
@@ -25,6 +26,11 @@ app.post("/submitData", async (req, res) => {
   await writeDataToJSON(req.body);
   res.sendStatus(200);
 });
+app.post("/removeData", async (req, res) => {
+  console.log(req.body);
+  await removeDataFromJSON(req.body);
+  res.sendStatus(200);
+});
 app.get("/output.json", async (req, res) => {
   const filePath = "./output.json";
   let data;
@@ -39,7 +45,20 @@ app.get("/output.json", async (req, res) => {
   // Send JSON data as response
   res.send(data);
 });
+async function removeDataFromJSON(index) {
+  const filePath = "./output.json";
+  await fileLock.lock(filePath, retryOptions).then((release) => {
+    const fileContent = fs.readFileSync(filePath, "utf8");
+    const jsonData = JSON.parse(fileContent || "[]");
+    // Append new data
+    jsonData.splice(index, 1);
 
+    // Write updated data to file
+    fs.writeFileSync(filePath, JSON.stringify(jsonData, null, 2));
+    console.log("Data removed from output.json.");
+    return release();
+  });
+}
 async function writeDataToJSON(data) {
   const filePath = "./output.json";
   data.timestamp = new Date();
@@ -47,7 +66,6 @@ async function writeDataToJSON(data) {
     // Read existing file content
     const fileContent = fs.readFileSync(filePath, "utf8");
     const jsonData = JSON.parse(fileContent || "[]");
-
     // Append new data
     jsonData.push(data);
 
