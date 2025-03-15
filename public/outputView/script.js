@@ -168,16 +168,18 @@ async function createDataBlocks() {
   createCollapsibleElements();
 }
 async function removeData(index) {
-  let response = await fetch("../removeData", {
-    method: "POST",
-    headers: {
-      "Content-Type": "text/html",
-    },
-    body: index,
-  });
+  if (confirm("Are you sure you want to delete this data?")) {
+    let response = await fetch("../removeData", {
+      method: "POST",
+      headers: {
+        "Content-Type": "text/html",
+      },
+      body: index,
+    });
 
-  if (response.status == 200) {
-    alert("Match Removed");
+    if (response.status == 200) {
+      alert("Match Removed");
+    }
   }
 }
 function createCollapsibleElements() {
