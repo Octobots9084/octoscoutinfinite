@@ -25,6 +25,17 @@ async function createDataBlocks() {
     wrapper.classList.add("dataWrapper");
     container.appendChild(wrapper);
 
+    //create delete button
+    let clickableDeleteImage = document.createElement("img");
+    clickableDeleteImage.src = "/images/deleteImage.png";
+    clickableDeleteImage.classList.add("deleteButton");
+    clickableDeleteImage.onclick = () => {
+      console.log(i);
+      removeData(i);
+      createDataBlocks();
+    };
+    wrapper.appendChild(clickableDeleteImage);
+
     //show important data
     let metaData = parsedJSONOutput[i]["01metaData"];
     let metaDataDisplay = document.createElement("div");
@@ -153,16 +164,8 @@ async function createDataBlocks() {
     commentDisplay.classList.add("dataHolder");
     wrapper.appendChild(commentDisplay);
     commentDisplay.innerHTML = "Comment : " + extra.Comments;
-    let clickableDeleteImage = document.createElement("img");
-    clickableDeleteImage.src = "/images/deleteImage.png";
-    clickableDeleteImage.classList.add("deleteButton");
-    clickableDeleteImage.onclick = () => {
-      console.log(i);
-      removeData(i);
-      createDataBlocks();
-    };
-    wrapper.appendChild(clickableDeleteImage);
   }
+  createCollapsibleElements();
 }
 async function removeData(index) {
   let response = await fetch("../removeData", {
