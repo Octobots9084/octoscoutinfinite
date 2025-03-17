@@ -2656,7 +2656,7 @@
   },
   {
     "02startingLocation": "{\"name\":\"redLeft\",\"x\":10.4,\"y\":6.8}",
-    "01metaData": "{\"scoutName\":\"Alyssa\",\"teamNumber\":\"1868\",\"matchNumber\":\"50 \",\"teamColor\":\"Red\"}",
+    "01metaData": "{\"scoutName\":\"Alyssa\",\"teamNumber\":\"1868\",\"matchNumber\":\"50\",\"teamColor\":\"Red\"}",
     "03auto": "[{\"collectionLocation\":{\"name\":\"startingCoral\",\"x\":7,\"y\":10},\"name\":\"Coral\",\"color\":\"rgb(0,50,0)\",\"result\":\"Missed onto Floor\"},{\"collectionLocation\":{\"name\":\"sourceLeft\",\"x\":15.7,\"y\":8},\"name\":\"Coral\",\"color\":\"rgb(91,0,0)\",\"result\":\"No Result\"}]",
     "05endgame": "{\"Deep\":\"No Attempt\",\"Shallow\":\"No Attempt\",\"Park\":\"Failed\"}",
     "06extra": "{\"Died\":\"False\",\"Defense\":\"None\",\"Driver_Quality\":\"Average\",\"Comments\":\"Trouble getting the coral on the reef. Didn’t climb \"}",

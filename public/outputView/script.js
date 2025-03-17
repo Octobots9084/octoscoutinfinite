@@ -21,8 +21,10 @@ async function createDataBlocks() {
   container.innerHTML = "";
   for (let i = 0; i < parsedJSONOutput.length; i++) {
     //create container
+
     let wrapper = document.createElement("div");
     wrapper.classList.add("dataWrapper");
+
     container.appendChild(wrapper);
 
     //create delete button
@@ -164,7 +166,44 @@ async function createDataBlocks() {
     commentDisplay.classList.add("dataHolder");
     wrapper.appendChild(commentDisplay);
     commentDisplay.innerHTML = "Comment : " + extra.Comments;
+
+    //find anomalies
+    var anomalies = detectAnomalies();
+    if (anomalies[metaData.matchNumber] != 6) {
+      if (anomalies[metaData.matchNumber] > 6) {
+        wrapper.classList.add("anomalyBig");
+      } else if (anomalies[metaData.matchNumber] < 6) {
+        wrapper.classList.add("anomalySmall");
+      }
+      let anomalyDisplay = document.createElement("div");
+      anomalyDisplay.classList.add("dataHolder");
+      wrapper.appendChild(anomalyDisplay);
+      anomalyDisplay.innerHTML =
+        "Number of results: " + anomalies[metaData.matchNumber];
+    }
   }
+  let anomalous = 0;
+  let anomalousBig = 0;
+  let anomalousSmall = 0;
+  let anomalyCounter = document.createElement("div");
+  container.prepend(anomalyCounter);
+  anomalyCounter.classList.add("anomalyCounter");
+  for (let i = 0; i < Object.keys(anomalies).length; i++) {
+    if (anomalies[Object.keys(anomalies)[i]] < 6) {
+      anomalousSmall++;
+      anomalous++;
+    } else if (anomalies[Object.keys(anomalies)[i]] > 6) {
+      anomalousBig++;
+      anomalous++;
+    }
+  }
+  anomalyCounter.innerHTML =
+    "Total Anomalies: " +
+    anomalous +
+    " | Matches with less scouts: " +
+    anomalousSmall +
+    " | Matches with too many scouts: " +
+    anomalousBig;
   createCollapsibleElements();
 }
 async function removeData(index) {
@@ -181,6 +220,21 @@ async function removeData(index) {
       alert("Match Removed");
     }
   }
+}
+function detectAnomalies() {
+  let matches = {};
+  for (let i = 0; i < parsedJSONOutput.length; i++) {
+    if (
+      Object.keys(matches).includes(
+        parsedJSONOutput[i]["01metaData"].matchNumber
+      )
+    ) {
+      matches[parsedJSONOutput[i]["01metaData"].matchNumber]++;
+    } else {
+      matches[parsedJSONOutput[i]["01metaData"].matchNumber] = 1;
+    }
+  }
+  return matches;
 }
 function createCollapsibleElements() {
   var coll = document.getElementsByClassName("collapsible");
