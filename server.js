@@ -51,7 +51,6 @@ async function removeDataFromJSON(index) {
     const fileContent = fs.readFileSync(filePath, "utf8");
     const jsonData = JSON.parse(fileContent || "[]");
     // Append new data
-    console.log(index);
     console.log(jsonData[index]);
     jsonData.splice(index, 1);
 
