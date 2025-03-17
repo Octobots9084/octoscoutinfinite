@@ -75,3 +75,14 @@
 .anomalySmall{
   background-color: darkred;
 }
+.anomalyCounter{
+  margin: auto;
+  background-color: darkred;
+  width: 70vh;
+  height: fit-content;
+  color: white;
+  font-size: large;
+  text-align: center;
+  overflow: hidden;
+
+}

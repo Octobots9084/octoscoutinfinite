@@ -17,7 +17,6 @@ async function updateJSON() {
 }
 async function createDataBlocks() {
   await updateJSON();
-  let anomalous;
   let container = document.getElementById("dataContainer");
   container.innerHTML = "";
   for (let i = 0; i < parsedJSONOutput.length; i++) {
@@ -181,10 +180,30 @@ async function createDataBlocks() {
       wrapper.appendChild(anomalyDisplay);
       anomalyDisplay.innerHTML =
         "Number of results: " + anomalies[metaData.matchNumber];
+    }
+  }
+  let anomalous = 0;
+  let anomalousBig = 0;
+  let anomalousSmall = 0;
+  let anomalyCounter = document.createElement("div");
+  container.prepend(anomalyCounter);
+  anomalyCounter.classList.add("anomalyCounter");
+  for (let i = 0; i < Object.keys(anomalies).length; i++) {
+    if (anomalies[Object.keys(anomalies)[i]] < 6) {
+      anomalousSmall++;
+      anomalous++;
+    } else if (anomalies[Object.keys(anomalies)[i]] > 6) {
+      anomalousBig++;
       anomalous++;
     }
   }
-  let anomalyCounter = document.createElement("div");
+  anomalyCounter.innerHTML =
+    "Total Anomalies: " +
+    anomalous +
+    " | Matches with less scouts: " +
+    anomalousSmall +
+    " | Matches with too many scouts: " +
+    anomalousBig;
   createCollapsibleElements();
 }
 async function removeData(index) {
