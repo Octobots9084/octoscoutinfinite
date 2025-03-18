@@ -235,8 +235,8 @@ function playConfetti() {
   const confettiImage = document.createElement('img');
   
   confettiImage.src = 'confetti.gif';
-  confettiImage.width = 512;
-  confettiImage.height = 512;
+  confettiImage.width = 1024;
+  confettiImage.height = 1024;
   
   confettiImage.style.position = 'fixed';
   confettiImage.style.top = '50%';
@@ -248,7 +248,7 @@ function playConfetti() {
   
   setTimeout(() => {
     confettiImage.remove();
-  }, 2000);//2 sec
+  }, 1500);//2 sec
 }
 
 function detectAnomalies() {
