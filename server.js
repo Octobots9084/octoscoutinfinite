@@ -26,6 +26,7 @@ app.post("/submitData", async (req, res) => {
   await writeDataToJSON(req.body);
   res.sendStatus(200);
 });
+
 app.post("/removeData", async (req, res) => {
   console.log(req.body);
   await removeDataFromJSON(req.body);
@@ -51,6 +52,7 @@ async function removeDataFromJSON(index) {
     const fileContent = fs.readFileSync(filePath, "utf8");
     const jsonData = JSON.parse(fileContent || "[]");
     // Append new data
+    console.log(jsonData[index]);
     jsonData.splice(index, 1);
 
     // Write updated data to file
