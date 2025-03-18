@@ -222,11 +222,35 @@ async function removeData(index) {
       alert("Match Removed");
       const sound = new Audio("pop.mp3");
       sound.play();
+      //MAKE 1/10 chance for other sound
+      
+      playConfetti();
+
     } else {
       alert("Error!");
     }
   }
 }
+function playConfetti() {
+  const confettiImage = document.createElement('img');
+  
+  confettiImage.src = 'confetti.gif';
+  confettiImage.width = 512;
+  confettiImage.height = 512;
+  
+  confettiImage.style.position = 'fixed';
+  confettiImage.style.top = '50%';
+  confettiImage.style.left = '50%';
+  confettiImage.style.transform = 'translate(-50%, -50%)';
+  confettiImage.style.zIndex = '9999';
+  
+  document.body.appendChild(confettiImage);
+  
+  setTimeout(() => {
+    confettiImage.remove();
+  }, 2000);//2 sec
+}
+
 function detectAnomalies() {
   let matches = {};
   for (let i = 0; i < parsedJSONOutput.length; i++) {
