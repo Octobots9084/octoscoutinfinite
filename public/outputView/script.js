@@ -220,11 +220,23 @@ async function removeData(index) {
 
     if (response.status == 200) {
       alert("Match Removed");
+      //if (Math.random() < 0.5) {
+        var sound = new Audio("../images/pop.mp3");
+      // } else {
+      //   var sound = new Audio("popRare.mp3");
+      // }
+      sound.play();
+
+      playConfetti();
+      playCupcake();
+
+      //add subway surfer? add ball drop? add cookie clicker game for when confetti is going? google chrome dino in background 100%
     } else {
       alert("Error!");
     }
   }
 }
+
 function detectAnomalies() {
   let matches = {};
   for (let i = 0; i < parsedJSONOutput.length; i++) {
@@ -261,3 +273,49 @@ function createCollapsibleElements() {
 }
 createDataBlocks();
 createCollapsibleElements();
+function playConfetti() {
+  const confettiImage = document.createElement('img');
+  
+  confettiImage.src = '../images/confetti.gif';
+  confettiImage.width = 1536;
+  confettiImage.height = 1536;
+  
+  confettiImage.style.position = 'fixed';
+  confettiImage.style.top = '50%';
+  confettiImage.style.left = '50%';
+  confettiImage.style.transform = 'translate(-50%, -50%)';
+  confettiImage.style.zIndex = '9999';
+  
+  document.body.appendChild(confettiImage);
+  
+  setTimeout(() => {
+    confettiImage.remove();
+  }, 1500);//1.5 sec
+}
+let currentCupcakeImage = null;
+
+function playCupcake() {
+  // If there's already an existing cupcake image, remove it
+  if (currentCupcakeImage) {
+    currentCupcakeImage.remove();
+  }
+
+  let randomX = Math.random() * 100;
+  let randomY = Math.random() * 100;
+
+  const cupcakeImage = document.createElement('img');
+  
+  cupcakeImage.src = '../images/cupcake.png';
+  cupcakeImage.width = 1152 / 4;
+  cupcakeImage.height = 648 / 4;
+  
+  cupcakeImage.style.position = 'fixed';
+  cupcakeImage.style.top = randomY + '%';
+  cupcakeImage.style.left = randomX + '%';
+  cupcakeImage.style.transform = 'translate(-50%, -50%)';
+  cupcakeImage.style.zIndex = '9999';
+  
+  document.body.appendChild(cupcakeImage);
+  
+  currentCupcakeImage = cupcakeImage;
+}
