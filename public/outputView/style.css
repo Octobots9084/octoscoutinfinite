@@ -86,3 +86,12 @@
   overflow: hidden;
 
 }
+#undoContainer{
+  height: fit-content;
+  width: 70vw;
+  background-color: yellow;
+  display: none;
+  bottom: 0;
+  position: fixed;
+  right: 15vw;
+}

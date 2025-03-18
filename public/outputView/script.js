@@ -217,13 +217,24 @@ async function removeData(index) {
       },
       body: JSON.stringify(input),
     });
-
     if (response.status == 200) {
       alert("Match Removed");
+      console.log(parsedJSONOutput[index]);
+      prepareUndo(parsedJSONOutput[index], index);
     } else {
       alert("Error!");
     }
   }
+}
+function prepareUndo(data, index) {
+  let undoWrapper = document.getElementById("undoContainer");
+  let undoButton = document.getElementById("undoButton");
+  undoButton.onclick = () => {
+    console.log(index);
+    undoRemove(data, index);
+    createDataBlocks();
+  };
+  undoWrapper.style.display = "block";
 }
 function detectAnomalies() {
   let matches = {};
