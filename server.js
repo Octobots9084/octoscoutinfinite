@@ -26,6 +26,7 @@ app.post("/submitData", async (req, res) => {
   await writeDataToJSON(req.body);
   res.sendStatus(200);
 });
+
 app.post("/removeData", async (req, res) => {
   console.log(req.body);
   await removeDataFromJSON(req.body);

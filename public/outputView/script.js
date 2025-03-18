@@ -207,17 +207,21 @@ async function createDataBlocks() {
   createCollapsibleElements();
 }
 async function removeData(index) {
+  const input = [];
+  input.push(index);
   if (confirm("Are you sure you want to delete this data?")) {
     let response = await fetch("../removeData", {
       method: "POST",
       headers: {
-        "Content-Type": "text/html",
+        "Content-Type": "application/json",
       },
-      body: index,
+      body: JSON.stringify(input),
     });
 
     if (response.status == 200) {
       alert("Match Removed");
+    } else {
+      alert("Error!");
     }
   }
 }
