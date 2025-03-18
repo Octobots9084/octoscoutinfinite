@@ -220,6 +220,8 @@ async function removeData(index) {
 
     if (response.status == 200) {
       alert("Match Removed");
+      const sound = new Audio("pop.mp3");
+      sound.play();
     } else {
       alert("Error!");
     }
