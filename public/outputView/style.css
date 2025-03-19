@@ -95,3 +95,9 @@
   position: fixed;
   right: 15vw;
 }
+#resurrectButton {
+  width: 10vh;
+  height: 5vh;
+  position: absolute;
+  right: 20vh;
+}

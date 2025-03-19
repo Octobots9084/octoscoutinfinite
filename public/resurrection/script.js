@@ -1,7 +1,7 @@
-import { getJSONOutput, getJSONConfig } from "/util.js";
+import { getJSONOutput, getJSONDeleted } from "/util.js";
 let parsedJSONOutput;
 async function updateJSON() {
-  let JSONOutput = await getJSONOutput();
+  let JSONOutput = await getJSONDeleted();
   // Parse JSON strings in data
   parsedJSONOutput = JSONOutput.map((item) => {
     const parsedItem = { ...item };
@@ -12,6 +12,7 @@ async function updateJSON() {
         // Ignore if it's not a JSON string
       }
     });
+    console.log(parsedItem);
     return parsedItem;
   });
 }
@@ -33,7 +34,7 @@ async function createDataBlocks() {
     clickableDeleteImage.classList.add("deleteButton");
     clickableDeleteImage.onclick = () => {
       console.log(i);
-      removeData(i);
+      resurrectData(i);
       createDataBlocks();
     };
     wrapper.appendChild(clickableDeleteImage);
@@ -167,50 +168,14 @@ async function createDataBlocks() {
     wrapper.appendChild(commentDisplay);
     commentDisplay.innerHTML = "Comment : " + extra.Comments;
 
-    //find anomalies
-    var anomalies = detectAnomalies();
-    if (anomalies[metaData.matchNumber] != 6) {
-      if (anomalies[metaData.matchNumber] > 6) {
-        wrapper.classList.add("anomalyBig");
-      } else if (anomalies[metaData.matchNumber] < 6) {
-        wrapper.classList.add("anomalySmall");
-      }
-      let anomalyDisplay = document.createElement("div");
-      anomalyDisplay.classList.add("dataHolder");
-      wrapper.appendChild(anomalyDisplay);
-      anomalyDisplay.innerHTML =
-        "Number of results: " + anomalies[metaData.matchNumber];
-    }
+    createCollapsibleElements();
   }
-  let anomalous = 0;
-  let anomalousBig = 0;
-  let anomalousSmall = 0;
-  let anomalyCounter = document.createElement("div");
-  container.prepend(anomalyCounter);
-  anomalyCounter.classList.add("anomalyCounter");
-  for (let i = 0; i < Object.keys(anomalies).length; i++) {
-    if (anomalies[Object.keys(anomalies)[i]] < 6) {
-      anomalousSmall++;
-      anomalous++;
-    } else if (anomalies[Object.keys(anomalies)[i]] > 6) {
-      anomalousBig++;
-      anomalous++;
-    }
-  }
-  anomalyCounter.innerHTML =
-    "Total Anomalies: " +
-    anomalous +
-    " | Matches with less scouts: " +
-    anomalousSmall +
-    " | Matches with too many scouts: " +
-    anomalousBig;
-  createCollapsibleElements();
 }
-async function removeData(index) {
-  const input = [];
-  input.push(index);
-  if (confirm("Are you sure you want to delete this data?")) {
-    let response = await fetch("../removeData", {
+async function resurrectData(index) {
+  console.log(parsedJSONOutput[index]);
+  input = parsedJSONOutput[index];
+  if (confirm("Are you sure you want to bring back this data?")) {
+    let response = await fetch("../resurrectData", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -219,36 +184,10 @@ async function removeData(index) {
     });
     if (response.status == 200) {
       alert("Match Removed");
-      console.log(parsedJSONOutput[index]);
     } else {
       alert("Error!");
     }
   }
-}
-// function prepareUndo(data, index) {
-//   let undoWrapper = document.getElementById("undoContainer");
-//   let undoButton = document.getElementById("undoButton");
-//   undoButton.onclick = () => {
-//     console.log(index);
-//     undoRemove(data, index);
-//     createDataBlocks();
-//   };
-//   undoWrapper.style.display = "block";
-// }
-function detectAnomalies() {
-  let matches = {};
-  for (let i = 0; i < parsedJSONOutput.length; i++) {
-    if (
-      Object.keys(matches).includes(
-        parsedJSONOutput[i]["01metaData"].matchNumber
-      )
-    ) {
-      matches[parsedJSONOutput[i]["01metaData"].matchNumber]++;
-    } else {
-      matches[parsedJSONOutput[i]["01metaData"].matchNumber] = 1;
-    }
-  }
-  return matches;
 }
 function createCollapsibleElements() {
   var coll = document.getElementsByClassName("collapsible");

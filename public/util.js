@@ -44,6 +44,20 @@ async function getJSONOutput() {
     return null;
   }
 }
+async function getJSONDeleted() {
+  try {
+    const response = await fetch("/deleted.json");
+    if (!response.ok) {
+      throw new Error(`HTTP error! Status: ${response.status}`);
+    }
+    const data = await response.json();
+    console.log(data);
+    return data;
+  } catch (error) {
+    console.error("Error fetching JSON config:", error);
+    return null;
+  }
+}
 
 // Calculates the pixels from the top of the screen so the button is positioned on the field at the correct x coordinate (in meters).
 function xPositionMetersToPixelsFromTop(
@@ -134,6 +148,7 @@ export {
   getJSONConfig,
   getGraphJSONConfig,
   getJSONOutput,
+  getJSONDeleted,
   xPositionMetersToPixelsFromTop,
   yPositionMetersToPixelsFromLeft,
   quartiles,
