@@ -2,7 +2,6 @@ let fieldWidth = 8.2;
 let fieldHeight = 16.5;
 let autoFieldWidth = 16.4;
 let autoFieldHeight = 19.5;
-
 async function getJSONConfig() {
   try {
     const response = await fetch("/config.json");
@@ -38,20 +37,6 @@ async function getJSONOutput() {
       throw new Error(`HTTP error! Status: ${response.status}`);
     }
     const data = await response.json();
-    return data;
-  } catch (error) {
-    console.error("Error fetching JSON config:", error);
-    return null;
-  }
-}
-async function getJSONDeleted() {
-  try {
-    const response = await fetch("/deleted.json");
-    if (!response.ok) {
-      throw new Error(`HTTP error! Status: ${response.status}`);
-    }
-    const data = await response.json();
-    console.log(data);
     return data;
   } catch (error) {
     console.error("Error fetching JSON config:", error);
@@ -148,7 +133,6 @@ export {
   getJSONConfig,
   getGraphJSONConfig,
   getJSONOutput,
-  getJSONDeleted,
   xPositionMetersToPixelsFromTop,
   yPositionMetersToPixelsFromLeft,
   quartiles,

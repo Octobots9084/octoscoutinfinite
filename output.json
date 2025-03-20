@@ -3948,6 +3948,17 @@
     "03auto": "[{\"collectionLocation\":{\"name\":\"startingCoral\",\"x\":9.5,\"y\":-1.8000000000000007},\"name\":\"Coral\",\"color\":\"rgb(0,50,0)\",\"result\":\"L4 (Top)\"},{\"collectionLocation\":{\"name\":\"sourceLeft\",\"x\":15.7,\"y\":7.999999999999999},\"name\":\"Coral\",\"color\":\"rgb(0,0,91)\",\"result\":\"Missed onto Floor\"}]",
     "05endgame": "{\"Deep\":\"No Attempt\",\"Shallow\":\"No Attempt\",\"Park\":\"Failed\"}",
     "06extra": "{\"Died\":\"False\",\"Defense\":\"None\",\"Driver_Quality\":\"Good\",\"Comments\":\"Holding algae and coral at the same time\"}",
-    "timestamp": "2025-03-09T21:16:25.335Z"
+    "timestamp": "2025-03-09T21:16:25.335Z",
+    "deleted": false
+  },
+  {
+    "01metaData": "{\"scoutName\":\"ari\",\"teamNumber\":\"\",\"matchNumber\":\"\",\"teamColor\":\"Blue\"}",
+    "02startingLocation": "{\"name\":\"noShow\",\"x\":16.5,\"y\":8.2}",
+    "06extra": "{\"Died\":\"False\",\"Defense\":\"None\",\"Driver_Quality\":\"Average\",\"Comments\":\"\"}",
+    "03auto": "[]",
+    "04teleop": "[]",
+    "05endgame": "{\"Deep\":\"No Attempt\",\"Shallow\":\"No Attempt\",\"Park\":\"No Attempt\"}",
+    "timestamp": "2025-03-20T00:17:55.757Z",
+    "deleted": true
   }
 ]

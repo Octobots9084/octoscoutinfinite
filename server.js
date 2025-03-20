@@ -34,25 +34,11 @@ app.post("/removeData", async (req, res) => {
 });
 app.post("/resurrectData", async (req, res) => {
   console.log(req.body);
-  await removeDataFromDeletedJSON(req.body);
+  await resurrectData(req.body);
   res.sendStatus(200);
 });
 app.get("/output.json", async (req, res) => {
   const filePath = "./output.json";
-  let data;
-  // Acquire lock
-  await fileLock.lock(filePath, retryOptions).then((release) => {
-    // Read the JSON file
-    data = fs.readFileSync(filePath, "utf8");
-    return release();
-  });
-  // Set headers to indicate JSON response
-  res.setHeader("Content-Type", "application/json");
-  // Send JSON data as response
-  res.send(data);
-});
-app.get("/deleted.json", async (req, res) => {
-  const filePath = "./deleted.json";
   let data;
   // Acquire lock
   await fileLock.lock(filePath, retryOptions).then((release) => {
@@ -72,24 +58,7 @@ async function removeDataFromJSON(index) {
     const jsonData = JSON.parse(fileContent || "[]");
     // Append new data
     console.log(jsonData[index]);
-    writeDataToDeletedJSON(jsonData[index], index);
-    jsonData.splice(index, 1);
-
-    // Write updated data to file
-    fs.writeFileSync(filePath, JSON.stringify(jsonData, null, 2));
-    console.log("Data removed from output.json.");
-    return release();
-  });
-}
-async function removeDataFromDeletedJSON(index) {
-  const filePath = "./deleted.json";
-  await fileLock.lock(filePath, retryOptions).then((release) => {
-    const fileContent = fs.readFileSync(filePath, "utf8");
-    const jsonData = JSON.parse(fileContent || "[]");
-    // Append new data
-    console.log(jsonData[index]);
-    writeDataToDeletedJSON(jsonData[index]);
-    jsonData.splice(index, 1);
+    jsonData[index].deleted = true;
 
     // Write updated data to file
     fs.writeFileSync(filePath, JSON.stringify(jsonData, null, 2));
@@ -100,22 +69,7 @@ async function removeDataFromDeletedJSON(index) {
 async function writeDataToJSON(data) {
   const filePath = "./output.json";
   data.timestamp = new Date();
-  await fileLock.lock(filePath, retryOptions).then((release) => {
-    // Read existing file content
-    const fileContent = fs.readFileSync(filePath, "utf8");
-    const jsonData = JSON.parse(fileContent || "[]");
-    // Append new data
-    jsonData.push(data);
-
-    // Write updated data to file
-    fs.writeFileSync(filePath, JSON.stringify(jsonData, null, 2));
-    console.log("Data appended to output.json.");
-    return release();
-  });
-}
-async function writeDataToDeletedJSON(data) {
-  const filePath = "./deleted.json";
-  data.timestamp = new Date();
+  data.deleted = false;
   await fileLock.lock(filePath, retryOptions).then((release) => {
     // Read existing file content
     const fileContent = fs.readFileSync(filePath, "utf8");
@@ -130,16 +84,16 @@ async function writeDataToDeletedJSON(data) {
   });
 }
 
-async function resurrectData(data, index) {
+async function resurrectData(index) {
   const filePath = "./output.json";
   await fileLock.lock(filePath, retryOptions).then((release) => {
     // Read existing file content
     const fileContent = fs.readFileSync(filePath, "utf8");
     const jsonData = JSON.parse(fileContent || "[]");
     // Append new data
-    console.log("data1" + data[1]);
-    console.log(data[0]);
-    jsonData.splice(data[1], 0, data[0]);
+    console.log("index  " + index);
+    console.log(" hi " + jsonData);
+    jsonData[index].deleted = false;
 
     // Write updated data to file
     fs.writeFileSync(filePath, JSON.stringify(jsonData, null, 2));
