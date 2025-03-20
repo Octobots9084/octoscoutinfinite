@@ -130,6 +130,9 @@ function getDataAndCreateGraph(
       // Getting matches of the team
       let matchesOfTeam = parsedJSONOutput.filter((obj) => {
         const metaData = obj["01metaData"];
+        if (obj.deleted) {
+          return false;
+        }
         return metaData.teamNumber === teams[l];
       });
 

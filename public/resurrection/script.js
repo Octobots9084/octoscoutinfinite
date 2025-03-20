@@ -20,7 +20,7 @@ async function createDataBlocks() {
   let container = document.getElementById("dataContainer");
   container.innerHTML = "";
   for (let i = 0; i < parsedJSONOutput.length; i++) {
-    if (!parsedJSONOutput[i].deleted) {
+    if (parsedJSONOutput[i].deleted) {
       //create container
 
       let wrapper = document.createElement("div");
@@ -34,7 +34,7 @@ async function createDataBlocks() {
       clickableDeleteImage.classList.add("deleteButton");
       clickableDeleteImage.onclick = () => {
         console.log(i);
-        removeData(i);
+        resurrectData(i);
         createDataBlocks();
       };
       wrapper.appendChild(clickableDeleteImage);
@@ -168,51 +168,16 @@ async function createDataBlocks() {
       wrapper.appendChild(commentDisplay);
       commentDisplay.innerHTML = "Comment : " + extra.Comments;
 
-      //find anomalies
-      var anomalies = detectAnomalies();
-      if (anomalies[metaData.matchNumber] != 6) {
-        if (anomalies[metaData.matchNumber] > 6) {
-          wrapper.classList.add("anomalyBig");
-        } else if (anomalies[metaData.matchNumber] < 6) {
-          wrapper.classList.add("anomalySmall");
-        }
-        let anomalyDisplay = document.createElement("div");
-        anomalyDisplay.classList.add("dataHolder");
-        wrapper.appendChild(anomalyDisplay);
-        anomalyDisplay.innerHTML =
-          "Number of results: " + anomalies[metaData.matchNumber];
-      }
+      createCollapsibleElements();
     }
   }
-  let anomalous = 0;
-  let anomalousBig = 0;
-  let anomalousSmall = 0;
-  let anomalyCounter = document.createElement("div");
-  container.prepend(anomalyCounter);
-  anomalyCounter.classList.add("anomalyCounter");
-  for (let i = 0; i < Object.keys(anomalies).length; i++) {
-    if (anomalies[Object.keys(anomalies)[i]] < 6) {
-      anomalousSmall++;
-      anomalous++;
-    } else if (anomalies[Object.keys(anomalies)[i]] > 6) {
-      anomalousBig++;
-      anomalous++;
-    }
-  }
-  anomalyCounter.innerHTML =
-    "Total Anomalies: " +
-    anomalous +
-    " | Matches with less scouts: " +
-    anomalousSmall +
-    " | Matches with too many scouts: " +
-    anomalousBig;
-  createCollapsibleElements();
 }
-async function removeData(index) {
+async function resurrectData(index) {
+  console.log("hello");
   const input = [];
   input.push(index);
-  if (confirm("Are you sure you want to delete this data?")) {
-    let response = await fetch("../removeData", {
+  if (confirm("Are you sure you want to bring back this data?")) {
+    let response = await fetch("../resurrectData", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -221,37 +186,10 @@ async function removeData(index) {
     });
     if (response.status == 200) {
       alert("Match Removed");
-      console.log(parsedJSONOutput[index]);
-      //if (Math.random() < 0.5) {
-        var sound = new Audio("../images/pop.mp3");
-      // } else {
-      //   var sound = new Audio("popRare.mp3");
-      // }
-      sound.play();
-
-      playConfetti();
-      playCupcake();
-
-      //add subway surfer? add ball drop? add cookie clicker game for when confetti is going? google chrome dino in background 100%
     } else {
       alert("Error!");
     }
   }
-}
-function detectAnomalies() {
-  let matches = {};
-  for (let i = 0; i < parsedJSONOutput.length; i++) {
-    if (
-      Object.keys(matches).includes(
-        parsedJSONOutput[i]["01metaData"].matchNumber
-      )
-    ) {
-      matches[parsedJSONOutput[i]["01metaData"].matchNumber]++;
-    } else {
-      matches[parsedJSONOutput[i]["01metaData"].matchNumber] = 1;
-    }
-  }
-  return matches;
 }
 function createCollapsibleElements() {
   var coll = document.getElementsByClassName("collapsible");
@@ -274,49 +212,3 @@ function createCollapsibleElements() {
 }
 createDataBlocks();
 createCollapsibleElements();
-function playConfetti() {
-  const confettiImage = document.createElement('img');
-  
-  confettiImage.src = '../images/confetti.gif';
-  confettiImage.width = 1536;
-  confettiImage.height = 1536;
-  
-  confettiImage.style.position = 'fixed';
-  confettiImage.style.top = '50%';
-  confettiImage.style.left = '50%';
-  confettiImage.style.transform = 'translate(-50%, -50%)';
-  confettiImage.style.zIndex = '9999';
-  
-  document.body.appendChild(confettiImage);
-  
-  setTimeout(() => {
-    confettiImage.remove();
-  }, 1500);//1.5 sec
-}
-let currentCupcakeImage = null;
-
-function playCupcake() {
-  // If there's already an existing cupcake image, remove it
-  if (currentCupcakeImage) {
-    currentCupcakeImage.remove();
-  }
-
-  let randomX = Math.random() * 100;
-  let randomY = Math.random() * 100;
-
-  const cupcakeImage = document.createElement('img');
-  
-  cupcakeImage.src = '../images/cupcake.png';
-  cupcakeImage.width = 1152 / 4;
-  cupcakeImage.height = 648 / 4;
-  
-  cupcakeImage.style.position = 'fixed';
-  cupcakeImage.style.top = randomY + '%';
-  cupcakeImage.style.left = randomX + '%';
-  cupcakeImage.style.transform = 'translate(-50%, -50%)';
-  cupcakeImage.style.zIndex = '9999';
-  
-  document.body.appendChild(cupcakeImage);
-  
-  currentCupcakeImage = cupcakeImage;
-}

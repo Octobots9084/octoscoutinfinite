@@ -189,7 +189,7 @@ function getDataAndCreateGraph(
     // Getting matches of the team
     let matchesOfTeam = parsedJSONOutput.filter((obj) => {
       const metaData = obj["01metaData"];
-      if (metaData.teamNumber === teamNumber) {
+      if (metaData.teamNumber === teamNumber && !obj.deleted) {
         matchNumbers.push(obj["01metaData"].matchNumber);
         return true;
       }

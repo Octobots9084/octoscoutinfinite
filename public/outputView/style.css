@@ -86,3 +86,18 @@
   overflow: hidden;
 
 }
+#undoContainer{
+  height: fit-content;
+  width: 70vw;
+  background-color: yellow;
+  display: none;
+  bottom: 0;
+  position: fixed;
+  right: 15vw;
+}
+#resurrectButton {
+  width: 10vh;
+  height: 5vh;
+  position: absolute;
+  right: 20vh;
+}
