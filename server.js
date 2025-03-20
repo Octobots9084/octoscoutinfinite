@@ -91,8 +91,6 @@ async function resurrectData(index) {
     const fileContent = fs.readFileSync(filePath, "utf8");
     const jsonData = JSON.parse(fileContent || "[]");
     // Append new data
-    console.log("index  " + index);
-    console.log(" hi " + jsonData);
     jsonData[index].deleted = false;
 
     // Write updated data to file

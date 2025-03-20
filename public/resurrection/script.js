@@ -176,7 +176,6 @@ async function resurrectData(index) {
   console.log("hello");
   const input = [];
   input.push(index);
-  console.log("world");
   if (confirm("Are you sure you want to bring back this data?")) {
     let response = await fetch("../resurrectData", {
       method: "POST",
@@ -190,9 +189,7 @@ async function resurrectData(index) {
     } else {
       alert("Error!");
     }
-    console.log("achoo");
   }
-  console.log("Sbeeze");
 }
 function createCollapsibleElements() {
   var coll = document.getElementsByClassName("collapsible");
