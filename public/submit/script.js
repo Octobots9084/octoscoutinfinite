@@ -91,6 +91,7 @@ function scoutAgain() {
   } else {
     window.location.href = "/";
   }
+  saveCookieClicker();
 }
 
 function playConfetti() {
@@ -139,3 +140,142 @@ function playCupcake() {
   
   currentCupcakeImage = cupcakeImage;
 }
+
+
+//cookie clicker
+let cookies;
+let cps;
+let clickVal;
+let cpsUpgradePrice;
+let clickValUpgradePrice;
+
+
+if (localStorage.getItem("CookieClicker.cookies") == null) {
+  cookies = 0;
+} else {
+  cookies = parseInt(localStorage.getItem("CookieClicker.cookies"));
+}
+  
+if (localStorage.getItem("CookieClicker.cps") == null) {
+  cps = 0;
+} else {
+cps = parseInt(localStorage.getItem("CookieClicker.cps"));
+}
+
+if (localStorage.getItem("CookieClicker.clickVal") == null) {
+  clickVal = 1;
+} else {
+clickVal = parseInt(localStorage.getItem("CookieClicker.clickVal"));
+}
+
+if (localStorage.getItem("CookieClicker.cpsUpgradePrice") == null) {
+  cpsUpgradePrice = 100;
+} else {
+cpsUpgradePrice = parseInt(localStorage.getItem("CookieClicker.cpsUpgradePrice"));
+}
+
+if (localStorage.getItem("CookieClicker.clickValUpgradePrice") == null) {
+  clickValUpgradePrice = 100;
+} else {
+clickValUpgradePrice = parseInt(localStorage.getItem("CookieClicker.clickValUpgradePrice"));
+}
+
+
+function saveCookieClicker () {
+  localStorage.setItem("CookieClicker.cookies", cookies);
+
+  localStorage.setItem("CookieClicker.cps", clickVal);
+
+  localStorage.setItem("CookieClicker.clickVal", clickVal);
+
+  localStorage.setItem("CookieClicker.cpsUpgradePrice", cpsUpgradePrice);
+}
+
+function addCookies(newCookies) {
+  cookies += newCookies;
+}
+
+function getCookies () {
+  return cookies; 
+}
+
+function addCps (newCps) {
+  cps += newCps;
+}
+
+function getCps () {
+  return cps;
+}
+
+function addClickVal (newClickVal) {
+  clickVal += newClickVal;
+}
+
+function getClickVal () {
+  return clickVal;
+}
+
+function addClickValUpgradePrice () {
+  clickValUpgradePrice *= 1.1;
+}
+
+function getClickValUpgradePrice () {
+  return clickValUpgradePrice;
+}
+
+function addCpsUpgradePrice () {
+  cpsUpgradePrice *= 1.1;
+}
+
+function getCpsUpgradePrice () {
+  return cpsUpgradePrice;
+}
+
+
+document.cookieClick = cookieClick;
+function cookieClick () {
+  addCookies(clickVal);
+  console.log(cookies);
+
+  updateVariables();
+  console.log("CLICKVAL" + 1); 
+  
+}//button click
+
+document.upgradeClickVal = upgradeClickVal;
+function upgradeClickVal () {
+  if (cookies >= clickValUpgradePrice) {
+    cookies -= clickValUpgradePrice;
+    addClickVal(1);
+    addClickValUpgradePrice();
+    updateVariables();
+    console.log("TEST")
+  }
+}
+
+
+document.cookieCps = cookieCps;
+function cookieCps () {
+  addCookies(clickVal);
+
+  updateVariables();
+}//per second
+
+function upgradeCps () {
+  if (cookies >= cpsUpgradePrice) {
+    cookies -= cpsUpgradePrice;
+    addCpsUpgradePrice();
+  }
+}
+
+function updateVariables () {
+  cookies = Math.trunc(cookies);
+document.getElementById("cookies").innerHTML = cookies;
+//document.getElementById("cps").innerHTML = cps;
+document.getElementById("clickVal").innerHTML = clickVal;
+//document.getElementById("cpsUpgradePrice").innerHTML = cpsUpgradePrice; 
+document.getElementById("clickValUpgradePrice").innerHTML = clickValUpgradePrice;
+}
+
+updateVariables();
+//console.log("CLICKVALUPGRADEPRICE" + clickValUpgradePrice);

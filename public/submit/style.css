@@ -29,3 +29,40 @@ select {
   height: 10vh;
   margin: 3vh;
 }
+
+.cookies {
+  display: flex; /* Enables flexbox */
+  align-items: center; /* Centers content vertically */
+  justify-content: center; /* Centers content horizontally */
+  background-color: #ffc629;
+  width: 300px; /* Increased width to fit text */
+  height: 20px; /* Increased height to fit text */
+  padding: 5px;
+  margin: 1px;
+  text-align: center; /* Ensures text is centered */
+}
+
+.cookies p {
+  font-size: 20px; /* Adjusted font size to fit the box */
+  color: #000000;
+  margin: 0; /* Removes default margin */
+}
+
+
+.clickVal {
+  display: flex; /* Enables flexbox */
+  align-items: center; /* Centers content vertically */
+  justify-content: center; /* Centers content horizontally */
+  background-color: #ffc629;
+  width: 300px; /* Increased width to fit text */
+  height: 30px; /* Increased height to fit text */
+  padding: 5px;
+  margin: 1px;
+  text-align: center; /* Ensures text is centered */
+}
+
+.clickVal p {
+  font-size: 20px; /* Adjusted font size to fit the box */
+  color: #000000;
+  margin: 0; /* Removes default margin */
+}
