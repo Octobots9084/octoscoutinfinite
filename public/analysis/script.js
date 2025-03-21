@@ -114,7 +114,7 @@ function getDataAndCreateGraph(
   let teams = [];
   parsedJSONOutput.filter((obj) => {
     const metaData = obj["01metaData"];
-    if (!teams.includes(metaData.teamNumber)) {
+    if (!teams.includes(metaData.teamNumber)&&!obj.deleted) {
       teams.push(metaData.teamNumber);
     }
   });
