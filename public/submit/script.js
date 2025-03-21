@@ -144,10 +144,38 @@ function playCupcake() {
 
 //cookie clicker
 let cookies;
+let tempcookies;
 let cps;
+let cpsActive = false;
 let clickVal;
 let cpsUpgradePrice;
 let clickValUpgradePrice;
+let cpsavg;
+
+if (!(cpsavg >= 0)) {
+  cpsavg = 0;
+}
+
+let second = setInterval (function() {
+  if (cpsActive) {
+    cookieCps();
+  }
+
+  cpsavg = cookies - tempcookies;
+
+if (!(cpsavg >= 0)) {
+  cpsavg = 0;
+}
+
+  tempcookies = cookies;
+
+
+  updateVariables();
+}, 1000) 
+// let fast = setInterval (function() {
+//   cpsavg = cookies - tempcookies;
+//   updateVariables();
+// },50)
 
 
 if (localStorage.getItem("CookieClicker.cookies") == null) {
@@ -203,33 +231,20 @@ function addCps (newCps) {
   cps += newCps;
 }
 
-function getCps () {
-  return cps;
-}
 
 function addClickVal (newClickVal) {
   clickVal += newClickVal;
 }
 
-function getClickVal () {
-  return clickVal;
-}
 
 function addClickValUpgradePrice () {
   clickValUpgradePrice *= 1.1;
-}
-
-function getClickValUpgradePrice () {
-  return clickValUpgradePrice;
 }
 
 function addCpsUpgradePrice () {
   cpsUpgradePrice *= 1.1;
 }
 
-function getCpsUpgradePrice () {
-  return cpsUpgradePrice;
-}
 
 
 document.cookieClick = cookieClick;
@@ -256,30 +271,49 @@ function upgradeClickVal () {
 
 document.cookieCps = cookieCps;
 function cookieCps () {
-  addCookies(clickVal);
+  addCookies(cps);
 
   updateVariables();
 }//per second
 
+document.startCps = startCps;
+function startCps () {
+  cpsActive = true;
+  console.log("Starting CPS");
+}
+
+document.stopCps = stopCps;
+function stopCps () {
+  cpsActive = false;
+  console.log("Stopping CPS");
+}
+
+document.upgradeCps = upgradeCps;
 function upgradeCps () {
   if (cookies >= cpsUpgradePrice) {
     cookies -= cpsUpgradePrice;
     addCpsUpgradePrice();
+    addCps(1);
   }
 }
 
 function updateVariables () {
   cookies = Math.trunc(cookies);
+  clickValUpgradePrice = Math.trunc(clickValUpgradePrice);
+  cpsUpgradePrice = Math.trunc(cpsUpgradePrice);
+  cps = Math.trunc(cps);
 document.getElementById("cookies").innerHTML = cookies;
-//document.getElementById("cps").innerHTML = cps;
-document.getElementById("clickVal").innerHTML = clickVal;
 
 document.getElementById("cookieClick").setAttribute("data-tooltip", ("Click Value: " + clickVal));
 //document.getElementById("cpsUpgradePrice").innerHTML = cpsUpgradePrice; 
 
-document.getElementById("clickVal").innerHTML = clickVal;
+document.getElementById("cpsavg").innerHTML = cpsavg;
 
-document.getElementById("upgradeClickVal").setAttribute("data-tooltip", ("Upgrade Price: " + Math.trunc(clickValUpgradePrice)));
+document.getElementById("upgradeClickVal").setAttribute("data-tooltip", ("Upgrade Price: " + clickValUpgradePrice));
+
+document.getElementById("upgradeCps").setAttribute("data-tooltip", ("Upgrade Price: " + cpsUpgradePrice));
+
+document.getElementById("cpsStart").setAttribute("data-tooltip", ("Cps Value: " + cps));
 }
 
 updateVariables();

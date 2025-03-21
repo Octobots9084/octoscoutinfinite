@@ -26,19 +26,65 @@
       </button>
       <button class="nextButton" onclick="scoutAgain()">Scout Again</button>
 
-      <button class="cookieClick" id="cookieClick" data-tooltip onclick="cookieClick()">Cookie Click</button>
-     
+      <h2 class="below" id="below">Cookie clicker below</h2>
+      <div class="seperation">
+       
+        <span id="seperation">
+
+        </span>
+      </div>
+
+
+
 
       <div class="cookies">
         <p>Cookies:</p>
         <p id="cookies"></p>
       </div>
 
-      <button class="upgradeClickVal" id="upgradeClickVal" data-tooltip onclick="upgradeClickVal()">Upgrade Clicks</button>
-      <div class="clickVal">
-        <p>Cookies per click: </p>
-        <p id="clickVal"></p>
+      <div class="sep2">
+        <span id="sep2"></span>
       </div>
+
+      <button class="cookieClick" id="cookieClick" data-tooltip onclick="cookieClick()"><img src="../images/cookie.jpg"></button>
+
+
+    <div class="sep2">
+      <span id="sep2"></span>
+    </div>
+      <button class="upgradeClickVal" id="upgradeClickVal" data-tooltip onclick="upgradeClickVal()">Upgrade Clicks</button>
+
+      <div class="sep2">
+        <span id="sep2"></span>
+      </div>
+
+      <button class="upgradeCps" id="upgradeCps" data-tooltip onclick="upgradeCps()">Upgrade CPS</button>
+
+
+
+
+      <div class="sep3">
+        <span id="sep3"></span>
+      </div>
+
+      <div class="cpsavg">
+        <p>Cookies per second: </p>
+        <p id="cpsavg"></p>
+      </div>
+      <div class="sep2">
+        <span id="sep2"></span>
+      </div>
+
+
+      <div>
+        <button class="cpsStart" id="cpsStart" onclick="startCps()">Start CPS</button>
+        
+        <h2 class="cpsStop" id="cpsStop" onclick="stopCps()">Stop CPS</p>
+      </div>
+
+
+
+
 
     </div>
     <script type="module" src="script.js"></script>

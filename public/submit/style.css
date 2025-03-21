@@ -30,16 +30,101 @@ select {
   margin: 3vh;
 }
 
+
+
+
+.seperation {
+  width:  0px;
+  height: 700px;
+  background-color: #ffc629;
+  display: block;
+}
+
+.below {
+  align-items: center;
+  text-align: center;
+  background-color: #bb9839;
+  display: inline-block;
+  padding: 2px 6px;
+  border-radius: 6px;
+  color: rgb(0, 0, 0);
+  font-size: 25px;
+}
+
+
+
+
+
+
+.sep2 {
+  height: 30px;
+}
+
+.sep3 {
+  height: 10px;
+}
+
+
+.cpsStart {
+  background-color: #bb9839;
+  border-radius: 6px;
+  text-align: center;
+  width: 115px;
+  height: 25px;
+  font-size: 22px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.cpsStart:hover {
+  position: relative;
+  display: block;
+  cursor:grab;
+}
+
+.cpsStart::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  left: 50%;
+  bottom:122.5%;
+  transform: translateX(-50%);
+  background: #ffc629da;
+  color:#000000;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-size: 14px;
+  white-space: nowrap;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.2s ease-in-out;
+}
+
+.cpsStart:hover::after {
+  opacity: 1;
+  visibility: visible;
+}
+
+.cpsStop {
+  background-color: #bb9839;
+  border-radius: 6px;
+  text-align: center;
+  width: 115px;
+  height: 25px;
+  font-size: 22px;
+  font-weight: 500;
+}
+
 .cookies {
   display: flex; /* Enables flexbox */
   align-items: center; /* Centers content vertically */
   justify-content: center; /* Centers content horizontally */
   background-color: #ffc629;
-  width: 300px; /* Increased width to fit text */
+  white-space: nowrap;
   height: 20px; /* Increased height to fit text */
   padding: 5px;
   margin: 3px;
   text-align: center; /* Ensures text is centered */
+  border-radius: 4px;
 }
 
 .cookies p {
@@ -49,23 +134,58 @@ select {
 }
 
 
-.clickVal {
+.cpsavg {
   display: flex; /* Enables flexbox */
   align-items: center; /* Centers content vertically */
   justify-content: center; /* Centers content horizontally */
   background-color: #ffc629;
-  width: 300px; /* Increased width to fit text */
-  height: 30px; /* Increased height to fit text */
   padding: 5px;
   margin: 1px;
   text-align: center; /* Ensures text is centered */
+  border-radius: 4px;
+
 }
 
-.clickVal p {
+.cpsavg p {
   font-size: 20px; /* Adjusted font size to fit the box */
   color: #000000;
   margin: 0; /* Removes default margin */
 }
+
+.upgradeCps:hover {
+  position: relative;
+  display: block;
+  cursor:grab;
+}
+.upgradeCps {
+  position:relative;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+
+.upgradeCps::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  left: 50%;
+  bottom:122.5%;
+  transform: translateX(-50%);
+  background: #ffc629da;
+  color:#000000;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-size: 14px;
+  white-space: nowrap;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.2s ease-in-out;
+}
+
+.upgradeCps:hover::after {
+  opacity: 1;
+  visibility: visible;
+}
+
 
 .cookieClick:hover {
   position: relative;
@@ -82,13 +202,19 @@ select {
 .cookieClick {
   position:relative;
   cursor: pointer;
+  margin: 0%;
+  padding: 0%;
+  padding-bottom: 0%;
+  padding-left: 0%;
+  padding-top: 0%;
+  padding-right: 0%;
 }
 
 .cookieClick::after {
   content: attr(data-tooltip);
   position: absolute;
   left: 50%;
-  bottom:110%;
+  bottom:102.5%;
   transform: translateX(-50%);
   background: #ffc629da;
   color:#000000;
@@ -111,13 +237,15 @@ select {
 .upgradeClickVal {
   position:relative;
   cursor: pointer;
+  border-radius: 4px;
 }
+
 
 .upgradeClickVal::after {
   content: attr(data-tooltip);
   position: absolute;
   left: 50%;
-  bottom:110%;
+  bottom:122.5%;
   transform: translateX(-50%);
   background: #ffc629da;
   color:#000000;
