@@ -25,17 +25,21 @@
         Back
       </button>
       <button class="nextButton" onclick="scoutAgain()">Scout Again</button>
-      <button class="cookieClick" onclick="cookieClick()">Cookie Click</button>
+
+      <button class="cookieClick" id="cookieClick" data-tooltip onclick="cookieClick()">Cookie Click</button>
+     
+
       <div class="cookies">
         <p>Cookies:</p>
         <p id="cookies"></p>
       </div>
 
-      <button class="upgradeClickVal" onclick="upgradeClickVal()">Upgrade Clicks</button>
+      <button class="upgradeClickVal" id="upgradeClickVal" data-tooltip onclick="upgradeClickVal()">Upgrade Clicks</button>
       <div class="clickVal">
         <p>Cookies per click: </p>
         <p id="clickVal"></p>
       </div>
+
     </div>
     <script type="module" src="script.js"></script>
   </body>

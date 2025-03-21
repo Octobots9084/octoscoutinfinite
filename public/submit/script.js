@@ -273,8 +273,13 @@ function updateVariables () {
 document.getElementById("cookies").innerHTML = cookies;
 //document.getElementById("cps").innerHTML = cps;
 document.getElementById("clickVal").innerHTML = clickVal;
+
+document.getElementById("cookieClick").setAttribute("data-tooltip", ("Click Value: " + clickVal));
 //document.getElementById("cpsUpgradePrice").innerHTML = cpsUpgradePrice; 
-document.getElementById("clickValUpgradePrice").innerHTML = clickValUpgradePrice;
+
+document.getElementById("clickVal").innerHTML = clickVal;
+
+document.getElementById("upgradeClickVal").setAttribute("data-tooltip", ("Upgrade Price: " + Math.trunc(clickValUpgradePrice)));
 }
 
 updateVariables();

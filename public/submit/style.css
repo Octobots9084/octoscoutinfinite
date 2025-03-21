@@ -38,14 +38,14 @@ select {
   width: 300px; /* Increased width to fit text */
   height: 20px; /* Increased height to fit text */
   padding: 5px;
-  margin: 1px;
+  margin: 3px;
   text-align: center; /* Ensures text is centered */
 }
 
 .cookies p {
   font-size: 20px; /* Adjusted font size to fit the box */
   color: #000000;
-  margin: 0; /* Removes default margin */
+  margin: 3; /* Removes default margin */
 }
 
 
@@ -65,4 +65,72 @@ select {
   font-size: 20px; /* Adjusted font size to fit the box */
   color: #000000;
   margin: 0; /* Removes default margin */
+}
+
+.cookieClick:hover {
+  position: relative;
+  display: block;
+  cursor:grab;
+}
+
+.upgradeClickVal:hover {
+  position: relative;
+  display: block;
+  cursor:grab;
+}
+
+.cookieClick {
+  position:relative;
+  cursor: pointer;
+}
+
+.cookieClick::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  left: 50%;
+  bottom:110%;
+  transform: translateX(-50%);
+  background: #ffc629da;
+  color:#000000;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-size: 14px;
+  white-space: nowrap;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.2s ease-in-out;
+}
+
+.cookieClick:hover::after {
+  opacity: 1;
+  visibility: visible;
+}
+
+
+
+.upgradeClickVal {
+  position:relative;
+  cursor: pointer;
+}
+
+.upgradeClickVal::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  left: 50%;
+  bottom:110%;
+  transform: translateX(-50%);
+  background: #ffc629da;
+  color:#000000;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-size: 14px;
+  white-space: nowrap;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.2s ease-in-out;
+}
+
+.upgradeClickVal:hover::after {
+  opacity: 1;
+  visibility: visible;
 }
