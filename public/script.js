@@ -66,6 +66,8 @@ function getNexusMatches() {
       teamcontainer.appendChild(teamSelector);
 
       //create typable input for match
+      let oldMatchSelector = document.getElementById("matchNumberInput");
+      oldMatchSelector.remove();
       const matchSelector = document.createElement("input");
       const container = document.getElementById("matchInputContainer");
       matchSelector.placeholder = "Match Number";
