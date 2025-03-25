@@ -83,6 +83,7 @@ async function submitData() {
       }
     }
   }
+  saveCookieClicker();
 }
 
 document.scoutAgain = scoutAgain;
@@ -235,9 +236,11 @@ clickValUpgradePrice = parseInt(localStorage.getItem("CookieClicker.clickValUpgr
 function saveCookieClicker () {
   localStorage.setItem("CookieClicker.cookies", cookies);
 
-  localStorage.setItem("CookieClicker.cps", clickVal);
+  localStorage.setItem("CookieClicker.cps", cps);
 
   localStorage.setItem("CookieClicker.clickVal", clickVal);
+
+  localStorage.setItem("CookieClicker.clickValUpgradePrice", clickValUpgradePrice)
 
   localStorage.setItem("CookieClicker.cpsUpgradePrice", cpsUpgradePrice);
 }
