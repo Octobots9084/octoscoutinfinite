@@ -74,10 +74,13 @@ async function submitData() {
 
     if (response.status == 200) {
       alert("Match Submitted");
+
+      if (funToggleVar) {
       var sound = new Audio("../images/pop.mp3");
         sound.play();
       playConfetti();
       playCupcake();
+      }
     }
   }
 }
@@ -96,6 +99,7 @@ function scoutAgain() {
 
 function playConfetti() {
   const confettiImage = document.createElement('img');
+  confettiImage.style.zIndex = -9999;
   
   confettiImage.src = '../images/confetti.gif';
   confettiImage.width = 1536;
@@ -105,7 +109,7 @@ function playConfetti() {
   confettiImage.style.top = '50%';
   confettiImage.style.left = '50%';
   confettiImage.style.transform = 'translate(-50%, -50%)';
-  confettiImage.style.zIndex = '9999';
+  confettiImage.style.zIndex = '-999';
   
   document.body.appendChild(confettiImage);
   
@@ -134,12 +138,31 @@ function playCupcake() {
   cupcakeImage.style.top = randomY + '%';
   cupcakeImage.style.left = randomX + '%';
   cupcakeImage.style.transform = 'translate(-50%, -50%)';
-  cupcakeImage.style.zIndex = '9999';
+  cupcakeImage.style.zIndex = '-999';
   
   document.body.appendChild(cupcakeImage);
   
   currentCupcakeImage = cupcakeImage;
 }
+
+let funToggleVar = true;
+
+document.funToggle = funToggle;
+function funToggle() {
+  funToggleVar = !funToggleVar;
+  if (funToggleVar) {
+    document.getElementById("funToggle").setAttribute("data-tooltip", "Fun is on.");
+    } else {
+      document.getElementById("funToggle").setAttribute("data-tooltip", "Fun is off.");
+    }
+}
+
+if (funToggleVar) {
+document.getElementById("funToggle").setAttribute("data-tooltip", "Fun is on.");
+} else {
+  document.getElementById("funToggle").setAttribute("data-tooltip", "Fun is off.");
+}
+
 
 
 //cookie clicker
