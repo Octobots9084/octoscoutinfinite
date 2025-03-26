@@ -75,11 +75,16 @@ input::placeholder {
 }
 
 .navButton {
-  width: auto;
+  width: 100%;
   height: auto;
   padding: 20px 40px;
-  margin-top: 10px;
+  margin: 10px 5px;
   position: inherit;
+}
+
+.primary-button {
+  background-color: #d4ae4c;
+  color: #000;
 }
 
 @media screen and (max-width: 800px) {
@@ -93,7 +98,6 @@ input::placeholder {
   }
 
   .navButton {
-    width: 100%;
     padding: 15px 20px;
   }
 
@@ -102,8 +106,13 @@ input::placeholder {
   }
 }
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 480px) {
+  .button-container {
+    flex-direction: column;
+  }
+
   .navButton {
-    padding: 10px 10px;
+    width: 100%;
+    margin: 5px 0;
   }
 }

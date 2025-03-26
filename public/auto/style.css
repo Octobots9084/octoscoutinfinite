@@ -39,9 +39,9 @@
 #gamePieceViewer {
   background-color: #bb9839;
   position: absolute;
-  top: 60vh;
+  top: 62vh;
   height: 20vh;
-  width: 80%;
+  width: 30vw;
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -55,7 +55,6 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-
 }
 
 .gamePieceContainer {
@@ -63,7 +62,7 @@
   padding: 5px;
   border-radius: 5px;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-between;
   margin: 4px;
   width: 100%;
 }
@@ -84,5 +83,14 @@
   position: relative;
   color: white;
   top: 0vh;
+}
 
+@media screen and (max-width: 800px) {
+  #gamePieceViewer {
+    width: 80%;
+  }
+
+  .gamePieceContainer {
+    justify-content: space-around;
+  }
 }
