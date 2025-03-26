@@ -1,5 +1,3 @@
-// Add this code at the beginning of your script.js file
-
 // Tab functionality
 document.addEventListener("DOMContentLoaded", function () {
   const tabButtons = document.querySelectorAll(".tab-button");
@@ -67,8 +65,10 @@ import {
   quartiles,
   calculateMean,
 } from "/util.js";
+
 let graphConfig = await getGraphJSONConfig();
 let JSONOutput = await getJSONOutput();
+
 // Parse JSON strings in data
 const parsedJSONOutput = JSONOutput.map((item) => {
   const parsedItem = { ...item };

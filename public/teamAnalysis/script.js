@@ -1,6 +1,69 @@
+// Tab functionality
+document.addEventListener("DOMContentLoaded", function () {
+  const tabButtons = document.querySelectorAll(".tab-button");
+  const tabSelect = document.getElementById("tabSelect");
+
+  // Store references to rendered charts
+  window.renderedCharts = [];
+
+  // Handle tab button clicks
+  tabButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+      switchTab(button.getAttribute("data-tab"));
+    });
+  });
+
+  // Handle dropdown selection
+  tabSelect.addEventListener("change", function () {
+    switchTab(this.value);
+  });
+
+  // Function to switch tabs
+  function switchTab(tabId) {
+    // Update button states
+    tabButtons.forEach((btn) => {
+      if (btn.getAttribute("data-tab") === tabId) {
+        btn.classList.add("active");
+      } else {
+        btn.classList.remove("active");
+      }
+    });
+
+    // Update dropdown selection
+    tabSelect.value = tabId;
+
+    // Update tab panes
+    document.querySelectorAll(".tab-pane").forEach((pane) => {
+      if (pane.id === tabId) {
+        pane.classList.add("active");
+      } else {
+        pane.classList.remove("active");
+      }
+    });
+
+    // Redraw charts in the active tab
+    if (window.renderedCharts.length > 0) {
+      const tabPane = document.getElementById(tabId);
+      const chartDivs = tabPane.querySelectorAll(".chart");
+      chartDivs.forEach((div) => {
+        const chart = window.renderedCharts.find(
+          (c) => c.container.id === div.id
+        );
+        if (chart) {
+          setTimeout(() => {
+            chart.render();
+          }, 10);
+        }
+      });
+    }
+  }
+});
+
 import { getGraphJSONConfig, getJSONOutput } from "/util.js";
+
 let graphConfig = await getGraphJSONConfig();
 let JSONOutput = await getJSONOutput();
+
 // Parse JSON strings in data
 const parsedJSONOutput = JSONOutput.map((item) => {
   const parsedItem = { ...item };
@@ -54,6 +117,12 @@ function drawGraph(dataPoints, chartName, yLabel, graphContainer) {
   // Drawing graph
   var chart = new CanvasJS.Chart(chartName, chartParameters);
   chart.render();
+
+  // Store reference to chart
+  if (!window.renderedCharts) {
+    window.renderedCharts = [];
+  }
+  window.renderedCharts.push(chart);
 }
 
 function drawGraphs() {
@@ -241,6 +310,7 @@ teamNumberInput.addEventListener("keydown", function (event) {
     updateTeamNumber(teamNumberInput);
   }
 });
+
 drawGraphs();
 addDefenseData();
 addComments();

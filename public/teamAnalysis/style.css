@@ -11,6 +11,7 @@
   align-items: center;
   flex-direction: column;
 }
+
 .wordsContainer {
   display: flex;
   width: 100%;
@@ -18,22 +19,9 @@
   align-items: center;
   flex-direction: column;
 }
+
 #header {
   color: white;
-}
-
-#backButton {
-  width: 10vh;
-  height: 5vh;
-  position: absolute;
-  left: 5vh;
-}
-
-#singleTeamButton {
-  width: 10vh;
-  height: 5vh;
-  position: absolute;
-  right: 5vh;
 }
 
 #teamNumberSelector {
@@ -43,18 +31,142 @@
   align-items: center;
   flex-direction: column;
 }
-#defense{
+
+#defense {
   color: white;
 }
-#comment{
+
+#comment {
   color: white;
 }
-#commentContainer{
-margin: 5px;
+
+#commentContainer {
+  margin: 5px;
 }
-.commentSeperator{
+
+.commentSeperator {
   color: white;
   height: 2px;
   border: none;
   background-color: white;
+}
+
+/* Top Navigation Bar */
+.top-nav {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+}
+
+.nav-left {
+  margin-left: 20px;
+}
+
+.nav-right {
+  display: flex;
+  margin-right: 20px;
+}
+
+.nav-link {
+  color: white;
+  text-decoration: none;
+  padding: 20px 40px;
+  margin: 0 5px;
+  border-radius: 4px;
+  font-size: 16px;
+  font-weight: 500;
+  transition: background-color 0.3s;
+  cursor: pointer;
+
+  &:hover {
+    background-color: #444;
+  }
+}
+
+/* Tab Navigation Styles */
+.tab-navigation {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin: 20px 0;
+  padding-top: 20px;
+}
+
+.tab-button {
+  padding: 20px 40px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+
+  &.active {
+    background-color: #6e6037;
+    color: white;
+  }
+}
+
+/* Dropdown for mobile */
+.tab-dropdown {
+  display: none;
+  width: 100%;
+}
+
+#tabSelect {
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: #333;
+  color: white;
+  font-size: 16px;
+  border: 1px solid #6e6037;
+}
+
+/* Tab Content Styles */
+.tab-pane {
+  display: none;
+
+  &.active {
+    display: flex;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .top-nav {
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px;
+  }
+
+  .nav-left,
+  .nav-right {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    width: 100%;
+    align-items: center;
+  }
+
+  .nav-link {
+    margin: 2.5px 0;
+    width: 80%;
+    padding: 15px 0px;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 700;
+
+  }
+
+  .tab-navigation {
+    display: none;
+  }
+
+  .tab-dropdown {
+    display: flex;
+    width: 80%;
+    justify-self: center;
+    padding-top: 20px;
+  }
 }
