@@ -93,7 +93,12 @@ input::placeholder {
   }
 
   .navButton {
+    width: 100%;
     padding: 15px 20px;
+  }
+
+  .button-container {
+    flex-wrap: wrap;
   }
 }
 
