@@ -100,6 +100,7 @@
   border: none;
   cursor: pointer;
   border-radius: 5px;
+  font-size: 16px;
 
   &.active {
     background-color: #6e6037;
@@ -150,12 +151,12 @@
   }
 
   .nav-link {
-    margin: 2.5px 0;
+    margin: 5px 0;
     width: 80%;
-    padding: 15px 0px;
+    padding: 15px 20px;
     text-align: center;
     font-size: 18px;
-    font-weight: 700;
+    font-weight: 500;
 
   }
 

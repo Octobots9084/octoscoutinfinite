@@ -1,5 +1,25 @@
-// Tab functionality
+// Mobile navigation functionality
 document.addEventListener("DOMContentLoaded", function () {
+  const hamburger = document.querySelector(".hamburger-menu");
+  const navRight = document.querySelector(".nav-right");
+
+  // Toggle navigation menu when hamburger is clicked
+  hamburger.addEventListener("click", function () {
+    this.classList.toggle("change");
+    navRight.classList.toggle("visible");
+  });
+
+  // Close menu when clicking outside
+  document.addEventListener("click", function (event) {
+    const isClickInside =
+      hamburger.contains(event.target) || navRight.contains(event.target);
+
+    if (!isClickInside && navRight.classList.contains("visible")) {
+      hamburger.classList.remove("change");
+      navRight.classList.remove("visible");
+    }
+  });
+
   const tabButtons = document.querySelectorAll(".tab-button");
   const tabSelect = document.getElementById("tabSelect");
 
