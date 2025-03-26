@@ -10,17 +10,29 @@ button {
 }
 
 .nextButton {
-  width: 5vh;
-  height: 5vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  /* width: 5vh; */
+  /* height: 5vh; */
   position: absolute;
   bottom: 5vh;
-  right: calc(95vw / 2 - 10vw);
+  right: calc(55vw / 2 - 10vw);
+  padding: 20px 40px;
+  margin-top: 10px;
 }
 
 .backButton {
-  width: 5vh;
-  height: 5vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  /* width: 5vh; */
+  /* height: 5vh; */
   position: absolute;
   bottom: 5vh;
-  left: calc(95vw / 2 - 10vw);
+  left: calc(55vw / 2 - 10vw);
+  padding: 20px 40px;
+  margin-top: 10px;
 }
