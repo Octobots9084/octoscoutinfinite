@@ -1,53 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Octo Scout 2025</title>
-    <link rel="stylesheet" href="../globalStyle.css" />
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <button id="backButton" onclick="window.location.href = '/'">Scout</button>
-    <button
-      id="singleTeamButton"
-      onclick="window.location.href = '/teamAnalysis'"
-    >
-      Single Team
-    </button>
-    <button
-      id="autoAnalysisButton"
-      onclick="window.location.href = '/autoAnalysis'"
-    >
-      Auto
-    </button>
-    <button id="compareButton" onclick="window.location.href = '/comparison'">
-      Compare
-    </button>
-    <button id="outputButton" onclick="window.location.href = '/outputView'">
-      Output
-    </button>
-    <div id="overallGraphContainer" class="graphContainer">
-      <h1 id="header">Overall</h1>
-    </div>
-    <div id="teleopGraphContainer" class="graphContainer">
-      <h1 id="header">Teleop</h1>
-    </div>
-    <div id="autoGraphContainer" class="graphContainer">
-      <h1 id="header">Auto</h1>
-    </div>
-    <div id="endgameGraphContainer" class="graphContainer">
-      <h1 id="header">Endgame</h1>
-    </div>
-    <div id="driverQualityGraphContainer" class="graphContainer">
-      <h1 id="header">Driver Quality</h1>
 
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Octo Scout 2025</title>
+  <link rel="stylesheet" href="../globalStyle.css" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <!-- Top navigation bar -->
+  <nav class="top-nav">
+    <div class="nav-left">
+      <button id="backButton" onclick="window.location.href = '/'" class="nav-link">Scout</button>
     </div>
-    <script
-      type="text/javascript"
-      src="https://cdn.canvasjs.com/canvasjs.min.js"
-    ></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jsonpath/1.0.0/jsonpath.min.js"></script>
-    <script type="module" src="script.js"></script>
-  </body>
+    <div class="nav-right">
+      <button id="singleTeamButton" onclick="window.location.href = '/teamAnalysis'" class="nav-link">
+        Single Team
+      </button>
+      <button id="autoAnalysisButton" onclick="window.location.href = '/autoAnalysis'" class="nav-link">
+        Auto
+      </button>
+      <button id="compareButton" onclick="window.location.href = '/comparison'" class="nav-link">
+        Compare
+      </button>
+      <button id="outputButton" onclick="window.location.href = '/outputView'" class="nav-link">
+        Output
+      </button>
+    </div>
+  </nav>
+
+  <!-- Tab navigation -->
+  <div class="tab-navigation">
+    <button class="tab-button active" data-tab="overallGraphContainer">Overall</button>
+    <button class="tab-button" data-tab="teleopGraphContainer">Teleop</button>
+    <button class="tab-button" data-tab="autoGraphContainer">Auto</button>
+    <button class="tab-button" data-tab="endgameGraphContainer">Endgame</button>
+    <button class="tab-button" data-tab="driverQualityGraphContainer">Driver Quality</button>
+  </div>
+
+  <!-- Mobile dropdown for tabs -->
+  <div class="tab-dropdown">
+    <select id="tabSelect">
+      <option value="overallGraphContainer">Overall</option>
+      <option value="teleopGraphContainer">Teleop</option>
+      <option value="autoGraphContainer">Auto</option>
+      <option value="endgameGraphContainer">Endgame</option>
+      <option value="driverQualityGraphContainer">Driver Quality</option>
+    </select>
+  </div>
+
+  <!-- Tab content - each container is a tab -->
+  <div id="overallGraphContainer" class="graphContainer tab-pane active">
+    <h1 id="header">Overall</h1>
+  </div>
+  <div id="teleopGraphContainer" class="graphContainer tab-pane">
+    <h1 id="header">Teleop</h1>
+  </div>
+  <div id="autoGraphContainer" class="graphContainer tab-pane">
+    <h1 id="header">Auto</h1>
+  </div>
+  <div id="endgameGraphContainer" class="graphContainer tab-pane">
+    <h1 id="header">Endgame</h1>
+  </div>
+  <div id="driverQualityGraphContainer" class="graphContainer tab-pane">
+    <h1 id="header">Driver Quality</h1>
+  </div>
+
+  <script type="text/javascript" src="https://cdn.canvasjs.com/canvasjs.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jsonpath/1.0.0/jsonpath.min.js"></script>
+  <script type="module" src="script.js"></script>
+</body>
+
 </html>
