@@ -36,19 +36,14 @@
 }
 
 .nav-link {
-  color: white;
   text-decoration: none;
   padding: 20px 40px;
   margin: 0 5px;
   border-radius: 4px;
   font-size: 16px;
-  font-weight: 500;
+  font-weight: bold;
   transition: background-color 0.3s;
   cursor: pointer;
-
-  &:hover {
-    background-color: #444;
-  }
 }
 
 /* Tab Navigation Styles */
@@ -153,8 +148,6 @@
     width: 80%;
     padding: 15px 20px;
     text-align: center;
-    font-size: 18px;
-    font-weight: 500;
 
   }
 

@@ -1,27 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Octo Scout 2025</title>
-    <link rel="stylesheet" href="../globalStyle.css" />
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <div id="container">
-      <button
-        class="backButton"
-        onclick="saveData(); window.location.href = '/teleop';"
-      >
-        Back
-      </button>
-      <button
-        class="nextButton"
-        onclick="saveData(); window.location.href = '/submit'"
-      >
-        Next
-      </button>
-    </div>
-    <script type="module" src="script.js"></script>
-  </body>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Octo Scout 2025</title>
+  <link rel="stylesheet" href="../globalStyle.css" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <h1 class="title">Endgame</h1>
+
+  <div class="form-container" id="endgame-form">
+    <!-- Dynamic select elements will be inserted here by JavaScript -->
+  </div>
+
+  <div class="button-container">
+    <button class="backButton" onclick="saveData(); window.location.href = '/teleop';">
+      Back
+    </button>
+    <button class="nextButton" onclick="saveData(); window.location.href = '/submit'">
+      Next
+    </button>
+  </div>
+
+  <script type="module" src="script.js"></script>
+</body>
+
 </html>

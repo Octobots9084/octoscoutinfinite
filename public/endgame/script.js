@@ -4,6 +4,10 @@ let JSONConfig = await getJSONConfig();
 document.title = JSONConfig.pageTitle;
 let endgameOptions = JSONConfig.endgameOptions;
 let endgameSelects = [];
+
+// Get the form container instead of appending to body
+const formContainer = document.getElementById("endgame-form");
+
 generateSelects();
 loadStoredData();
 
@@ -21,9 +25,14 @@ function loadStoredData() {
 function generateSelects() {
   for (let i = 0; i < endgameOptions.length; i++) {
     let container = document.createElement("div");
+    container.classList.add("inputContainer");
+
     endgameSelects.push(document.createElement("select"));
+
     let label = document.createElement("h3");
     label.innerHTML = endgameOptions[i].name;
+    label.classList.add("inputLabel");
+
     let possibleResults = endgameOptions[i].possibleResults;
     for (var j = 0; j < possibleResults.length; j++) {
       var option = document.createElement("option");
@@ -32,12 +41,11 @@ function generateSelects() {
       endgameSelects[endgameSelects.length - 1].appendChild(option);
     }
 
-    label.classList.add("inputLabel");
-    container.classList.add("inputContainer");
     container.appendChild(label);
     container.appendChild(endgameSelects[endgameSelects.length - 1]);
 
-    document.body.appendChild(container);
+    // Append to form container instead of body
+    formContainer.appendChild(container);
   }
 }
 
