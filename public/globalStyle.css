@@ -10,17 +10,19 @@ button {
 }
 
 .nextButton {
-  width: 5vh;
+  width: 6vh;
   height: 5vh;
   position: absolute;
   bottom: 5vh;
   right: calc(95vw / 2 - 10vw);
+  text-align: center;
 }
 
 .backButton {
-  width: 5vh;
+  width: 6vh;
   height: 5vh;
   position: absolute;
   bottom: 5vh;
   left: calc(95vw / 2 - 10vw);
+  text-align: center;
 }
