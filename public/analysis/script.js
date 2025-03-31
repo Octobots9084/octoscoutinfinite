@@ -1,11 +1,94 @@
+// Mobile navigation functionality
+document.addEventListener("DOMContentLoaded", function () {
+  const hamburger = document.querySelector(".hamburger-menu");
+  const navRight = document.querySelector(".nav-right");
+
+  // Toggle navigation menu when hamburger is clicked
+  hamburger.addEventListener("click", function () {
+    this.classList.toggle("change");
+    navRight.classList.toggle("visible");
+  });
+
+  // Close menu when clicking outside
+  document.addEventListener("click", function (event) {
+    const isClickInside =
+      hamburger.contains(event.target) || navRight.contains(event.target);
+
+    if (!isClickInside && navRight.classList.contains("visible")) {
+      hamburger.classList.remove("change");
+      navRight.classList.remove("visible");
+    }
+  });
+
+  const tabButtons = document.querySelectorAll(".tab-button");
+  const tabSelect = document.getElementById("tabSelect");
+
+  // Store references to rendered charts
+  window.renderedCharts = [];
+
+  // Handle tab button clicks
+  tabButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+      switchTab(button.getAttribute("data-tab"));
+    });
+  });
+
+  // Handle dropdown selection
+  tabSelect.addEventListener("change", function () {
+    switchTab(this.value);
+  });
+
+  // Function to switch tabs
+  function switchTab(tabId) {
+    // Update button states
+    tabButtons.forEach((btn) => {
+      if (btn.getAttribute("data-tab") === tabId) {
+        btn.classList.add("active");
+      } else {
+        btn.classList.remove("active");
+      }
+    });
+
+    // Update dropdown selection
+    tabSelect.value = tabId;
+
+    // Update tab panes
+    document.querySelectorAll(".tab-pane").forEach((pane) => {
+      if (pane.id === tabId) {
+        pane.classList.add("active");
+      } else {
+        pane.classList.remove("active");
+      }
+    });
+
+    // Redraw charts in the active tab
+    if (window.renderedCharts.length > 0) {
+      const tabPane = document.getElementById(tabId);
+      const chartDivs = tabPane.querySelectorAll(".chart");
+      chartDivs.forEach((div) => {
+        const chart = window.renderedCharts.find(
+          (c) => c.container.id === div.id
+        );
+        if (chart) {
+          setTimeout(() => {
+            chart.render();
+          }, 10);
+        }
+      });
+    }
+  }
+});
+
 import {
   getGraphJSONConfig,
   getJSONOutput,
   quartiles,
   calculateMean,
 } from "/util.js";
+
 let graphConfig = await getGraphJSONConfig();
 let JSONOutput = await getJSONOutput();
+
 // Parse JSON strings in data
 const parsedJSONOutput = JSONOutput.map((item) => {
   const parsedItem = { ...item };
@@ -61,6 +144,9 @@ function drawGraph(dataPoints, meanPoints, chartName, yLabel, graphContainer) {
   // Drawing graph
   var chart = new CanvasJS.Chart(chartName, chartParameters);
   chart.render();
+
+  // Store reference to the rendered chart
+  window.renderedCharts.push(chart);
 }
 
 // Defining which graphs to create based on which configs
@@ -114,7 +200,7 @@ function getDataAndCreateGraph(
   let teams = [];
   parsedJSONOutput.filter((obj) => {
     const metaData = obj["01metaData"];
-    if (!teams.includes(metaData.teamNumber)&&!obj.deleted) {
+    if (!teams.includes(metaData.teamNumber) && !obj.deleted) {
       teams.push(metaData.teamNumber);
     }
   });

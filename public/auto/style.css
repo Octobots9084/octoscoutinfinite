@@ -35,39 +35,62 @@
   display: flex;
   justify-content: center;
 }
+
 #gamePieceViewer {
   background-color: #bb9839;
   position: absolute;
-  top: 60vh;
+  top: 62vh;
   height: 20vh;
-  width: 30vh;
+  width: 30vw;
   display: flex;
   align-items: center;
   flex-direction: column;
   overflow: scroll;
+  border-radius: 5px;
+}
+
+#gamePieceContainer {
+  display: flex;
+  width: 85%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .gamePieceContainer {
   display: flex;
-  padding: 2px;
+  padding: 5px;
   border-radius: 5px;
   align-items: center;
+  justify-content: space-between;
   margin: 4px;
   width: 100%;
 }
 
 .gamePieceResultSelector {
   margin: 5px;
-  height: 5vh;
+  height: 4vh;
 }
 
 #gamePieceViewerTitle {
+  display: flex;
   height: 4vh;
-  top: 0px;
+  align-items: center;
+  text-align: center;
 }
-#teamNum{
+
+#teamNum {
   position: relative;
   color: white;
   top: 0vh;
-  
+}
+
+@media screen and (max-width: 800px) {
+  #gamePieceViewer {
+    width: 80%;
+  }
+
+  .gamePieceContainer {
+    justify-content: space-around;
+  }
 }

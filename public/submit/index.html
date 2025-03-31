@@ -1,31 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Octo Scout 2025</title>
-    <link rel="stylesheet" href="../globalStyle.css" />
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <div id="container">
-      
-      <div id="extraSelectsContainer"></div>
-      <div class="inputContainer">
-        <h3 class="inputLabel">Comments</h3>
-        <input id="commentInput" placeholder="Comments" type="text"></input>
-      </div>
-      <button class="dataButton" onclick="saveData(); submitData()">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Octo Scout 2025</title>
+  <link rel="stylesheet" href="../globalStyle.css" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <h1 class="title">Submit Data</h1>
+
+  <div class="form-container">
+    <div id="extraSelectsContainer"></div>
+
+    <div class="inputContainer">
+      <h3 class="inputLabel">Comments</h3>
+      <input id="commentInput" placeholder="Add any additional observations" type="text">
+    </div>
+
+    <div class="button-container">
+      <button class="navButton primary-button" onclick="saveData(); submitData()">
         Submit Data
       </button>
-      <button
-        class="backButton"
-        onclick="saveData(); window.location.href = '/teleop';"
-      >
+    </div>
+
+    <div class="button-container">
+      <button class="navButton" onclick="saveData(); window.location.href = '/endgame';">
         Back
       </button>
-      <button class="nextButton" onclick="scoutAgain()">Scout Again</button>
+      <button class="navButton" onclick="scoutAgain()">
+        Scout Again
+      </button>
     </div>
-    <script type="module" src="script.js"></script>
-  </body>
+  </div>
+
+  <script type="module" src="script.js"></script>
+</body>
+
 </html>

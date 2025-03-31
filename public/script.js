@@ -145,3 +145,20 @@ let teamColorInput = document.getElementById("teamColorInput");
 localStorage.setItem("alerted", false);
 loadStoredData();
 localStorage.clear();
+
+// Auto-set team color based on team selection
+document
+  .getElementById("teamNumberInput")
+  .addEventListener("change", function () {
+    const teamColorInput = document.getElementById("teamColorInput");
+    const selectedValue = parseInt(this.value);
+
+    // Blue teams are 0, 1, 2 (first three options)
+    if (selectedValue <= 2) {
+      teamColorInput.value = "Blue";
+    }
+    // Red teams are 3, 4, 5 (last three options)
+    else if (selectedValue >= 3) {
+      teamColorInput.value = "Red";
+    }
+  });

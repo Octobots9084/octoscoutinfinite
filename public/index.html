@@ -1,21 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="globalStyle.css" />
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Octo Scout 2025</title>
+  <link rel="stylesheet" href="globalStyle.css" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <h1 class="title">Octo Scout 2025</h1>
+
+  <div class="form-container">
     <div class="inputContainer">
       <h3 class="inputLabel">Scout Name</h3>
-      <input id="scoutNameInput" placeholder="Scout Name" type="text"></input>
+      <input id="scoutNameInput" placeholder="Scout Name" type="text" />
     </div>
+
     <div class="inputContainer" id="matchInputContainer">
       <h3 class="inputLabel">Match Number</h3>
-      
-    </select>
     </div>
+
     <div class="inputContainer" id="teamInputContainer">
       <h3 class="inputLabel">Team Number</h3>
       <select id="teamNumberInput" name="Robot">
@@ -27,22 +33,32 @@
         <option value="5">Red 3</option>
       </select>
     </div>
+
     <div class="inputContainer">
       <h3 class="inputLabel">Team Color</h3>
       <select id="teamColorInput" class="textInput">
-        <option value="Red">Red</option>
         <option value="Blue">Blue</option>
+        <option value="Red">Red</option>
       </select>
     </div>
-    <div class="input inputContainer">
-      <button id="manualButton" onclick="setManual()">Manual Input</button>
-    </div>
-    <button class="backButton" id="analysisButton" onclick="saveDataAnalysis();window.location.href = '/analysis'">Analysis</button>
-    <button class="nextButton" onclick="saveData();window.location.href = '/startingLocation'">Next</button>
-    
 
-    
-    <script src="script.js"></script>
-    <script type="module" src="name.js"></script>
-  </body>
+    <div class="button-container">
+      <button class="navButton primary-button" onclick="saveData();window.location.href = '/startingLocation'">Next</button>
+    </div>
+
+    <div class="button-container">
+      <button class="navButton" id="manualButton" onclick="setManual()">Manual Input</button>
+      <button class="navButton" id="analysisButton" onclick="saveDataAnalysis();window.location.href = '/analysis'">Analysis</button>
+    </div>
+
+    <!-- <div class="button-container">
+      <button class="backButton" id="analysisButton" onclick="saveDataAnalysis();window.location.href = '/analysis'">Analysis</button>
+      <button class="nextButton" onclick="saveData();window.location.href = '/startingLocation'">Next</button>
+    </div> -->
+  </div>
+
+  <script src="script.js"></script>
+  <script type="module" src="name.js"></script>
+</body>
+
 </html>
