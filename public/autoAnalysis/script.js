@@ -146,8 +146,8 @@ function getDataAndDrawAutoPaths() {
   let matchesOfTeam = parsedJSONOutput.filter((obj) => {
     try {
       const metaData = obj["01metaData"];
-      if (!teams.includes(metaData.teamNumber) && !obj.deleted) {
-        teams.push(metaData.teamNumber);
+      if (obj.deleted) {
+        return false;
       }
       return metaData.teamNumber === teamNumber;
     } catch (e) {
