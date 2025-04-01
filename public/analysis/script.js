@@ -199,12 +199,16 @@ function getDataAndCreateGraph(
   // Getting all teams in matches scouted
   let teams = [];
   parsedJSONOutput.filter((obj) => {
-    const metaData = obj["01metaData"];
-    if (!teams.includes(metaData.teamNumber) && !obj.deleted) {
-      teams.push(metaData.teamNumber);
+    try {
+      const metaData = obj["01metaData"];
+      if (!teams.includes(metaData.teamNumber) && !obj.deleted) {
+        teams.push(metaData.teamNumber);
+      }
+    } catch (e) {
+      console.warn("ERROR: " + e);
     }
   });
-
+  let error;
   // Creating a graph for each section under the category
   for (let k = 0; k < graphCategory.length; k++) {
     let dataPoints = [];
@@ -215,11 +219,15 @@ function getDataAndCreateGraph(
       let values = [];
       // Getting matches of the team
       let matchesOfTeam = parsedJSONOutput.filter((obj) => {
-        const metaData = obj["01metaData"];
-        if (obj.deleted) {
-          return false;
+        try {
+          const metaData = obj["01metaData"];
+          if (obj.deleted) {
+            return false;
+          }
+          return metaData.teamNumber === teams[l];
+        } catch (e) {
+          error = e;
         }
-        return metaData.teamNumber === teams[l];
       });
 
       // Computing the values for the metric for each match
@@ -284,6 +292,9 @@ function getDataAndCreateGraph(
       graphCategory[k].units,
       graphContainer
     );
+  }
+  if (error != undefined) {
+    console.warn(error);
   }
 }
 

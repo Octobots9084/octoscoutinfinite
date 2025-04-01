@@ -144,29 +144,37 @@ function drawAutoPath(pieces, matchNumber) {
 function getDataAndDrawAutoPaths() {
   // Get matches for the selected team
   let matchesOfTeam = parsedJSONOutput.filter((obj) => {
-    const metaData = obj["01metaData"];
-    if (obj.deleted) {
-      return false;
+    try {
+      const metaData = obj["01metaData"];
+      if (!teams.includes(metaData.teamNumber) && !obj.deleted) {
+        teams.push(metaData.teamNumber);
+      }
+      return metaData.teamNumber === teamNumber;
+    } catch (e) {
+      console.warn("ERROR: " + e);
     }
-    return metaData.teamNumber === teamNumber;
   });
 
   // Draw the auto path for each match
   for (let i = 0; i < matchesOfTeam.length; i++) {
-    drawAutoPath(
-      [
-        {
-          collectionLocation: {
-            name: "blue3",
-            x: matchesOfTeam[i]["02startingLocation"].x,
-            y: matchesOfTeam[i]["02startingLocation"].y,
+    try {
+      drawAutoPath(
+        [
+          {
+            collectionLocation: {
+              name: "blue3",
+              x: matchesOfTeam[i]["02startingLocation"].x,
+              y: matchesOfTeam[i]["02startingLocation"].y,
+            },
+            name: "robot",
+            result: "Starting Location",
           },
-          name: "robot",
-          result: "Starting Location",
-        },
-      ].concat(matchesOfTeam[i]["03auto"]),
-      "Match " + matchesOfTeam[i]["01metaData"].matchNumber
-    );
+        ].concat(matchesOfTeam[i]["03auto"]),
+        "Match " + matchesOfTeam[i]["01metaData"].matchNumber
+      );
+    } catch (e) {
+      console.warn(e);
+    }
   }
 }
 
