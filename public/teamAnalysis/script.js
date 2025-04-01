@@ -85,6 +85,22 @@ if (teamNumber == undefined) {
   teamNumber = 0;
 }
 
+let robotImage = document.getElementById("robotImage");
+try {
+  robotImage.src = "../images/robotImages/" + teamNumber + ".jpg";
+} catch (error) {
+  try {
+    robotImage.src = "../images/robotImages/" + teamNumber + ".jpeg";
+  } catch (error) {
+    try {
+      robotImage.src = "../images/robotImages/" + teamNumber + ".png";
+    } catch (error) {
+      console.log("Robot image for team " + teamNumber + " was not found.");
+    }
+  }
+}
+
+
 // Function to draw a graph to the screen
 function drawGraph(dataPoints, chartName, yLabel, graphContainer) {
   let chartDiv = document.createElement("div");
