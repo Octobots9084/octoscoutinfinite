@@ -39,7 +39,7 @@
 #gamePieceViewer {
   background-color: #bb9839;
   position: absolute;
-  top: 62vh;
+  top: 60vh;
   height: 20vh;
   width: 30vw;
   display: flex;
@@ -85,4 +85,15 @@
   color: white;
   top: 0vh;
 
+}
+
+
+@media screen and (max-width: 800px) {
+  #gamePieceViewer {
+    width: 80%;
+  }
+
+  .gamePieceContainer {
+    justify-content: space-around;
+  }
 }

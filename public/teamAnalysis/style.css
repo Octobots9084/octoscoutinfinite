@@ -71,13 +71,12 @@
 }
 
 .nav-link {
-  color: white;
   text-decoration: none;
   padding: 20px 40px;
   margin: 0 5px;
   border-radius: 4px;
   font-size: 16px;
-  font-weight: 500;
+  font-weight: bold;
   transition: background-color 0.3s;
   cursor: pointer;
 
@@ -92,9 +91,7 @@
   justify-content: center;
   gap: 10px;
   padding: 10px;
-  
-  
-  position:sticky;
+  position: sticky;
   top: 0px;
   z-index: 999999;
   background-color: #1a2d43;
@@ -163,8 +160,6 @@
     width: 80%;
     padding: 15px 20px;
     text-align: center;
-    font-size: 18px;
-    font-weight: 500;
 
   }
 
