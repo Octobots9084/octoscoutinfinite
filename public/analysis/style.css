@@ -10,6 +10,7 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
+
 }
 
 #header {
@@ -44,6 +45,10 @@
   font-weight: bold;
   transition: background-color 0.3s;
   cursor: pointer;
+
+  &:hover {
+    background-color: #444;
+  }
 }
 
 /* Tab Navigation Styles */
@@ -52,7 +57,7 @@
   justify-content: center;
   gap: 10px;
   padding: 30px;
-  position:sticky;
+  position: sticky;
   top: 0px;
   z-index: 999999;
   background-color: #1a2d43;
@@ -138,6 +143,7 @@
     flex-direction: column;
     align-items: center;
     margin-top: 10px;
+
   }
 
   .nav-left,
