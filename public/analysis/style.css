@@ -51,8 +51,14 @@
   display: flex;
   justify-content: center;
   gap: 10px;
-  margin: 20px 0;
-  padding-top: 20px;
+  padding: 30px;
+  position:sticky;
+  top: 0px;
+  z-index: 999999;
+  background-color: #1a2d43;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  border-bottom-right-radius: 15px;
+  border-bottom-left-radius: 15px;
 }
 
 .tab-button {
