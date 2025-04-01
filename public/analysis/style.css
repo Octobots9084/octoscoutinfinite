@@ -46,9 +46,13 @@
   transition: background-color 0.3s;
   cursor: pointer;
 
-  &:hover {
+  /* &:hover {
     background-color: #444;
-  }
+  } */
+}
+
+.nav-link:hover {
+  background-color: #444;
 }
 
 /* Tab Navigation Styles */
@@ -73,10 +77,15 @@
   border-radius: 5px;
   font-size: 16px;
 
-  &.active {
+  /* &.active {
     background-color: #6e6037;
     color: white;
-  }
+  } */
+}
+
+.tab-button.active {
+  background-color: #6e6037;
+  color: white;
 }
 
 /* Dropdown for mobile */
@@ -99,9 +108,13 @@
 .tab-pane {
   display: none;
 
-  &.active {
+  /* &.active {
     display: flex;
-  }
+  } */
+}
+
+.tab-pane.active {
+  display: flex;
 }
 
 /* Hamburger Menu */
