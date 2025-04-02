@@ -1,5 +1,6 @@
 import { getJSONOutput } from "/util.js";
 let parsedJSONOutput;
+let errored = false;
 async function updateJSON() {
   let JSONOutput = await getJSONOutput();
   // Parse JSON strings in data
@@ -63,7 +64,6 @@ async function createDataBlocks() {
         //show autonomous results
 
         let auto = parsedJSONOutput[i]["03auto"];
-        console.log(auto);
         let autoDisplay = document.createElement("div");
         autoDisplay.classList.add("dataHolder", "collapsible");
         wrapper.appendChild(autoDisplay);
@@ -171,29 +171,34 @@ async function createDataBlocks() {
         commentDisplay.innerHTML = "Comment : " + extra.Comments;
 
         //find anomalies
-        var anomalies = detectAnomalies();
-        if (anomalies[metaData.matchNumber] != 6) {
-          if (anomalies[metaData.matchNumber] > 6) {
-            wrapper.classList.add("anomalyBig");
-          } else if (anomalies[metaData.matchNumber] < 6) {
-            wrapper.classList.add("anomalySmall");
+        try {
+          var anomalies = detectAnomalies();
+          if (anomalies[metaData.matchNumber] != 6) {
+            if (anomalies[metaData.matchNumber] > 6) {
+              wrapper.classList.add("anomalyBig");
+            } else if (anomalies[metaData.matchNumber] < 6) {
+              wrapper.classList.add("anomalySmall");
+            }
+            let anomalyDisplay = document.createElement("div");
+            anomalyDisplay.classList.add("dataHolder");
+            wrapper.appendChild(anomalyDisplay);
+            anomalyDisplay.innerHTML =
+              "Number of results: " + anomalies[metaData.matchNumber];
           }
-          let anomalyDisplay = document.createElement("div");
-          anomalyDisplay.classList.add("dataHolder");
-          wrapper.appendChild(anomalyDisplay);
-          anomalyDisplay.innerHTML =
-            "Number of results: " + anomalies[metaData.matchNumber];
-        }
+        } catch (e) {}
       } catch (e) {
-        let errorDisplay = document.createElement("div");
+        /*let errorDisplay = document.createElement("div");
         errorDisplay.classList.add("dataHolder");
         errorDisplay.style.fontSize = "larger";
         errorDisplay.style.backgroundColor = "red";
 
         wrapper.appendChild(errorDisplay);
         wrapper.style.backgroundColor = "red";
-        errorDisplay.innerHTML += "ERROR: " + e;
+        errorDisplay.innerHTML = "ERROR: " + e;*/
         errors++;
+        removeErrorData(i);
+        console.log(e);
+        createDataBlocks();
       }
     }
   }
@@ -212,15 +217,18 @@ async function createDataBlocks() {
       anomalous++;
     }
   }
+  console.log("Errors: " + errors);
+  if (errors > 0 && errored == false) {
+    alert("Automatically Deleted Errors X" + errors);
+    errored = true;
+  }
   anomalyCounter.innerHTML =
     "Total Anomalies: " +
     anomalous +
     " | Matches with less scouts: " +
     anomalousSmall +
     " | Matches with too many scouts: " +
-    anomalousBig +
-    "| Errors: " +
-    errors;
+    anomalousBig;
   createCollapsibleElements();
 }
 async function removeData(index) {
@@ -242,18 +250,36 @@ async function removeData(index) {
     }
   }
 }
+async function removeErrorData(index) {
+  const input = [];
+  input.push(index);
+  let response = await fetch("../removeData", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(input),
+  });
+  if (response.status == 200) {
+    console.log(parsedJSONOutput[index]);
+  } else {
+    alert("Error!");
+  }
+}
 function detectAnomalies() {
   let matches = {};
   for (let i = 0; i < parsedJSONOutput.length; i++) {
-    if (
-      Object.keys(matches).includes(
-        parsedJSONOutput[i]["01metaData"].matchNumber
-      )
-    ) {
-      matches[parsedJSONOutput[i]["01metaData"].matchNumber]++;
-    } else {
-      matches[parsedJSONOutput[i]["01metaData"].matchNumber] = 1;
-    }
+    try {
+      if (
+        Object.keys(matches).includes(
+          parsedJSONOutput[i]["01metaData"].matchNumber
+        )
+      ) {
+        matches[parsedJSONOutput[i]["01metaData"].matchNumber]++;
+      } else {
+        matches[parsedJSONOutput[i]["01metaData"].matchNumber] = 1;
+      }
+    } catch (e) {}
   }
   return matches;
 }
