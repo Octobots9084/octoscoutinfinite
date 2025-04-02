@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", async function () {
   const tabSelect = document.getElementById("tabSelect");
 
   // Store references to rendered charts
-  window.renderedCharts = []; // Initialize here
+  window.renderedCharts = [];
 
   let graphConfig = await getGraphJSONConfig();
   let JSONOutput = await getJSONOutput();
@@ -125,7 +125,7 @@ document.addEventListener("DOMContentLoaded", async function () {
     }
   }
 
-  // Function to draw a graph to the screen - Minimal Changes
+  // Function to draw a graph to the screen
   function drawGraph(dataPoints, chartName, yLabel, graphContainer) {
     if (!graphContainer) return; // Don't proceed if container is invalid
 
@@ -175,7 +175,7 @@ document.addEventListener("DOMContentLoaded", async function () {
     }
   }
 
-  // Function to draw all graphs - Minimal Changes
+  // Function to draw all graphs
   function drawGraphs() {
     if (!graphConfig) return; // Don't run if config failed to load
 
@@ -220,7 +220,7 @@ document.addEventListener("DOMContentLoaded", async function () {
     }
   }
 
-  // Update the average defense quality - Minimal Changes
+  // Update the average defense quality
   function addDefenseData() {
     if (teamNumber === null) return; // Don't run if no team number
     const defenseDisplay = document.getElementById("defense");
@@ -266,7 +266,7 @@ document.addEventListener("DOMContentLoaded", async function () {
     }
   }
 
-  // Function to add comments - Minimal Changes
+  // Function to add comments
   function addComments() {
     if (teamNumber === null) return; // Don't run if no team number
     const commentsWrapper = document.getElementById("commentContainer");
@@ -300,9 +300,8 @@ document.addEventListener("DOMContentLoaded", async function () {
 
     // Add comments to the DOM
     if (commentsData.length === 0) {
-      // Optionally display a message if no comments
       let noCommentDiv = document.createElement("div");
-      noCommentDiv.id = "comment"; // Use the same ID for consistency if needed
+      noCommentDiv.id = "comment";
       noCommentDiv.innerHTML = `<h3 id="commentPreface" style="color: white;">No comments recorded for this team.</h3>`;
       commentsWrapper.appendChild(noCommentDiv);
     } else {
@@ -311,14 +310,14 @@ document.addEventListener("DOMContentLoaded", async function () {
         commentDiv.id = "comment"; // Use the same ID
 
         let commentPreface = document.createElement("h3");
-        commentPreface.id = "commentPreface"; // Keep original ID if needed by CSS
-        commentPreface.style.color = "white"; // Ensure visibility
+        commentPreface.id = "commentPreface";
+        commentPreface.style.color = "white";
         commentPreface.innerHTML = `Scout: ${data.scoutName} | Match #: ${data.matchNumber}`;
 
         let commentTextElem = document.createElement("h2");
-        commentTextElem.id = "commentText"; // Keep original ID
-        commentTextElem.style.color = "white"; // Ensure visibility
-        commentTextElem.textContent = data.comment; // Use textContent for security
+        commentTextElem.id = "commentText";
+        commentTextElem.style.color = "white";
+        commentTextElem.textContent = data.comment;
 
         let bar = document.createElement("hr");
         bar.classList.add("commentSeperator");
@@ -331,7 +330,7 @@ document.addEventListener("DOMContentLoaded", async function () {
     }
   }
 
-  // Function to get data and create graph for a single team - Minimal Changes
+  // Function to get data and create graph for a single team
   function getDataAndCreateGraph(
     graphCategory,
     graphContainer,
@@ -425,7 +424,7 @@ document.addEventListener("DOMContentLoaded", async function () {
         // Optionally display a message in the container if no data
         graphContainer.innerHTML += `<p style="color:yellow;">No data for ${categoryConfig.graphName}</p>`;
       }
-    }); // End loop through graphCategory configs
+    });
   }
 
   // Function to retrieve value by JSON path - Made Safer
