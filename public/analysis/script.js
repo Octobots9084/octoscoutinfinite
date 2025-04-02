@@ -251,7 +251,7 @@ document.addEventListener("DOMContentLoaded", async function () {
           let mean = calculateMean(values); // Assume calculateMean handles empty array
           means.push({ label: String(teamNumber), y: mean }); // Ensure label is string
           dataPoints.push({
-            label: teams[l],
+            label: String(teamNumber),
             y: [
               Math.min(...values),
               quartilesValues.Q1,
@@ -306,7 +306,6 @@ document.addEventListener("DOMContentLoaded", async function () {
     });
   }
 
-  // Function to retrieve value by JSON path - Made Safer
   function getValues(JSON, path) {
     return jsonpath.query(JSON, path).length;
   }
@@ -355,4 +354,4 @@ document.addEventListener("DOMContentLoaded", async function () {
       }
     }
   }
-}); // End DOMContentLoaded listener
+});
