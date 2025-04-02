@@ -11,7 +11,7 @@
 }
 #dataContainer {
   display: flex;
-  width: 100%;
+  width: 90vw;
   justify-content: center;
   align-items: center;
   flex-direction: column;
@@ -24,7 +24,7 @@
 }
 .dataWrapper{
   height: fit-content;
-  width: 70vh;
+  width: 70vw;
   background-color: green;
   margin-top: 3vh;
 }
@@ -78,7 +78,7 @@
 .anomalyCounter{
   margin: auto;
   background-color: darkred;
-  width: 70vh;
+  width: 70vw;
   height: fit-content;
   color: white;
   font-size: large;
@@ -100,4 +100,14 @@
   height: 5vh;
   position: absolute;
   right: 20vh;
+}
+@media (max-width:1220px){
+  #dataContainer{
+    padding-top: 50px;
+  }
+}
+@media(min-width:1220px){
+  #dataContainer{
+    padding-top: 0;
+  }
 }

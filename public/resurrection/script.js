@@ -23,11 +23,24 @@ async function createDataBlocks() {
     if (parsedJSONOutput[i].deleted) {
       //create container
 
-      let wrapper = document.createElement("div");
-      wrapper.classList.add("dataWrapper");
+      let dataWrapper = document.createElement("div");
+      dataWrapper.classList.add("dataWrapper");
 
-      container.appendChild(wrapper);
+      container.appendChild(dataWrapper);
 
+      let buttonContainer = document.createElement("div");
+      buttonContainer.classList.add("buttonContainer");
+
+      //create revive button
+      let clickableReviveImage = document.createElement("img");
+      clickableReviveImage.src = "/images/ressurect.png";
+      clickableReviveImage.classList.add("deleteButton");
+      clickableReviveImage.onclick = () => {
+        console.log(i);
+        reviveData(i);
+        createDataBlocks();
+      };
+      buttonContainer.appendChild(clickableReviveImage);
       //create delete button
       let clickableDeleteImage = document.createElement("img");
       clickableDeleteImage.src = "/images/deleteImage.png";
@@ -37,8 +50,12 @@ async function createDataBlocks() {
         resurrectData(i);
         createDataBlocks();
       };
-      wrapper.appendChild(clickableDeleteImage);
+      buttonContainer.appendChild(clickableDeleteImage);
 
+      let wrapper = document.createElement("div");
+      wrapper.classList.add("dataWrapperContainer");
+      dataWrapper.appendChild(wrapper);
+      dataWrapper.appendChild(buttonContainer);
       //show important data
       let metaData = parsedJSONOutput[i]["01metaData"];
       let metaDataDisplay = document.createElement("div");
