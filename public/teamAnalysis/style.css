@@ -71,19 +71,22 @@
 }
 
 .nav-link {
-  color: white;
   text-decoration: none;
   padding: 20px 40px;
   margin: 0 5px;
   border-radius: 4px;
   font-size: 16px;
-  font-weight: 500;
+  font-weight: bold;
   transition: background-color 0.3s;
   cursor: pointer;
 
-  &:hover {
+  /* &:hover {
     background-color: #444;
-  }
+  } */
+}
+
+.nav-link:hover {
+  background-color: #444;
 }
 
 /* Tab Navigation Styles */
@@ -91,21 +94,37 @@
   display: flex;
   justify-content: center;
   gap: 10px;
-  margin: 20px 0;
-  padding-top: 20px;
+  padding: 10px;
+  position: sticky;
+  top: 0px;
+  z-index: 999999;
+  background-color: #1a2d43;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  border-bottom-right-radius: 15px;
+  border-bottom-left-radius: 15px;
 }
 
 .tab-button {
-  padding: 20px 40px;
+  padding: 10px 20px;
   border: none;
   cursor: pointer;
   border-radius: 5px;
   font-size: 16px;
 
-  &.active {
+  /* &.active {
     background-color: #6e6037;
     color: white;
-  }
+  } */
+}
+
+.tab-button.active {
+  background-color: #6e6037;
+  color: white;
+}
+
+.tab-button.active {
+  background-color: #6e6037;
+  color: white;
 }
 
 /* Dropdown for mobile */
@@ -128,9 +147,13 @@
 .tab-pane {
   display: none;
 
-  &.active {
+  /* &.active {
     display: flex;
-  }
+  } */
+}
+
+.tab-pane.active {
+  display: flex;
 }
 
 @media screen and (max-width: 800px) {
@@ -155,8 +178,6 @@
     width: 80%;
     padding: 15px 20px;
     text-align: center;
-    font-size: 18px;
-    font-weight: 500;
 
   }
 
@@ -170,4 +191,21 @@
     justify-self: center;
     padding-top: 20px;
   }
+}
+
+img {
+  width: 400px;
+  border-radius: 10px;
+  margin: 5px;
+  margin-bottom: 0px;
+}
+
+
+.robotImageDiv {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 10px;
+  background-color: #233b57;
 }
