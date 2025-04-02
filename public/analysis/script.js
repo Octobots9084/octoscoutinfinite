@@ -251,7 +251,7 @@ document.addEventListener("DOMContentLoaded", async function () {
           let mean = calculateMean(values); // Assume calculateMean handles empty array
           means.push({ label: String(teamNumber), y: mean }); // Ensure label is string
           dataPoints.push({
-            label: teams[l],
+            label: String(teamNumber),
             y: [
               Math.min(...values),
               quartilesValues.Q1,
