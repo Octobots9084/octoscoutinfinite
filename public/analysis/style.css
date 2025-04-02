@@ -46,9 +46,13 @@
   transition: background-color 0.3s;
   cursor: pointer;
 
-  &:hover {
+  /* &:hover {
     background-color: #444;
-  }
+  } */
+}
+
+.nav-link:hover {
+  background-color: #444;
 }
 
 /* Tab Navigation Styles */
@@ -73,10 +77,15 @@
   border-radius: 5px;
   font-size: 16px;
 
-  &.active {
+  /* &.active {
     background-color: #6e6037;
     color: white;
-  }
+  } */
+}
+
+.tab-button.active {
+  background-color: #6e6037;
+  color: white;
 }
 
 /* Dropdown for mobile */
@@ -99,42 +108,13 @@
 .tab-pane {
   display: none;
 
-  &.active {
+  /* &.active {
     display: flex;
-  }
+  } */
 }
 
-/* Hamburger Menu */
-.hamburger-menu {
-  display: none;
-  cursor: pointer;
-  z-index: 1001;
-  position: absolute;
-  right: 12px;
-  top: 32px;
-}
-
-.bar1,
-.bar2,
-.bar3 {
-  width: 30px;
-  height: 4px;
-  background-color: white;
-  margin: 6px 0;
-  transition: 0.2s;
-}
-
-/* Rotate bars when hamburger is clicked */
-.change .bar1 {
-  transform: translate(0, 10px) rotate(-45deg);
-}
-
-.change .bar2 {
-  opacity: 0;
-}
-
-.change .bar3 {
-  transform: translate(0, -10px) rotate(45deg);
+.tab-pane.active {
+  display: flex;
 }
 
 @media screen and (max-width: 800px) {
@@ -143,7 +123,6 @@
     flex-direction: column;
     align-items: center;
     margin-top: 10px;
-
   }
 
   .nav-left,
@@ -160,7 +139,6 @@
     width: 80%;
     padding: 15px 20px;
     text-align: center;
-
   }
 
   .tab-navigation {
@@ -174,23 +152,14 @@
     padding-top: 20px;
   }
 
-  .hamburger-menu {
-    display: block;
-  }
-
   .top-nav {
     flex-direction: column;
     align-items: flex-start;
   }
 
   .nav-right {
-    display: none;
     flex-direction: column;
     width: 100%;
     margin-top: 10px;
-  }
-
-  .nav-right.visible {
-    display: flex;
   }
 }
