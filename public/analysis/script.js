@@ -306,7 +306,6 @@ document.addEventListener("DOMContentLoaded", async function () {
     });
   }
 
-  // Function to retrieve value by JSON path - Made Safer
   function getValues(JSON, path) {
     return jsonpath.query(JSON, path).length;
   }
@@ -355,4 +354,4 @@ document.addEventListener("DOMContentLoaded", async function () {
       }
     }
   }
-}); // End DOMContentLoaded listener
+});
