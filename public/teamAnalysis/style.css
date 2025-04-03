@@ -195,17 +195,16 @@
 
 img {
   width: 400px;
-  border-radius: 10px;
+  border-radius: 15px;
   margin: 5px;
   margin-bottom: 0px;
 }
-
 
 .robotImageDiv {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  border-radius: 10px;
+  border-radius: 15px;
   background-color: #233b57;
 }
