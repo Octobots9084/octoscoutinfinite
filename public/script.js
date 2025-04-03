@@ -1,4 +1,4 @@
-const eventKey = "2025casd";
+const eventKey = "demo7228";
 const apiUrl = `https://frc.nexus/api/v1/event/${eventKey}`;
 let manualInput = false;
 let teams = [];
@@ -20,18 +20,33 @@ function getNexusMatches() {
       return response.json(); // Parse the response as JSON
     })
     .then((data) => {
+      console.log(data);
       nexusData = data;
       //create dropdown menu for match number
-      const matchSelector = document.createElement("select");
+      const matchSelector = document.getElementById("matchNumberInput");
       const container = document.getElementById("matchInputContainer");
       matchSelector.name = "matchNumber";
       matchSelector.id = "matchNumberInput";
       container.appendChild(matchSelector);
       for (let i = 0; i < data.matches.length; i++) {
         try {
-          if (
+          if (i < 2) {
+            if (data.matches[i + 1].status != "On field") {
+              let match = document.createElement("option");
+              match.value = data.matches[i].label;
+              match.innerHTML = data.matches[i].label;
+              matchSelector.appendChild(match);
+            }
+          } else if (i > data.matches.length - 3) {
+            if (data.matches[i].status != "Queuing soon") {
+              let match = document.createElement("option");
+              match.value = data.matches[i].label;
+              match.innerHTML = data.matches[i].label;
+              matchSelector.appendChild(match);
+            }
+          } else if (
             data.matches[i + 2].status != "On field" &&
-            data.matches[i - 2].status != "Queuing soon"
+            data.matches[i].status != "Queuing soon"
           ) {
             let match = document.createElement("option");
             match.value = data.matches[i].label;
@@ -39,17 +54,7 @@ function getNexusMatches() {
             matchSelector.appendChild(match);
           }
         } catch (error) {
-          if (data.matches[i].status != "Queuing soon" && i >= 2) {
-            let match = document.createElement("option");
-            match.value = data.matches[i].label;
-            match.innerHTML = data.matches[i].label;
-            matchSelector.appendChild(match);
-          } else if (data.matches[i + 2].status != "On field") {
-            let match = document.createElement("option");
-            match.value = i + 1;
-            match.innerHTML = data.matches[i].label;
-            matchSelector.appendChild(match);
-          }
+          console.warn(error);
         }
       }
     })
