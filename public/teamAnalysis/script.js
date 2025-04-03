@@ -94,7 +94,7 @@ document.addEventListener("DOMContentLoaded", async function () {
 
     // Redraw charts in the active tab only if the pane exists and is a graph container
     if (
-      paneFound &&
+      paneFound&&
       window.renderedCharts &&
       window.renderedCharts.length > 0
     ) {
