@@ -30,6 +30,63 @@ document.addEventListener("DOMContentLoaded", async function () {
   let teamNumberParam = urlParams.get("team");
   let teamNumber = teamNumberParam ? teamNumberParam : null; // Use null if not provided
 
+  let robotImage = document.getElementById("robotImage");
+  let loadedImage = false;
+  // if (!loadedImage) {
+  //   try {
+  //     robotImage.src = "../images/robotImages/" + teamNumber + ".jpg";
+  //     loadedImage = true;
+  //   } catch (error) {
+  //     try {
+  //       robotImage.src = "../images/robotImages/" + teamNumber + ".jpeg";
+  //       loadedImage = true;
+  //     } catch (error) {
+  //       try {
+  //         robotImage.src = "../images/robotImages/" + teamNumber + ".png";
+  //         loadedImage = true;
+  //         robotImage.onerror = function () {stopImageDiv()};
+  //       } catch (error) {
+  //       }
+  //     }
+  //   }
+  // }
+  function loadImage(i) {
+    let extensions = ["jpg","jpeg","png"];
+
+    if (i > extensions.length - 1) {
+      console.log("Image not found");
+      stopImageDiv();
+      console.clear();
+      return;
+    }
+
+    robotImage.src = "../images/robotImages/" + teamNumber + "." + extensions[i];
+    
+    robotImage.onerror = function () { loadImage(i+1) };
+    console.clear();
+  }
+
+  loadImage(0);
+
+  function stopImageDiv () {
+    let div = document.getElementById("robotImageDiv");
+    div.style.display = "none";
+  }
+
+
+
+
+  // if (robotImage != null) {
+  //   robotImageDiv.style {
+  //       display: flex;
+  //       justify-content: center;
+  //       align-items: center;
+  //       flex-direction: column;
+  //       border-radius: 10px;
+  //       background-color: #233b57
+  //   }
+  // }
+
   // --- Event Listeners ---
   // Handle tab button clicks
   if (tabButtons && tabButtons.length > 0) {
