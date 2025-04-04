@@ -89,10 +89,6 @@ window.submitData = async function () {
 
       if (response.status == 200) {
         alert("Match Submitted");
-        var sound = new Audio("../images/pop.mp3");
-        sound.play();
-        playConfetti();
-        playCupcake();
       } else {
         alert("Error submitting data. Please try again.");
       }
@@ -113,51 +109,3 @@ window.scoutAgain = function () {
     window.location.href = "/";
   }
 };
-
-// Display confetti animation
-function playConfetti() {
-  const confettiImage = document.createElement("img");
-
-  confettiImage.src = "../images/confetti.gif";
-  confettiImage.width = 1536;
-  confettiImage.height = 1536;
-
-  confettiImage.style.position = "fixed";
-  confettiImage.style.top = "50%";
-  confettiImage.style.left = "50%";
-  confettiImage.style.transform = "translate(-50%, -50%)";
-  confettiImage.style.zIndex = "9999";
-
-  document.body.appendChild(confettiImage);
-
-  setTimeout(() => {
-    confettiImage.remove();
-  }, 3000);
-}
-
-// Display cupcake animation
-function playCupcake() {
-  // If there's already an existing cupcake image, remove it
-  if (currentCupcakeImage) {
-    currentCupcakeImage.remove();
-  }
-
-  let randomX = Math.random() * 100;
-  let randomY = Math.random() * 50;
-
-  const cupcakeImage = document.createElement("img");
-
-  cupcakeImage.src = "../images/cupcake.png";
-  cupcakeImage.width = 1152 / 4;
-  cupcakeImage.height = 648 / 4;
-
-  cupcakeImage.style.position = "fixed";
-  cupcakeImage.style.top = randomY + "%";
-  cupcakeImage.style.left = randomX + "%";
-  cupcakeImage.style.transform = "translate(-50%, -50%)";
-  cupcakeImage.style.zIndex = "9999";
-
-  document.body.appendChild(cupcakeImage);
-
-  currentCupcakeImage = cupcakeImage;
-}
