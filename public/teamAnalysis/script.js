@@ -51,7 +51,7 @@ document.addEventListener("DOMContentLoaded", async function () {
   //   }
   // }
   function loadImage(i) {
-    let extensions = ["jpg","jpeg","png"];
+    let extensions = ["jpg", "jpeg", "png"];
 
     if (i > extensions.length - 1) {
       console.log("Image not found");
@@ -60,21 +60,21 @@ document.addEventListener("DOMContentLoaded", async function () {
       return;
     }
 
-    robotImage.src = "../images/robotImages/" + teamNumber + "." + extensions[i];
-    
-    robotImage.onerror = function () { loadImage(i+1) };
+    robotImage.src =
+      "../images/robotImages/" + teamNumber + "." + extensions[i];
+
+    robotImage.onerror = function () {
+      loadImage(i + 1);
+    };
     console.clear();
   }
 
   loadImage(0);
 
-  function stopImageDiv () {
+  function stopImageDiv() {
     let div = document.getElementById("robotImageDiv");
     div.style.display = "none";
   }
-
-
-
 
   // if (robotImage != null) {
   //   robotImageDiv.style {
@@ -350,6 +350,7 @@ document.addEventListener("DOMContentLoaded", async function () {
             comment: String(commentText).trim(),
             scoutName: obj["01metaData"]["scoutName"] || "N/A",
             matchNumber: obj["01metaData"]["matchNumber"] || "N/A",
+            died: obj["06extra"]["Died"] || "N/A",
           });
         }
       }
@@ -369,7 +370,7 @@ document.addEventListener("DOMContentLoaded", async function () {
         let commentPreface = document.createElement("h3");
         commentPreface.id = "commentPreface";
         commentPreface.style.color = "white";
-        commentPreface.innerHTML = `Scout: ${data.scoutName} | Match #: ${data.matchNumber}`;
+        commentPreface.innerHTML = `Scout: ${data.scoutName} | Match #: ${data.matchNumber} | Died: ${data.died}`;
 
         let commentTextElem = document.createElement("h2");
         commentTextElem.id = "commentText";
