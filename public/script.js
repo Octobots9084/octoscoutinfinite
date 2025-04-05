@@ -89,6 +89,7 @@ function loadStoredData() {
   if (data != null) {
     let metaData = JSON.parse(data);
     scoutNameInput.value = metaData.scoutName;
+    teamNumberInput.value = localStorage.getItem("team");
     teamColorInput.value = metaData.teamColor;
   }
 }
@@ -108,6 +109,7 @@ function saveData() {
     console.log(teamNumberInput.value);
     console.log(teams[teamNumberInput.value]);
     metaData.teamNumber = teams[teamNumberInput.value];
+    localStorage.setItem("team", teamNumberInput.value);
   } else {
     teamNumberInput = document.getElementById("teamNumberInput");
     metaData.teamNumber = teamNumberInput.value;
