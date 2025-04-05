@@ -1,4 +1,4 @@
-const eventKey = "2025cafr";
+const eventKey = "demo7228";
 const apiUrl = `https://frc.nexus/api/v1/event/${eventKey}`;
 let manualInput = false;
 let teams = [];
@@ -51,6 +51,9 @@ function getNexusMatches() {
             let match = document.createElement("option");
             match.value = data.matches[i].label;
             match.innerHTML = data.matches[i].label;
+            if (data.matches[i + 1].status == "On deck") {
+              match.selected = "selected";
+            }
             matchSelector.appendChild(match);
           }
         } catch (error) {
