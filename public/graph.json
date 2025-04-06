@@ -138,6 +138,20 @@
         }
       ],
       "units": "Algae"
+    },
+    {
+      "graphName": "Defense",
+      "metrics": [
+        {
+          "path": "$[?(@.Driver_Quality== 'Good')]",
+           "weight": 2
+        },
+        {
+          "path": "$[?(@.Defense== 'Poor')]",
+           "weight": 1
+        }
+      ],
+      "units": "Score"
     }
 
   ],
