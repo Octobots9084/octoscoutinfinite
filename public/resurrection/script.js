@@ -77,8 +77,18 @@ async function createDataBlocks() {
         wrapper.appendChild(startingLocationDisplay);
         startingLocationDisplay.innerHTML =
           "Starting Location: " + startingLocation.name;
-        //show autonomous results
+      } catch (e) {
+        let errorDisplay = document.createElement("div");
+        errorDisplay.classList.add("dataHolder");
+        errorDisplay.style.fontSize = "larger";
+        errorDisplay.style.backgroundColor = "red";
 
+        wrapper.appendChild(errorDisplay);
+        dataWrapper.style.backgroundColor = "red";
+        errorDisplay.innerHTML = "ERROR: " + e;
+      }
+      //show autonomous results
+      try {
         let auto = parsedJSONOutput[i]["03auto"];
         let autoDisplay = document.createElement("div");
         autoDisplay.classList.add("dataHolder", "collapsible");
@@ -115,7 +125,17 @@ async function createDataBlocks() {
           autoDisplay.innerHTML = "No Auto Data";
           autoDisplay.classList.remove("collapsible");
         }
+      } catch (e) {
+        let errorDisplay = document.createElement("div");
+        errorDisplay.classList.add("dataHolder");
+        errorDisplay.style.fontSize = "larger";
+        errorDisplay.style.backgroundColor = "red";
 
+        wrapper.appendChild(errorDisplay);
+        dataWrapper.style.backgroundColor = "red";
+        errorDisplay.innerHTML = "ERROR: " + e;
+      }
+      try {
         //show teleoperated results
         let teleop = parsedJSONOutput[i]["04teleop"];
         let teleopDisplay = document.createElement("div");
@@ -152,7 +172,17 @@ async function createDataBlocks() {
           teleopDisplay.innerHTML = "No Teleop Data";
           teleopDisplay.classList.remove("collapsible");
         }
+      } catch (e) {
+        let errorDisplay = document.createElement("div");
+        errorDisplay.classList.add("dataHolder");
+        errorDisplay.style.fontSize = "larger";
+        errorDisplay.style.backgroundColor = "red";
 
+        wrapper.appendChild(errorDisplay);
+        dataWrapper.style.backgroundColor = "red";
+        errorDisplay.innerHTML = "ERROR: " + e;
+      }
+      try {
         //show endgame data
         let endgame = parsedJSONOutput[i]["05endgame"];
         let endgameDisplay = document.createElement("div");
@@ -165,7 +195,17 @@ async function createDataBlocks() {
           endgame.Shallow +
           " | Park: " +
           endgame.Park;
+      } catch (e) {
+        let errorDisplay = document.createElement("div");
+        errorDisplay.classList.add("dataHolder");
+        errorDisplay.style.fontSize = "larger";
+        errorDisplay.style.backgroundColor = "red";
 
+        wrapper.appendChild(errorDisplay);
+        dataWrapper.style.backgroundColor = "red";
+        errorDisplay.innerHTML = "ERROR: " + e;
+      }
+      try {
         //show extra data
         let extra = parsedJSONOutput[i]["06extra"];
         let extraDisplay = document.createElement("div");
@@ -178,9 +218,18 @@ async function createDataBlocks() {
           extra.Defense +
           " | Driver Quality: " +
           extra.Driver_Quality;
+      } catch (e) {
+        let errorDisplay = document.createElement("div");
+        errorDisplay.classList.add("dataHolder");
+        errorDisplay.style.fontSize = "larger";
+        errorDisplay.style.backgroundColor = "red";
 
-        //show comments
-
+        wrapper.appendChild(errorDisplay);
+        dataWrapper.style.backgroundColor = "red";
+        errorDisplay.innerHTML = "ERROR: " + e;
+      }
+      //show comments
+      try {
         let commentDisplay = document.createElement("div");
         commentDisplay.classList.add("dataHolder");
         wrapper.appendChild(commentDisplay);
