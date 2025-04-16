@@ -187,14 +187,6 @@ async function createDataBlocks() {
           }
         } catch (e) {}
       } catch (e) {
-        /*let errorDisplay = document.createElement("div");
-        errorDisplay.classList.add("dataHolder");
-        errorDisplay.style.fontSize = "larger";
-        errorDisplay.style.backgroundColor = "red";
-
-        wrapper.appendChild(errorDisplay);
-        wrapper.style.backgroundColor = "red";
-        errorDisplay.innerHTML = "ERROR: " + e;*/
         errors++;
         removeErrorData(i);
         console.log(e);
@@ -270,14 +262,16 @@ function detectAnomalies() {
   let matches = {};
   for (let i = 0; i < parsedJSONOutput.length; i++) {
     try {
-      if (
-        Object.keys(matches).includes(
-          parsedJSONOutput[i]["01metaData"].matchNumber
-        )
-      ) {
-        matches[parsedJSONOutput[i]["01metaData"].matchNumber]++;
-      } else {
-        matches[parsedJSONOutput[i]["01metaData"].matchNumber] = 1;
+      if (!parsedJSONOutput[i].deleted) {
+        if (
+          Object.keys(matches).includes(
+            parsedJSONOutput[i]["01metaData"].matchNumber
+          )
+        ) {
+          matches[parsedJSONOutput[i]["01metaData"].matchNumber]++;
+        } else {
+          matches[parsedJSONOutput[i]["01metaData"].matchNumber] = 1;
+        }
       }
     } catch (e) {}
   }
