@@ -183,7 +183,7 @@ async function createDataBlocks() {
             anomalyDisplay.classList.add("dataHolder");
             wrapper.appendChild(anomalyDisplay);
             anomalyDisplay.innerHTML =
-              "Number of results: " + anomalies[metaData.matchNumber];
+              "Number of results: " + anomalies[metaData.matchNumber.replace(/\D/g, "")];
           }
         } catch (e) {}
       } catch (e) {
