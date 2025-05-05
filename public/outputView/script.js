@@ -265,12 +265,12 @@ function detectAnomalies() {
       if (!parsedJSONOutput[i].deleted) {
         if (
           Object.keys(matches).includes(
-            parsedJSONOutput[i]["01metaData"].matchNumber
+            parsedJSONOutput[i]["01metaData"].matchNumber.replace(/\D/g, "")
           )
         ) {
-          matches[parsedJSONOutput[i]["01metaData"].matchNumber]++;
+          matches[parsedJSONOutput[i]["01metaData"].matchNumber.replace(/\D/g, "")]++;
         } else {
-          matches[parsedJSONOutput[i]["01metaData"].matchNumber] = 1;
+          matches[parsedJSONOutput[i]["01metaData"].matchNumber.replace(/\D/g, "")] = 1;
         }
       }
     } catch (e) {}
