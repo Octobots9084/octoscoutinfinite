@@ -269,6 +269,7 @@ function detectAnomalies() {
           )
         ) {
           matches[parsedJSONOutput[i]["01metaData"].matchNumber.replace(/\D/g, "")]++;
+          console.log(parsedJSONOutput[i]["01metaData"].matchNumber.replace(/\D/g, "");
         } else {
           matches[parsedJSONOutput[i]["01metaData"].matchNumber.replace(/\D/g, "")] = 1;
         }
