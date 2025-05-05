@@ -230,6 +230,7 @@ async function createDataBlocks() {
       }
       //show comments
       try {
+        let extra = parsedJSONOutput[i]["06extra"];
         let commentDisplay = document.createElement("div");
         commentDisplay.classList.add("dataHolder");
         wrapper.appendChild(commentDisplay);
