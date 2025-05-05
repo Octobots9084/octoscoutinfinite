@@ -173,10 +173,10 @@ async function createDataBlocks() {
         //find anomalies
         try {
           var anomalies = detectAnomalies();
-          if (anomalies[metaData.matchNumber] != 6) {
-            if (anomalies[metaData.matchNumber] > 6) {
+          if (anomalies[metaData.matchNumber.replace(/\D/g, "")] != 6) {
+            if (anomalies[metaData.matchNumber.replace(/\D/g, "")] > 6) {
               wrapper.classList.add("anomalyBig");
-            } else if (anomalies[metaData.matchNumber] < 6) {
+            } else if (anomalies[metaData.matchNumber.replace(/\D/g, "")] < 6) {
               wrapper.classList.add("anomalySmall");
             }
             let anomalyDisplay = document.createElement("div");
