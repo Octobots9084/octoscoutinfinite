@@ -396,8 +396,8 @@ document.addEventListener("DOMContentLoaded", async function () {
 
       // Sort matches by match number if available
       matchesOfTeam.sort((a, b) => {
-        const matchNumA = parseInt(a["01metaData"]?.matchNumber, 10) || 0;
-        const matchNumB = parseInt(b["01metaData"]?.matchNumber, 10) || 0;
+        const matchNumA = parseInt(a["01metaData"]?.matchNumber.replace(/\D/g, ""), 10) || 0;
+        const matchNumB = parseInt(b["01metaData"]?.matchNumber.replace(/\D/g, ""), 10) || 0;
         return matchNumA - matchNumB;
       });
 
