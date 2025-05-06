@@ -143,7 +143,7 @@
       "graphName": "Defense",
       "metrics": [
         {
-          "path": "$[?(@.Driver_Quality== 'Good')]",
+          "path": "$[?(@.Defense== 'Good')]",
            "weight": 2
         },
         {
