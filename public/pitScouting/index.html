@@ -8,8 +8,10 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <input type="file" accept="image/*" capture="camera" id="imageInput">
-    <button onclick="uploadData()">Submit</button>
+    <form id="pitForm">
+      <input type="file" accept="image/*" capture="camera" id="imageInput" required>
+      <input type="submit" value="Submit">
+    </form>
     <script type="module" src="script.js"></script>
   </body>
 </html>

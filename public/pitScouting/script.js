@@ -1,7 +1,15 @@
 import { getPitJSONConfig } from "/util.js";
 let JSONConfig = await getPitJSONConfig();
 let options = JSONConfig.questions;
-for (let i = 0; i++; i < options.length) {}
+for (let i = 0; i++; i < options.length) {
+  let label = document.createElement();
+}
+let form = document.getElementById("pitForm");
+form.addEventListener("submit", function (event) {
+  event.preventDefault();
+  console.log("yipee");
+  uploadData();
+});
 async function uploadData() {
   const fileInput = document.getElementById("imageInput");
   const file = fileInput.files[0];

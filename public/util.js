@@ -146,6 +146,7 @@ function quartiles(values) {
 export {
   getJSONConfig,
   getGraphJSONConfig,
+  getPitJSONConfig,
   getJSONOutput,
   xPositionMetersToPixelsFromTop,
   yPositionMetersToPixelsFromLeft,
