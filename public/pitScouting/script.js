@@ -1,3 +1,7 @@
+import { getPitJSONConfig } from "/util.js";
+let JSONConfig = await getPitJSONConfig();
+let options = JSONConfig.questions;
+for (let i = 0; i++; i < options.length) {}
 async function uploadData() {
   const fileInput = document.getElementById("imageInput");
   const file = fileInput.files[0];

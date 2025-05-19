@@ -16,6 +16,20 @@ async function getJSONConfig() {
   }
 }
 
+async function getPitJSONConfig() {
+  try {
+    const response = await fetch("/pitScout.json");
+    if (!response.ok) {
+      throw new Error(`HTTP error! Status: ${response.status}`);
+    }
+    const data = await response.json();
+    return data;
+  } catch (error) {
+    console.error("Error fetching JSON config:", error);
+    return null;
+  }
+}
+
 async function getGraphJSONConfig() {
   try {
     const response = await fetch("/graph.json");

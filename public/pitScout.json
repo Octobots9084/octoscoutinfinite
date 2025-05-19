@@ -1,0 +1,16 @@
+{
+    "questions": 
+    [
+        {
+            "name":"Drive Type",
+            "type": "text"
+        },
+        {
+            "name": "Example",
+            "type": "boolean"
+        }
+
+    ]
+
+        
+}

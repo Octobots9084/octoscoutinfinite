@@ -87,6 +87,22 @@ app.get("/output.json", async (req, res) => {
   // Send JSON data as response
   res.send(data);
 });
+
+app.get("/pitScout.json", async (req, res) => {
+  const filePath = "./pitScout.json";
+  let data;
+  // Acquire lock
+  await fileLock.lock(filePath, retryOptions).then((release) => {
+    // Read the JSON file
+    data = fs.readFileSync(filePath, "utf8");
+    return release();
+  });
+  // Set headers to indicate JSON response
+  res.setHeader("Content-Type", "application/json");
+  // Send JSON data as response
+  res.send(data);
+});
+
 async function removeDataFromJSON(index) {
   const filePath = "./output.json";
   await fileLock.lock(filePath, retryOptions).then((release) => {
