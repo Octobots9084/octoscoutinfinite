@@ -1,8 +1,12 @@
 import { getPitJSONConfig } from "/util.js";
 let JSONConfig = await getPitJSONConfig();
 let options = JSONConfig.questions;
-for (let i = 0; i++; i < options.length) {
-  let label = document.createElement();
+let questionContainer = document.getElementById("customQuestion");
+for (let i = 0; i < options.length; i++) {
+  let label = document.createElement("label");
+  label.innerHTML = options[i].name;
+  let smolName = options[i].name.split(" ").join("_");
+  label.setAttribute("for", smolName);
 }
 let form = document.getElementById("pitForm");
 form.addEventListener("submit", function (event) {
