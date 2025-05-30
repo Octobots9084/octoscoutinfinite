@@ -1,5 +1,4 @@
 const express = require("express");
-const multer = require("multer");
 const path = require("path");
 const app = express();
 const fs = require("fs");
@@ -20,9 +19,6 @@ if (!fs.existsSync(uploadDir)) {
 }
 
 //do some fancy stuff i dont really understand
-const storage = multer.memoryStorage();
-const upload = multer({ storage });
-
 const retryOptions = {
   retries: {
     retries: 5,
@@ -53,24 +49,10 @@ app.post("/deleteData", async (req, res) => {
   await deleteDataFromJSON(req.body);
   res.sendStatus(200);
 });
-//image upload from pitScouting;
-app.post("/upload", upload.single("image"), (req, res) => {
-  if (!req.file) return res.status(400).json({ error: "No file uploaded" });
-
-  const originalExt = path.extname(req.file.originalname); // Keep original extension
-  let baseName = req.body.filename || path.parse(req.file.originalname).name;
-
-  // Sanitize filename
-  baseName = baseName.replace(/[^a-z0-9_\-]/gi, "_").toLowerCase();
-
-  const finalName = `${baseName}${originalExt}`;
-  const finalPath = path.join(uploadDir, finalName);
-
-  fs.writeFile(finalPath, req.file.buffer, (err) => {
-    if (err) return res.status(500).json({ error: "Failed to save file" });
-
-    res.json({ message: `Image saved as ${finalName}` });
-  });
+app.post("/submitPitData", async (req, res) => {
+  console.log(req.body);
+  await writePitDataToJSON(req.body);
+  res.sendStatus(200);
 });
 
 app.get("/output.json", async (req, res) => {
@@ -135,6 +117,24 @@ async function deleteDataFromJSON(index) {
 }
 async function writeDataToJSON(data) {
   const filePath = "./output.json";
+  data.timestamp = new Date();
+  data.deleted = false;
+  await fileLock.lock(filePath, retryOptions).then((release) => {
+    // Read existing file content
+    const fileContent = fs.readFileSync(filePath, "utf8");
+    const jsonData = JSON.parse(fileContent || "[]");
+    // Append new data
+    jsonData.push(data);
+
+    // Write updated data to file
+    fs.writeFileSync(filePath, JSON.stringify(jsonData, null, 2));
+    console.log("Data appended to output.json.");
+    return release();
+  });
+}
+
+async function writePitDataToJSON(data) {
+  const filePath = "./pitOutput.json";
   data.timestamp = new Date();
   data.deleted = false;
   await fileLock.lock(filePath, retryOptions).then((release) => {
