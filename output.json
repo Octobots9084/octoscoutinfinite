@@ -3969,6 +3969,71 @@
     "04teleop": "[]",
     "05endgame": "{\"Deep\":\"No Attempt\",\"Shallow\":\"No Attempt\",\"Park\":\"No Attempt\"}",
     "timestamp": "2025-08-19T02:56:53.151Z",
+    "deleted": true
+  },
+  {
+    "01metaData": "{\"scoutName\":\"ari\",\"teamNumber\":\"\",\"matchNumber\":\"\",\"teamColor\":\"Blue\"}",
+    "02startingLocation": "{\"name\":\"blueMiddle\",\"x\":9.8,\"y\":4.199999999999999}",
+    "06extra": "{\"Died\":\"False\",\"Defense\":\"None\",\"Driver_Quality\":\"Average\",\"Comments\":\"\"}",
+    "03auto": "[]",
+    "04teleop": "[]",
+    "05endgame": "{\"Deep\":\"No Attempt\",\"Shallow\":\"No Attempt\",\"Park\":\"No Attempt\"}",
+    "timestamp": "2025-08-19T05:00:05.533Z",
+    "deleted": true
+  },
+  {
+    "01metaData": "{\"scoutName\":\"ari\",\"teamNumber\":\"\",\"matchNumber\":\"\",\"teamColor\":\"Blue\"}",
+    "02startingLocation": "{\"name\":\"blueMiddle\",\"x\":9.8,\"y\":4.199999999999999}",
+    "03auto": "[]",
+    "04teleop": "[]",
+    "06extra": "{\"Comments\":\"\"}",
+    "05endgame": "{\"Deep\":\"No Attempt\",\"Shallow\":\"No Attempt\",\"Park\":\"No Attempt\"}",
+    "timestamp": "2025-08-19T05:02:09.014Z",
+    "deleted": true
+  },
+  {
+    "01metaData": "{\"scoutName\":\"ari\",\"teamNumber\":\"\",\"matchNumber\":\"\",\"teamColor\":\"Blue\"}",
+    "02startingLocation": "{\"name\":\"blueMiddle\",\"x\":9.8,\"y\":4.199999999999999}",
+    "03auto": "[]",
+    "04teleop": "[]",
+    "06extra": "{\"Comments\":\"No Show\"}",
+    "05endgame": "{\"Deep\":\"No Attempt\",\"Shallow\":\"No Attempt\",\"Park\":\"No Attempt\"}",
+    "timestamp": "2025-08-19T05:04:51.279Z",
+    "deleted": true
+  },
+  {
+    "01metaData": "{\"scoutName\":\"ari\",\"teamNumber\":\"\",\"matchNumber\":\"\",\"teamColor\":\"Blue\"}",
+    "02startingLocation": "\"{\\\"name\\\":\\\"noShow\\\",\\\"x\\\":0,\\\"y\\\":0}\"",
+    "06extra": "{\"Comments\":\"No Show\"}",
+    "timestamp": "2025-08-19T05:43:25.776Z",
+    "deleted": true
+  },
+  {
+    "01metaData": "{\"scoutName\":\"ari\",\"teamNumber\":\"\",\"matchNumber\":\"\",\"teamColor\":\"Blue\"}",
+    "02startingLocation": "\"{\\\"name\\\":\\\"noShow\\\",\\\"x\\\":0,\\\"y\\\":0}\"",
+    "06extra": "{\"Comments\":\"No Show\"}",
+    "timestamp": "2025-08-19T05:48:17.607Z",
+    "deleted": true
+  },
+  {
+    "01metaData": "{\"scoutName\":\"ari\",\"teamNumber\":\"\",\"matchNumber\":\"\",\"teamColor\":\"Blue\"}",
+    "02startingLocation": "{\"name\":\"redRight\",\"x\":10.4,\"y\":1.2}",
+    "06extra": "{\"Comments\":\"No Show\"}",
+    "timestamp": "2025-08-19T05:50:27.751Z",
+    "deleted": true
+  },
+  {
+    "01metaData": "{\"scoutName\":\"ari\",\"teamNumber\":\"\",\"matchNumber\":\"\",\"teamColor\":\"Blue\"}",
+    "02startingLocation": "{\"name\":\"noShow\",\"x\":0,\"y\":0}",
+    "06extra": "{\"Comments\":\"No Show\"}",
+    "timestamp": "2025-08-19T05:51:24.174Z",
+    "deleted": true
+  },
+  {
+    "01metaData": "{\"scoutName\":\"ari\",\"teamNumber\":\"\",\"matchNumber\":\"\",\"teamColor\":\"Blue\"}",
+    "02startingLocation": "{\"name\":\"noShow\",\"x\":0,\"y\":0}",
+    "06extra": "{\"Comments\":\"No Show\"}",
+    "timestamp": "2025-08-19T06:06:20.167Z",
     "deleted": false
   }
 ]
