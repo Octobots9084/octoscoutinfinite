@@ -89,6 +89,9 @@
 .anomalySmall{
   background-color: darkred;
 }
+.reScout{
+  background-color: yellow;
+}
 .anomalyCounter{
   margin: auto;
   background-color: darkred;

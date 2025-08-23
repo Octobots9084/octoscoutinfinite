@@ -5,6 +5,7 @@ document.title = JSONConfig.pageTitle;
 let extraOptions = JSONConfig.extraOptions;
 let extraSelectsContainer = document.getElementById("extraSelectsContainer");
 let commentInput = document.getElementById("commentInput");
+let rescoutInput = document.getElementById("reScoutInput");
 let extraSelects = [];
 let currentCupcakeImage = null;
 let matchSubmitted = false;
@@ -67,6 +68,7 @@ window.saveData = function () {
   }
 
   extra["Comments"] = commentInput.value;
+  extra["reScout"] = rescoutInput.checked;
   localStorage.setItem("06extra", JSON.stringify(extra));
 };
 

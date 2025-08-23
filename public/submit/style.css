@@ -102,6 +102,13 @@ input::placeholder {
   color: #000;
 }
 
+#reScoutLabel{
+  color: #d4ae4c;
+}
+#reScoutInput{
+  height: 30px;
+  
+}
 @media screen and (max-width: 800px) {
   .inputLabel {
     font-size: large;

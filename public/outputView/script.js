@@ -1,6 +1,7 @@
 import { getJSONOutput } from "/util.js";
 let parsedJSONOutput;
 let errored = false;
+let reScouts = 0;
 async function updateJSON() {
   let JSONOutput = await getJSONOutput();
   // Parse JSON strings in data
@@ -179,13 +180,18 @@ async function createDataBlocks() {
         }
         //find anomalies
         try {
+          let extra = parsedJSONOutput[i]["06extra"];
           var anomalies = detectAnomalies();
           if (anomalies[metaData.matchNumber.replace(/\D/g, "")] != 6) {
-            if (anomalies[metaData.matchNumber.replace(/\D/g, "")] > 6) {
+            if (extra.reScout) {
+              wrapper.classList.add("reScout");
+              reScouts++;
+            } else if (anomalies[metaData.matchNumber.replace(/\D/g, "")] > 6) {
               wrapper.classList.add("anomalyBig");
             } else if (anomalies[metaData.matchNumber.replace(/\D/g, "")] < 6) {
               wrapper.classList.add("anomalySmall");
             }
+
             let anomalyDisplay = document.createElement("div");
             anomalyDisplay.classList.add("dataHolder");
             wrapper.appendChild(anomalyDisplay);
@@ -228,7 +234,9 @@ async function createDataBlocks() {
     " | Matches with less scouts: " +
     anomalousSmall +
     " | Matches with too many scouts: " +
-    anomalousBig;
+    anomalousBig +
+    "| Rescouts needed: " +
+    reScouts;
   createCollapsibleElements();
 }
 async function removeData(index) {
