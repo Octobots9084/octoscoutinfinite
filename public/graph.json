@@ -87,6 +87,10 @@
         {
           "path": "$[?(@.Deep == 'Successful')]",
           "weight": 12
+        },
+        {        
+          "path": "$['03auto'][?(@.result == 'Leave')]",
+          "weight": 3
         }
       ],
       "units": "Points"

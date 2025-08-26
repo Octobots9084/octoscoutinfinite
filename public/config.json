@@ -2,7 +2,6 @@
   "pageTitle": "Octo Scout 2025",
   
   "startingLocations": [
-    { "name": "noShow", "x": 0, "y": 0 },
     { "name": "blueMiddle", "x": 6.7, "y": 4 },
     { "name": "blueLeft", "x": 6.7, "y": 6.8 },
     { "name": "blueRight", "x": 6.7, "y": 1.2 },
@@ -91,7 +90,6 @@
       ],
       "neutralAutoCollectionLocations": [
         { "name": "startingAlgae", "x": 9, "y":10}
-
       ],
       "autoFieldImageLocation": "autoField.png",
       "teleopCollectionLocations": [
@@ -116,7 +114,29 @@
         { "name": "Failed Algae Placement" },
         { "name": "Intentional Algae Drop"}
       ]
+    },
+    {
+      "name": "Leave",
+      "blueAutoCollectionLocations": [
+      ],
+      "redAutoCollectionLocations": [
+      ],
+      "neutralAutoCollectionLocations": [
+        { "name": "autoLeave", "x": 8.2, "y":4}
+
+      ],
+      "autoFieldImageLocation": "autoField.png",
+      "teleopCollectionLocations": [
+      ],
+      "teleopFieldImageLocation": "teleopField.png",
+      "autoPossibleResults": [
+        { "name": "Leave" }
+      ],
+      "teleopPossibleResults": [
+        { "name": "Leave" }
+      ]
     }
+    
   ],
   "endgameOptions": [
     {

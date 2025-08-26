@@ -1,4 +1,5 @@
-const eventKey = "2025cafr";
+const eventKey = "demo5007";
+const apiKey = "";
 const apiUrl = `https://frc.nexus/api/v1/event/${eventKey}`;
 let manualInput = false;
 let teams = [];
@@ -8,13 +9,13 @@ function getNexusMatches() {
   fetch(apiUrl, {
     method: "GET", // GET request to fetch data
     headers: {
-      "Nexus-Api-Key": `GEd51Lz5hYot-fIhZM7P84-KPMM`, // Include the Bearer token if required
+      "Nexus-Api-Key": apiKey, // Include the Bearer token if required
       "Content-Type": "application/json", // Typically used to specify data type
     },
   })
     .then((response) => {
       if (!response.ok) {
-        throw new Error("Network response was not ok");
+        throw new Error("Network response was not ok." + response.status);
       }
 
       return response.json(); // Parse the response as JSON

@@ -63,3 +63,11 @@ function addStartingLocationButton(startingLocation) {
 function selectPosition(position) {
   localStorage.setItem("02startingLocation", JSON.stringify(position));
 }
+
+window.noShow = function () {
+  localStorage.setItem(
+    "02startingLocation",
+    JSON.stringify({ name: "noShow", x: 0, y: 0 })
+  );
+  window.location.href = "/noShow";
+};
