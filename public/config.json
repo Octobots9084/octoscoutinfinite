@@ -28,7 +28,7 @@
 
       ],
       "neutralAutoCollectionLocations": [
-        { "name": "startingCoral", "x": 7, "y":10}
+        { "name": "startingCoral", "x": 8.2, "y":2}
       ],
       "autoFieldImageLocation": "autoField.png",
       "teleopCollectionLocations": [
@@ -89,7 +89,7 @@
         { "name": "floorRight", "x": 15.5, "y": 2.2 }
       ],
       "neutralAutoCollectionLocations": [
-        { "name": "startingAlgae", "x": 9, "y":10}
+        { "name": "startingAlgae", "x": 8.2, "y":6}
       ],
       "autoFieldImageLocation": "autoField.png",
       "teleopCollectionLocations": [

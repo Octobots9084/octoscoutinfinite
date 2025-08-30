@@ -22,7 +22,7 @@ let teamNumber = urlParams.get("team");
 // Defining constants
 let fieldSizeMultiplier = 50;
 let gamePieceDimension = 1;
-let gamePieceBoxDimension = 1.4;
+let gamePieceBoxDimension = 1;
 
 // Function to draw an auto path to the screen
 function drawAutoPath(pieces, matchNumber) {
