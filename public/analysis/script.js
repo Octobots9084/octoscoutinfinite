@@ -138,7 +138,7 @@ document.addEventListener("DOMContentLoaded", async function () {
           type: "scatter",
           markerColor: "black",
           markerSize: 5,
-          toolTipContent: "Mean: {y}",
+          toolTipContent: meanPoints,
           dataPoints: meanPoints,
         },
       ],
