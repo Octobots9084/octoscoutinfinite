@@ -36,7 +36,7 @@ document.addEventListener("DOMContentLoaded", async function () {
 
     if (i > extensions.length - 1) {
       console.log("Image not found");
-      console.clear();
+      //console.clear();
       return;
     }
 
@@ -50,7 +50,7 @@ document.addEventListener("DOMContentLoaded", async function () {
       robotImage.remove();
       loadImage(i + 1);
     };
-    console.clear();
+    //console.clear();
   }
 
   loadImage(0);
@@ -355,6 +355,19 @@ document.addEventListener("DOMContentLoaded", async function () {
       });
     }
   }
+  async function addTeamName() {
+    let headers = {
+      "X-TBA-Auth-Key":
+        "iK9TUBQcow5iMaUHmoxTrJsT73CZfx7xRCweTo5MdUAUo05TW5e1YeR9gPRyDloj ",
+    };
+    const response = await fetch(
+      `https://www.thebluealliance.com/api/v3/team/frc${teamNumber}`,
+      { headers }
+    );
+    let parsedResponse = await response.json();
+    let teamName = document.getElementById("teamNameDisplay");
+    teamName.innerHTML = parsedResponse.nickname;
+  }
 
   // Function to get data and create graph for a single team
   function getDataAndCreateGraph(
@@ -396,8 +409,10 @@ document.addEventListener("DOMContentLoaded", async function () {
 
       // Sort matches by match number if available
       matchesOfTeam.sort((a, b) => {
-        const matchNumA = parseInt(a["01metaData"]?.matchNumber.replace(/\D/g, ""), 10) || 0;
-        const matchNumB = parseInt(b["01metaData"]?.matchNumber.replace(/\D/g, ""), 10) || 0;
+        const matchNumA =
+          parseInt(a["01metaData"]?.matchNumber.replace(/\D/g, ""), 10) || 0;
+        const matchNumB =
+          parseInt(b["01metaData"]?.matchNumber.replace(/\D/g, ""), 10) || 0;
         return matchNumA - matchNumB;
       });
 
@@ -509,6 +524,7 @@ document.addEventListener("DOMContentLoaded", async function () {
     drawGraphs();
     addDefenseData();
     addComments();
+    addTeamName();
   } else {
     // Optionally display a message asking user to enter a team number
     const overallContainer = document.getElementById("overallGraphContainer");
