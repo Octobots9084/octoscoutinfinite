@@ -389,6 +389,19 @@ document.addEventListener("DOMContentLoaded", async function () {
       });
     }
   }
+  async function addTeamName() {
+    let headers = {
+      "X-TBA-Auth-Key":
+        "iK9TUBQcow5iMaUHmoxTrJsT73CZfx7xRCweTo5MdUAUo05TW5e1YeR9gPRyDloj ",
+    };
+    const response = await fetch(
+      `https://www.thebluealliance.com/api/v3/team/frc${teamNumber}`,
+      { headers }
+    );
+    let parsedResponse = await response.json();
+    let teamName = document.getElementById("teamNameDisplay");
+    teamName.innerHTML = parsedResponse.nickname;
+  }
 
   // Function to get data and create graph for a single team
   function getDataAndCreateGraph(
@@ -647,6 +660,7 @@ document.addEventListener("DOMContentLoaded", async function () {
     drawGraphs();
     addDefenseData();
     addComments();
+    addTeamName();
   } else {
     // Optionally display a message asking user to enter a team number
     const overallContainer = document.getElementById("overallGraphContainer");

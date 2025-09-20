@@ -134,13 +134,6 @@ document.addEventListener("DOMContentLoaded", async function () {
           yValueFormatString: "##.## " + yLabel,
           dataPoints: dataPoints,
         },
-        {
-          type: "scatter",
-          markerColor: "black",
-          markerSize: 5,
-          toolTipContent: "Mean: {y}",
-          dataPoints: meanPoints,
-        },
       ],
       axisX: {
         interval: 1,
