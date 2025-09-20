@@ -30,13 +30,15 @@ document.addEventListener("DOMContentLoaded", async function () {
   let teamNumberParam = urlParams.get("team");
   let teamNumber = teamNumberParam ? teamNumberParam : null; // Use null if not provided
 
+  let comparisonNumberParam = urlParams.get("compare");
+  let comparisonNumber = comparisonNumberParam ? comparisonNumberParam : null; // Use null if not provided
+
   let robotImageContainer = document.getElementById("robotImageDiv");
   function loadImage(i) {
     let extensions = ["jpg", "jpeg", "png"];
 
     if (i > extensions.length - 1) {
       console.log("Image not found");
-      console.clear();
       return;
     }
 
@@ -50,7 +52,6 @@ document.addEventListener("DOMContentLoaded", async function () {
       robotImage.remove();
       loadImage(i + 1);
     };
-    console.clear();
   }
 
   loadImage(0);
@@ -151,14 +152,47 @@ document.addEventListener("DOMContentLoaded", async function () {
   }
 
   // Function to draw a graph to the screen
-  function drawGraph(dataPoints, chartName, yLabel, graphContainer) {
+  function drawGraph(
+    dataPoints,
+    comparisonPoints,
+    chartName,
+    yLabel,
+    graphContainer
+  ) {
     if (!graphContainer) return; // Don't proceed if container is invalid
+
+    console.log(dataPoints);
+    console.log(comparisonPoints);
 
     let chartDiv = document.createElement("div");
     chartDiv.id = chartName;
     chartDiv.classList.add("chart");
     graphContainer.appendChild(chartDiv);
 
+    let data = [];
+    if (comparisonPoints) {
+      data.push(
+        {
+          type: "spline",
+          markerColor: "black",
+          markerSize: 5,
+          dataPoints: dataPoints,
+        },
+        {
+          type: "spline",
+          markerColor: "black",
+          markerSize: 5,
+          dataPoints: comparisonPoints,
+        }
+      );
+    } else {
+      data.push({
+        type: "spline",
+        markerColor: "black",
+        markerSize: 5,
+        dataPoints: dataPoints,
+      });
+    }
     // Defining the parameters for the graph
     let chartParameters = {
       animationEnabled: false, // Consider disabling animation
@@ -170,15 +204,15 @@ document.addEventListener("DOMContentLoaded", async function () {
         includeZero: true,
       },
       dataPointMaxWidth: 5,
-      data: [
-        {
-          type: "spline",
-          markerColor: "black",
-          markerSize: 5,
-          dataPoints: dataPoints,
-        },
-      ],
+      data: data,
       axisX: {
+        labelFormatter: function (e) {
+          // Only show labels if they correspond to a datapoint
+          const dp = chart.options.data
+            .flatMap((series) => series.dataPoints)
+            .find((p) => p.x === e.value);
+          return dp ? dp.label : "";
+        },
         interval: 1,
         labelAutoFit: true,
         labelAngle: -30,
@@ -396,8 +430,10 @@ document.addEventListener("DOMContentLoaded", async function () {
 
       // Sort matches by match number if available
       matchesOfTeam.sort((a, b) => {
-        const matchNumA = parseInt(a["01metaData"]?.matchNumber.replace(/\D/g, ""), 10) || 0;
-        const matchNumB = parseInt(b["01metaData"]?.matchNumber.replace(/\D/g, ""), 10) || 0;
+        const matchNumA =
+          parseInt(a["01metaData"]?.matchNumber.replace(/\D/g, ""), 10) || 0;
+        const matchNumB =
+          parseInt(b["01metaData"]?.matchNumber.replace(/\D/g, ""), 10) || 0;
         return matchNumA - matchNumB;
       });
 
@@ -422,9 +458,20 @@ document.addEventListener("DOMContentLoaded", async function () {
         }
 
         if (calculationSuccess) {
+          const numericMatch = matchData["01metaData"]?.matchNumber
+            ? parseInt(
+                String(matchData["01metaData"]?.matchNumber).replace(/\D/g, ""),
+                10
+              )
+            : i + 1;
+          console.log(numericMatch || i + 1);
           const matchNumberLabel =
             matchData["01metaData"]?.matchNumber || i + 1; // Fallback to index if no match number
-          values.push({ label: "Match " + matchNumberLabel, y: totalForMatch });
+          values.push({
+            label: "Match " + matchNumberLabel,
+            y: totalForMatch,
+            x: numericMatch,
+          });
         } else {
           // Optionally push a point with y=0 or null if calculation failed
           const matchNumberLabel =
@@ -432,6 +479,74 @@ document.addEventListener("DOMContentLoaded", async function () {
           // values.push({ label: "Match " + matchNumberLabel, y: 0 }); // Or null
         }
       });
+      let comparisonInput = document.getElementById("comparisonInput");
+      let comparisonTeam = comparisonInput.value;
+      let comparisonValues = [];
+      if (comparisonTeam) {
+        let matchesOfTeam = parsedJSONOutput.filter((obj) => {
+          // Check existence and compare team number (as strings for safety)
+          return (
+            obj &&
+            obj["01metaData"] &&
+            String(obj["01metaData"].teamNumber) === String(comparisonTeam) &&
+            !obj.deleted
+          );
+        });
+
+        // Sort matches by match number if available
+        matchesOfTeam.sort((a, b) => {
+          const matchNumA =
+            parseInt(a["01metaData"]?.matchNumber.replace(/\D/g, ""), 10) || 0;
+          const matchNumB =
+            parseInt(b["01metaData"]?.matchNumber.replace(/\D/g, ""), 10) || 0;
+          return matchNumA - matchNumB;
+        });
+
+        // Computing the values for the metric for each match
+        matchesOfTeam.forEach((matchData, i) => {
+          let totalForMatch = 0;
+          let calculationSuccess = true;
+          try {
+            // Wrap metric calculation per match
+            categoryConfig.metrics.forEach((metric) => {
+              if (metric && metric.path && typeof metric.weight === "number") {
+                totalForMatch +=
+                  getValues(matchData, metric.path) * metric.weight; // Use safer getValues
+              }
+            });
+            if (isNaN(totalForMatch)) {
+              // Check for NaN result
+              calculationSuccess = false;
+            }
+          } catch (e) {
+            calculationSuccess = false;
+          }
+
+          if (calculationSuccess) {
+            const numericMatch = matchData["01metaData"]?.matchNumber
+              ? parseInt(
+                  String(matchData["01metaData"]?.matchNumber).replace(
+                    /\D/g,
+                    ""
+                  ),
+                  10
+                )
+              : i + 1;
+            const matchNumberLabel =
+              matchData["01metaData"]?.matchNumber || i + 1; // Fallback to index if no match number
+            comparisonValues.push({
+              label: "Match " + matchNumberLabel,
+              y: totalForMatch,
+              x: numericMatch,
+            });
+          } else {
+            // Optionally push a point with y=0 or null if calculation failed
+            const matchNumberLabel =
+              matchData["01metaData"]?.matchNumber || i + 1;
+            // values.push({ label: "Match " + matchNumberLabel, y: 0 }); // Or null
+          }
+        });
+      }
 
       // Only draw graph if there are values
       if (values.length > 0) {
@@ -442,6 +557,7 @@ document.addEventListener("DOMContentLoaded", async function () {
           (categoryConfig.graphName || `Graph ${k + 1}`);
         drawGraph(
           values,
+          comparisonValues,
           graphFullName,
           categoryConfig.units || "", // Use empty string if units undefined
           graphContainer
@@ -488,9 +604,20 @@ document.addEventListener("DOMContentLoaded", async function () {
     }
     window.location.href = url.toString();
   }
-
+  function updateComparisonNumber(newTeamNumber) {
+    // Get the current URL
+    var url = new URL(window.location.href);
+    // Set or update the 'team' parameter
+    if (newTeamNumber && String(newTeamNumber).trim()) {
+      url.searchParams.set("compare", String(newTeamNumber).trim());
+    } else {
+      url.searchParams.delete("compare"); // Remove if input is empty
+    }
+    window.location.href = url.toString();
+  }
   // Team Number Input Handling
   const teamNumberInput = document.getElementById("teamNumberInput");
+  const comparisonInput = document.getElementById("comparisonInput");
   if (teamNumberInput) {
     teamNumberInput.value = teamNumber !== null ? teamNumber : ""; // Set initial value from URL param
     // teamNumberInput.focus(); // Auto-focus might not be desired
@@ -503,6 +630,17 @@ document.addEventListener("DOMContentLoaded", async function () {
     });
   }
 
+  if (comparisonInput) {
+    comparisonInput.value = comparisonNumber !== null ? comparisonNumber : ""; // Set initial value from URL param
+    // comparisonInput.focus(); // Auto-focus might not be desired
+
+    comparisonInput.addEventListener("keydown", function (event) {
+      if (event.key === "Enter") {
+        event.preventDefault(); // Prevent potential form submission
+        updateComparisonNumber(comparisonInput.value);
+      }
+    });
+  }
   // --- Initial Execution ---
   if (teamNumber !== null) {
     // Only draw graphs etc. if a team number is present
