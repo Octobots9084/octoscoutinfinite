@@ -162,25 +162,30 @@ function updateGamePieceViewer() {
     gamePieceImage.style.height = gamePieceImageSideLength + "vh";
 
     // Adding a selector for results
-    let gamePieceResultSelector = document.createElement("select");
-    if (possibleResults.length > 0 && gamePieces[i].result == null) {
-      gamePieces[i].result = possibleResults[0].name;
+    if (possibleResults.length > 1) {
+      var gamePieceResultSelector = document.createElement("select");
+      if (possibleResults.length > 0 && gamePieces[i].result == null) {
+        gamePieces[i].result = possibleResults[0].name;
+      }
+      gamePieceResultSelector.onchange = () => {
+        gamePieces[i].result = gamePieceResultSelector.value;
+      };
+      gamePieceResultSelector.classList.add("gamePieceResultSelector");
+      gamePieceResultSelector.classList.add(gamePieces[i].name);
+
+      for (var j = 0; j < possibleResults.length; j++) {
+        var option = document.createElement("option");
+        option.value = possibleResults[j].name;
+        option.text = possibleResults[j].name;
+        gamePieceResultSelector.appendChild(option);
+      }
+
+      gamePieceResultSelector.value = gamePieces[i].result;
+    } else {
+      var resultText = document.createElement("h3");
+      resultText.innerHTML = possibleResults[0]?.name || "None";
+      resultText.classList.add("gamePieceResultSelector");
     }
-    gamePieceResultSelector.onchange = () => {
-      gamePieces[i].result = gamePieceResultSelector.value;
-    };
-    gamePieceResultSelector.classList.add("gamePieceResultSelector");
-    gamePieceResultSelector.classList.add(gamePieces[i].name);
-
-    for (var j = 0; j < possibleResults.length; j++) {
-      var option = document.createElement("option");
-      option.value = possibleResults[j].name;
-      option.text = possibleResults[j].name;
-      gamePieceResultSelector.appendChild(option);
-    }
-
-    gamePieceResultSelector.value = gamePieces[i].result;
-
     let clickableDeleteImage = document.createElement("img");
     clickableDeleteImage.src = "/images/deleteImage.png";
     clickableDeleteImage.style.width = clickableDeleteImageSideLength + "vh";
@@ -192,7 +197,11 @@ function updateGamePieceViewer() {
 
     // Compiling elements together
     gamePiece.appendChild(gamePieceImage);
-    gamePiece.appendChild(gamePieceResultSelector);
+    if (possibleResults.length > 1) {
+      gamePiece.appendChild(gamePieceResultSelector);
+    } else {
+      gamePiece.appendChild(resultText);
+    }
     gamePiece.appendChild(clickableDeleteImage);
     gamePieceContainer.appendChild(gamePiece);
 
