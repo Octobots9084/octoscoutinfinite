@@ -101,7 +101,7 @@ function addCollectionClickableImage(
     collectionLocation.y = fieldWidth - collectionLocation.y;
   }
   let clickableImage = document.createElement("img");
-  let clickableImageSideLength = 4; // In units of vh
+  let clickableImageSideLength = 5; // In units of vh
   clickableImage.onclick = function () {
     collectPiece(collectionLocation, gamePieceName, imageBackgroundColor);
   };
@@ -181,10 +181,16 @@ function updateGamePieceViewer() {
       }
 
       gamePieceResultSelector.value = gamePieces[i].result;
-    } else {
-      var resultText = document.createElement("h3");
+    } else if (possibleResults.length > 0) {
+      var resultText = document.createElement("h2");
+      gamePieces[i].result = possibleResults[0]?.name;
       resultText.innerHTML = possibleResults[0]?.name || "None";
-      resultText.classList.add("gamePieceResultSelector");
+      resultText.classList.add("resultText");
+    } else {
+      var resultText = document.createElement("h2");
+      gamePieces[i].result = gamePieces[i].collectionLocation.name;
+      resultText.innerHTML = gamePieces[i].collectionLocation.name || "None";
+      resultText.classList.add("resultText");
     }
     let clickableDeleteImage = document.createElement("img");
     clickableDeleteImage.src = "/images/deleteImage.png";

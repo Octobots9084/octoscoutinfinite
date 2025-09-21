@@ -71,6 +71,11 @@
   margin: 5px;
   height: 4vh;
 }
+.resultText {
+  color: white;
+  margin: 5px;
+  height: 4vh;
+}
 
 #gamePieceViewerTitle {
   display: flex;

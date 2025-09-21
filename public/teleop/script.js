@@ -72,7 +72,8 @@ function addCollectionClickableImage(
     collectionLocation.y = fieldWidth - collectionLocation.y;
   }
   let clickableImage = document.createElement("img");
-  let clickableImageSideLength = 4; // In units of vh
+  let clickableImageSideLength = 5; // In units of vh
+  console.log(collectionLocation);
   clickableImage.onclick = function () {
     collectPiece(collectionLocation, gamePieceName, imageBackgroundColor);
   };
@@ -104,7 +105,7 @@ function addCollectionClickableImage(
 // Creates a game piece object to represent a collected game piece and updates the viewer
 function collectPiece(location, gamePieceName, buttonColor) {
   gamePieces.push(new GamePiece(location, gamePieceName, buttonColor));
-  updateGamePieceViewer();
+  updateGamePieceViewer(location);
 }
 
 // Updates the visualization of the game pieces collected
@@ -133,25 +134,37 @@ function updateGamePieceViewer() {
     gamePieceImage.style.height = gamePieceImageSideLength + "vh";
 
     // Adding a selector for results
-    let gamePieceResultSelector = document.createElement("select");
-    if (possibleResults.length > 0 && gamePieces[i].result == null) {
-      gamePieces[i].result = possibleResults[0].name;
+
+    if (possibleResults.length > 1) {
+      var gamePieceResultSelector = document.createElement("select");
+      if (possibleResults.length > 0 && gamePieces[i].result == null) {
+        gamePieces[i].result = possibleResults[0].name;
+      }
+      gamePieceResultSelector.onchange = () => {
+        gamePieces[i].result = gamePieceResultSelector.value;
+      };
+      gamePieceResultSelector.classList.add("gamePieceResultSelector");
+      gamePieceResultSelector.classList.add(gamePieces[i].name);
+
+      for (var j = 0; j < possibleResults.length; j++) {
+        var option = document.createElement("option");
+        option.value = possibleResults[j].name;
+        option.text = possibleResults[j].name;
+        gamePieceResultSelector.appendChild(option);
+      }
+
+      gamePieceResultSelector.value = gamePieces[i].result;
+    } else if (possibleResults.length > 0) {
+      var resultText = document.createElement("h3");
+      gamePieces[i].result = possibleResults[0]?.name;
+      resultText.innerHTML = possibleResults[0]?.name || "None";
+      resultText.classList.add("resultText");
+    } else {
+      var resultText = document.createElement("h3");
+      gamePieces[i].result = gamePieces[i].collectionLocation.name;
+      resultText.innerHTML = gamePieces[i].collectionLocation.name || "None";
+      resultText.classList.add("resultText");
     }
-
-    gamePieceResultSelector.onchange = () => {
-      gamePieces[i].result = gamePieceResultSelector.value;
-    };
-    gamePieceResultSelector.classList.add("gamePieceResultSelector");
-
-    for (var j = 0; j < possibleResults.length; j++) {
-      var option = document.createElement("option");
-      option.value = possibleResults[j].name;
-      option.text = possibleResults[j].name;
-      gamePieceResultSelector.appendChild(option);
-    }
-
-    gamePieceResultSelector.value = gamePieces[i].result;
-
     let clickableDeleteImage = document.createElement("img");
     clickableDeleteImage.src = "/images/deleteImage.png";
     clickableDeleteImage.style.width = clickableDeleteImageSideLength + "vh";
@@ -163,9 +176,15 @@ function updateGamePieceViewer() {
 
     // Compiling elements together
     gamePiece.appendChild(gamePieceImage);
-    gamePiece.appendChild(gamePieceResultSelector);
+    if (possibleResults.length > 1) {
+      gamePiece.appendChild(gamePieceResultSelector);
+    } else {
+      gamePiece.appendChild(resultText);
+    }
     gamePiece.appendChild(clickableDeleteImage);
     gamePieceContainer.appendChild(gamePiece);
+
+    // Compiling elements together
 
     // Setting background color of game piece and scrolling to bottom of the viewer
     gamePiece.style.backgroundColor = gamePieces[i].color;
