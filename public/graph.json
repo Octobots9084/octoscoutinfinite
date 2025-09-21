@@ -170,6 +170,10 @@
           "weight": 4
         },
         {
+          "path": "$['04teleop'][?(@.collectionLocation.name == 'L3')]",
+          "weight": 4
+        },
+        {
           "path": "$['04teleop'][?(@.result == 'L4 (Top)')]",
           "weight": 5
         },
