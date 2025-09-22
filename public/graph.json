@@ -81,12 +81,24 @@
           "weight": 2
         },
         {
+          "path": "$[?(@.Park == 'Successful')]",
+          "weight": 2
+        },
+        {
           "path": "$['05endgame'][?(@.name == 'Shallow')]",
+          "weight": 6
+        },
+        {
+          "path": "$[?(@.Shallow == 'Successful')]",
           "weight": 6
         },
         {
           "path": "$['05endgame'][?(@.name == 'Deep')]",
           "weight": 12
+        },
+        {
+          "path": "$[?(@.Deep == 'Successful')]",
+          "weight": 2
         },
         {        
           "path": "$['03auto'][?(@.result == 'Leave')]",
@@ -443,6 +455,10 @@
         {
           "path": "$['05endgame'][?(@.name == 'Park')]",
           "weight": 1
+        },
+        {
+          "path": "$[?(@.Park == 'Successful')]",
+          "weight": 2
         }
       ],
       "units": "Parks"
@@ -453,6 +469,10 @@
         {
           "path": "$['05endgame'][?(@.name == 'Shallow')]",
           "weight": 1
+        },
+        {
+          "path": "$[?(@.Shallow == 'Successful')]",
+          "weight": 1
         }
       ],
       "units": "Climbs"
@@ -462,6 +482,10 @@
       "metrics": [
         {
           "path": "$['05endgame'][?(@.name == 'Deep')]",
+          "weight": 1
+        },
+        {
+          "path": "$[?(@.Deep == 'Successful')]",
           "weight": 1
         }
       ],
