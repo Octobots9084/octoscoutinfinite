@@ -36,17 +36,7 @@ function addStartingLocationButton(startingLocation) {
   let button = document.createElement("button");
   button.onclick = function () {
     selectPosition(startingLocation);
-    // if (startingLocation.name === "noShow") {
-    //   window.location.href = "/submit";
-    //   localStorage.setItem("03auto", JSON.stringify([]));
-    //   localStorage.setItem("04teleop", JSON.stringify([]));
-    //   localStorage.setItem(
-    //     "05endgame",
-    //     '{"Deep":"No Attempt","Shallow":"No Attempt","Park":"No Attempt"}'
-    //   );
-    // } else {
     window.location.href = "/auto";
-    //}
   };
 
   button.classList.add("positionButton");

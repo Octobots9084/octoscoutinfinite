@@ -99,3 +99,22 @@
     justify-content: space-around;
   }
 }
+
+.noShow {
+  max-width: 4vh;
+  max-height: 4vh;
+  min-width: 5vh;
+  min-height: 5vh;
+  position: absolute;
+  background-color: #bb9839;
+  border: none;
+  border-radius: 5px;
+  color: black;
+  padding: 10px 15px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  top: 6vh;
+  left: 10vw;
+}

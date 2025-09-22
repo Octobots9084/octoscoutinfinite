@@ -9,6 +9,9 @@
     { "name": "redLeft", "x": 10.4, "y": 6.8},
     { "name": "redRight", "x": 10.4, "y": 1.2 }
   ],
+  "noShow":{
+    "x":1.1,"y":6.5
+  },
   "gamePieces": [
     {
       
@@ -64,7 +67,7 @@
       "redAutoCollectionLocations": [
       ],
       "neutralAutoCollectionLocations": [
-        { "name": "autoLeave", "x": 15, "y":4}
+        { "name": "autoLeave", "x": 15, "y":6}
 
       ],
       "autoFieldImageLocation": "autoField.png",

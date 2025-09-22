@@ -88,8 +88,26 @@ function generateCollectionButtons() {
         gamePieces[i].neutralAutoCollectionLocations.length;
     }
   }
+  let noShow = JSONConfig.noShow;
+  let noShowButton = document.createElement("img");
+  noShowButton.src = "../images/noShow.png";
+  noShowButton.classList.add("noShow");
+  noShowButton.onclick = function () {
+    noShowFunc();
+  };
+  noShowButton.style.top =
+    xPositionMetersToPixelsFromTop(fieldImage, noShow.x, 5) + "px";
+  noShowButton.style.left =
+    yPositionMetersToPixelsFromLeft(fieldImage, noShow.y, 5) + "px";
+  fieldContainer.appendChild(noShowButton);
 }
-
+function noShowFunc() {
+  localStorage.setItem(
+    "02startingLocation",
+    JSON.stringify({ name: "noShow", x: 0, y: 0 })
+  );
+  window.location.href = "/noShow";
+}
 // Adds a clickable image to the field using the position of the button (in meters), the piece type, and the button's color
 function addCollectionClickableImage(
   collectionLocation,
@@ -218,6 +236,10 @@ function updateGamePieceViewer() {
 }
 window.saveData = saveData;
 function saveData() {
+  localStorage.setItem(
+    "02startingLocation",
+    JSON.stringify({ name: "show", x: 0, y: 0 })
+  );
   localStorage.setItem("03auto", JSON.stringify(gamePieces));
 }
 
