@@ -86,28 +86,25 @@
   "endgameOptions": [
     {
       "name": "Deep",
-      "possibleResults": [
-        { "name": "No Attempt" },
-        { "name": "Failed" },
-        { "name": "Successful" }
-      ]
+      "x":1.7,
+      "y":2
     },
     {
       "name": "Shallow",
-      "possibleResults": [
-        { "name": "No Attempt" },
-        { "name": "Failed" },
-        { "name": "Successful" }
-      ]
+      "x":3.5,
+      "y":6.165
     },
     {
       "name": "Park",
-      "possibleResults": [
-        { "name": "No Attempt" },
-        { "name": "Failed" },
-        { "name": "Successful" }
-      ]
+      "x":12,
+      "y":2.1
+    },
+    {
+      "name": "None",
+      "x":9.5,
+      "y":6.2
     }
+
   ],
   "commentsEnabled": true,
   "extraOptions": [

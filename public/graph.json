@@ -77,15 +77,15 @@
           "weight": 2
         },
         {
-          "path": "$[?(@.Park == 'Successful')]",
+          "path": "$['05endgame'][?(@.name == 'Park')]",
           "weight": 2
         },
         {
-          "path": "$[?(@.Shallow== 'Successful')]",
+          "path": "$['05endgame'][?(@.name == 'Shallow')]",
           "weight": 6
         },
         {
-          "path": "$[?(@.Deep == 'Successful')]",
+          "path": "$['05endgame'][?(@.name == 'Deep')]",
           "weight": 12
         },
         {        
@@ -441,7 +441,7 @@
       "graphName": "Park",
       "metrics": [
         {
-          "path": "$[?(@.Park == 'Successful')]",
+          "path": "$['05endgame'][?(@.name == 'Park')]",
           "weight": 1
         }
       ],
@@ -451,7 +451,7 @@
       "graphName": "Shallow Climbs",
       "metrics": [
         {
-          "path": "$[?(@.Shallow== 'Successful')]",
+          "path": "$['05endgame'][?(@.name == 'Shallow')]",
           "weight": 1
         }
       ],
@@ -461,7 +461,7 @@
       "graphName": "Deep Climbs",
       "metrics": [
         {
-          "path": "$[?(@.Deep == 'Successful')]",
+          "path": "$['05endgame'][?(@.name == 'Deep')]",
           "weight": 1
         }
       ],
