@@ -12,14 +12,14 @@
     {
       "name": "Note",
       "blueAutoCollectionLocations": [
-        { "name": "blue1", "x": 2.9, "y": 7 },
-        { "name": "blue2", "x": 2.9, "y": 5.55 },
-        { "name": "blue3", "x": 2.9, "y": 4.1 }
+        { "name": "blue1", "x": 1, "y": 7.2 },
+        { "name": "blue2", "x": 1.4, "y": 5.5 },
+        { "name": "blue3", "x": 1, "y": 3.3 }
       ],
       "redAutoCollectionLocations": [
-        { "name": "red1", "x": 13.65, "y": 7 },
-        { "name": "red2", "x": 13.65, "y": 5.55 },
-        { "name": "red3", "x": 13.65, "y": 4.1 }
+        { "name": "red1", "x": 15.6, "y": 7.2 },
+        { "name": "red2", "x": 15.2, "y": 5.5 },
+        { "name": "red3", "x": 15.6, "y": 3.3 }
       ],
       "neutralAutoCollectionLocations": [
         { "name": "preLoad", "x": 0, "y": 0 },
