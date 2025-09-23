@@ -62,13 +62,6 @@ async function createDataBlocks() {
           wrapper.appendChild(noShowDisplay);
           noShowDisplay.innerHTML = "No Show";
         } else {
-          //show starting location
-          let startingLocation = parsedJSONOutput[i]["02startingLocation"];
-          let startingLocationDisplay = document.createElement("div");
-          startingLocationDisplay.classList.add("dataHolder");
-          wrapper.appendChild(startingLocationDisplay);
-          startingLocationDisplay.innerHTML =
-            "Starting Location: " + startingLocation.name;
           //show autonomous results
 
           let auto = parsedJSONOutput[i]["03auto"];
@@ -96,11 +89,7 @@ async function createDataBlocks() {
             let pieceInfo = document.createElement("div");
             pieceContainer.appendChild(pieceInfo);
             pieceContainer.classList.add("pieceInfo");
-            pieceInfo.innerHTML =
-              "Collected: " +
-              piece.collectionLocation.name +
-              " | Result: " +
-              piece.result;
+            pieceInfo.innerHTML = " Result: " + piece.result;
           }
 
           if (auto.length == 0) {
@@ -133,11 +122,7 @@ async function createDataBlocks() {
             let pieceInfo = document.createElement("div");
             pieceContainer.appendChild(pieceInfo);
             pieceContainer.classList.add("pieceInfo");
-            pieceInfo.innerHTML =
-              "Collected: " +
-              piece.collectionLocation.name +
-              " | Result: " +
-              piece.result;
+            pieceInfo.innerHTML = "Result: " + piece.result;
           }
 
           if (teleop.length == 0) {

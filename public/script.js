@@ -1,4 +1,4 @@
-const eventKey = "demo5007";
+const eventKey = "2025cc";
 const apiKey = "";
 const apiUrl = `https://frc.nexus/api/v1/event/${eventKey}`;
 let manualInput = false;
@@ -91,7 +91,6 @@ function loadStoredData() {
     let metaData = JSON.parse(data);
     scoutNameInput.value = metaData.scoutName;
     teamNumberInput.value = localStorage.getItem("team");
-    teamColorInput.value = metaData.teamColor;
   }
 }
 
@@ -117,7 +116,6 @@ function saveData() {
   }
 
   metaData.matchNumber = matchNumberInput.value;
-  metaData.teamColor = teamColorInput.value;
   localStorage.setItem("01metaData", JSON.stringify(metaData));
 }
 function saveDataAnalysis() {
@@ -125,7 +123,6 @@ function saveDataAnalysis() {
   metaData.scoutName = scoutNameInput.value;
   teamNumberInput = document.getElementById("teamNumberInput");
   metaData.teamNumber = teamNumberInput.value;
-  metaData.teamColor = teamColorInput.value;
   localStorage.setItem("01metaData", JSON.stringify(metaData));
 }
 function setManual() {
@@ -152,24 +149,8 @@ function setManual() {
 getNexusMatches();
 let scoutNameInput = document.getElementById("scoutNameInput");
 let teamNumberInput = document.getElementById("teamNumberInput");
-let teamColorInput = document.getElementById("teamColorInput");
 localStorage.setItem("alerted", false);
 loadStoredData();
 localStorage.clear();
 
 // Auto-set team color based on team selection
-document
-  .getElementById("teamNumberInput")
-  .addEventListener("change", function () {
-    const teamColorInput = document.getElementById("teamColorInput");
-    const selectedValue = parseInt(this.value);
-
-    // Blue teams are 0, 1, 2 (first three options)
-    if (selectedValue <= 2) {
-      teamColorInput.value = "Blue";
-    }
-    // Red teams are 3, 4, 5 (last three options)
-    else if (selectedValue >= 3) {
-      teamColorInput.value = "Red";
-    }
-  });

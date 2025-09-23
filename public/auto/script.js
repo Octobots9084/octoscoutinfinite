@@ -13,10 +13,6 @@ let fieldImage = document.getElementById("fieldImage");
 let gamePieceContainer = document.getElementById("gamePieceContainer");
 let gamePieceViewer = document.getElementById("gamePieceViewer");
 let gamePieces = [];
-let isBlue = JSON.parse(localStorage.getItem("01metaData")).teamColor == "Blue";
-if (!isBlue) {
-  fieldImage.src = "../images/autoFieldRed.png";
-}
 document.getElementById("teamNum").innerHTML =
   "Team #: " + JSON.parse(localStorage.getItem("01metaData")).teamNumber;
 
@@ -114,15 +110,19 @@ function addCollectionClickableImage(
   gamePieceName,
   imageBackgroundColor
 ) {
-  if (isBlue) {
-    collectionLocation.x = fieldHeight - collectionLocation.x;
-    collectionLocation.y = fieldWidth - collectionLocation.y;
-  }
+  collectionLocation.x = fieldHeight - collectionLocation.x;
+  collectionLocation.y = fieldWidth - collectionLocation.y;
   let clickableImage = document.createElement("img");
   let clickableImageSideLength = 5; // In units of vh
   clickableImage.onclick = function () {
     collectPiece(collectionLocation, gamePieceName, imageBackgroundColor);
   };
+  clickableImage.addEventListener("touchstart", function () {
+    clickableImage.style.backgroundColor = "white";
+  });
+  clickableImage.addEventListener("touchend", function () {
+    clickableImage.style.backgroundColor = imageBackgroundColor;
+  });
 
   clickableImage.classList.add("clickableImage");
 

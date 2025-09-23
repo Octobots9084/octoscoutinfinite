@@ -10,10 +10,6 @@ let JSONConfig = await getJSONConfig();
 document.title = JSONConfig.pageTitle;
 let fieldContainer = document.getElementById("fieldContainer");
 let fieldImage = document.getElementById("fieldImage");
-let isBlue = JSON.parse(localStorage.getItem("01metaData")).teamColor == "Blue";
-if (!isBlue) {
-  fieldImage.src = "../images/blankFieldRed.png";
-}
 generateStartingLocationButtons();
 document.getElementById("teamNum").innerHTML =
   "Team #: " + JSON.parse(localStorage.getItem("01metaData")).teamNumber;
@@ -28,10 +24,8 @@ function generateStartingLocationButtons() {
 }
 // Adding a button to select a starting location
 function addStartingLocationButton(startingLocation) {
-  if (isBlue) {
-    startingLocation.x = fieldHeight - startingLocation.x;
-    startingLocation.y = fieldWidth - startingLocation.y;
-  }
+  startingLocation.x = fieldHeight - startingLocation.x;
+  startingLocation.y = fieldWidth - startingLocation.y;
   // Creating the button
   let button = document.createElement("button");
   button.onclick = function () {

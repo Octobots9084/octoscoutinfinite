@@ -10,7 +10,6 @@ let JSONConfig = await getJSONConfig();
 document.title = JSONConfig.pageTitle;
 let fieldContainer = document.getElementById("fieldContainer");
 let fieldImage = document.getElementById("fieldImage");
-let isBlue = JSON.parse(localStorage.getItem("01metaData")).teamColor == "Blue";
 generateEndgameButtons();
 document.getElementById("teamNum").innerHTML =
   "Team #: " + JSON.parse(localStorage.getItem("01metaData")).teamNumber;
@@ -25,10 +24,8 @@ function generateEndgameButtons() {
 }
 // Adding a button to select a starting location
 function addEndgameButton(endgame) {
-  if (isBlue) {
-    endgame.x = fieldHeight - endgame.x;
-    endgame.y = fieldWidth - endgame.y;
-  }
+  endgame.x = fieldHeight - endgame.x;
+  endgame.y = fieldWidth - endgame.y;
   // Creating the button
   let button = document.createElement("button");
   button.onclick = function () {
