@@ -176,13 +176,7 @@ async function createDataBlocks() {
         let endgameDisplay = document.createElement("div");
         endgameDisplay.classList.add("dataHolder");
         wrapper.appendChild(endgameDisplay);
-        endgameDisplay.innerHTML =
-          "Deep: " +
-          endgame.Deep +
-          " | Shallow: " +
-          endgame.Shallow +
-          " | Park: " +
-          endgame.Park;
+        endgameDisplay.innerHTML = "Endgame: " + endgame[0]?.name || "none";
       } catch (e) {
         let errorDisplay = document.createElement("div");
         errorDisplay.classList.add("dataHolder");

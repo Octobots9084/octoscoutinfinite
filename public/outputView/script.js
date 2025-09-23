@@ -135,13 +135,7 @@ async function createDataBlocks() {
           let endgameDisplay = document.createElement("div");
           endgameDisplay.classList.add("dataHolder");
           wrapper.appendChild(endgameDisplay);
-          endgameDisplay.innerHTML =
-            "Deep: " +
-            endgame.Deep +
-            " | Shallow: " +
-            endgame.Shallow +
-            " | Park: " +
-            endgame.Park;
+          endgameDisplay.innerHTML = "Endgame: " + endgame[0]?.name || "none";
 
           //show extra data
           let extra = parsedJSONOutput[i]["06extra"];
