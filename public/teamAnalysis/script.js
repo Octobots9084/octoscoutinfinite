@@ -475,7 +475,7 @@ document.addEventListener("DOMContentLoaded", async function () {
             ? parseInt(
                 String(matchData["01metaData"]?.matchNumber).replace(/\D/g, ""),
                 10
-              )
+              ) || i + 1
             : i + 1;
           console.log(numericMatch || i + 1);
           const matchNumberLabel =
