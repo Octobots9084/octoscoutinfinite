@@ -575,6 +575,10 @@
         {
           "path": "$['04teleop'][?(@.result == 'Net')]",
           "weight": 4
+        },
+        {
+          "path": "$['03auto'][?(@.result == 'Leave')]",
+          "weight": 3
         }
       ],
       "units": "Points"

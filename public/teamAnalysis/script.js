@@ -603,10 +603,10 @@ document.addEventListener("DOMContentLoaded", async function () {
     }
   }
 
-  window.updateTeamNumber = updateTeamNumber; // Avoid if possible
+  window.updateTeamNumber = updateTeamNumbers; // Avoid if possible
 
   // Function to update team number via URL reload
-  function updateTeamNumber(newTeamNumber) {
+  function updateTeamNumbers(newTeamNumber, newComparisonNumber) {
     // Get the current URL
     var url = new URL(window.location.href);
     // Set or update the 'team' parameter
@@ -615,14 +615,8 @@ document.addEventListener("DOMContentLoaded", async function () {
     } else {
       url.searchParams.delete("team"); // Remove if input is empty
     }
-    window.location.href = url.toString();
-  }
-  function updateComparisonNumber(newTeamNumber) {
-    // Get the current URL
-    var url = new URL(window.location.href);
-    // Set or update the 'team' parameter
-    if (newTeamNumber && String(newTeamNumber).trim()) {
-      url.searchParams.set("compare", String(newTeamNumber).trim());
+    if (newComparisonNumber && String(newComparisonNumber).trim()) {
+      url.searchParams.set("compare", String(newComparisonNumber).trim());
     } else {
       url.searchParams.delete("compare"); // Remove if input is empty
     }
@@ -638,7 +632,7 @@ document.addEventListener("DOMContentLoaded", async function () {
     teamNumberInput.addEventListener("keydown", function (event) {
       if (event.key === "Enter") {
         event.preventDefault(); // Prevent potential form submission
-        updateTeamNumber(teamNumberInput.value);
+        updateTeamNumbers(teamNumberInput.value, comparisonInput.value);
       }
     });
   }
@@ -650,7 +644,7 @@ document.addEventListener("DOMContentLoaded", async function () {
     comparisonInput.addEventListener("keydown", function (event) {
       if (event.key === "Enter") {
         event.preventDefault(); // Prevent potential form submission
-        updateComparisonNumber(comparisonInput.value);
+        updateTeamNumbers(teamNumberInput.value, comparisonInput.value);
       }
     });
   }
