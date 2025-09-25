@@ -12,6 +12,8 @@
   "noShow":{
     "x":1.1,"y":6.5
   },
+  "leave":{
+     "x": 1.4, "y":2},
   "gamePieces": [
     {
       
@@ -58,27 +60,6 @@
       "autoPossibleResults": [
       ],
       "teleopPossibleResults": [
-      ]
-    },
-    {
-      "name": "Leave",
-      "blueAutoCollectionLocations": [
-      ],
-      "redAutoCollectionLocations": [
-      ],
-      "neutralAutoCollectionLocations": [
-        { "name": "autoLeave", "x": 15, "y":6}
-
-      ],
-      "autoFieldImageLocation": "autoField.png",
-      "teleopCollectionLocations": [
-      ],
-      "teleopFieldImageLocation": "teleopField.png",
-      "autoPossibleResults": [
-        { "name": "Leave" }
-      ],
-      "teleopPossibleResults": [
-        { "name": "Leave" }
       ]
     }
     

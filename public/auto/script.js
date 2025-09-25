@@ -25,12 +25,88 @@ class GamePiece {
     this.color = color;
   }
 }
+let pieceTimer = null;
+let flashInterval = null;
+function leaveFunc(bypass) {
+  console.log(localStorage.getItem("left"));
+  let left = localStorage.getItem("left") === "true";
+  let leaveButton = document.getElementById("leave");
+  let leave = JSONConfig.leave;
+  console.log(bypass);
+  console.log(left);
+  if (left == false || bypass) {
+    console.log("yay");
 
+    leaveButton.style.backgroundColor = "grey";
+    leaveButton.onclick = null;
+    left = true;
+    localStorage.setItem("left", true);
+    console.log("set true");
+    collectPiece({ name: "Leave", x: leave.x, y: leave.y }, "Leave", "green");
+  }
+}
+function unLeave() {
+  let leaveButton = document.getElementById("leave");
+  leaveButton.style.backgroundColor = "green";
+  localStorage.setItem("left", false);
+  leaveButton.onclick = function () {
+    leaveFunc();
+  };
+}
+function startPieceTimer(targetElementId) {
+  // If a timer is already running, clear it first
+  stopPieceTimer();
+
+  // Start 15 second countdown
+  pieceTimer = setTimeout(() => {
+    startFlashing(targetElementId);
+  }, 15000); // 15000 ms = 15 seconds
+}
+
+function startFlashing() {
+  const element = document.getElementById("nextButton");
+  if (!element) return;
+
+  // If already flashing, don't stack intervals
+  if (flashInterval) clearInterval(flashInterval);
+
+  flashInterval = setInterval(() => {
+    element.classList.toggle("flash-red");
+  }, 500); // toggles every 0.5s
+}
+
+function stopPieceTimer() {
+  // Stop timer if running
+  if (pieceTimer) {
+    clearTimeout(pieceTimer);
+    pieceTimer = null;
+  }
+
+  // Stop flashing if running
+  if (flashInterval) {
+    clearInterval(flashInterval);
+    flashInterval = null;
+
+    // Remove flashing class in case it’s stuck red
+    const flashing = document.querySelector(".flash-red");
+    if (flashing) flashing.classList.remove("flash-red");
+  }
+}
 function loadStoredData() {
   let data = localStorage.getItem("03auto");
   if (data != null) {
     gamePieces = JSON.parse(data);
+    for (let i = 0; i < gamePieces.length; i++) {
+      if (gamePieces[i].name == "Leave") {
+        localStorage.setItem("left", true);
+        break;
+      } else {
+        localStorage.setItem("left", false);
+      }
+    }
     updateGamePieceViewer();
+  } else {
+    localStorage.setItem("left", false);
   }
 }
 
@@ -96,6 +172,24 @@ function generateCollectionButtons() {
   noShowButton.style.left =
     yPositionMetersToPixelsFromLeft(fieldImage, noShow.y, 5) + "px";
   fieldContainer.appendChild(noShowButton);
+
+  //leave
+  let left = localStorage.getItem("left") || false;
+  let leave = JSONConfig.leave;
+  let leaveButton = document.createElement("img");
+  if (left) window.addEventListener("DOMContentLoaded", () => leaveFunc(true));
+  leaveButton.src = "../images/leave.png";
+  leaveButton.classList.add("leave");
+  leaveButton.id = "leave";
+
+  leaveButton.onclick = function () {
+    leaveFunc();
+  };
+  leaveButton.style.top =
+    xPositionMetersToPixelsFromTop(fieldImage, leave.x, 5) + "px";
+  leaveButton.style.left =
+    yPositionMetersToPixelsFromLeft(fieldImage, leave.y, 5) + "px";
+  fieldContainer.appendChild(leaveButton);
 }
 function noShowFunc() {
   localStorage.setItem(
@@ -147,11 +241,12 @@ function addCollectionClickableImage(
   clickableImage.style.width = clickableImageSideLength + "vh";
   clickableImage.style.height = clickableImageSideLength + "vh";
 }
-
 // Creates a game piece object to represent a collected game piece and updates the viewer
 function collectPiece(location, gamePieceName, buttonColor) {
+  leaveFunc();
   gamePieces.push(new GamePiece(location, gamePieceName, buttonColor));
   updateGamePieceViewer();
+  startPieceTimer();
 }
 
 // Updates the visualization of the game pieces collected
@@ -159,7 +254,9 @@ function updateGamePieceViewer() {
   let gamePieceImageSideLength = 5; // In units of vh
   let clickableDeleteImageSideLength = 5;
   gamePieceContainer.innerHTML = "";
-
+  if (gamePieces.length == 0) {
+    stopPieceTimer();
+  }
   // Looping through game pieces
   for (let i = 0; i < gamePieces.length; i++) {
     // Finding possible results
@@ -215,6 +312,9 @@ function updateGamePieceViewer() {
     clickableDeleteImage.style.width = clickableDeleteImageSideLength + "vh";
     clickableDeleteImage.style.height = clickableDeleteImageSideLength + "vh";
     clickableDeleteImage.onclick = () => {
+      if (gamePieces[i].result == "Leave") {
+        unLeave();
+      }
       gamePieces.splice(i, 1);
       updateGamePieceViewer();
     };
