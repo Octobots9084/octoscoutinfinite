@@ -42,7 +42,7 @@ function leaveFunc(bypass) {
     left = true;
     localStorage.setItem("left", true);
     console.log("set true");
-    collectPiece({ name: "Leave", x: leave.x, y: leave.y }, "Leave", "green");
+    collectPiece({ name: "Leave", x: leave.x, y: leave.y }, "leave", "green");
   }
 }
 function unLeave() {
