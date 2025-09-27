@@ -15,6 +15,8 @@ let gamePieceViewer = document.getElementById("gamePieceViewer");
 let gamePieces = [];
 document.getElementById("teamNum").innerHTML =
   "Team #: " + JSON.parse(localStorage.getItem("01metaData")).teamNumber;
+let pieceTimer = null;
+let flashInterval = null;
 if (fieldImage.complete) {
   generateCollectionButtons();
   loadStoredData();
@@ -32,8 +34,7 @@ class GamePiece {
     this.color = color;
   }
 }
-let pieceTimer = null;
-let flashInterval = null;
+
 function leaveFunc(bypass) {
   console.log(localStorage.getItem("left"));
   let left = localStorage.getItem("left") === "true";
