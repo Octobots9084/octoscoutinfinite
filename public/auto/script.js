@@ -15,14 +15,18 @@ let gamePieceViewer = document.getElementById("gamePieceViewer");
 let gamePieces = [];
 document.getElementById("teamNum").innerHTML =
   "Team #: " + JSON.parse(localStorage.getItem("01metaData")).teamNumber;
-if (fieldImage.complete) {
-  generateCollectionButtons();
-} else {
-  fieldImage.onload = () => {
+window.addEventListener("DOMContentLoaded", () => {
+  if (fieldImage.complete) {
     generateCollectionButtons();
-  };
-}
-loadStoredData();
+    loadStoredData();
+  } else {
+    fieldImage.onload = () => {
+      generateCollectionButtons();
+      loadStoredData();
+    };
+  }
+});
+
 class GamePiece {
   constructor(collectionLocation, name, color) {
     this.collectionLocation = collectionLocation;
