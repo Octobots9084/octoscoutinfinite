@@ -50,11 +50,12 @@ function leaveFunc(bypass) {
     left = true;
     localStorage.setItem("left", true);
     console.log("set true");
-    collectPiece({ name: "Leave", x: leave.x, y: leave.y }, "leave", "green");
+    collectPiece({ name: "Move", x: leave.x, y: leave.y }, "Move", "green");
   }
 }
 function unLeave() {
   let leaveButton = document.getElementById("leave");
+  console.log(leaveButton);
   leaveButton.style.backgroundColor = "green";
   localStorage.setItem("left", false);
   leaveButton.onclick = function () {
@@ -186,7 +187,7 @@ function generateCollectionButtons() {
   let leave = JSONConfig.leave;
   let leaveButton = document.createElement("img");
   if (left) window.addEventListener("DOMContentLoaded", () => leaveFunc(true));
-  leaveButton.src = "../images/leave.png";
+  leaveButton.src = "../images/Move.png";
   leaveButton.classList.add("leave");
   leaveButton.id = "leave";
 
@@ -320,7 +321,7 @@ function updateGamePieceViewer() {
     clickableDeleteImage.style.width = clickableDeleteImageSideLength + "vh";
     clickableDeleteImage.style.height = clickableDeleteImageSideLength + "vh";
     clickableDeleteImage.onclick = () => {
-      if (gamePieces[i].result == "Leave") {
+      if (gamePieces[i].result == "Move") {
         unLeave();
       }
       gamePieces.splice(i, 1);
