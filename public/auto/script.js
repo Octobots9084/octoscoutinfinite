@@ -17,12 +17,14 @@ document.getElementById("teamNum").innerHTML =
   "Team #: " + JSON.parse(localStorage.getItem("01metaData")).teamNumber;
 if (fieldImage.complete) {
   generateCollectionButtons();
+  loadStoredData();
 } else {
   fieldImage.onload = () => {
     generateCollectionButtons();
+    loadStoredData();
   };
 }
-loadStoredData();
+
 class GamePiece {
   constructor(collectionLocation, name, color) {
     this.collectionLocation = collectionLocation;
