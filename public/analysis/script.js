@@ -242,7 +242,7 @@ document.addEventListener("DOMContentLoaded", async function () {
           // Wrap stats calculation in try/catch
           let quartilesValues = quartiles(values); // Assume quartiles handles empty/single values
           let mean = calculateMean(values); // Assume calculateMean handles empty array
-          means.push({ label: String(teamNumber), y: mean }); // Ensure label is string
+          means.push({ label: String(teamNumber), y: quartilesValues.Q3 }); // Ensure label is string
           dataPoints.push({
             label: String(teamNumber),
             y: [
