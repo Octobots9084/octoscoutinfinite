@@ -45,29 +45,16 @@ async function getJSONOutput() {
 }
 
 // Calculates the pixels from the top of the screen so the button is positioned on the field at the correct x coordinate (in meters).
-function xPositionMetersToPixelsFromTop(
-  fieldImage,
-  xMeters,
-  widthInPercentOfScreen
-) {
-  return (
-    fieldImage.getBoundingClientRect().top +
-    xMeters * (fieldImage.clientHeight / 16.4) -
-    ((widthInPercentOfScreen / 100) * window.innerHeight) / 2
-  );
+function xPositionMetersToPixelsFromTop(fieldImage, xMeters, widthInVh) {
+  const rect = fieldImage.getBoundingClientRect();
+  const buttonPx = (widthInVh / 100) * window.innerHeight; // still vh-based
+  return rect.top + xMeters * (rect.height / 16.4) - buttonPx / 2;
 }
 
-// Calculates the pixels from the left of the screen so the button is positioned on the field at the correct y coordinate (in meters).
-function yPositionMetersToPixelsFromLeft(
-  fieldImage,
-  yMeters,
-  widthInPercentOfScreen
-) {
-  return (
-    fieldImage.getBoundingClientRect().left +
-    yMeters * (fieldImage.clientWidth / 8.2) -
-    ((widthInPercentOfScreen / 100) * window.innerHeight) / 2
-  );
+function yPositionMetersToPixelsFromLeft(fieldImage, yMeters, widthInVh) {
+  const rect = fieldImage.getBoundingClientRect();
+  const buttonPx = (widthInVh / 100) * window.innerHeight; // still vh-based
+  return rect.left + yMeters * (rect.width / 8.2) - buttonPx / 2;
 }
 function calculateMean(values) {
   if (values.length === 0) {

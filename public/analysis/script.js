@@ -67,7 +67,7 @@ document.addEventListener("DOMContentLoaded", async function () {
     // Update tab panes
     let paneFound = false;
     document.querySelectorAll(".tab-pane").forEach((pane) => {
-      if (pane.id === tabId) {
+      if (pane.id === tabId || tabId == "allGraphs") {
         pane.classList.add("active");
         paneFound = true;
       } else {
@@ -81,7 +81,11 @@ document.addEventListener("DOMContentLoaded", async function () {
       window.renderedCharts &&
       window.renderedCharts.length > 0
     ) {
-      const tabPane = document.getElementById(tabId);
+      if (tabId == "allGraphs") {
+        var tabPane = document.getElementById("allGraphsContainer");
+      } else {
+        var tabPane = document.getElementById(tabId);
+      }
       if (!tabPane) return; // Exit if pane not found (shouldn't happen due to paneFound check)
 
       const chartDivs = tabPane.querySelectorAll(".chart");

@@ -39,7 +39,8 @@
     <button class="tab-button" data-tab="teleopGraphContainer">Teleop</button>
     <button class="tab-button" data-tab="autoGraphContainer">Auto</button>
     <button class="tab-button" data-tab="endgameGraphContainer">Endgame</button>
-    <button class="tab-button" data-tab="driverQualityGraphContainer">Driver Quality</button>
+    <!--<button class="tab-button" data-tab="driverQualityGraphContainer">Driver Quality</button> -->
+    <button class="tab-button" data-tab="allGraphs">All Graphs</button>
   </div>
 
   <!-- Mobile dropdown for tabs -->
@@ -54,6 +55,7 @@
   </div>
 
   <!-- Tab content - each container is a tab -->
+   <div id="allGraphsContainer">
   <div id="overallGraphContainer" class="graphContainer tab-pane active">
     <h1 id="header">Overall</h1>
   </div>
@@ -66,9 +68,10 @@
   <div id="endgameGraphContainer" class="graphContainer tab-pane">
     <h1 id="header">Endgame</h1>
   </div>
-  <div id="driverQualityGraphContainer" class="graphContainer tab-pane">
+  <!--<div id="driverQualityGraphContainer" class="graphContainer tab-pane">
     <h1 id="header">Driver Quality</h1>
-  </div>
+  </div> -->
+</div>
 
   <script type="text/javascript" src="https://cdn.canvasjs.com/canvasjs.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jsonpath/1.0.0/jsonpath.min.js"></script>
