@@ -103,6 +103,16 @@
   font-size: 16px;
   border: 1px solid #6e6037;
 }
+#sortBy {
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: #333;
+  color: white;
+  font-size: 16px;
+  border: 1px solid #6e6037;
+}
+
 
 /* Tab Content Styles */
 .tab-pane {

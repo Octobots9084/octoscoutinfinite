@@ -273,9 +273,10 @@ document.addEventListener("DOMContentLoaded", async function () {
       }));
 
       // Sort the combined array by Q3 value (index 4) in dataPoint's y array
+      sortBy = sortBySelector.value;
       combinedArray.sort((a, b) => {
-        let q2A = a.dataPoint.y[4]; // Mean value of a
-        let q2B = b.dataPoint.y[4]; // Mean value of b
+        let q2A = a.dataPoint.y[sortBy]; // Mean value of a
+        let q2B = b.dataPoint.y[sortBy]; // Mean value of b
 
         // If Q2 value is not present, fall back on mean
         if (isNaN(q2A)) {
@@ -309,32 +310,37 @@ document.addEventListener("DOMContentLoaded", async function () {
 
   // --- Initial Graph Generation ---
   // Check if config and container exist before calling
-  const overallContainer = document.getElementById("overallGraphContainer");
-  if (graphConfig && graphConfig.Overall && overallContainer) {
-    getDataAndCreateGraph(graphConfig.Overall, overallContainer, "Overall");
-  }
+  function createGraphs() {
+    window.renderedCharts = [];
+    const overallContainer = document.getElementById("overallGraphContainer");
+    if (graphConfig && graphConfig.Overall && overallContainer) {
+      getDataAndCreateGraph(graphConfig.Overall, overallContainer, "Overall");
+    }
 
-  const teleopContainer = document.getElementById("teleopGraphContainer");
-  if (graphConfig && graphConfig.Teleop && teleopContainer) {
-    getDataAndCreateGraph(graphConfig.Teleop, teleopContainer, "Teleop");
-  }
+    const teleopContainer = document.getElementById("teleopGraphContainer");
+    if (graphConfig && graphConfig.Teleop && teleopContainer) {
+      getDataAndCreateGraph(graphConfig.Teleop, teleopContainer, "Teleop");
+    }
 
-  const autoContainer = document.getElementById("autoGraphContainer");
-  if (graphConfig && graphConfig.Auto && autoContainer) {
-    getDataAndCreateGraph(graphConfig.Auto, autoContainer, "Auto");
-  }
+    const autoContainer = document.getElementById("autoGraphContainer");
+    if (graphConfig && graphConfig.Auto && autoContainer) {
+      getDataAndCreateGraph(graphConfig.Auto, autoContainer, "Auto");
+    }
 
-  const endgameContainer = document.getElementById("endgameGraphContainer");
-  if (graphConfig && graphConfig.Endgame && endgameContainer) {
-    getDataAndCreateGraph(graphConfig.Endgame, endgameContainer, "Endgame");
-  }
+    const endgameContainer = document.getElementById("endgameGraphContainer");
+    if (graphConfig && graphConfig.Endgame && endgameContainer) {
+      getDataAndCreateGraph(graphConfig.Endgame, endgameContainer, "Endgame");
+    }
 
-  const driverQualityContainer = document.getElementById(
-    "driverQualityGraphContainer"
-  );
-  if (graphConfig && graphConfig.Driver && driverQualityContainer) {
-    getDataAndCreateGraph(graphConfig.Driver, driverQualityContainer, "Driver");
+    const driverQualityContainer = document.getElementById(
+      "driverQualityGraphContainer"
+    );
   }
+  const sortBySelector = document.getElementById("sortBy");
+  sortBySelector.addEventListener("change", function () {
+    createGraphs();
+  });
+  createGraphs();
 
   // --- Initial Tab Activation ---
   // Ensure the correct initial tab is shown and attempt to render its charts
