@@ -46,13 +46,19 @@ async function getJSONOutput() {
 
 // Calculates the pixels from the top of the screen so the button is positioned on the field at the correct x coordinate (in meters).
 function xPositionMetersToPixelsFromTop(fieldImage, xMeters, widthInVh) {
-  const rect = fieldImage.getBoundingClientRect();
+  var rect = 0;
+  while (rect == 0) {
+    rect = fieldImage.getBoundingClientRect();
+  }
   const buttonPx = (widthInVh / 100) * window.innerHeight; // still vh-based
   return rect.top + xMeters * (rect.height / 16.4) - buttonPx / 2;
 }
 
 function yPositionMetersToPixelsFromLeft(fieldImage, yMeters, widthInVh) {
-  const rect = fieldImage.getBoundingClientRect();
+  var rect = 0;
+  while (rect == 0) {
+    rect = fieldImage.getBoundingClientRect();
+  }
   const buttonPx = (widthInVh / 100) * window.innerHeight; // still vh-based
   return rect.left + yMeters * (rect.width / 8.2) - buttonPx / 2;
 }
