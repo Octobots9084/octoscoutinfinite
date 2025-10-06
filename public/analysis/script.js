@@ -273,7 +273,7 @@ document.addEventListener("DOMContentLoaded", async function () {
       }));
 
       // Sort the combined array by Q3 value (index 4) in dataPoint's y array
-      sortBy = sortBySelector.value;
+      let sortBy = sortBySelector.value;
       combinedArray.sort((a, b) => {
         let q2A = a.dataPoint.y[sortBy]; // Mean value of a
         let q2B = b.dataPoint.y[sortBy]; // Mean value of b
