@@ -10,7 +10,14 @@ let JSONConfig = await getJSONConfig();
 document.title = JSONConfig.pageTitle;
 let fieldContainer = document.getElementById("fieldContainer");
 let fieldImage = document.getElementById("fieldImage");
-generateEndgameButtons();
+fieldImage.src = "../images/endgameField.png";
+if (fieldImage.complete) {
+  generateEndgameButtons();
+} else {
+  fieldImage.onload = () => {
+    generateEndgameButtons();
+  };
+}
 document.getElementById("teamNum").innerHTML =
   "Team #: " + JSON.parse(localStorage.getItem("01metaData")).teamNumber;
 

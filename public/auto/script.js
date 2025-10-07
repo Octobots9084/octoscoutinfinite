@@ -17,6 +17,7 @@ document.getElementById("teamNum").innerHTML =
   "Team #: " + JSON.parse(localStorage.getItem("01metaData")).teamNumber;
 let pieceTimer = null;
 let flashInterval = null;
+fieldImage.src = "../images/autoFieldBlue.png";
 if (fieldImage.complete) {
   generateCollectionButtons();
   loadStoredData();

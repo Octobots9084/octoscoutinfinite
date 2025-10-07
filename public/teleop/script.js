@@ -16,8 +16,16 @@ let gamePieces = [];
 document.getElementById("teamNum").innerHTML =
   "Team #: " + JSON.parse(localStorage.getItem("01metaData")).teamNumber;
 
-generateCollectionButtons();
-loadStoredData();
+fieldImage.src = "../images/autoFieldBlue.png";
+if (fieldImage.complete) {
+  generateCollectionButtons();
+  loadStoredData();
+} else {
+  fieldImage.onload = () => {
+    generateCollectionButtons();
+    loadStoredData();
+  };
+}
 
 class GamePiece {
   constructor(collectionLocation, name, color) {
