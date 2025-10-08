@@ -118,7 +118,6 @@ document.addEventListener("DOMContentLoaded", async function () {
     chartDiv.id = chartName;
     chartDiv.classList.add("chart");
     graphContainer.appendChild(chartDiv);
-
     let chartParameters = {
       animationEnabled: false, // Disable animation for potential performance gain/stability
       title: {
@@ -160,7 +159,8 @@ document.addEventListener("DOMContentLoaded", async function () {
   function getDataAndCreateGraph(
     graphCategory,
     graphContainer,
-    graphCategoryName
+    graphCategoryName,
+    noDraw
   ) {
     // Basic validation
     if (!graphCategory || !Array.isArray(graphCategory) || !graphContainer) {
@@ -357,4 +357,149 @@ document.addEventListener("DOMContentLoaded", async function () {
       }
     }
   }
+  async function printList() {
+    let graphConfig = await getGraphJSONConfig();
+    const JSONOutput = await getJSONOutput();
+    const parsedJSONOutput = JSONOutput.map((item) => {
+      const parsedItem = { ...item };
+      Object.keys(item).forEach((key) => {
+        try {
+          parsedItem[key] = JSON.parse(item[key]);
+        } catch (error) {
+          // Ignore if it's not a JSON string
+        }
+      });
+      return parsedItem;
+    });
+    let teams = [];
+    try {
+      // Add try/catch around team processing as it accesses nested data
+      const uniqueTeams = new Set();
+      parsedJSONOutput.forEach((obj) => {
+        // Add checks for obj and metaData existence
+        if (
+          obj &&
+          obj["01metaData"] &&
+          !obj.deleted &&
+          obj["01metaData"].teamNumber
+        ) {
+          uniqueTeams.add(obj["01metaData"].teamNumber);
+        }
+      });
+      teams = Array.from(uniqueTeams);
+    } catch (e) {
+      // console.error("Error processing teams", e);
+    }
+
+    if (teams.length === 0) return; // No teams, nothing to graph
+
+    // Creating a graph for each section under the category
+    const categoryConfig = graphConfig.Overall.find(
+      (categoryConfig) => categoryConfig.graphName === "Controlled Game Pieces"
+    );
+    // Check if categoryConfig and its metrics are valid
+    if (
+      !categoryConfig ||
+      !categoryConfig.graphName ||
+      !Array.isArray(categoryConfig.metrics) ||
+      !categoryConfig.graphName == "Controlled Game Pieces"
+    ) {
+      //return; // Skip this config if invalid
+    }
+
+    let dataPoints = [];
+    let means = [];
+
+    // Looping through each team
+    teams.forEach((teamNumber) => {
+      let values = [];
+      // Getting non-deleted matches of the team
+      let matchesOfTeam = parsedJSONOutput.filter((obj) => {
+        // Add checks
+        return (
+          obj &&
+          !obj.deleted &&
+          obj["01metaData"] &&
+          obj["01metaData"].teamNumber === teamNumber
+        );
+      });
+
+      // Computing the values for the metric for each match
+      matchesOfTeam.forEach((matchData) => {
+        let totalForMatch = 0;
+        let calculationSuccess = true;
+
+        categoryConfig.metrics.forEach((metric) => {
+          if (metric && metric.path && typeof metric.weight === "number") {
+            totalForMatch += getValues(matchData, metric.path) * metric.weight;
+          } else {
+            // Skip invalid metric definition
+          }
+        });
+        if (isNaN(totalForMatch)) {
+          // Check if calculation resulted in NaN
+          calculationSuccess = false;
+        }
+        if (calculationSuccess) {
+          values.push(totalForMatch);
+        }
+      });
+
+      // Calculate quartiles and mean only if values exist
+      if (values.length > 0) {
+        // Wrap stats calculation in try/catch
+        let quartilesValues = quartiles(values); // Assume quartiles handles empty/single values
+        let mean = calculateMean(values); // Assume calculateMean handles empty array
+        means.push({ label: String(teamNumber), y: quartilesValues.Q3 }); // Ensure label is string
+        dataPoints.push({
+          label: String(teamNumber),
+          y: [
+            Math.min(...values),
+            quartilesValues.Q1,
+            quartilesValues.Q3,
+            Math.max(...values),
+            quartilesValues.Q2,
+          ],
+        });
+      } else {
+        // Handle case where team has no valid data - maybe push default points or skip
+        means.push({ label: String(teamNumber), y: 0 });
+        dataPoints.push({ label: String(teamNumber), y: [0, 0, 0, 0, 0] });
+      }
+    }); // End loop through teams
+
+    //if (dataPoints.length === 0) return; // Skip drawing if no data points generated
+
+    // Combine dataPoints and means into one array of objects
+    let combinedArray = dataPoints.map((dataPoint, index) => ({
+      dataPoint,
+      mean: means[index],
+    }));
+
+    // Sort the combined array by Q3 value (index 4) in dataPoint's y array
+    const sortBySelector = document.getElementById("sortBy");
+    let sortBy = sortBySelector.value;
+    combinedArray.sort((a, b) => {
+      let q2A = a.dataPoint.y[sortBy]; // Mean value of a
+      let q2B = b.dataPoint.y[sortBy]; // Mean value of b
+
+      // If Q2 value is not present, fall back on mean
+      if (isNaN(q2A)) {
+        q2A = a.mean.y;
+      }
+      if (isNaN(q2B)) {
+        q2B = b.mean.y;
+      }
+
+      return q2B - q2A;
+    });
+    let message = "";
+    let sortedDataPoints = combinedArray.map((item) => item.dataPoint);
+    sortedDataPoints.forEach((item, i) => {
+      message += item.label + "\n";
+    });
+
+    return console.log(message);
+  }
+  window.printList = printList;
 });
