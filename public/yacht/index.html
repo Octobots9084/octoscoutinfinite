@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Yacht Store</title>
+  <style>
+    body {
+      background-color: black;
+      color: white;
+      text-align: center;
+      margin-top: 100px;
+      font-family: Arial, sans-serif;
+    }
+    img {
+      height: 60vh;
+      border-radius: 10px;
+    }
+    #buyButton {
+      background-color: limegreen;
+      color: black;
+      font-size: 70px;
+      padding: 15px 40px;
+      border: none;
+      border-radius: 15px;
+      cursor: pointer;
+      margin-top: 20px;
+    }
+    #buyButton:hover {
+      background-color: #00cc00;
+    }
+    #message {
+      color: red;
+      font-size: 90px;
+      display: none;
+      margin-top: 45vh;
+    }
+  </style>
+</head>
+<body>
+  <div id="container">
+    <img id="yacht" src="https://brazilexclusivetravels.com/wp-content/uploads/2025/05/Lancha-Intermares-47-yacht-boat-rental-rio-de-janeiro.png" alt="Yacht">
+    <br>
+    <button id="buyButton">BUY YACHT</button>
+  </div>
+
+  <div id="message">CARD CANCELLED</div>
+
+  <script>
+    document.getElementById("buyButton").addEventListener("click", function() {
+      document.getElementById("container").style.display = "none";
+      document.getElementById("message").style.display = "block";
+    });
+  </script>
+</body>
+</html>
