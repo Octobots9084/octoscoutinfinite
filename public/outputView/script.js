@@ -1,7 +1,6 @@
 import { getJSONOutput } from "/util.js";
 let parsedJSONOutput;
 let errored = false;
-let reScouts = 0;
 async function updateJSON() {
   let JSONOutput = await getJSONOutput();
   // Parse JSON strings in data
@@ -20,9 +19,15 @@ async function updateJSON() {
 async function createDataBlocks() {
   await updateJSON();
   parsedJSONOutput.sort((a, b) => {
-    var matchA = parseInt(a["01metaData"]["matchNumber"].replace(/\D/g, ""));
-    var matchB = parseInt(b["01metaData"]["matchNumber"].replace(/\D/g, ""));
-    return matchA - matchB;
+    try {
+      var matchA = parseInt(a["01metaData"]["matchNumber"].replace(/\D/g, ""));
+      var matchB = parseInt(b["01metaData"]["matchNumber"].replace(/\D/g, ""));
+      errors++;
+      removeErrorData(i);
+      return matchA - matchB;
+    } catch (e) {
+      return 0;
+    }
   });
   let searchFilterInput = document.getElementById("search");
   let searchTypeSelector = document.getElementById("searchBy");
@@ -31,9 +36,12 @@ async function createDataBlocks() {
   let container = document.getElementById("dataContainer");
   container.innerHTML = "";
   let errors = 0;
+  let reScouts = 0;
   for (let i = 0; i < parsedJSONOutput.length; i++) {
-    console.log(parsedJSONOutput[i]["01metaData"][searchType]);
-    if (
+    if (!parsedJSONOutput[i]["01metaData"] && !parsedJSONOutput[i].deleted) {
+      errors++;
+      removeErrorData(i);
+    } else if (
       !parsedJSONOutput[i].deleted &&
       parsedJSONOutput[i]["01metaData"][searchType].includes(searchFilter)
     ) {
