@@ -11,10 +11,10 @@
 }
 #dataContainer {
   display: flex;
-  width: 90vw;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  margin-top: 10px;
 }
 #singleTeamButton {
   width: 10vh;
@@ -118,13 +118,33 @@
   position: absolute;
   right: 20vh;
 }
-@media (max-width:1220px){
-  #dataContainer{
-    padding-top: 50px;
-  }
+#searchContainer {
+  display: flex;
+  justify-content: center;  /* centers horizontally */
+  align-items: center;      /* centers vertically within its parent */
+  width: 100%;
+  margin-top: 30px;          /* space from top */
+  gap: 1%;                  /* spacing between input and select */
 }
-@media(min-width:1220px){
-  #dataContainer{
-    padding-top: 0;
-  }
+
+#search {
+  flex: 0 0 53%;            /* 56% width, doesn’t shrink/grow oddly */
+  padding: 10px;
+  border-radius: 5px;
+  background-color: #234267;
+  color: white;
+  font-size: 16px;
+  border: 1px solid #6e6037;
+  margin-top: 50px;
+}
+
+#searchBy {
+  flex: 0 0 12%;            /* 13% width, matches your old ratio */
+  padding: 10px;
+  border-radius: 5px;
+  background-color: #234267;
+  color: white;
+  font-size: 16px;
+  border: 1px solid #6e6037;
+  margin-top: 50px;
 }

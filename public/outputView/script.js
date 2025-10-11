@@ -19,11 +19,24 @@ async function updateJSON() {
 }
 async function createDataBlocks() {
   await updateJSON();
+  parsedJSONOutput.sort((a, b) => {
+    var matchA = parseInt(a["01metaData"]["matchNumber"].replace(/\D/g, ""));
+    var matchB = parseInt(b["01metaData"]["matchNumber"].replace(/\D/g, ""));
+    return matchA - matchB;
+  });
+  let searchFilterInput = document.getElementById("search");
+  let searchTypeSelector = document.getElementById("searchBy");
+  let searchFilter = searchFilterInput.value;
+  let searchType = searchTypeSelector.value;
   let container = document.getElementById("dataContainer");
   container.innerHTML = "";
   let errors = 0;
   for (let i = 0; i < parsedJSONOutput.length; i++) {
-    if (!parsedJSONOutput[i].deleted) {
+    console.log(parsedJSONOutput[i]["01metaData"][searchType]);
+    if (
+      !parsedJSONOutput[i].deleted &&
+      parsedJSONOutput[i]["01metaData"][searchType].includes(searchFilter)
+    ) {
       //create container
 
       let wrapper = document.createElement("div");
@@ -295,5 +308,16 @@ function createCollapsibleElements() {
     });
   }
 }
+let searchFilterInput = document.getElementById("search");
+let searchTypeSelector = document.getElementById("searchBy");
+
+searchFilterInput.addEventListener("input", function () {
+  createDataBlocks();
+});
+
+searchTypeSelector.addEventListener("input", function () {
+  createDataBlocks();
+});
+
 createDataBlocks();
 createCollapsibleElements();

@@ -7,12 +7,20 @@
     <link rel="stylesheet" href="../globalStyle.css" />
     <link rel="stylesheet" href="style.css" />
   </head>
-  <body>
+  <body> 
     <button id="backButton" onclick="window.location.href = '/'">Scout</button>
     <button id="singleTeamButton" onclick="window.location.href = '/analysis'">
       Overall Analysis
     </button>
     <button id="resurrectButton" onclick="window.location.href = '/resurrection'">resurrection</button>
+    <div id="searchContainer">
+    <input id="search" placeholder="Search">
+    <select id="searchBy">
+      <option value="matchNumber">Match #</option>
+      <option value="teamNumber">Team #</option>
+      <option value="scoutName">Scout name</option>
+    </select>
+    </div>
     <div id="dataContainer">
 
     </div>
