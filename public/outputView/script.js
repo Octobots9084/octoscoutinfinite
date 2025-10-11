@@ -19,15 +19,11 @@ async function updateJSON() {
 async function createDataBlocks() {
   await updateJSON();
   parsedJSONOutput.sort((a, b) => {
-    try {
-      var matchA = parseInt(a["01metaData"]["matchNumber"].replace(/\D/g, ""));
-      var matchB = parseInt(b["01metaData"]["matchNumber"].replace(/\D/g, ""));
-      errors++;
-      removeErrorData(i);
-      return matchA - matchB;
-    } catch (e) {
-      return 0;
-    }
+    const matchA =
+      parseInt(a["01metaData"]?.matchNumber?.replace(/\D/g, "")) || 0;
+    const matchB =
+      parseInt(b["01metaData"]?.matchNumber?.replace(/\D/g, "")) || 0;
+    return matchA - matchB;
   });
   let searchFilterInput = document.getElementById("search");
   let searchTypeSelector = document.getElementById("searchBy");
@@ -43,7 +39,9 @@ async function createDataBlocks() {
       removeErrorData(i);
     } else if (
       !parsedJSONOutput[i].deleted &&
-      parsedJSONOutput[i]["01metaData"][searchType].includes(searchFilter)
+      String(parsedJSONOutput[i]["01metaData"]?.[searchType] ?? "")
+        .toLowerCase()
+        .includes(searchFilter.toLowerCase())
     ) {
       //create container
 
@@ -214,6 +212,7 @@ async function createDataBlocks() {
   let anomalyCounter = document.createElement("div");
   container.prepend(anomalyCounter);
   anomalyCounter.classList.add("anomalyCounter");
+  if (!anomalies || typeof anomalies !== "object") anomalies = {};
   for (let i = 0; i < Object.keys(anomalies).length; i++) {
     if (anomalies[Object.keys(anomalies)[i]] < 6) {
       anomalousSmall++;
