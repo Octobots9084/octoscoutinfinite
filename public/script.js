@@ -28,6 +28,7 @@ function getNexusMatches() {
     })
     .catch((error) => {
       console.error("There was a problem with the fetch operation:", error); // Handle any errors
+      filter.checked = true;
       filter.setAttribute("disabled", true);
 
       setManualInput();
