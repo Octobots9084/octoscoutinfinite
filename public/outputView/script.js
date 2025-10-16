@@ -18,11 +18,16 @@ async function updateJSON() {
 }
 async function createDataBlocks() {
   await updateJSON();
+  for (let i = 0; i < parsedJSONOutput.length; i++) {
+    parsedJSONOutput[i]._originalIndex = i;
+  }
   parsedJSONOutput.sort((a, b) => {
     const matchA =
-      parseInt(a["01metaData"]?.matchNumber?.replace(/\D/g, "")) || 0;
+      parseInt(a["01metaData"]?.matchNumber?.replace(/\D/g, "")) || -1;
     const matchB =
       parseInt(b["01metaData"]?.matchNumber?.replace(/\D/g, "")) || 0;
+    console.log(matchA);
+
     return matchA - matchB;
   });
   let searchFilterInput = document.getElementById("search");
@@ -55,8 +60,7 @@ async function createDataBlocks() {
       clickableDeleteImage.src = "/images/deleteImage.png";
       clickableDeleteImage.classList.add("deleteButton");
       clickableDeleteImage.onclick = () => {
-        console.log(i);
-        removeData(i);
+        removeData(parsedJSONOutput[i]._originalIndex);
         createDataBlocks();
       };
       wrapper.appendChild(clickableDeleteImage);
@@ -200,7 +204,7 @@ async function createDataBlocks() {
         } catch (e) {}
       } catch (e) {
         errors++;
-        removeErrorData(i);
+        removeErrorData(parsedJSONOutput[i]._originalIndex);
         console.log(e);
         createDataBlocks();
       }

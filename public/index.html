@@ -40,8 +40,14 @@
     </div>
 
     <div class="button-container">
-      <button class="navButton" id="manualButton" onclick="setManual()">Manual Input</button>
-      <button class="navButton" id="analysisButton" onclick="saveDataAnalysis();window.location.href = '/analysis'">Analysis</button>
+     <!-- From Uiverse.io by cbolson --> 
+      <label for="filter" class="switch" aria-label="Toggle Filter">
+        <input type="checkbox" id="filter"/>
+        <span>Auto</span>
+        <span>Manual</span>
+      </label>
+
+      <button class="navButton" id="analysisButton" onclick="saveData();window.location.href = '/analysis'">Analysis</button>
     </div>
 
     <!-- <div class="button-container">

@@ -37,26 +37,19 @@ class GamePiece {
 }
 
 function leaveFunc(bypass) {
-  console.log(localStorage.getItem("left"));
   let left = localStorage.getItem("left") === "true";
   let leaveButton = document.getElementById("leave");
   let leave = JSONConfig.leave;
-  console.log(bypass);
-  console.log(left);
   if (left == false || bypass) {
-    console.log("yay");
-
     leaveButton.style.backgroundColor = "grey";
     leaveButton.onclick = null;
     left = true;
     localStorage.setItem("left", true);
-    console.log("set true");
     collectPiece({ name: "Move", x: leave.x, y: leave.y }, "Move", "green");
   }
 }
 function unLeave() {
   let leaveButton = document.getElementById("leave");
-  console.log(leaveButton);
   leaveButton.style.backgroundColor = "green";
   localStorage.setItem("left", false);
   leaveButton.onclick = function () {
