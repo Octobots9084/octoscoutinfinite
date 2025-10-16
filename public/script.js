@@ -1,5 +1,5 @@
 const eventKey = "demo5007";
-const apiKey = "6PSXVXjHb7eFzDDHwqR98BOwANU";
+const apiKey = "";
 const apiUrl = `https://frc.nexus/api/v1/event/${eventKey}`;
 let manualInput = false;
 let teams = [];
