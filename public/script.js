@@ -2,7 +2,7 @@ const eventKey = "demo5007";
 const apiKey = "";
 const apiUrl = `https://frc.nexus/api/v1/event/${eventKey}`;
 let manualInput = false;
-let teams = [];
+let teamNumbers = [];
 let nexusData;
 function getNexusMatches() {
   //get nexus api
@@ -126,9 +126,10 @@ function updateTeams(data) {
   }
   for (i = 0; i < 6; i++) {
     let teamOption = document.createElement("option");
-    teams = match.blueTeams.concat(match.redTeams);
-    teamOption.innerHTML = bots[i] + teams[i];
+    teamNumbers = match.blueTeams.concat(match.redTeams);
+    teamOption.innerHTML = bots[i] + teamNumbers[i];
     teamOption.value = i;
+    teamOption.setAttribute("data-name", bots[i].slice(0, -3));
     teamSelector.appendChild(teamOption);
   }
   const teamcontainer = document.getElementById("teamInputContainer");
@@ -140,6 +141,12 @@ async function loadStoredData() {
     let metaData = JSON.parse(data);
     scoutNameInput.value = metaData.scoutName;
     teamNumberInput.value = localStorage.getItem("team");
+    console.log(teamNumberInput.options);
+    console.log(
+      teamNumberInput.options[teamNumberInput.selectedIndex].getAttribute(
+        "data-name"
+      )
+    );
   }
 }
 
@@ -155,12 +162,16 @@ function saveData() {
         match = nexusData.matches[i];
       }
     }
-    teams = match.blueTeams.concat(match.redTeams);
-    metaData.teamNumber = teams[teamNumberInput.value];
+    teamNumbers = match.blueTeams.concat(match.redTeams);
+    metaData.teamNumber = teamNumbers[teamNumberInput.value];
+    metaData.teamPosition =
+      teamNumberInput.options[teamNumberInput.selectedIndex].getAttribute(
+        "data-name"
+      );
     localStorage.setItem("team", teamNumberInput.value);
   } else {
     metaData.teamNumber = teamNumberInput.value;
-    localStorage.setItem("team", 0);
+    localStorage.setItem("team", teamNumberInput.value);
   }
 
   metaData.matchNumber = matchNumberInput.value;
