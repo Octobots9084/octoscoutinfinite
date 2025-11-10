@@ -68,7 +68,9 @@ async function createDataBlocks() {
           " | Team Number: " +
           metaData.teamNumber +
           " | Match: " +
-          metaData.matchNumber;
+          metaData.matchNumber +
+          " | Position: " +
+          metaData.teamPosition;
       } catch (e) {
         let errorDisplay = document.createElement("div");
         errorDisplay.classList.add("dataHolder");

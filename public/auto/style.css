@@ -138,4 +138,9 @@
 }
 .flash-red{
   background-color: red !important;
+  
+}
+.embiggen{
+  min-width: 10vh;
+  min-height: 10vh;
 }

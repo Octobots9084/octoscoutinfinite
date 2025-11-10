@@ -29,10 +29,9 @@ if (fieldImage.complete) {
 }
 
 class GamePiece {
-  constructor(collectionLocation, name, color) {
-    this.collectionLocation = collectionLocation;
+  constructor(name, collectionLocation) {
     this.name = name;
-    this.color = color;
+    this.result = collectionLocation;
   }
 }
 
@@ -45,7 +44,7 @@ function leaveFunc(bypass) {
     leaveButton.onclick = null;
     left = true;
     localStorage.setItem("left", true);
-    collectPiece({ name: "Move", x: leave.x, y: leave.y }, "Move", "green");
+    collectPiece("Move", "Move");
   }
 }
 function unLeave() {
@@ -72,7 +71,7 @@ function startFlashing() {
 
   // If already flashing, don't stack intervals
   if (flashInterval) clearInterval(flashInterval);
-
+  document.body.style.backgroundColor = "darkred";
   flashInterval = setInterval(() => {
     element.classList.toggle("flash-red");
   }, 500); // toggles every 0.5s
@@ -93,6 +92,7 @@ function stopPieceTimer() {
     // Remove flashing class in case it’s stuck red
     const flashing = document.querySelector(".flash-red");
     if (flashing) flashing.classList.remove("flash-red");
+    document.body.style.backgroundColor = "#1a2d43";
   }
 }
 function loadStoredData() {
@@ -116,103 +116,63 @@ function loadStoredData() {
 // Dynamically generating buttons to select auto collections
 function generateCollectionButtons() {
   let gamePieces = JSONConfig.gamePieces;
-  let iteratorColorStartingValue = 50;
-  let maxColorIteratorValue = 255;
 
   for (let i = 0; i < gamePieces.length; i++) {
     // Creating the collection locations for the blue alliance, changing the color for differentiation
-    let blueButtonColorIterator = iteratorColorStartingValue;
-    for (let j = 0; j < gamePieces[i].blueAutoCollectionLocations.length; j++) {
+    for (let j = 0; j < gamePieces[i].autoCollectionLocations.length; j++) {
       addCollectionClickableImage(
-        gamePieces[i].blueAutoCollectionLocations[j],
-        gamePieces[i].name,
-        "rgb(" + [0, 0, blueButtonColorIterator].join(",") + ")"
+        gamePieces[i].autoCollectionLocations[j],
+        gamePieces[i].name
       );
-      blueButtonColorIterator +=
-        (maxColorIteratorValue - iteratorColorStartingValue) /
-        gamePieces[i].blueAutoCollectionLocations.length;
     }
+    let noShow = JSONConfig.noShow;
+    let noShowButton = document.createElement("img");
+    noShowButton.src = "../images/noShow.png";
+    noShowButton.classList.add("noShow");
+    noShowButton.onclick = function () {
+      noShowFunc();
+    };
+    noShowButton.style.top =
+      xPositionMetersToPixelsFromTop(fieldImage, noShow.x, 5) + "px";
+    noShowButton.style.left =
+      yPositionMetersToPixelsFromLeft(fieldImage, noShow.y, 5) + "px";
+    fieldContainer.appendChild(noShowButton);
 
-    // Creating the collection locations for the red alliance, changing the color for differentiation
-    let redButtonColorIterator = iteratorColorStartingValue;
-    for (let j = 0; j < gamePieces[i].redAutoCollectionLocations.length; j++) {
-      addCollectionClickableImage(
-        gamePieces[i].redAutoCollectionLocations[j],
-        gamePieces[i].name,
-        "rgb(" + [redButtonColorIterator, 0, 0].join(",") + ")"
-      );
-      redButtonColorIterator +=
-        (maxColorIteratorValue - iteratorColorStartingValue) /
-        gamePieces[i].redAutoCollectionLocations.length;
-    }
+    //leave
+    let left = localStorage.getItem("left") || false;
+    let leave = JSONConfig.leave;
+    let leaveButton = document.createElement("img");
+    if (left)
+      window.addEventListener("DOMContentLoaded", () => leaveFunc(true));
+    leaveButton.src = "../images/Move.png";
+    leaveButton.classList.add("leave");
+    leaveButton.id = "leave";
 
-    // Creating the collection locations for the neutral locations, changing the color for differentiation
-    let neutralButtonColorIterator = iteratorColorStartingValue;
-    for (
-      let j = 0;
-      j < gamePieces[i].neutralAutoCollectionLocations.length;
-      j++
-    ) {
-      addCollectionClickableImage(
-        gamePieces[i].neutralAutoCollectionLocations[j],
-        gamePieces[i].name,
-        "rgb(" + [0, neutralButtonColorIterator, 0].join(",") + ")"
-      );
-      neutralButtonColorIterator +=
-        (maxColorIteratorValue - iteratorColorStartingValue) /
-        gamePieces[i].neutralAutoCollectionLocations.length;
-    }
+    leaveButton.onclick = function () {
+      leaveFunc();
+    };
+    leaveButton.style.top =
+      xPositionMetersToPixelsFromTop(fieldImage, leave.x, 5) + "px";
+    leaveButton.style.left =
+      yPositionMetersToPixelsFromLeft(fieldImage, leave.y, 5) + "px";
+    fieldContainer.appendChild(leaveButton);
   }
-  let noShow = JSONConfig.noShow;
-  let noShowButton = document.createElement("img");
-  noShowButton.src = "../images/noShow.png";
-  noShowButton.classList.add("noShow");
-  noShowButton.onclick = function () {
-    noShowFunc();
-  };
-  noShowButton.style.top =
-    xPositionMetersToPixelsFromTop(fieldImage, noShow.x, 5) + "px";
-  noShowButton.style.left =
-    yPositionMetersToPixelsFromLeft(fieldImage, noShow.y, 5) + "px";
-  fieldContainer.appendChild(noShowButton);
-
-  //leave
-  let left = localStorage.getItem("left") || false;
-  let leave = JSONConfig.leave;
-  let leaveButton = document.createElement("img");
-  if (left) window.addEventListener("DOMContentLoaded", () => leaveFunc(true));
-  leaveButton.src = "../images/Move.png";
-  leaveButton.classList.add("leave");
-  leaveButton.id = "leave";
-
-  leaveButton.onclick = function () {
-    leaveFunc();
-  };
-  leaveButton.style.top =
-    xPositionMetersToPixelsFromTop(fieldImage, leave.x, 5) + "px";
-  leaveButton.style.left =
-    yPositionMetersToPixelsFromLeft(fieldImage, leave.y, 5) + "px";
-  fieldContainer.appendChild(leaveButton);
 }
 function noShowFunc() {
   localStorage.setItem(
     "02startingLocation",
-    JSON.stringify({ name: "noShow", x: 0, y: 0 })
+    JSON.stringify({ name: "noShow" })
   );
   window.location.href = "/noShow";
 }
 // Adds a clickable image to the field using the position of the button (in meters), the piece type, and the button's color
-function addCollectionClickableImage(
-  collectionLocation,
-  gamePieceName,
-  imageBackgroundColor
-) {
+function addCollectionClickableImage(collectionLocation, gamePieceName) {
   collectionLocation.x = fieldHeight - collectionLocation.x;
   collectionLocation.y = fieldWidth - collectionLocation.y;
   let clickableImage = document.createElement("img");
   let clickableImageSideLength = 5; // In units of vh
   clickableImage.onclick = function () {
-    collectPiece(collectionLocation, gamePieceName, imageBackgroundColor);
+    collectPiece(collectionLocation.name, gamePieceName);
   };
   clickableImage.addEventListener("touchstart", function () {
     clickableImage.style.backgroundColor = "white";
@@ -240,14 +200,14 @@ function addCollectionClickableImage(
 
   // Setting additional style elements
   clickableImage.src = "/images/" + gamePieceName + ".png";
-  clickableImage.style.backgroundColor = imageBackgroundColor;
+  clickableImage.style.backgroundColor = `rgb(0, 0, 50)`;
   clickableImage.style.width = clickableImageSideLength + "vh";
   clickableImage.style.height = clickableImageSideLength + "vh";
 }
 // Creates a game piece object to represent a collected game piece and updates the viewer
-function collectPiece(location, gamePieceName, buttonColor) {
+function collectPiece(location, gamePieceName) {
   leaveFunc();
-  gamePieces.push(new GamePiece(location, gamePieceName, buttonColor));
+  gamePieces.push(new GamePiece(gamePieceName, location));
   updateGamePieceViewer();
   startPieceTimer();
 }
@@ -278,38 +238,10 @@ function updateGamePieceViewer() {
     gamePieceImage.src = "/images/" + gamePieces[i].name + ".png";
     gamePieceImage.style.width = gamePieceImageSideLength + " vh";
     gamePieceImage.style.height = gamePieceImageSideLength + "vh";
+    var resultText = document.createElement("h3");
+    resultText.innerHTML = gamePieces[i].result || "None";
+    resultText.classList.add("resultText");
 
-    // Adding a selector for results
-    if (possibleResults.length > 1) {
-      var gamePieceResultSelector = document.createElement("select");
-      if (possibleResults.length > 0 && gamePieces[i].result == null) {
-        gamePieces[i].result = possibleResults[0].name;
-      }
-      gamePieceResultSelector.onchange = () => {
-        gamePieces[i].result = gamePieceResultSelector.value;
-      };
-      gamePieceResultSelector.classList.add("gamePieceResultSelector");
-      gamePieceResultSelector.classList.add(gamePieces[i].name);
-
-      for (var j = 0; j < possibleResults.length; j++) {
-        var option = document.createElement("option");
-        option.value = possibleResults[j].name;
-        option.text = possibleResults[j].name;
-        gamePieceResultSelector.appendChild(option);
-      }
-
-      gamePieceResultSelector.value = gamePieces[i].result;
-    } else if (possibleResults.length > 0) {
-      var resultText = document.createElement("h2");
-      gamePieces[i].result = possibleResults[0]?.name;
-      resultText.innerHTML = possibleResults[0]?.name || "None";
-      resultText.classList.add("resultText");
-    } else {
-      var resultText = document.createElement("h2");
-      gamePieces[i].result = gamePieces[i].collectionLocation.name;
-      resultText.innerHTML = gamePieces[i].collectionLocation.name || "None";
-      resultText.classList.add("resultText");
-    }
     let clickableDeleteImage = document.createElement("img");
     clickableDeleteImage.src = "/images/deleteImage.png";
     clickableDeleteImage.style.width = clickableDeleteImageSideLength + "vh";
@@ -333,7 +265,9 @@ function updateGamePieceViewer() {
     gamePieceContainer.appendChild(gamePiece);
 
     // Setting background color of game piece and scrolling to bottom of the viewer
-    gamePiece.style.backgroundColor = gamePieces[i].color;
+    gamePieces[i].result == "Move"
+      ? (gamePiece.style.backgroundColor = `green`)
+      : (gamePiece.style.backgroundColor = ` rgb(0, 0, 50)`);
     gamePieceViewer.scrollTop = gamePieceViewer.scrollHeight;
   }
 }
