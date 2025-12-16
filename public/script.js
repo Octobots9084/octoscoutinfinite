@@ -1,5 +1,5 @@
 const eventKey = "demo5007";
-const apiKey = "";
+const apiKey = "vHM2buuNoyH8B-EetL7YPa7GvBI";
 const apiUrl = `https://frc.nexus/api/v1/event/${eventKey}`;
 let manualInput = false;
 let teamNumbers = [];
@@ -40,11 +40,16 @@ function setManualInput() {
   manualInput = true;
   //create typable input for team
   let oldteamSelector = document.getElementById("teamNumberInput");
-  oldteamSelector ? oldteamSelector.remove() : "";
+  if (oldteamSelector) {
+    localStorage.setItem("autoTeam", oldteamSelector.value);
+    oldteamSelector.remove();
+  }
+
   const teamSelector = document.createElement("input");
   const teamcontainer = document.getElementById("teamInputContainer");
   teamSelector.placeholder = "Team Number";
   teamSelector.id = "teamNumberInput";
+  teamSelector.value = localStorage.getItem("manualTeam");
   teamcontainer.appendChild(teamSelector);
 
   //create typable input for match
@@ -57,12 +62,15 @@ function setManualInput() {
   container.appendChild(matchSelector);
 }
 function setAutomaticInput(data) {
-  manualInput = false;
-  //create typable input for team
   if (data.matches.length < 1) {
     throw new Error("No matches");
   }
+  manualInput = false;
+  //create typable input for team
+
   //create typable input for match
+  let oldteamSelector = document.getElementById("teamNumberInput");
+  localStorage.setItem("manualTeam", oldteamSelector.value);
   let oldMatchSelector = document.getElementById("matchNumberInput");
   oldMatchSelector.remove();
   const matchSelector = document.createElement("select");
@@ -102,10 +110,14 @@ function setAutomaticInput(data) {
       console.warn(error);
     }
   }
-  matchNumberInput.addEventListener("change", () => updateTeams(data));
-  updateTeams(data);
+  matchNumberInput.addEventListener("change", () => updateTeams(data, false));
+  updateTeams(data, true);
 }
-function updateTeams(data) {
+function updateTeams(data, fromManual) {
+  if (!fromManual) {
+    localStorage.setItem("autoTeam", oldteamSelector.value);
+  }
+
   let oldteamSelector = document.getElementById("teamNumberInput");
   oldteamSelector.remove();
   const teamSelector = document.createElement("select");
@@ -132,15 +144,22 @@ function updateTeams(data) {
     teamOption.setAttribute("data-name", bots[i].slice(0, -3));
     teamSelector.appendChild(teamOption);
   }
+  teamSelector.value = localStorage.getItem("autoTeam");
   const teamcontainer = document.getElementById("teamInputContainer");
   teamcontainer.appendChild(teamSelector);
 }
 async function loadStoredData() {
   let data = localStorage.getItem("01metaData");
+  let teamNumberInput = document.getElementById("teamNumberInput");
   if (data != null) {
     let metaData = JSON.parse(data);
     scoutNameInput.value = metaData.scoutName;
-    teamNumberInput.value = localStorage.getItem("team");
+    if (manualInput) {
+      teamNumberInput.value = localStorage.getItem("manualTeam");
+    } else {
+      teamNumberInput.value = localStorage.getItem("autoTeam");
+    }
+
     console.log(teamNumberInput.options);
     console.log(
       teamNumberInput.options[teamNumberInput.selectedIndex].getAttribute(
