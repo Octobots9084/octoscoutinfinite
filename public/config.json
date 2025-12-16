@@ -9,25 +9,22 @@
     { "name": "redBottom", "x": 15.6, "y": 3.3 }
   ],
   "gamePieces": [
+    
     {
-      "name": "Note",
+      "name": "Hatch",
       "blueAutoCollectionLocations": [
-        { "name": "blue1", "x": 1, "y": 7.2 },
-        { "name": "blue2", "x": 1.4, "y": 5.5 },
-        { "name": "blue3", "x": 1, "y": 3.3 }
+        { "name": "TopL", "x": 10, "y": 6 },
+        { "name": "TopM", "x": 12, "y": 4 },
+        { "name": "TopR", "x": 10, "y": 2 },
+         { "name": "MiddleL", "x": 8, "y": 6 },
+        { "name": "MiddleM", "x": 8, "y": 4 },
+        { "name": "MiddleR", "x": 8, "y": 2 }
       ],
       "redAutoCollectionLocations": [
-        { "name": "red1", "x": 15.6, "y": 7.2 },
-        { "name": "red2", "x": 15.2, "y": 5.5 },
-        { "name": "red3", "x": 15.6, "y": 3.3 }
+        
       ],
       "neutralAutoCollectionLocations": [
-        { "name": "preLoad", "x": 0, "y": 0 },
-        { "name": "center1", "x": 8.3, "y": 7.45 },
-        { "name": "center2", "x": 8.3, "y": 5.8 },
-        { "name": "center3", "x": 8.3, "y": 4.1 },
-        { "name": "center4", "x": 8.3, "y": 2.45 },
-        { "name": "center5", "x": 8.3, "y": 0.8 }
+       
       ],
       "autoFieldImageLocation": "autoField.png",
       "teleopCollectionLocations": [
@@ -52,6 +49,14 @@
         { "name": "Trap" },
         { "name": "Failed" },
         { "name": "Ferry" }
+      ]
+    },
+    {
+      "name": "Cargo - Copy",
+      "blueAutoCollectionLocations":[
+ { "name": "BottomL", "x": 4, "y": 6 },
+        { "name": "BottomM", "x": 4, "y": 4 },
+        { "name": "BottomR", "x": 4, "y": 2 }
       ]
     }
   ],
