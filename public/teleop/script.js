@@ -28,10 +28,9 @@ if (fieldImage.complete) {
 }
 
 class GamePiece {
-  constructor(collectionLocation, name, color) {
-    this.collectionLocation = collectionLocation;
+  constructor(name, collectionLocation) {
     this.name = name;
-    this.color = color;
+    this.result = collectionLocation;
   }
 }
 
@@ -46,38 +45,27 @@ function loadStoredData() {
 // Dynamically generating buttons to select teleop collections
 function generateCollectionButtons() {
   let gamePieces = JSONConfig.gamePieces;
-  let iteratorColorStartingValue = 50;
-  let maxColorIteratorValue = 255;
 
   for (let i = 0; i < gamePieces.length; i++) {
     // Creating the collection locations for the blue alliance, changing the color for differentiation
-    let buttonColorIterator = iteratorColorStartingValue;
     for (let j = 0; j < gamePieces[i].teleopCollectionLocations.length; j++) {
       addCollectionClickableImage(
         gamePieces[i].teleopCollectionLocations[j],
-        gamePieces[i].name,
-        "rgb(" + [0, 0, buttonColorIterator].join(",") + ")"
+        gamePieces[i].name
       );
-      buttonColorIterator +=
-        (maxColorIteratorValue - iteratorColorStartingValue) /
-        gamePieces[i].teleopCollectionLocations.length;
     }
   }
 }
 
 // Adds a clickable image to the field using the position of the button (in meters), the piece type, and the button's color
-function addCollectionClickableImage(
-  collectionLocation,
-  gamePieceName,
-  imageBackgroundColor
-) {
+function addCollectionClickableImage(collectionLocation, gamePieceName) {
   collectionLocation.x = fieldHeight - collectionLocation.x;
   collectionLocation.y = fieldWidth - collectionLocation.y;
   let clickableImage = document.createElement("img");
   let clickableImageSideLength = 5; // In units of vh
   console.log(collectionLocation);
   clickableImage.onclick = function () {
-    collectPiece(collectionLocation, gamePieceName, imageBackgroundColor);
+    collectPiece(collectionLocation.name, gamePieceName);
   };
   clickableImage.addEventListener("touchstart", function () {
     clickableImage.style.backgroundColor = "white";
@@ -105,15 +93,15 @@ function addCollectionClickableImage(
 
   // Setting additional style elements
   clickableImage.src = "/images/" + gamePieceName + ".png";
-  clickableImage.style.backgroundColor = imageBackgroundColor;
+  clickableImage.style.backgroundColor = `rgb(0, 0, 50)`;
   clickableImage.style.width = clickableImageSideLength + "vh";
   clickableImage.style.height = clickableImageSideLength + "vh";
 }
 
 // Creates a game piece object to represent a collected game piece and updates the viewer
-function collectPiece(location, gamePieceName, buttonColor) {
-  gamePieces.push(new GamePiece(location, gamePieceName, buttonColor));
-  updateGamePieceViewer(location);
+function collectPiece(location, gamePieceName) {
+  gamePieces.push(new GamePiece(gamePieceName, location));
+  updateGamePieceViewer();
 }
 
 // Updates the visualization of the game pieces collected
@@ -143,36 +131,10 @@ function updateGamePieceViewer() {
 
     // Adding a selector for results
 
-    if (possibleResults.length > 1) {
-      var gamePieceResultSelector = document.createElement("select");
-      if (possibleResults.length > 0 && gamePieces[i].result == null) {
-        gamePieces[i].result = possibleResults[0].name;
-      }
-      gamePieceResultSelector.onchange = () => {
-        gamePieces[i].result = gamePieceResultSelector.value;
-      };
-      gamePieceResultSelector.classList.add("gamePieceResultSelector");
-      gamePieceResultSelector.classList.add(gamePieces[i].name);
+    var resultText = document.createElement("h3");
+    resultText.innerHTML = gamePieces[i].result || "None";
+    resultText.classList.add("resultText");
 
-      for (var j = 0; j < possibleResults.length; j++) {
-        var option = document.createElement("option");
-        option.value = possibleResults[j].name;
-        option.text = possibleResults[j].name;
-        gamePieceResultSelector.appendChild(option);
-      }
-
-      gamePieceResultSelector.value = gamePieces[i].result;
-    } else if (possibleResults.length > 0) {
-      var resultText = document.createElement("h3");
-      gamePieces[i].result = possibleResults[0]?.name;
-      resultText.innerHTML = possibleResults[0]?.name || "None";
-      resultText.classList.add("resultText");
-    } else {
-      var resultText = document.createElement("h3");
-      gamePieces[i].result = gamePieces[i].collectionLocation.name;
-      resultText.innerHTML = gamePieces[i].collectionLocation.name || "None";
-      resultText.classList.add("resultText");
-    }
     let clickableDeleteImage = document.createElement("img");
     clickableDeleteImage.src = "/images/deleteImage.png";
     clickableDeleteImage.style.width = clickableDeleteImageSideLength + "vh";
@@ -195,7 +157,7 @@ function updateGamePieceViewer() {
     // Compiling elements together
 
     // Setting background color of game piece and scrolling to bottom of the viewer
-    gamePiece.style.backgroundColor = gamePieces[i].color;
+    gamePiece.style.backgroundColor = ` rgb(0, 0, 50)`;
     gamePieceViewer.scrollTop = gamePieceViewer.scrollHeight;
   }
 }

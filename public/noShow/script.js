@@ -33,6 +33,9 @@ window.submitData = async function () {
     confirm("Are you sure you want to submit a duplicate match?")
   ) {
     matchSubmitted = true;
+    localStorage.removeItem("teamPosition");
+    localStorage.removeItem("left");
+    localStorage.removeItem("team");
 
     try {
       let response = await fetch("../submitData", {

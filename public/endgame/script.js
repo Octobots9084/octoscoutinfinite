@@ -36,7 +36,7 @@ function addEndgameButton(endgame) {
   // Creating the button
   let button = document.createElement("button");
   button.onclick = function () {
-    selectEndgame(endgame);
+    selectEndgame(endgame.name);
     window.location.href = "/submit";
   };
 
@@ -52,5 +52,5 @@ function addEndgameButton(endgame) {
 }
 
 function selectEndgame(endgame) {
-  localStorage.setItem("05endgame", JSON.stringify([endgame]));
+  localStorage.setItem("05endgame", JSON.stringify([{ name: endgame }]));
 }

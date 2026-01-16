@@ -18,15 +18,11 @@
     {
       
       "name": "Coral",
-      "blueAutoCollectionLocations": [
+      "autoCollectionLocations": [
         { "name": "L2", "x": 5.4, "y": 6.2 },
         { "name": "L1 (Trough)", "x": 1.7, "y": 7 },
         { "name": "L4 (Top)", "x": 11, "y": 6.2 },
         { "name": "L3", "x": 7.7, "y":6.2}
-      ],
-      "redAutoCollectionLocations": [
-      ],
-      "neutralAutoCollectionLocations": [
       ],
       "autoFieldImageLocation": "autoField.png",
       "teleopCollectionLocations": [
@@ -43,13 +39,9 @@
     },
     {
       "name": "Algae",
-      "blueAutoCollectionLocations": [
+      "autoCollectionLocations": [
         { "name": "Processor", "x": 3, "y": 3 },
         { "name": "Net", "x": 10, "y": 2.6 }
-      ],
-      "redAutoCollectionLocations": [
-      ],
-      "neutralAutoCollectionLocations": [
       ],
       "autoFieldImageLocation": "autoField.png",
       "teleopCollectionLocations": [
@@ -96,10 +88,6 @@
     {
       "name": "Defense",
       "possibleResults": [{ "name": "None" }, { "name": "Good" }, { "name": "Poor" }]
-    },
-    {
-      "name": "Driver_Quality",
-      "possibleResults": [{ "name": "Average" }, { "name": "Good" }, { "name": "Bad" }]
     }
   ]
 }

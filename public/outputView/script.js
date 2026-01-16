@@ -77,7 +77,9 @@ async function createDataBlocks() {
           " | Team Number: " +
           metaData.teamNumber +
           " | Match: " +
-          metaData.matchNumber;
+          metaData.matchNumber +
+          " | Position: " +
+          metaData.teamPosition;
         console.log(parsedJSONOutput[i]["02startingLocation"].name);
         if (parsedJSONOutput[i]["02startingLocation"].name == "noShow") {
           let noShowDisplay = document.createElement("div");

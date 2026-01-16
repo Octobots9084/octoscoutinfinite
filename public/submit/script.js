@@ -79,14 +79,30 @@ window.submitData = async function () {
     confirm("Are you sure you want to submit a duplicate match?")
   ) {
     matchSubmitted = true;
-
+    let save = [
+      "01metaData",
+      "02startingLocation",
+      "03auto",
+      "04teleop",
+      "05endgame",
+      "06extra",
+    ];
+    let savedData = {};
+    for (let i = 0; i < save.length; i++) {
+      console.log(save[i]);
+      if (localStorage.getItem("username") !== null) {
+        savedData[save[i]] = localStorage.getItem(save[i]);
+      }
+    }
+    console.log(localStorage);
+    console.log(savedData);
     try {
       let response = await fetch("../submitData", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify(localStorage),
+        body: JSON.stringify(savedData),
       });
 
       if (response.status == 200) {
