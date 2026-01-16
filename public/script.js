@@ -1,5 +1,5 @@
 const eventKey = "demo5007";
-const apiKey = "vHM2buuNoyH8B-EetL7YPa7GvBI";
+const apiKey = "";
 const apiUrl = `https://frc.nexus/api/v1/event/${eventKey}`;
 let manualInput = false;
 let teamNumbers = [];
@@ -7,10 +7,10 @@ let nexusData;
 function getNexusMatches() {
   //get nexus api
   fetch(apiUrl, {
-    method: "GET", // GET request to fetch data
+    method: "GET",
     headers: {
-      "Nexus-Api-Key": apiKey, // Include the Bearer token if required
-      "Content-Type": "application/json", // Typically used to specify data type
+      "Nexus-Api-Key": apiKey,
+      "Content-Type": "application/json",
     },
   })
     .then((response) => {
@@ -18,7 +18,7 @@ function getNexusMatches() {
         throw new Error("Network response was not ok." + response.status);
       }
 
-      return response.json(); // Parse the response as JSON
+      return response.json();
     })
     .then((data) => {
       setAutomaticInput(data);
@@ -27,7 +27,7 @@ function getNexusMatches() {
       nexusData = data;
     })
     .catch((error) => {
-      console.error("There was a problem with the fetch operation:", error); // Handle any errors
+      console.error("There was a problem with the fetch operation:", error);
       filter.checked = true;
       filter.setAttribute("disabled", true);
 

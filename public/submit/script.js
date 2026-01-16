@@ -88,17 +88,21 @@ window.submitData = async function () {
       "06extra",
     ];
     let savedData = {};
-    for (let i; i < save.length; i++) {
-      savedData.push(localStorage.getItem(save[i]));
+    for (let i = 0; i < save.length; i++) {
+      console.log(save[i]);
+      if (localStorage.getItem("username") !== null) {
+        savedData[save[i]] = localStorage.getItem(save[i]);
+      }
     }
-
+    console.log(localStorage);
+    console.log(savedData);
     try {
       let response = await fetch("../submitData", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify(localStorage),
+        body: JSON.stringify(savedData),
       });
 
       if (response.status == 200) {
