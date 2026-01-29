@@ -10,7 +10,11 @@ let JSONConfig = await getJSONConfig();
 document.title = JSONConfig.pageTitle;
 let fieldContainer = document.getElementById("fieldContainer");
 let fieldImage = document.getElementById("fieldImage");
-fieldImage.src = "../images/endgameField.png";
+fieldImage.src = "../images/endgameFieldBlue.png";
+let isBlue = JSON.parse(localStorage.getItem("01metaData")).teamColor == "Blue";
+if (!isBlue) {
+  fieldImage.src = "../images/endgameFieldRed.png";
+}
 if (fieldImage.complete) {
   generateEndgameButtons();
 } else {

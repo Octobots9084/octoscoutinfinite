@@ -5,11 +5,15 @@ import {
   fieldWidth,
   fieldHeight,
 } from "/util.js";
-
+let fieldImage = document.getElementById("fieldImage");
+let isBlue = JSON.parse(localStorage.getItem("01metaData")).teamColor == "Blue";
+if (!isBlue) {
+  fieldImage.src = "../images/blankFieldRed.png";
+}
 let JSONConfig = await getJSONConfig();
 document.title = JSONConfig.pageTitle;
 let fieldContainer = document.getElementById("fieldContainer");
-let fieldImage = document.getElementById("fieldImage");
+
 generateStartingLocationButtons();
 document.getElementById("teamNum").innerHTML =
   "Team #: " + JSON.parse(localStorage.getItem("01metaData")).teamNumber;
@@ -51,7 +55,7 @@ function selectPosition(position) {
 window.noShow = function () {
   localStorage.setItem(
     "02startingLocation",
-    JSON.stringify({ name: "noShow", x: 0, y: 0 })
+    JSON.stringify({ name: "noShow", x: 0, y: 0 }),
   );
   window.location.href = "/noShow";
 };

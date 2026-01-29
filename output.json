@@ -4067,5 +4067,12 @@
     "left": "true",
     "timestamp": "2025-12-05T07:32:28.204Z",
     "deleted": false
+  },
+  {
+    "02startingLocation": "{\"name\":\"noShow\",\"x\":0,\"y\":0}",
+    "01metaData": "{\"scoutName\":\"TEST\",\"teamNumber\":\"TEST\",\"teamColor\":\"Blue\",\"matchNumber\":\"TEST\"}",
+    "06extra": "{\"Comments\":\"No Show\"}",
+    "timestamp": "2026-01-27T05:54:07.693Z",
+    "deleted": false
   }
 ]

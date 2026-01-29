@@ -173,13 +173,13 @@ document.addEventListener("DOMContentLoaded", async function () {
     if (comparisonPoints) {
       data.push(
         {
-          type: "spline",
+          type: "line",
           markerColor: "black",
           markerSize: 5,
           dataPoints: dataPoints,
         },
         {
-          type: "spline",
+          type: "line",
           markerColor: "black",
           markerSize: 5,
           dataPoints: comparisonPoints,
@@ -187,7 +187,7 @@ document.addEventListener("DOMContentLoaded", async function () {
       );
     } else {
       data.push({
-        type: "spline",
+        type: "line",
         markerColor: "black",
         markerSize: 5,
         dataPoints: dataPoints,

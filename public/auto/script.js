@@ -13,11 +13,16 @@ let fieldImage = document.getElementById("fieldImage");
 let gamePieceContainer = document.getElementById("gamePieceContainer");
 let gamePieceViewer = document.getElementById("gamePieceViewer");
 let gamePieces = [];
+fieldImage.src = "../images/autoFieldBlue.png";
+let isBlue = JSON.parse(localStorage.getItem("01metaData")).teamColor == "Blue";
+if (!isBlue) {
+  fieldImage.src = "../images/autoFieldRed.png";
+}
 document.getElementById("teamNum").innerHTML =
   "Team #: " + JSON.parse(localStorage.getItem("01metaData")).teamNumber;
 let pieceTimer = null;
 let flashInterval = null;
-fieldImage.src = "../images/autoFieldBlue.png";
+
 if (fieldImage.complete) {
   generateCollectionButtons();
   loadStoredData();
@@ -122,7 +127,7 @@ function generateCollectionButtons() {
     for (let j = 0; j < gamePieces[i].autoCollectionLocations.length; j++) {
       addCollectionClickableImage(
         gamePieces[i].autoCollectionLocations[j],
-        gamePieces[i].name
+        gamePieces[i].name,
       );
     }
     let noShow = JSONConfig.noShow;
@@ -161,7 +166,7 @@ function generateCollectionButtons() {
 function noShowFunc() {
   localStorage.setItem(
     "02startingLocation",
-    JSON.stringify({ name: "noShow" })
+    JSON.stringify({ name: "noShow" }),
   );
   window.location.href = "/noShow";
 }
@@ -188,13 +193,13 @@ function addCollectionClickableImage(collectionLocation, gamePieceName) {
     xPositionMetersToPixelsFromTop(
       fieldImage,
       collectionLocation.x,
-      clickableImageSideLength
+      clickableImageSideLength,
     ) + "px";
   clickableImage.style.left =
     yPositionMetersToPixelsFromLeft(
       fieldImage,
       collectionLocation.y,
-      clickableImageSideLength
+      clickableImageSideLength,
     ) + "px";
   fieldContainer.appendChild(clickableImage);
 
@@ -275,7 +280,7 @@ window.saveData = saveData;
 function saveData() {
   localStorage.setItem(
     "02startingLocation",
-    JSON.stringify({ name: "show", x: 0, y: 0 })
+    JSON.stringify({ name: "show", x: 0, y: 0 }),
   );
   localStorage.setItem("03auto", JSON.stringify(gamePieces));
 }
