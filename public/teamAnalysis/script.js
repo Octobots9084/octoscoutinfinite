@@ -133,7 +133,7 @@ document.addEventListener("DOMContentLoaded", async function () {
 
           // Find chart, ensuring c and c.container exist
           const chart = window.renderedCharts.find(
-            (c) => c && c.container && c.container.id === div.id
+            (c) => c && c.container && c.container.id === div.id,
           );
           if (chart) {
             // Use setTimeout to ensure the container is visible
@@ -150,14 +150,31 @@ document.addEventListener("DOMContentLoaded", async function () {
       }
     }
   }
+  function resolveDoubles(data) {
+    const averaged = Object.values(
+      data.reduce((acc, { x, y }) => {
+        if (!acc[x]) {
+          acc[x] = { x, label: x, total: 0, count: 0 };
+        }
+        acc[x].total += y;
+        acc[x].count += 1;
+        return acc;
+      }, {}),
+    ).map(({ x, label, total, count }) => ({
+      x,
+      label,
+      y: total / count,
+    }));
 
+    return averaged;
+  }
   // Function to draw a graph to the screen
   function drawGraph(
     dataPoints,
     comparisonPoints,
     chartName,
     yLabel,
-    graphContainer
+    graphContainer,
   ) {
     if (!graphContainer) return; // Don't proceed if container is invalid
 
@@ -183,7 +200,7 @@ document.addEventListener("DOMContentLoaded", async function () {
           markerColor: "black",
           markerSize: 5,
           dataPoints: comparisonPoints,
-        }
+        },
       );
     } else {
       data.push({
@@ -268,13 +285,13 @@ document.addEventListener("DOMContentLoaded", async function () {
     }
 
     const driverQualityContainer = document.getElementById(
-      "driverQualityGraphContainer"
+      "driverQualityGraphContainer",
     );
     if (graphConfig.Driver && driverQualityContainer) {
       getDataAndCreateGraph(
         graphConfig.Driver,
         driverQualityContainer,
-        "Driver"
+        "Driver",
       );
     }
   }
@@ -396,7 +413,7 @@ document.addEventListener("DOMContentLoaded", async function () {
     };
     const response = await fetch(
       `https://www.thebluealliance.com/api/v3/team/frc${teamNumber}`,
-      { headers }
+      { headers },
     );
     let parsedResponse = await response.json();
     let teamName = document.getElementById("teamNameDisplay");
@@ -407,7 +424,7 @@ document.addEventListener("DOMContentLoaded", async function () {
   function getDataAndCreateGraph(
     graphCategory,
     graphContainer,
-    graphCategoryName
+    graphCategoryName,
   ) {
     if (
       teamNumber === null ||
@@ -474,7 +491,7 @@ document.addEventListener("DOMContentLoaded", async function () {
           const numericMatch = matchData["01metaData"]?.matchNumber
             ? parseInt(
                 String(matchData["01metaData"]?.matchNumber).replace(/\D/g, ""),
-                10
+                10,
               ) || i + 1
             : i + 1;
           console.log(numericMatch || i + 1);
@@ -492,6 +509,7 @@ document.addEventListener("DOMContentLoaded", async function () {
           // values.push({ label: "Match " + matchNumberLabel, y: 0 }); // Or null
         }
       });
+      values = resolveDoubles(values);
       let comparisonInput = document.getElementById("comparisonInput");
       let comparisonTeam = comparisonInput.value;
       let comparisonValues = [];
@@ -540,9 +558,9 @@ document.addEventListener("DOMContentLoaded", async function () {
               ? parseInt(
                   String(matchData["01metaData"]?.matchNumber).replace(
                     /\D/g,
-                    ""
+                    "",
                   ),
-                  10
+                  10,
                 )
               : i + 1;
             const matchNumberLabel =
@@ -560,7 +578,7 @@ document.addEventListener("DOMContentLoaded", async function () {
           }
         });
       }
-
+      comparisonValues = resolveDoubles(comparisonValues);
       // Only draw graph if there are values
       if (values.length > 0) {
         // Construct graph name safely
@@ -573,7 +591,7 @@ document.addEventListener("DOMContentLoaded", async function () {
           comparisonValues,
           graphFullName,
           categoryConfig.units || "", // Use empty string if units undefined
-          graphContainer
+          graphContainer,
         );
       } else {
         // Optionally display a message in the container if no data
