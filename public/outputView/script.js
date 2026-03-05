@@ -5,6 +5,9 @@ async function updateJSON() {
   let JSONOutput = await getJSONOutput();
   // Parse JSON strings in data
   parsedJSONOutput = JSONOutput.map((item) => {
+    if (item.id) {
+      return item;
+    }
     const parsedItem = { ...item };
     Object.keys(item).forEach((key) => {
       try {
@@ -22,14 +25,23 @@ async function createDataBlocks() {
     parsedJSONOutput[i]._originalIndex = i;
   }
   parsedJSONOutput.sort((a, b) => {
-    const matchA =
-      parseInt(a["01metaData"]?.matchNumber?.replace(/\D/g, "")) || -1;
-    const matchB =
-      parseInt(b["01metaData"]?.matchNumber?.replace(/\D/g, "")) || 0;
-    console.log(matchA);
-
-    return matchA - matchB;
+    const matchNumA =
+      parseInt(
+        a["01metaData"]
+          ? a["01metaData"]?.matchNumber.replace(/\D/g, "")
+          : a["match"]?.toString().replace(/\D/g, ""),
+        10,
+      ) || 0;
+    const matchNumB =
+      parseInt(
+        b["01metaData"]
+          ? b["01metaData"]?.matchNumber.replace(/\D/g, "")
+          : b["match"]?.toString().replace(/\D/g, ""),
+        10,
+      ) || 0;
+    return matchNumA - matchNumB;
   });
+
   let searchFilterInput = document.getElementById("search");
   let searchTypeSelector = document.getElementById("searchBy");
   let searchFilter = searchFilterInput.value;
@@ -39,14 +51,19 @@ async function createDataBlocks() {
   let errors = 0;
   let reScouts = 0;
   for (let i = 0; i < parsedJSONOutput.length; i++) {
-    if (!parsedJSONOutput[i]["01metaData"] && !parsedJSONOutput[i].deleted) {
+    if (
+      !parsedJSONOutput[i].id &&
+      !parsedJSONOutput[i]["01metaData"] &&
+      !parsedJSONOutput[i].deleted
+    ) {
       errors++;
       removeErrorData(i);
     } else if (
       !parsedJSONOutput[i].deleted &&
-      String(parsedJSONOutput[i]["01metaData"]?.[searchType] ?? "")
+      (String(parsedJSONOutput[i]["01metaData"]?.[searchType] ?? "")
         .toLowerCase()
-        .includes(searchFilter.toLowerCase())
+        .includes(searchFilter.toLowerCase()) ||
+        parsedJSONOutput[i].id)
     ) {
       //create container
 
@@ -80,7 +97,6 @@ async function createDataBlocks() {
           metaData.matchNumber +
           " | Position: " +
           metaData.teamPosition;
-        console.log(parsedJSONOutput[i]["02startingLocation"].name);
         if (parsedJSONOutput[i]["02startingLocation"].name == "noShow") {
           let noShowDisplay = document.createElement("div");
           noShowDisplay.classList.add("noShow");
@@ -205,10 +221,24 @@ async function createDataBlocks() {
           }
         } catch (e) {}
       } catch (e) {
-        errors++;
-        removeErrorData(parsedJSONOutput[i]._originalIndex);
-        console.log(e);
-        createDataBlocks();
+        if (parsedJSONOutput[i].id) {
+          let externalDisplay = document.createElement("div");
+          externalDisplay.classList.add("dataHolder");
+          wrapper.appendChild(externalDisplay);
+          wrapper.classList.add("externalData");
+          externalDisplay.innerHTML =
+            "External Data | Match: " +
+            parsedJSONOutput[i].match +
+            " | Team: " +
+            parsedJSONOutput[i].team +
+            " | Scout: " +
+            parsedJSONOutput[i].scoutname;
+        } else if (!parsedJSONOutput[i].id) {
+          errors++;
+          removeErrorData(parsedJSONOutput[i]._originalIndex);
+          console.log(e);
+          createDataBlocks();
+        }
       }
     }
   }
@@ -257,7 +287,6 @@ async function removeData(index) {
     });
     if (response.status == 200) {
       alert("Match Removed");
-      console.log(parsedJSONOutput[index]);
     } else {
       alert("Error!");
     }
@@ -274,7 +303,6 @@ async function removeErrorData(index) {
     body: JSON.stringify(input),
   });
   if (response.status == 200) {
-    console.log(parsedJSONOutput[index]);
   } else {
     alert("Error!");
   }
@@ -286,7 +314,7 @@ function detectAnomalies() {
       if (!parsedJSONOutput[i].deleted) {
         if (
           Object.keys(matches).includes(
-            parsedJSONOutput[i]["01metaData"].matchNumber.replace(/\D/g, "")
+            parsedJSONOutput[i]["01metaData"].matchNumber.replace(/\D/g, ""),
           )
         ) {
           matches[
