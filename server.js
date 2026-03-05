@@ -8,7 +8,7 @@ app.use(express.json());
 app.use(
   express.urlencoded({
     extended: true,
-  })
+  }),
 );
 app.use(express.static("public"));
 
@@ -119,8 +119,43 @@ async function resurrectData(index) {
     return release();
   });
 }
+async function pullOverClockData() {
+  console.log("Pulling overclock data...");
+  const filePath = "./output.json";
+  let overclockData;
+
+  try {
+    const response = await fetch(
+      "https://frc2485analytics.vercel.app/api/get-data",
+    );
+
+    if (!response.ok) {
+      throw new Error("Network response was not ok. " + response.status);
+    }
+
+    // FIX: Parse the body as JSON and assign it to your variable
+    parsedData = await response.json();
+    overclockData = parsedData.rows;
+  } catch (error) {
+    console.error("Fetch error:", error);
+  }
+  await fileLock.lock(filePath, retryOptions).then(async (release) => {
+    // Read existing file content
+    const fileContent = fs.readFileSync(filePath, "utf8");
+    const jsonData = JSON.parse(fileContent || "[]");
+    if (overclockData) {
+      const filteredData = jsonData.filter((item) => !item.id);
+      const updatedData = filteredData.concat(overclockData);
+      // Write updated data to file
+      fs.writeFileSync(filePath, JSON.stringify(updatedData, null, 2));
+    }
+    return release();
+  });
+  setTimeout(pullOverClockData, 10 * 60 * 1000);
+}
 
 const PORT = 9084;
 app.listen(PORT, () => {
   console.log("App is listening on port 9084");
+  pullOverClockData();
 });

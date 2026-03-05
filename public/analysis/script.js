@@ -93,7 +93,7 @@ document.addEventListener("DOMContentLoaded", async function () {
         if (!div.id) return;
 
         const chart = window.renderedCharts.find(
-          (c) => c && c.container && c.container.id === div.id
+          (c) => c && c.container && c.container.id === div.id,
         );
         if (chart) {
           setTimeout(() => {
@@ -110,7 +110,7 @@ document.addEventListener("DOMContentLoaded", async function () {
     meanPoints,
     chartName,
     yLabel,
-    graphContainer
+    graphContainer,
   ) {
     if (!graphContainer) return; // Don't proceed if container is invalid
 
@@ -159,7 +159,7 @@ document.addEventListener("DOMContentLoaded", async function () {
   function getDataAndCreateGraph(
     graphCategory,
     graphContainer,
-    graphCategoryName
+    graphCategoryName,
   ) {
     // Basic validation
     if (!graphCategory || !Array.isArray(graphCategory) || !graphContainer) {
@@ -174,12 +174,13 @@ document.addEventListener("DOMContentLoaded", async function () {
       parsedJSONOutput.forEach((obj) => {
         // Add checks for obj and metaData existence
         if (
-          obj &&
-          obj["01metaData"] &&
-          !obj.deleted &&
-          obj["01metaData"].teamNumber
+          (obj &&
+            obj["01metaData"] &&
+            !obj.deleted &&
+            obj["01metaData"].teamNumber) ||
+          obj.team
         ) {
-          uniqueTeams.add(obj["01metaData"].teamNumber);
+          uniqueTeams.add(obj["01metaData"]?.teamNumber || obj.team);
         }
       });
       teams = Array.from(uniqueTeams);
@@ -209,12 +210,13 @@ document.addEventListener("DOMContentLoaded", async function () {
         let values = [];
         // Getting non-deleted matches of the team
         let matchesOfTeam = parsedJSONOutput.filter((obj) => {
-          // Add checks
+          // Check existence and compare team number (as strings for safety)
           return (
-            obj &&
-            !obj.deleted &&
-            obj["01metaData"] &&
-            obj["01metaData"].teamNumber === teamNumber
+            ((obj &&
+              obj["01metaData"] &&
+              String(obj["01metaData"].teamNumber) === String(teamNumber)) ||
+              (obj && obj["team"] && obj["team"] == String(teamNumber))) &&
+            !obj.deleted
           );
         });
 
@@ -298,13 +300,69 @@ document.addEventListener("DOMContentLoaded", async function () {
         sortedMeans,
         graphCategoryName + " " + graphConfig[graphCategoryName][k].graphName,
         graphCategory[k].units,
-        graphContainer
+        graphContainer,
       );
     });
   }
 
-  function getValues(JSON, path) {
-    return jsonpath.query(JSON, path).length;
+  function getValues(JSONData, path) {
+    try {
+      // Ensure jsonpath is loaded and JSONData/path are valid
+      if (typeof jsonpath === "undefined" || !JSONData || !path) {
+        return 0;
+      }
+      const result = jsonpath.query(JSONData, path);
+      console.log(path, result);
+      // Check if the result is an array before accessing length
+      if (Array.isArray(result)) {
+        if (path.includes("@.autoclimb == 1")) {
+          console.log(
+            "Autoclimb check for path",
+            path,
+            "in match",
+            JSONData.id,
+            ":",
+            JSONData.autoclimb,
+          );
+          return JSONData.autoclimb == 1 ? 1 : 0;
+        }
+        if (typeof result[0] === "number") {
+          console.log(
+            "Result for path",
+            path,
+            "in match",
+            JSONData.id,
+            ":",
+            result[0],
+          );
+          if (path.includes("autoclimb")) {
+            if (result[0] === 2) {
+              return 1;
+            } else {
+              return 0;
+            }
+          } else if (path.includes("endclimbposition")) {
+            if (result[0] >= 1 && result[0] <= 3) {
+              return 1;
+            } else if (result[0] >= 4 && result[0] <= 6) {
+              return 2;
+            } else if (result[0] >= 7 && result[0] <= 9) {
+              return 3;
+            }
+          }
+          return result[0];
+        } else {
+          return result.length;
+        }
+      } else {
+        // If jsonpath returns something else return 0 for length
+        return 0;
+      }
+    } catch (error) {
+      console.error("Error in getValues with path:", path, error);
+      // Error during query (e.g., invalid path syntax)
+      return 0;
+    }
   }
 
   // --- Initial Graph Generation ---
@@ -332,7 +390,7 @@ document.addEventListener("DOMContentLoaded", async function () {
     }
 
     const driverQualityContainer = document.getElementById(
-      "driverQualityGraphContainer"
+      "driverQualityGraphContainer",
     );
   }
   const sortBySelector = document.getElementById("sortBy");
@@ -394,7 +452,7 @@ document.addEventListener("DOMContentLoaded", async function () {
 
     // Creating a graph for each section under the category
     const categoryConfig = graphConfig.Overall.find(
-      (categoryConfig) => categoryConfig.graphName === "Controlled Game Pieces"
+      (categoryConfig) => categoryConfig.graphName === "Controlled Game Pieces",
     );
     // Check if categoryConfig and its metrics are valid
     if (
@@ -446,13 +504,13 @@ document.addEventListener("DOMContentLoaded", async function () {
             totalForMatch *
               (0.05 * (matchesOfTeam.length - i) * 2 +
                 0.15 * (matchesOfTeam.length - i) +
-                0.8)
+                0.8),
           );
           console.log(
             totalForMatch *
               (0.05 * Math.pow(matchesOfTeam.length - i, 2) -
                 0.35 * (matchesOfTeam.length - i) +
-                1.3)
+                1.3),
           );
         }
       });
@@ -585,7 +643,7 @@ document.addEventListener("DOMContentLoaded", async function () {
 
     // Creating a graph for each section under the category
     const categoryConfig = graphConfig.Overall.find(
-      (categoryConfig) => categoryConfig.graphName === "Controlled Game Pieces"
+      (categoryConfig) => categoryConfig.graphName === "Controlled Game Pieces",
     );
     // Check if categoryConfig and its metrics are valid
     if (

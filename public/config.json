@@ -61,7 +61,33 @@
       ],
       "teleopPossibleResults": [
       ]
+    },
+    {
+      "name": "Climb",
+      "autoCollectionLocations": [
+        { "name": "Auto Climb", "x": 0.5, "y": 4 }
+      ],
+      "teleopCollectionLocations": [
+      ],
+      "autoPossibleResults": [
+      ],
+      "teleopPossibleResults": [
+      ]
+    },
+    {
+      "name": "Depot",
+      "autoCollectionLocations": [
+        { "name": " Place in Depot", "x": 0.5, "y": 2 }
+      ],
+      "teleopCollectionLocations": [
+        { "name": "Place in Depot", "x": 0.5, "y": 2 }
+      ],
+      "autoPossibleResults": [
+      ],
+      "teleopPossibleResults": [
+      ]
     }
+    
     
   ],
   "endgameOptions": [

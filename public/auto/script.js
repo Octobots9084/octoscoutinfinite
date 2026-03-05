@@ -278,10 +278,6 @@ function updateGamePieceViewer() {
 }
 window.saveData = saveData;
 function saveData() {
-  localStorage.setItem(
-    "02startingLocation",
-    JSON.stringify({ name: "show", x: 0, y: 0 }),
-  );
   localStorage.setItem("03auto", JSON.stringify(gamePieces));
 }
 

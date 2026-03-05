@@ -178,9 +178,6 @@ document.addEventListener("DOMContentLoaded", async function () {
   ) {
     if (!graphContainer) return; // Don't proceed if container is invalid
 
-    console.log(dataPoints);
-    console.log(comparisonPoints);
-
     let chartDiv = document.createElement("div");
     chartDiv.id = chartName;
     chartDiv.classList.add("chart");
@@ -310,11 +307,12 @@ document.addEventListener("DOMContentLoaded", async function () {
     parsedJSONOutput.forEach((obj) => {
       // Check existence of nested properties before access
       if (
-        obj &&
-        obj["01metaData"] &&
-        obj["06extra"] &&
-        String(obj["01metaData"].teamNumber) === String(teamNumber) &&
-        !obj.deleted
+        (obj && obj["01metaData"] && obj["06extra"]) ||
+        (obj["id"] &&
+          String(
+            obj["01metaData"] ? obj["01metaData"].teamNumber : obj["team"],
+          ) === String(teamNumber) &&
+          !obj.deleted)
       ) {
         const defenseRating = obj["06extra"]["Defense"];
         if (defenseRating === "Poor") {
@@ -451,9 +449,10 @@ document.addEventListener("DOMContentLoaded", async function () {
       let matchesOfTeam = parsedJSONOutput.filter((obj) => {
         // Check existence and compare team number (as strings for safety)
         return (
-          obj &&
-          obj["01metaData"] &&
-          String(obj["01metaData"].teamNumber) === String(teamNumber) &&
+          ((obj &&
+            obj["01metaData"] &&
+            String(obj["01metaData"].teamNumber) === String(teamNumber)) ||
+            (obj && obj["team"] && obj["team"] == String(teamNumber))) &&
           !obj.deleted
         );
       });
@@ -461,9 +460,19 @@ document.addEventListener("DOMContentLoaded", async function () {
       // Sort matches by match number if available
       matchesOfTeam.sort((a, b) => {
         const matchNumA =
-          parseInt(a["01metaData"]?.matchNumber.replace(/\D/g, ""), 10) || 0;
+          parseInt(
+            a["01metaData"]
+              ? a["01metaData"]?.matchNumber.replace(/\D/g, "")
+              : a["match"]?.toString().replace(/\D/g, ""),
+            10,
+          ) || 0;
         const matchNumB =
-          parseInt(b["01metaData"]?.matchNumber.replace(/\D/g, ""), 10) || 0;
+          parseInt(
+            b["01metaData"]
+              ? b["01metaData"]?.matchNumber.replace(/\D/g, "")
+              : b["match"]?.toString().replace(/\D/g, ""),
+            10,
+          ) || 0;
         return matchNumA - matchNumB;
       });
 
@@ -492,11 +501,12 @@ document.addEventListener("DOMContentLoaded", async function () {
             ? parseInt(
                 String(matchData["01metaData"]?.matchNumber).replace(/\D/g, ""),
                 10,
-              ) || i + 1
-            : i + 1;
-          console.log(numericMatch || i + 1);
+              )
+            : matchData["match"]
+              ? parseInt(String(matchData["match"]).replace(/\D/g, ""), 10)
+              : i + 1;
           const matchNumberLabel =
-            matchData["01metaData"]?.matchNumber || i + 1; // Fallback to index if no match number
+            matchData["01metaData"]?.matchNumber || matchData["match"] || i + 1; // Fallback to index if no match number
           values.push({
             label: "Match " + matchNumberLabel,
             y: totalForMatch,
@@ -504,8 +514,6 @@ document.addEventListener("DOMContentLoaded", async function () {
           });
         } else {
           // Optionally push a point with y=0 or null if calculation failed
-          const matchNumberLabel =
-            matchData["01metaData"]?.matchNumber || i + 1;
           // values.push({ label: "Match " + matchNumberLabel, y: 0 }); // Or null
         }
       });
@@ -517,9 +525,11 @@ document.addEventListener("DOMContentLoaded", async function () {
         let matchesOfTeam = parsedJSONOutput.filter((obj) => {
           // Check existence and compare team number (as strings for safety)
           return (
-            obj &&
-            obj["01metaData"] &&
-            String(obj["01metaData"].teamNumber) === String(comparisonTeam) &&
+            ((obj &&
+              obj["01metaData"] &&
+              String(obj["01metaData"].teamNumber) ===
+                String(comparisonTeam)) ||
+              (obj && obj["team"] && obj["team"] == String(comparisonTeam))) &&
             !obj.deleted
           );
         });
@@ -527,9 +537,19 @@ document.addEventListener("DOMContentLoaded", async function () {
         // Sort matches by match number if available
         matchesOfTeam.sort((a, b) => {
           const matchNumA =
-            parseInt(a["01metaData"]?.matchNumber.replace(/\D/g, ""), 10) || 0;
+            parseInt(
+              a["01metaData"]
+                ? a["01metaData"]?.matchNumber.replace(/\D/g, "")
+                : a["match"].replace(/\D/g, ""),
+              10,
+            ) || 0;
           const matchNumB =
-            parseInt(b["01metaData"]?.matchNumber.replace(/\D/g, ""), 10) || 0;
+            parseInt(
+              b["01metaData"]
+                ? b["01metaData"]?.matchNumber.replace(/\D/g, "")
+                : b["match"].replace(/\D/g, ""),
+              10,
+            ) || 0;
           return matchNumA - matchNumB;
         });
 
@@ -562,9 +582,13 @@ document.addEventListener("DOMContentLoaded", async function () {
                   ),
                   10,
                 )
-              : i + 1;
+              : matchData["match"]
+                ? parseInt(String(matchData["match"]).replace(/\D/g, ""), 10)
+                : i + 1;
             const matchNumberLabel =
-              matchData["01metaData"]?.matchNumber || i + 1; // Fallback to index if no match number
+              matchData["01metaData"]?.matchNumber ||
+              matchData["match"] ||
+              i + 1; // Fallback to index if no match number
             comparisonValues.push({
               label: "Match " + matchNumberLabel,
               y: totalForMatch,
@@ -573,7 +597,9 @@ document.addEventListener("DOMContentLoaded", async function () {
           } else {
             // Optionally push a point with y=0 or null if calculation failed
             const matchNumberLabel =
-              matchData["01metaData"]?.matchNumber || i + 1;
+              matchData["01metaData"]?.matchNumber ||
+              matchData["match"] ||
+              i + 1;
             // values.push({ label: "Match " + matchNumberLabel, y: 0 }); // Or null
           }
         });
@@ -608,14 +634,54 @@ document.addEventListener("DOMContentLoaded", async function () {
         return 0;
       }
       const result = jsonpath.query(JSONData, path);
+      console.log(path, result);
       // Check if the result is an array before accessing length
       if (Array.isArray(result)) {
-        return result.length;
+        if (path.includes("@.autoclimb == 1")) {
+          console.log(
+            "Autoclimb check for path",
+            path,
+            "in match",
+            JSONData.id,
+            ":",
+            JSONData.autoclimb,
+          );
+          return JSONData.autoclimb == 1 ? 1 : 0;
+        }
+        if (typeof result[0] === "number") {
+          console.log(
+            "Result for path",
+            path,
+            "in match",
+            JSONData.id,
+            ":",
+            result[0],
+          );
+          if (path.includes("autoclimb")) {
+            if (result[0] === 2) {
+              return 1;
+            } else {
+              return 0;
+            }
+          } else if (path.includes("endclimbposition")) {
+            if (result[0] >= 1 && result[0] <= 3) {
+              return 1;
+            } else if (result[0] >= 4 && result[0] <= 6) {
+              return 2;
+            } else if (result[0] >= 7 && result[0] <= 9) {
+              return 3;
+            }
+          }
+          return result[0];
+        } else {
+          return result.length;
+        }
       } else {
         // If jsonpath returns something else return 0 for length
         return 0;
       }
     } catch (error) {
+      console.error("Error in getValues with path:", path, error);
       // Error during query (e.g., invalid path syntax)
       return 0;
     }
