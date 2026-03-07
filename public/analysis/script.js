@@ -342,12 +342,14 @@ document.addEventListener("DOMContentLoaded", async function () {
               return 0;
             }
           } else if (path.includes("endclimbposition")) {
-            if (result[0] >= 1 && result[0] <= 3) {
+            if (result[0] >= 0 && result[0] <= 2) {
               return 1;
-            } else if (result[0] >= 4 && result[0] <= 6) {
+            } else if (result[0] >= 3 && result[0] <= 5) {
               return 2;
-            } else if (result[0] >= 7 && result[0] <= 9) {
+            } else if (result[0] >= 6 && result[0] <= 8) {
               return 3;
+            } else if (result[0] == 9) {
+              return 0;
             }
           }
           return result[0];
