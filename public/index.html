@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -10,7 +9,7 @@
 </head>
 
 <body>
-  <h1 class="title">Octo Scout 2025</h1>
+  <h1 class="title">Octo Scout 2026</h1>
 
   <div class="form-container">
     <div class="inputContainer">
@@ -25,6 +24,7 @@
 
     <div class="inputContainer" id="teamInputContainer">
       <h3 class="inputLabel">Team Number</h3>
+      
       <select id="teamNumberInput" name="Robot">
         <option value="0" data-name="Blue 1">Blue 1</option>
         <option value="1" data-name="Blue 2">Blue 2</option>
@@ -34,9 +34,16 @@
         <option value="5" data-name="Red 3">Red 3</option>
       </select>
     </div>
+    <div class="inputContainer">
+      <h3 class="inputLabel">Team Color</h3>
+      <select id="teamColorInput" class="textInput">
+        <option value="Blue">Blue</option>
+        <option value="Red">Red</option>
+      </select>
+    </div>
 
     <div class="button-container">
-      <button class="navButton primary-button" onclick="saveData();window.location.href = '/auto'">Next</button>
+      <button class="navButton primary-button" onclick="saveData();window.location.href = '/startingLocation'">Next</button>
     </div>
 
     <div class="button-container">

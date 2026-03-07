@@ -133,7 +133,7 @@ document.addEventListener("DOMContentLoaded", async function () {
 
           // Find chart, ensuring c and c.container exist
           const chart = window.renderedCharts.find(
-            (c) => c && c.container && c.container.id === div.id
+            (c) => c && c.container && c.container.id === div.id,
           );
           if (chart) {
             // Use setTimeout to ensure the container is visible
@@ -150,19 +150,33 @@ document.addEventListener("DOMContentLoaded", async function () {
       }
     }
   }
+  function resolveDoubles(data) {
+    const averaged = Object.values(
+      data.reduce((acc, { x, y }) => {
+        if (!acc[x]) {
+          acc[x] = { x, label: x, total: 0, count: 0 };
+        }
+        acc[x].total += y;
+        acc[x].count += 1;
+        return acc;
+      }, {}),
+    ).map(({ x, label, total, count }) => ({
+      x,
+      label,
+      y: total / count,
+    }));
 
+    return averaged;
+  }
   // Function to draw a graph to the screen
   function drawGraph(
     dataPoints,
     comparisonPoints,
     chartName,
     yLabel,
-    graphContainer
+    graphContainer,
   ) {
     if (!graphContainer) return; // Don't proceed if container is invalid
-
-    console.log(dataPoints);
-    console.log(comparisonPoints);
 
     let chartDiv = document.createElement("div");
     chartDiv.id = chartName;
@@ -173,21 +187,21 @@ document.addEventListener("DOMContentLoaded", async function () {
     if (comparisonPoints) {
       data.push(
         {
-          type: "spline",
+          type: "line",
           markerColor: "black",
           markerSize: 5,
           dataPoints: dataPoints,
         },
         {
-          type: "spline",
+          type: "line",
           markerColor: "black",
           markerSize: 5,
           dataPoints: comparisonPoints,
-        }
+        },
       );
     } else {
       data.push({
-        type: "spline",
+        type: "line",
         markerColor: "black",
         markerSize: 5,
         dataPoints: dataPoints,
@@ -268,13 +282,13 @@ document.addEventListener("DOMContentLoaded", async function () {
     }
 
     const driverQualityContainer = document.getElementById(
-      "driverQualityGraphContainer"
+      "driverQualityGraphContainer",
     );
     if (graphConfig.Driver && driverQualityContainer) {
       getDataAndCreateGraph(
         graphConfig.Driver,
         driverQualityContainer,
-        "Driver"
+        "Driver",
       );
     }
   }
@@ -293,11 +307,12 @@ document.addEventListener("DOMContentLoaded", async function () {
     parsedJSONOutput.forEach((obj) => {
       // Check existence of nested properties before access
       if (
-        obj &&
-        obj["01metaData"] &&
-        obj["06extra"] &&
-        String(obj["01metaData"].teamNumber) === String(teamNumber) &&
-        !obj.deleted
+        (obj && obj["01metaData"] && obj["06extra"]) ||
+        (obj["id"] &&
+          String(
+            obj["01metaData"] ? obj["01metaData"].teamNumber : obj["team"],
+          ) === String(teamNumber) &&
+          !obj.deleted)
       ) {
         const defenseRating = obj["06extra"]["Defense"];
         if (defenseRating === "Poor") {
@@ -396,7 +411,7 @@ document.addEventListener("DOMContentLoaded", async function () {
     };
     const response = await fetch(
       `https://www.thebluealliance.com/api/v3/team/frc${teamNumber}`,
-      { headers }
+      { headers },
     );
     let parsedResponse = await response.json();
     let teamName = document.getElementById("teamNameDisplay");
@@ -407,7 +422,7 @@ document.addEventListener("DOMContentLoaded", async function () {
   function getDataAndCreateGraph(
     graphCategory,
     graphContainer,
-    graphCategoryName
+    graphCategoryName,
   ) {
     if (
       teamNumber === null ||
@@ -434,9 +449,10 @@ document.addEventListener("DOMContentLoaded", async function () {
       let matchesOfTeam = parsedJSONOutput.filter((obj) => {
         // Check existence and compare team number (as strings for safety)
         return (
-          obj &&
-          obj["01metaData"] &&
-          String(obj["01metaData"].teamNumber) === String(teamNumber) &&
+          ((obj &&
+            obj["01metaData"] &&
+            String(obj["01metaData"].teamNumber) === String(teamNumber)) ||
+            (obj && obj["team"] && obj["team"] == String(teamNumber))) &&
           !obj.deleted
         );
       });
@@ -444,9 +460,19 @@ document.addEventListener("DOMContentLoaded", async function () {
       // Sort matches by match number if available
       matchesOfTeam.sort((a, b) => {
         const matchNumA =
-          parseInt(a["01metaData"]?.matchNumber.replace(/\D/g, ""), 10) || 0;
+          parseInt(
+            a["01metaData"]
+              ? a["01metaData"]?.matchNumber.replace(/\D/g, "")
+              : a["match"]?.toString().replace(/\D/g, ""),
+            10,
+          ) || 0;
         const matchNumB =
-          parseInt(b["01metaData"]?.matchNumber.replace(/\D/g, ""), 10) || 0;
+          parseInt(
+            b["01metaData"]
+              ? b["01metaData"]?.matchNumber.replace(/\D/g, "")
+              : b["match"]?.toString().replace(/\D/g, ""),
+            10,
+          ) || 0;
         return matchNumA - matchNumB;
       });
 
@@ -474,12 +500,13 @@ document.addEventListener("DOMContentLoaded", async function () {
           const numericMatch = matchData["01metaData"]?.matchNumber
             ? parseInt(
                 String(matchData["01metaData"]?.matchNumber).replace(/\D/g, ""),
-                10
-              ) || i + 1
-            : i + 1;
-          console.log(numericMatch || i + 1);
+                10,
+              )
+            : matchData["match"]
+              ? parseInt(String(matchData["match"]).replace(/\D/g, ""), 10)
+              : i + 1;
           const matchNumberLabel =
-            matchData["01metaData"]?.matchNumber || i + 1; // Fallback to index if no match number
+            matchData["01metaData"]?.matchNumber || matchData["match"] || i + 1; // Fallback to index if no match number
           values.push({
             label: "Match " + matchNumberLabel,
             y: totalForMatch,
@@ -487,11 +514,10 @@ document.addEventListener("DOMContentLoaded", async function () {
           });
         } else {
           // Optionally push a point with y=0 or null if calculation failed
-          const matchNumberLabel =
-            matchData["01metaData"]?.matchNumber || i + 1;
           // values.push({ label: "Match " + matchNumberLabel, y: 0 }); // Or null
         }
       });
+      values = resolveDoubles(values);
       let comparisonInput = document.getElementById("comparisonInput");
       let comparisonTeam = comparisonInput.value;
       let comparisonValues = [];
@@ -499,9 +525,11 @@ document.addEventListener("DOMContentLoaded", async function () {
         let matchesOfTeam = parsedJSONOutput.filter((obj) => {
           // Check existence and compare team number (as strings for safety)
           return (
-            obj &&
-            obj["01metaData"] &&
-            String(obj["01metaData"].teamNumber) === String(comparisonTeam) &&
+            ((obj &&
+              obj["01metaData"] &&
+              String(obj["01metaData"].teamNumber) ===
+                String(comparisonTeam)) ||
+              (obj && obj["team"] && obj["team"] == String(comparisonTeam))) &&
             !obj.deleted
           );
         });
@@ -509,9 +537,19 @@ document.addEventListener("DOMContentLoaded", async function () {
         // Sort matches by match number if available
         matchesOfTeam.sort((a, b) => {
           const matchNumA =
-            parseInt(a["01metaData"]?.matchNumber.replace(/\D/g, ""), 10) || 0;
+            parseInt(
+              a["01metaData"]
+                ? a["01metaData"]?.matchNumber.replace(/\D/g, "")
+                : a["match"].replace(/\D/g, ""),
+              10,
+            ) || 0;
           const matchNumB =
-            parseInt(b["01metaData"]?.matchNumber.replace(/\D/g, ""), 10) || 0;
+            parseInt(
+              b["01metaData"]
+                ? b["01metaData"]?.matchNumber.replace(/\D/g, "")
+                : b["match"].replace(/\D/g, ""),
+              10,
+            ) || 0;
           return matchNumA - matchNumB;
         });
 
@@ -540,13 +578,17 @@ document.addEventListener("DOMContentLoaded", async function () {
               ? parseInt(
                   String(matchData["01metaData"]?.matchNumber).replace(
                     /\D/g,
-                    ""
+                    "",
                   ),
-                  10
+                  10,
                 )
-              : i + 1;
+              : matchData["match"]
+                ? parseInt(String(matchData["match"]).replace(/\D/g, ""), 10)
+                : i + 1;
             const matchNumberLabel =
-              matchData["01metaData"]?.matchNumber || i + 1; // Fallback to index if no match number
+              matchData["01metaData"]?.matchNumber ||
+              matchData["match"] ||
+              i + 1; // Fallback to index if no match number
             comparisonValues.push({
               label: "Match " + matchNumberLabel,
               y: totalForMatch,
@@ -555,12 +597,14 @@ document.addEventListener("DOMContentLoaded", async function () {
           } else {
             // Optionally push a point with y=0 or null if calculation failed
             const matchNumberLabel =
-              matchData["01metaData"]?.matchNumber || i + 1;
+              matchData["01metaData"]?.matchNumber ||
+              matchData["match"] ||
+              i + 1;
             // values.push({ label: "Match " + matchNumberLabel, y: 0 }); // Or null
           }
         });
       }
-
+      comparisonValues = resolveDoubles(comparisonValues);
       // Only draw graph if there are values
       if (values.length > 0) {
         // Construct graph name safely
@@ -573,7 +617,7 @@ document.addEventListener("DOMContentLoaded", async function () {
           comparisonValues,
           graphFullName,
           categoryConfig.units || "", // Use empty string if units undefined
-          graphContainer
+          graphContainer,
         );
       } else {
         // Optionally display a message in the container if no data
@@ -590,14 +634,54 @@ document.addEventListener("DOMContentLoaded", async function () {
         return 0;
       }
       const result = jsonpath.query(JSONData, path);
+      console.log(path, result);
       // Check if the result is an array before accessing length
       if (Array.isArray(result)) {
-        return result.length;
+        if (path.includes("@.autoclimb == 1")) {
+          console.log(
+            "Autoclimb check for path",
+            path,
+            "in match",
+            JSONData.id,
+            ":",
+            JSONData.autoclimb,
+          );
+          return JSONData.autoclimb == 1 ? 1 : 0;
+        }
+        if (typeof result[0] === "number") {
+          console.log(
+            "Result for path",
+            path,
+            "in match",
+            JSONData.id,
+            ":",
+            result[0],
+          );
+          if (path.includes("autoclimb")) {
+            if (result[0] === 2) {
+              return 1;
+            } else {
+              return 0;
+            }
+          } else if (path.includes("endclimbposition")) {
+            if (result[0] >= 1 && result[0] <= 3) {
+              return 1;
+            } else if (result[0] >= 4 && result[0] <= 6) {
+              return 2;
+            } else if (result[0] >= 7 && result[0] <= 9) {
+              return 3;
+            }
+          }
+          return result[0];
+        } else {
+          return result.length;
+        }
       } else {
         // If jsonpath returns something else return 0 for length
         return 0;
       }
     } catch (error) {
+      console.error("Error in getValues with path:", path, error);
       // Error during query (e.g., invalid path syntax)
       return 0;
     }

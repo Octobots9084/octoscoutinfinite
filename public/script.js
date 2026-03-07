@@ -1,4 +1,4 @@
-const eventKey = "demo5007";
+const eventKey = "2026capoh";
 const apiKey = "";
 const apiUrl = `https://frc.nexus/api/v1/event/${eventKey}`;
 let manualInput = false;
@@ -163,13 +163,14 @@ async function loadStoredData() {
     console.log(teamNumberInput.options);
     console.log(
       teamNumberInput.options[teamNumberInput.selectedIndex].getAttribute(
-        "data-name"
-      )
+        "data-name",
+      ),
     );
   }
 }
 
 function saveData() {
+  let teamColorInput = document.getElementById("teamColorInput");
   let teamNumberInput = document.getElementById("teamNumberInput");
   let matchNumberInput = document.getElementById("matchNumberInput");
   let match;
@@ -185,14 +186,14 @@ function saveData() {
     metaData.teamNumber = teamNumbers[teamNumberInput.value];
     metaData.teamPosition =
       teamNumberInput.options[teamNumberInput.selectedIndex].getAttribute(
-        "data-name"
+        "data-name",
       );
     localStorage.setItem("team", teamNumberInput.value);
   } else {
     metaData.teamNumber = teamNumberInput.value;
     localStorage.setItem("team", teamNumberInput.value);
   }
-
+  metaData.teamColor = teamColorInput.value;
   metaData.matchNumber = matchNumberInput.value;
   localStorage.setItem("01metaData", JSON.stringify(metaData));
 }
@@ -216,3 +217,18 @@ filter.addEventListener("change", () => {
 let scoutNameInput = document.getElementById("scoutNameInput");
 
 // Auto-set team color based on team selection
+document
+  .getElementById("teamNumberInput")
+  .addEventListener("change", function () {
+    const teamColorInput = document.getElementById("teamColorInput");
+    const selectedValue = parseInt(this.value);
+
+    // Blue teams are 0, 1, 2 (first three options)
+    if (selectedValue <= 2) {
+      teamColorInput.value = "Blue";
+    }
+    // Red teams are 3, 4, 5 (last three options)
+    else if (selectedValue >= 3) {
+      teamColorInput.value = "Red";
+    }
+  });

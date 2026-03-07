@@ -1,0 +1,39 @@
+body{
+font-family: Arial;
+margin:40px;
+}
+
+h1{
+margin-bottom:20px;
+}
+
+input{
+padding:6px;
+margin:4px;
+}
+
+button{
+padding:8px 14px;
+margin:6px;
+cursor:pointer;
+}
+
+table{
+border-collapse: collapse;
+margin-top:20px;
+}
+
+td, th{
+border:1px solid #999;
+padding:6px 10px;
+text-align:center;
+}
+
+.inputs{
+margin-bottom:20px;
+}
+
+.config{
+margin-top:20px;
+margin-bottom:20px;
+}

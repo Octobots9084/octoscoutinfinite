@@ -13,10 +13,14 @@ let fieldImage = document.getElementById("fieldImage");
 let gamePieceContainer = document.getElementById("gamePieceContainer");
 let gamePieceViewer = document.getElementById("gamePieceViewer");
 let gamePieces = [];
+fieldImage.src = "../images/teleopFieldBlue.png";
+let isBlue = JSON.parse(localStorage.getItem("01metaData")).teamColor == "Blue";
+if (!isBlue) {
+  fieldImage.src = "../images/teleopFieldRed.png";
+}
 document.getElementById("teamNum").innerHTML =
   "Team #: " + JSON.parse(localStorage.getItem("01metaData")).teamNumber;
 
-fieldImage.src = "../images/autoFieldBlue.png";
 if (fieldImage.complete) {
   generateCollectionButtons();
   loadStoredData();
@@ -51,7 +55,7 @@ function generateCollectionButtons() {
     for (let j = 0; j < gamePieces[i].teleopCollectionLocations.length; j++) {
       addCollectionClickableImage(
         gamePieces[i].teleopCollectionLocations[j],
-        gamePieces[i].name
+        gamePieces[i].name,
       );
     }
   }
@@ -81,13 +85,13 @@ function addCollectionClickableImage(collectionLocation, gamePieceName) {
     xPositionMetersToPixelsFromTop(
       fieldImage,
       collectionLocation.x,
-      clickableImageSideLength
+      clickableImageSideLength,
     ) + "px";
   clickableImage.style.left =
     yPositionMetersToPixelsFromLeft(
       fieldImage,
       collectionLocation.y,
-      clickableImageSideLength
+      clickableImageSideLength,
     ) + "px";
   fieldContainer.appendChild(clickableImage);
 

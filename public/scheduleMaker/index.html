@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>FRC Scouting Scheduler</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<h1>FRC Scouting Scheduler</h1>
+
+<div class="inputs">
+
+<input id="name" placeholder="Scout Name">
+
+<input id="late" type="number" placeholder="Arrive Match">
+
+<input id="early" type="number" placeholder="Leave Match">
+
+<input id="group" placeholder="Group ID">
+
+<button onclick="addScout()">Add Scout</button>
+
+</div>
+
+<h2>Scouts</h2>
+<div id="scoutList"></div>
+
+<div class="config">
+
+<label>Total Matches</label>
+<input id="matches" type="number" value="80">
+
+<label>Match Before Lunch</label>
+<input id="lunch" type="number" value="0">
+
+<label>End of Day 1 Match</label>
+<input id="dayEnd" type="number" value="0">
+
+</div>
+
+<button onclick="generate()">Generate Schedule</button>
+
+<div id="schedule"></div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
