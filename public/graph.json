@@ -76,6 +76,16 @@
         }
       ],
       "units": "Points"
+    },
+    {
+      "graphName": "Ferry speed",
+      "metrics": [
+       {
+          "path": "$.passingspeed",
+          "weight": 1
+        }
+      ],
+      "units": "Points"
     }
   ],
   "Teleop": [
