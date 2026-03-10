@@ -119,7 +119,7 @@ async function resurrectData(index) {
     return release();
   });
 }
-async function pullOverClockData() {
+/*async function pullOverClockData() {
   console.log("Pulling overclock data...");
   const filePath = "./output.json";
   let overclockData;
@@ -153,9 +153,9 @@ async function pullOverClockData() {
   });
   setTimeout(pullOverClockData, 10 * 60 * 1000);
 }
-
+*/
 const PORT = 9084;
 app.listen(PORT, () => {
   console.log("App is listening on port 9084");
-  pullOverClockData();
+  //pullOverClockData();
 });
