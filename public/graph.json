@@ -95,6 +95,18 @@
           "path": "$.telefuel",
           "weight": 1
         },
+                {
+          "path": "$['04teleop'][?(@.result == 'Score 5')]",
+          "weight": 5
+        },
+        {
+          "path": "$['04teleop'][?(@.result == 'Score 3')]",
+          "weight": 3
+        },
+        {
+          "path": "$['04teleop'][?(@.result == 'Score 1')]",
+          "weight": 1
+        },
         {
           "path": "$.endclimbposition",
           "weight": 10
@@ -105,9 +117,51 @@
     {
       "graphName":"Fuel Scored",
       "metrics":[
-        { "path": "$.telefuel", "weight": 1 }
+        { "path": "$.telefuel", "weight": 1 },
+        {
+          "path": "$['04teleop'][?(@.result == 'Score 5')]",
+          "weight": 5
+        },
+        {
+          "path": "$['04teleop'][?(@.result == 'Score 3')]",
+          "weight": 3
+        },
+        {
+          "path": "$['04teleop'][?(@.result == 'Score 1')]",
+          "weight": 1
+        }
       ],
       "units": "Fuel"
+    },
+    {
+      "graphName": "Fuel Ferried",
+      "metrics": [
+        {
+          "path": "$['04teleop'][?(@.result == 'Ferry 5')]",
+          "weight": 5
+        },
+        {
+          "path": "$['04teleop'][?(@.result == 'Ferry 3')]",
+          "weight": 3
+        },
+        {
+          "path": "$['04teleop'][?(@.result == 'Ferry 1')]",
+          "weight": 1
+        },
+                {
+          "path": "$['04teleop'][?(@.result == 'Ferry Long 5')]",
+          "weight": 5
+        },
+        {
+          "path": "$['04teleop'][?(@.result == 'Ferry Long 3')]",
+          "weight": 3
+        },
+        {
+          "path": "$['04teleop'][?(@.result == 'Ferry Long 1')]",
+          "weight": 1
+        }
+      ],
+      "units": "Points"
     }
     
   ],

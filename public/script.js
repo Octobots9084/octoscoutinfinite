@@ -1,4 +1,4 @@
-const eventKey = "2026capoh";
+const eventKey = "2026caven";
 const apiKey = "";
 const apiUrl = `https://frc.nexus/api/v1/event/${eventKey}`;
 let manualInput = false;
