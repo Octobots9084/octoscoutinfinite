@@ -90,7 +90,7 @@ window.submitData = async function () {
     let savedData = {};
     for (let i = 0; i < save.length; i++) {
       console.log(save[i]);
-      if (localStorage.getItem("username") !== null) {
+      if (localStorage.getItem(save[i]) !== null) {
         savedData[save[i]] = localStorage.getItem(save[i]);
       }
     }
