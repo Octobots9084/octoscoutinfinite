@@ -4074,5 +4074,15 @@
     "06extra": "{\"Comments\":\"No Show\"}",
     "timestamp": "2026-01-27T05:54:07.693Z",
     "deleted": false
+  },
+  {
+    "01metaData": "{\"scoutName\":\"Ari\",\"teamNumber\":\"\",\"teamColor\":\"Blue\",\"matchNumber\":\"\"}",
+    "02startingLocation": "{\"name\":\"middle\",\"x\":12.5,\"y\":4.199999999999999}",
+    "03auto": "[{\"name\":\"Move\",\"result\":\"Move\"},{\"name\":\"Climb\",\"result\":\"Auto Climb\"}]",
+    "04teleop": "[]",
+    "05endgame": "[{\"name\":\"L2\"}]",
+    "06extra": "{\"Died\":\"False\",\"Defense\":\"None\",\"Comments\":\"\",\"reScout\":false}",
+    "timestamp": "2026-03-15T04:34:53.306Z",
+    "deleted": false
   }
 ]

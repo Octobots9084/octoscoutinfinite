@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Octo Scout 2025</title>
+  <title>Octo Scout 2026</title>
   <link rel="stylesheet" href="../globalStyle.css" />
   <link rel="stylesheet" href="style.css" />
 </head>
@@ -12,12 +12,59 @@
 <body>
   <div id="container">
     <div id="fieldContainer">
+      <div class="FuelCounter">
+            <div class="Container">
+                <div class="decrementBox">
+                    <button type="button" class="decButton" onClick="decrementOne()"><h1><strong>-1</strong></h1></button>
+                    <button type="button" class="decButton" onClick="decrementThree()"><h1><strong>-3</strong></h1></button>
+                    <button type="button" class="decButton" onClick="decrementTen()"><h1><strong>-10</strong></h1></button>
+                </div>
+                
+                <div class="inputBox">  
+                    <h1>Fuel</h1>
+                    <div class="inputBox2">
+                        <hr class="line"></hr>
+                        <input 
+                            class="fuelInput"
+                            type="number"
+                            id="fuelInput"
+                            value=0
+                            readOnly
+                        />
+                    </div>
+                </div>
+                <div class="incrementBox">
+                    <button type="button" class="incButton" onClick="incrementOne()"><h1><strong>+1</strong></h1></button>
+                    <button type="button" class="incButton" onClick="incrementThree()"><h1><strong>+3</strong></h1></button>
+                    <button type="button" class="incButton" onClick="incrementTen()"><h2><strong>+10</strong></h2></button>
+                </div>
+          
+            <br/>
+            
+        </div>
+      </div>
+      <div class="ClimbYesNo">
+            <div class="radioGroup">
+                <label>
+                    <input
+                        type="checkbox"
+                        name="climbYesNo"
+                        id="climbInput"
+                    />
+                    Climb
+                </label>
+            </div>
+      </div>
+      <button class="teleopButton" id="teleopButton" onclick="saveData(); window.location.href = '/teleop'">Teleop</button>  
       <img id="fieldImage">
     </div>
+    
     <div id="gamePieceViewerContainer">
       <div id="gamePieceViewer">
+        
         <h4 id="gamePieceViewerTitle">Game Piece Viewer</h4>
         <div id="gamePieceContainer"></div>
+        
       </div>
       <h3 id="teamNum"></h3>
     </div>
@@ -29,3 +76,69 @@
 </body>
 
 </html>
+<script>
+
+min = 0;
+max = 99999;
+let pieceTimer = null;
+let flashInterval = null;
+let value = 0;
+
+function setValue(newValue) {
+  value = newValue;
+  document.getElementById('fuelInput').value = value;
+  if(value>0) {
+    startPieceTimer();
+  } else {
+    stopPieceTimer();
+  }
+}
+window.incrementOne = () => { if (value + 1 <= max) setValue(value + 1); };
+  window.incrementThree = () => { if (value + 3 <= max) setValue(value + 3); };
+  window.incrementTen = () => { if (value + 10 <= max) setValue(value + 10); };
+
+  window.decrementOne = () => { if (value - 1 >= min) setValue(value - 1); };
+  window.decrementThree = () => { if (value - 3 >= min) setValue(value - 3); };
+  window.decrementTen = () => { if (value - 10 >= min) setValue(value - 10); };
+function startPieceTimer(targetElementId) {
+
+  // Start 15 second countdown
+  if(pieceTimer){
+    return; // Timer already running, do nothing
+  }
+  pieceTimer = setTimeout(() => {
+    startFlashing(targetElementId);
+  }, 15000); // 15000 ms = 15 seconds
+}
+
+function startFlashing() {
+  const element = document.getElementById("teleopButton");
+  if (!element) return;
+
+  // If already flashing, don't stack intervals
+  if (flashInterval) clearInterval(flashInterval);
+  document.body.style.backgroundColor = "darkred";
+  flashInterval = setInterval(() => {
+    element.classList.toggle("flash-red");
+  }, 500); // toggles every 0.5s
+}
+
+function stopPieceTimer() {
+  // Stop timer if running
+  if (pieceTimer) {
+    clearTimeout(pieceTimer);
+    pieceTimer = null;
+  }
+
+  // Stop flashing if running
+  if (flashInterval) {
+    clearInterval(flashInterval);
+    flashInterval = null;
+
+    // Remove flashing class in case it’s stuck red
+    const flashing = document.querySelector(".flash-red");
+    if (flashing) flashing.classList.remove("flash-red");
+    document.body.style.backgroundColor = "#1a2d43";
+  }
+}
+</script>

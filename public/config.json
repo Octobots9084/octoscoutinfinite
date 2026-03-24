@@ -7,88 +7,9 @@
     { "name": "right", "x": 4, "y": 1.2 }
   ],
   "noShow":{
-    "x":1.1,"y":6.5
+    "x":15,"y":6.5
   },
-  "leave":{
-     "x": 1.4, "y":2},
   "gamePieces": [
-    {
-      
-      "name": "plus1",
-      "autoCollectionLocations": [
-        { "name": "Score 1", "x": 3, "y": 6 },
-        { "name": "Ferry 1", "x": 8.2, "y": 6 }
-      ],
-      "teleopCollectionLocations": [
-        { "name": "Score 1", "x": 3, "y": 6 },
-        { "name": "Ferry 1", "x": 8.2, "y": 6 },
-        { "name": "Ferry Long 1", "x": 13.5, "y":6}
-      ],
-      "autoPossibleResults": [
-      ],
-      "teleopPossibleResults": [
-      ]
-    },
-    {
-      "name": "plus3",
-      "autoCollectionLocations": [
-        { "name": "Score 3", "x": 3, "y": 4 },
-        { "name": "Ferry 3", "x": 8.2, "y": 4 }
-        
-      ],
-      "teleopCollectionLocations": [
-        { "name": "Score 3", "x": 3, "y": 4 },
-        { "name": "Ferry 3", "x": 8.2, "y": 4 },
-        { "name": "Ferry Long 3", "x": 13.5, "y": 4 }
-      ],
-      "autoPossibleResults": [
-      ],
-      "teleopPossibleResults": [
-      ]
-    },
-    {
-      "name": "plus5",
-      "autoCollectionLocations": [
-        { "name": "Score 5", "x": 3, "y": 2 },
-        { "name": "Ferry 5", "x": 8.2, "y": 2 }
-      ],
-      "teleopCollectionLocations": [
-        { "name": "Score 5", "x": 3, "y": 2 },
-        { "name": "Ferry 5", "x": 8.2, "y": 2 },
-        { "name": "Ferry Long 5", "x": 13.5, "y": 2 }
-      ],
-      "autoPossibleResults": [
-      ],
-      "teleopPossibleResults": [
-      ]
-    },
-    {
-      "name": "Climb",
-      "autoCollectionLocations": [
-        { "name": "Auto Climb", "x": 0.5, "y": 4 }
-      ],
-      "teleopCollectionLocations": [
-      ],
-      "autoPossibleResults": [
-      ],
-      "teleopPossibleResults": [
-      ]
-    },
-    {
-      "name": "Depot",
-      "autoCollectionLocations": [
-        { "name": " Place in Depot", "x": 0.5, "y": 2 }
-      ],
-      "teleopCollectionLocations": [
-        { "name": "Place in Depot", "x": 0.5, "y": 2 }
-      ],
-      "autoPossibleResults": [
-      ],
-      "teleopPossibleResults": [
-      ]
-    }
-    
-    
   ],
   "endgameOptions": [
     {
@@ -122,6 +43,14 @@
     {
       "name": "Defense",
       "possibleResults": [{ "name": "None" }, { "name": "Good" }, { "name": "Poor" }]
+    },
+    {
+      "name": "Trench",
+      "possibleResults": [{ "name": "False" }, { "name": "True" }]
+    },
+    {
+      "name": "Bump",
+      "possibleResults": [{ "name": "False" }, { "name": "True" }]
     }
   ]
 }

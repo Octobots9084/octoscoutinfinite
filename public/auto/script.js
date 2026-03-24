@@ -13,15 +13,13 @@ let fieldImage = document.getElementById("fieldImage");
 let gamePieceContainer = document.getElementById("gamePieceContainer");
 let gamePieceViewer = document.getElementById("gamePieceViewer");
 let gamePieces = [];
-fieldImage.src = "../images/autoFieldBlue.png";
+fieldImage.src = "../images/jamie.png";
 let isBlue = JSON.parse(localStorage.getItem("01metaData")).teamColor == "Blue";
 if (!isBlue) {
-  fieldImage.src = "../images/autoFieldRed.png";
+  //fieldImage.src = "../images/autoFieldRed.png";
 }
 document.getElementById("teamNum").innerHTML =
   "Team #: " + JSON.parse(localStorage.getItem("01metaData")).teamNumber;
-let pieceTimer = null;
-let flashInterval = null;
 
 if (fieldImage.complete) {
   generateCollectionButtons();
@@ -60,46 +58,7 @@ function unLeave() {
     leaveFunc();
   };
 }
-function startPieceTimer(targetElementId) {
-  // If a timer is already running, clear it first
-  stopPieceTimer();
 
-  // Start 15 second countdown
-  pieceTimer = setTimeout(() => {
-    startFlashing(targetElementId);
-  }, 15000); // 15000 ms = 15 seconds
-}
-
-function startFlashing() {
-  const element = document.getElementById("nextButton");
-  if (!element) return;
-
-  // If already flashing, don't stack intervals
-  if (flashInterval) clearInterval(flashInterval);
-  document.body.style.backgroundColor = "darkred";
-  flashInterval = setInterval(() => {
-    element.classList.toggle("flash-red");
-  }, 500); // toggles every 0.5s
-}
-
-function stopPieceTimer() {
-  // Stop timer if running
-  if (pieceTimer) {
-    clearTimeout(pieceTimer);
-    pieceTimer = null;
-  }
-
-  // Stop flashing if running
-  if (flashInterval) {
-    clearInterval(flashInterval);
-    flashInterval = null;
-
-    // Remove flashing class in case it’s stuck red
-    const flashing = document.querySelector(".flash-red");
-    if (flashing) flashing.classList.remove("flash-red");
-    document.body.style.backgroundColor = "#1a2d43";
-  }
-}
 function loadStoredData() {
   let data = localStorage.getItem("03auto");
   if (data != null) {
@@ -143,26 +102,35 @@ function generateCollectionButtons() {
       yPositionMetersToPixelsFromLeft(fieldImage, noShow.y, 5) + "px";
     fieldContainer.appendChild(noShowButton);
 
-    //leave
+    //leav
     let left = localStorage.getItem("left") || false;
     let leave = JSONConfig.leave;
-    let leaveButton = document.createElement("img");
-    if (left)
-      window.addEventListener("DOMContentLoaded", () => leaveFunc(true));
-    leaveButton.src = "../images/Move.png";
-    leaveButton.classList.add("leave");
-    leaveButton.id = "leave";
+    if (leave) {
+      let leaveButton = document.createElement("img");
+      if (left)
+        window.addEventListener("DOMContentLoaded", () => leaveFunc(true));
+      leaveButton.src = "../images/Move.png";
+      leaveButton.classList.add("leave");
+      leaveButton.id = "leave";
 
-    leaveButton.onclick = function () {
-      leaveFunc();
-    };
-    leaveButton.style.top =
-      xPositionMetersToPixelsFromTop(fieldImage, leave.x, 5) + "px";
-    leaveButton.style.left =
-      yPositionMetersToPixelsFromLeft(fieldImage, leave.y, 5) + "px";
-    fieldContainer.appendChild(leaveButton);
+      leaveButton.onclick = function () {
+        leaveFunc();
+      };
+      leaveButton.style.top =
+        xPositionMetersToPixelsFromTop(fieldImage, leave.x, 5) + "px";
+      leaveButton.style.left =
+        yPositionMetersToPixelsFromLeft(fieldImage, leave.y, 5) + "px";
+      fieldContainer.appendChild(leaveButton);
+    }
   }
 }
+
+window.decrementOne = decrementOne;
+window.decrementThree = decrementThree;
+window.decrementTen = decrementTen;
+window.incrementOne = incrementOne;
+window.incrementThree = incrementThree;
+window.incrementTen = incrementTen;
 function noShowFunc() {
   localStorage.setItem(
     "02startingLocation",
@@ -278,9 +246,13 @@ function updateGamePieceViewer() {
 }
 window.saveData = saveData;
 function saveData() {
-  localStorage.setItem("03auto", JSON.stringify(gamePieces));
+  let dataToSave = {
+    autoFuel: document.getElementById("fuelInput").value,
+    autoClimb: document.getElementById("climbInput").value == "on" ? 1 : 0,
+  };
+  console.log(dataToSave);
+  localStorage.setItem("03auto", JSON.stringify(dataToSave));
 }
-
 function placeCoral() {
   $("#image").click(function () {
     $("#foo").addClass("myClass");
