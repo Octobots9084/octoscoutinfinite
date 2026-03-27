@@ -22,20 +22,28 @@
           "weight": 1
         },
         {
-          "path": "$.autofuel",
+          "path": "$['03auto'].autoFuel",
           "weight": 1
         },
         {
-          "path": "$.telefuel",
+          "path": "$['04teleop'].teleFuel",
           "weight": 1
         },
         {
-          "path": "$.autoclimb",
+          "path": "$['03auto'].autoClimb",
           "weight": 15
         },
         {
-          "path": "$.endclimbposition",
+          "path": "$['05endgame'][?(@.name == 'L1')]",
           "weight": 10
+        },
+        {
+          "path": "$['05endgame'][?(@.name == 'L2')]",
+          "weight": 20
+        },
+        {
+          "path": "$['05endgame'][?(@.name == 'L3')]",
+          "weight": 30
         }
         
       ],
@@ -56,8 +64,8 @@
         { "path": "$['04teleop'][?(@.result == 'Ferry 3')]", "weight": 3 } ,
         { "path": "$['03auto'][?(@.result == 'Ferry 1')]", "weight": 1 },
         { "path": "$['04teleop'][?(@.result == 'Ferry 1')]", "weight": 1 },
-        { "path": "$.autofuel", "weight": 1 },
-        { "path": "$.telefuel", "weight": 1 }
+        { "path": "$['03auto'].autofuel", "weight": 1 },
+        { "path": "$['04teleop'].teleFuel", "weight": 1 }
 
         
       ],
@@ -67,22 +75,20 @@
       "graphName": "Climb Points",
       "metrics": [
        {
-          "path": "$.autoclimb",
+          "path": "$.autoClimb",
           "weight": 15
         },
         {
-          "path": "$.endclimbposition",
+          "path": "$['05endgame'][?(@.name == 'L1')]",
           "weight": 10
-        }
-      ],
-      "units": "Points"
-    },
-    {
-      "graphName": "Ferry speed",
-      "metrics": [
-       {
-          "path": "$.passingspeed",
-          "weight": 1
+        },
+        {
+          "path": "$['05endgame'][?(@.name == 'L2')]",
+          "weight": 20
+        },
+        {
+          "path": "$['05endgame'][?(@.name == 'L3')]",
+          "weight": 30
         }
       ],
       "units": "Points"
@@ -92,7 +98,7 @@
     {
       "graphName": "Points scored",
       "metrics": [{
-          "path": "$.telefuel",
+          "path": "$['04teleop'].teleFuel",
           "weight": 1
         },
                 {
@@ -108,8 +114,16 @@
           "weight": 1
         },
         {
-          "path": "$.endclimbposition",
+          "path": "$['05endgame'][?(@.name == 'L1')]",
           "weight": 10
+        },
+        {
+          "path": "$['05endgame'][?(@.name == 'L2')]",
+          "weight": 20
+        },
+        {
+          "path": "$['05endgame'][?(@.name == 'L3')]",
+          "weight": 30
         }
       ],
       "units": "Points"
@@ -129,6 +143,10 @@
         {
           "path": "$['04teleop'][?(@.result == 'Score 1')]",
           "weight": 1
+        },
+        {
+          "path": "$['04teleop'].teleFuel",
+          "weight": 5
         }
       ],
       "units": "Fuel"

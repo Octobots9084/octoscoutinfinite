@@ -315,43 +315,7 @@ document.addEventListener("DOMContentLoaded", async function () {
       console.log(path, result);
       // Check if the result is an array before accessing length
       if (Array.isArray(result)) {
-        if (path.includes("@.autoclimb == 1")) {
-          console.log(
-            "Autoclimb check for path",
-            path,
-            "in match",
-            JSONData.id,
-            ":",
-            JSONData.autoclimb,
-          );
-          return JSONData.autoclimb == 1 ? 1 : 0;
-        }
         if (typeof result[0] === "number") {
-          console.log(
-            "Result for path",
-            path,
-            "in match",
-            JSONData.id,
-            ":",
-            result[0],
-          );
-          if (path.includes("autoclimb")) {
-            if (result[0] === 2) {
-              return 1;
-            } else {
-              return 0;
-            }
-          } else if (path.includes("endclimbposition")) {
-            if (result[0] >= 0 && result[0] <= 2) {
-              return 1;
-            } else if (result[0] >= 3 && result[0] <= 5) {
-              return 2;
-            } else if (result[0] >= 6 && result[0] <= 8) {
-              return 3;
-            } else if (result[0] == 9) {
-              return 0;
-            }
-          }
           return result[0];
         } else {
           return result.length;
@@ -752,5 +716,5 @@ document.addEventListener("DOMContentLoaded", async function () {
     return console.log(message);
   }
   window.printList = printList;
-  elliotGraph();
+  //elliotGraph();
 });

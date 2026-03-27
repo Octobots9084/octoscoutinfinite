@@ -247,7 +247,7 @@ function updateGamePieceViewer() {
 window.saveData = saveData;
 function saveData() {
   let dataToSave = {
-    autoFuel: document.getElementById("fuelInput").value,
+    autoFuel: parseInt(document.getElementById("fuelInput").value) || 0,
     autoClimb: document.getElementById("climbInput").value == "on" ? 1 : 0,
   };
   console.log(dataToSave);

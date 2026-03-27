@@ -69,11 +69,6 @@ let value = 0;
 function setValue(newValue) {
   value = newValue;
   document.getElementById('fuelInput').value = value;
-  if(value>0) {
-    startPieceTimer();
-  } else {
-    stopPieceTimer();
-  }
 }
 window.incrementOne = () => { if (value + 1 <= max) setValue(value + 1); };
   window.incrementThree = () => { if (value + 3 <= max) setValue(value + 3); };

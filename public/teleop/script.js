@@ -168,7 +168,7 @@ function updateGamePieceViewer() {
 window.saveData = saveData;
 function saveData() {
   let dataToSave = {
-    autoFuel: document.getElementById("fuelInput").value,
+    teleFuel: parseInt(document.getElementById("fuelInput").value) || 0,
   };
   console.log(dataToSave);
   localStorage.setItem("04teleop", JSON.stringify(dataToSave));

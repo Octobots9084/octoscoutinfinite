@@ -57,7 +57,7 @@ function updateGraph() {
 function getDataAndCreateGraph(
   graphCategory,
   graphContainer,
-  graphCategoryName
+  graphCategoryName,
 ) {
   let blueTeams = getBlueTeams();
   let redTeams = getRedTeams();
@@ -66,12 +66,12 @@ function getDataAndCreateGraph(
     blueTeams,
     graphCategory,
     graphCategoryName,
-    true
+    true,
   );
 
   graphConfigs.push.apply(
     graphConfigs,
-    getGraphConfigForTeams(redTeams, graphCategory, graphCategoryName, false)
+    getGraphConfigForTeams(redTeams, graphCategory, graphCategoryName, false),
   );
 
   // Drawing graph
@@ -82,7 +82,7 @@ function getGraphConfigForTeams(
   teams,
   graphCategory,
   graphCategoryName,
-  teamIsBlue
+  teamIsBlue,
 ) {
   let graphConfigs = [];
   let maxColorIteratorValue = 255;
@@ -159,7 +159,29 @@ function getGraphConfigForTeams(
 
 // Function to retrieve value by JSON path
 function getValues(JSON, path) {
-  return jsonpath.query(JSON, path).length;
+  try {
+    // Ensure jsonpath is loaded and JSONData/path are valid
+    if (typeof jsonpath === "undefined" || !JSONData || !path) {
+      return 0;
+    }
+    const result = jsonpath.query(JSONData, path);
+    console.log(path, result);
+    // Check if the result is an array before accessing length
+    if (Array.isArray(result)) {
+      if (typeof result[0] === "number") {
+        return result[0];
+      } else {
+        return result.length;
+      }
+    } else {
+      // If jsonpath returns something else return 0 for length
+      return 0;
+    }
+  } catch (error) {
+    console.error("Error in getValues with path:", path, error);
+    // Error during query (e.g., invalid path syntax)
+    return 0;
+  }
 }
 
 document.addBlueTeam = addBlueTeam;
