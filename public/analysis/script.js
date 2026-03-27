@@ -315,8 +315,8 @@ document.addEventListener("DOMContentLoaded", async function () {
       console.log(path, result);
       // Check if the result is an array before accessing length
       if (Array.isArray(result)) {
-        if (typeof result[0] === "number") {
-          return result[0];
+        if (typeof result[0] === "number" || typeof result[0] === "string") {
+          return parseInt(result[0], 10) || 0;
         } else {
           return result.length;
         }
