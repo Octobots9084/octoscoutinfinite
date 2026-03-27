@@ -248,9 +248,10 @@ window.saveData = saveData;
 function saveData() {
   let dataToSave = {
     autoFuel: parseInt(document.getElementById("fuelInput").value) || 0,
-    autoClimb: document.getElementById("climbInput").value == "on" ? 1 : 0,
+    autoClimb: document.getElementById("climbInput").checked ? 1 : 0,
   };
-  console.log(dataToSave);
+  console.log(document.getElementById("climbInput"));
+  console.log("Deeta" + JSON.stringify(dataToSave));
   localStorage.setItem("03auto", JSON.stringify(dataToSave));
 }
 function placeCoral() {
