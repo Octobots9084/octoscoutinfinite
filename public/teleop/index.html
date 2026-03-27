@@ -9,6 +9,38 @@
   <body>  
     <div id="container">
       <div id="fieldContainer">
+        <div class="FuelCounter">
+            <div class="Container">
+                <div class="decrementBox">
+                    <button type="button" class="decButton" onClick="decrementOne()"><h1><strong>-1</strong></h1></button>
+                    <button type="button" class="decButton" onClick="decrementThree()"><h1><strong>-3</strong></h1></button>
+                    <button type="button" class="decButton" onClick="decrementTen()"><h1><strong>-10</strong></h1></button>
+                </div>
+                
+                <div class="inputBox">  
+                    <h1>Teleop Fuel</h1>
+                    <div class="inputBox2">
+                        <hr class="line"></hr>
+                        <input 
+                            class="fuelInput"
+                            type="number"
+                            id="fuelInput"
+                            value=0
+                            readOnly
+                        />
+                    </div>
+                </div>
+                <div class="incrementBox">
+                    <button type="button" class="incButton" onClick="incrementOne()"><h1><strong>+1</strong></h1></button>
+                    <button type="button" class="incButton" onClick="incrementThree()"><h1><strong>+3</strong></h1></button>
+                    <button type="button" class="incButton" onClick="incrementTen()"><h2><strong>+10</strong></h2></button>
+                </div>
+          
+            <br/>
+            
+        </div>
+      </div>
+      <button class="teleopButton" id="teleopButton" onclick="saveData(); window.location.href = '/endgame'">Next</button>  
         <img id="fieldImage" >
       </div>
       <div id="gamePieceViewerContainer">
@@ -16,12 +48,39 @@
           <h4 id="gamePieceViewerTitle">Game Piece Viewer</h4>
           <div id="gamePieceContainer"></div>  
         </div>
-        <h3 id="teamNum"></h3>
+        
       </div>
+      <h3 id="teamNum"></h3>
       <button class="backButton" onclick="saveData(); window.location.href = '/auto';">Back</button>
       <button class="nextButton" onclick="saveData(); window.location.href = '/endgame'">Next</button>
       
     </div>
     <script type="module" src="script.js"></script>
   </body>
+  
+<script>
+
+min = 0;
+max = 99999;
+let pieceTimer = null;
+let flashInterval = null;
+let value = 0;
+
+function setValue(newValue) {
+  value = newValue;
+  document.getElementById('fuelInput').value = value;
+  if(value>0) {
+    startPieceTimer();
+  } else {
+    stopPieceTimer();
+  }
+}
+window.incrementOne = () => { if (value + 1 <= max) setValue(value + 1); };
+  window.incrementThree = () => { if (value + 3 <= max) setValue(value + 3); };
+  window.incrementTen = () => { if (value + 10 <= max) setValue(value + 10); };
+
+  window.decrementOne = () => { if (value - 1 >= min) setValue(value - 1); };
+  window.decrementThree = () => { if (value - 3 >= min) setValue(value - 3); };
+  window.decrementTen = () => { if (value - 10 >= min) setValue(value - 10); };
+</script>
 </html>

@@ -13,11 +13,11 @@ let fieldImage = document.getElementById("fieldImage");
 let gamePieceContainer = document.getElementById("gamePieceContainer");
 let gamePieceViewer = document.getElementById("gamePieceViewer");
 let gamePieces = [];
-fieldImage.src = "../images/teleopFieldBlue.png";
+fieldImage.src = "../images/jamie.png";
 let isBlue = JSON.parse(localStorage.getItem("01metaData")).teamColor == "Blue";
-if (!isBlue) {
+/*if (!isBlue) {
   fieldImage.src = "../images/teleopFieldRed.png";
-}
+}*/
 document.getElementById("teamNum").innerHTML =
   "Team #: " + JSON.parse(localStorage.getItem("01metaData")).teamNumber;
 
@@ -167,5 +167,9 @@ function updateGamePieceViewer() {
 }
 window.saveData = saveData;
 function saveData() {
-  localStorage.setItem("04teleop", JSON.stringify(gamePieces));
+  let dataToSave = {
+    autoFuel: document.getElementById("fuelInput").value,
+  };
+  console.log(dataToSave);
+  localStorage.setItem("04teleop", JSON.stringify(dataToSave));
 }

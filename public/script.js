@@ -151,9 +151,11 @@ function updateTeams(data, fromManual) {
 async function loadStoredData() {
   let data = localStorage.getItem("01metaData");
   let teamNumberInput = document.getElementById("teamNumberInput");
+  let scoutNumberInput = document.getElementById("scoutNumberInput");
   if (data != null) {
     let metaData = JSON.parse(data);
     scoutNameInput.value = metaData.scoutName;
+    scoutNumberInput.value = metaData.scoutNumber;
     if (manualInput) {
       teamNumberInput.value = localStorage.getItem("manualTeam");
     } else {
@@ -173,9 +175,11 @@ function saveData() {
   let teamColorInput = document.getElementById("teamColorInput");
   let teamNumberInput = document.getElementById("teamNumberInput");
   let matchNumberInput = document.getElementById("matchNumberInput");
+  let scoutNumberInput = document.getElementById("scoutNumberInput");
   let match;
   let metaData = {};
   metaData.scoutName = scoutNameInput.value;
+  metaData.scoutNumber = scoutNumberInput.value;
   if (!manualInput) {
     for (let i = 0; i < nexusData.matches.length; i++) {
       if (nexusData.matches[i].label == matchNumberInput.value) {
@@ -200,6 +204,7 @@ function saveData() {
 function saveDataAnalysis() {
   let metaData = {};
   metaData.scoutName = scoutNameInput.value;
+  metaData.scoutNumber = scoutNumberInput.value;
   teamNumberInput = document.getElementById("teamNumberInput");
   metaData.teamNumber = teamNumberInput.value;
   localStorage.setItem("01metaData", JSON.stringify(metaData));
