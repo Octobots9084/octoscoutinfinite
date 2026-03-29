@@ -188,11 +188,11 @@
       "graphName": "Points scored",
       "metrics": [
         {
-          "path": "$.autofuel",
+          "path": "$.autoFuel",
           "weight": 1
         },
         {
-          "path": "$.autoclimb",
+          "path": "$.autoClimb",
           "weight": 15
         }
       ],
@@ -202,7 +202,7 @@
       "graphName": "Fuel scored",
       "metrics": [
         {
-          "path": "$.autofuel",
+          "path": "$.autoFuel",
           "weight":1
         }
       ],
@@ -211,8 +211,8 @@
     {
       "graphName": "Climb",
       "metrics":[
-        { "path": "$.autoclimb", "weight":15},
-        { "path": "$[?(@.autoclimb == 1)]", "weight":4}
+        { "path": "$.autoClimb", "weight":15},
+        { "path": "$[?(@.autoClimb == 1)]", "weight":4}
       ]
     }
     
@@ -221,8 +221,10 @@
     {
       "graphName": "Total Climb Points",
       "metrics": [
-        { "path": "$.autoclimb", "weight":15},
-        { "path": "$.endclimbposition", "weight":10}
+        { "path": "$.autoClimb", "weight":15},
+        { "path": "$['05endgame'][?(@.name == 'L1')]", "weight":10},
+        { "path": "$['05endgame'][?(@.name == 'L2')]", "weight":20},
+        { "path": "$['05endgame'][?(@.name == 'L3')]", "weight":30}
       ],
       "units": "Points"
     },
