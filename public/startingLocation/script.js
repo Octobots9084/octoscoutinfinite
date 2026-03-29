@@ -8,7 +8,7 @@ import {
 let fieldImage = document.getElementById("fieldImage");
 let isBlue = JSON.parse(localStorage.getItem("01metaData")).teamColor == "Blue";
 if (!isBlue) {
-  fieldImage.src = "../images/blankFieldRed.png";
+  fieldImage.src = "../images/blankFieldRed.jpg";
 }
 let JSONConfig = await getJSONConfig();
 document.title = JSONConfig.pageTitle;
