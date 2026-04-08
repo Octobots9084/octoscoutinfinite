@@ -244,23 +244,22 @@ if (!navigator.onLine) {
   analysisButton.setAttribute("disabled", true);
 }
 // Add this to your existing script.js
-/*if ("serviceWorker" in navigator) {
-    // Wait until the page has fully loaded to avoid slowing down the initial paint
-    window.addEventListener("load", () => {
-      navigator.serviceWorker
-        .register("/sw.js")
-        .then((registration) => {
-          console.log(
-            "Service Worker registered with scope:",
-            registration.scope,
-          );
-        })
-        .catch((error) => {
-          console.error("Service Worker registration failed:", error);
-        });
-    });
-  }
-  */
+if ("serviceWorker" in navigator) {
+  // Wait until the page has fully loaded to avoid slowing down the initial paint
+  window.addEventListener("load", () => {
+    navigator.serviceWorker
+      .register("/sw.js")
+      .then((registration) => {
+        console.log(
+          "Service Worker registered with scope:",
+          registration.scope,
+        );
+      })
+      .catch((error) => {
+        console.error("Service Worker registration failed:", error);
+      });
+  });
+}
 
 //end starting page
 
