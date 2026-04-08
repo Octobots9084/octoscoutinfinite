@@ -9,6 +9,7 @@
 </head>
 
 <body>
+  <div id="starting">
   <h1 class="title">Octo Scout 2026</h1>
 
   <div class="form-container">
@@ -38,17 +39,6 @@
         <option value="5" data-name="Red 3">Red 3</option>
       </select>
     </div>
-    <div class="inputContainer">
-      <h3 class="inputLabel">Team Color</h3>
-      <select id="teamColorInput" class="textInput">
-        <option value="Blue">Blue</option>
-        <option value="Red">Red</option>
-      </select>
-    </div>
-
-    <div class="button-container">
-      <button class="navButton primary-button" onclick="saveData();window.location.href = '/startingLocation'">Next</button>
-    </div>
 
     <div class="button-container">
      <!-- From Uiverse.io by cbolson --> 
@@ -58,17 +48,285 @@
         <span>Manual</span>
       </label>
 
-      <button class="navButton" id="analysisButton" onclick="saveData();window.location.href = '/analysis'">Analysis</button>
+      <button class="navButton" id="analysisButton" onclick="saveDataAnalysis();window.location.href = '/analysis'">Analysis</button>
     </div>
-
-    <!-- <div class="button-container">
-      <button class="backButton" id="analysisButton" onclick="saveDataAnalysis();window.location.href = '/analysis'">Analysis</button>
-      <button class="nextButton" onclick="saveData();window.location.href = '/startingLocation'">Next</button>
-    </div> -->
   </div>
 
   <script src="script.js"></script>
   <script type="module" src="name.js"></script>
+  </div>
+  <div id="auto">
+      <div id="container">
+    <div id="fieldContainer">
+      <div class="FuelCounter">
+            <div class="Container">
+                <div class="decrementBox">
+                    <button type="button" class="decButton" onClick="decrementOneAuto()"><h1><strong>-1</strong></h1></button>
+                    <button type="button" class="decButton" onClick="decrementThree()"><h1><strong>-3</strong></h1></button>
+                    <button type="button" class="decButton" onClick="decrementTen()"><h1><strong>-10</strong></h1></button>
+                </div>
+                
+                <div class="inputBox">  
+                    <h1>Auto Fuel</h1>
+                    <div class="inputBox2">
+                        <hr class="line"></hr>
+                        <input 
+                            class="autoFuelInput"
+                            type="number"
+                            id="autoFuelInput"
+                            value=0
+                            readOnly
+                        />
+                    </div>
+                </div>
+                <div class="incrementBox">
+                    <button type="button" class="incButton" onClick="incrementOneAuto()"><h1><strong>+1</strong></h1></button>
+                    <button type="button" class="incButton" onClick="incrementThreeAuto()"><h1><strong>+3</strong></h1></button>
+                    <button type="button" class="incButton" onClick="incrementTenAuto()"><h2><strong>+10</strong></h2></button>
+                </div>
+          
+            <br/>
+            
+        </div>
+      </div>
+      <div class="ClimbYesNo">
+            <div class="radioGroup">
+                <label>
+                    <input
+                        type="checkbox"
+                        name="climbYesNo"
+                        id="climbInput"
+                    />
+                    Climb
+                </label>
+            </div>
+      </div>
+      <img id="fieldImage">
+    </div>
+    
+    <div id="gamePieceViewerContainer">
+      <div id="gamePieceViewer">
+        
+        <h4 id="gamePieceViewerTitle">Game Piece Viewer</h4>
+        <div id="gamePieceContainer"></div>
+        
+      </div>
+      <h3 id="teamNum"></h3>
+    </div>
+
+  </div>
+  <script type="module" src="script.js"></script>
+
+<script>
+
+min = 0;
+max = 99999;
+let pieceTimer = null;
+let flashInterval = null;
+let autoValue = 0;
+
+function setAutoValue(newValue) {
+  autoValue = newValue;
+  document.getElementById('autoFuelInput').value = autoValue;
+  if(autoValue>0) {
+    startPieceTimer();
+  } else {
+    stopPieceTimer();
+  }
+}
+window.incrementOneAuto = () => { if (autoValue + 1 <= max) setAutoValue(autoValue + 1); };
+  window.incrementThreeAuto = () => { if (autoValue + 3 <= max) setAutoValue(autoValue + 3); };
+  window.incrementTenAuto = () => { if (autoValue + 10 <= max) setAutoValue(autoValue + 10); };
+
+  window.decrementOneAuto = () => { if (autoValue - 1 >= min) setAutoValue(autoValue - 1); };
+  window.decrementThreeAuto = () => { if (autoValue - 3 >= min) setAutoValue(autoValue - 3); };
+  window.decrementTenAuto = () => { if (autoValue - 10 >= min) setAutoValue(autoValue - 10); };
+function startPieceTimer(targetElementId) {
+
+  // Start 15 second countdown
+  if(pieceTimer){
+    return; // Timer already running, do nothing
+  }
+  pieceTimer = setTimeout(() => {
+    startFlashing(targetElementId);
+  }, 15000); // 15000 ms = 15 seconds
+}
+
+function startFlashing() {
+  const element = document.getElementById("autoFuelInput");
+  if (!element) return;
+
+  // If already flashing, don't stack intervals
+  if (flashInterval) clearInterval(flashInterval);
+  flashInterval = setInterval(() => {
+    element.classList.toggle("flash-red");
+  }, 500); // toggles every 0.5s
+}
+
+function stopPieceTimer() {
+  // Stop timer if running
+  if (pieceTimer) {
+    clearTimeout(pieceTimer);
+    pieceTimer = null;
+  }
+
+  // Stop flashing if running
+  if (flashInterval) {
+    clearInterval(flashInterval);
+    flashInterval = null;
+
+    // Remove flashing class in case it’s stuck red
+    const flashing = document.querySelector(".flash-red");
+    if (flashing) flashing.classList.remove("flash-red");
+    document.body.style.backgroundColor = "#1a2d43";
+  }
+}
+</script>
+</div>
+  <div id="teleop">  
+    <div id="container">
+      <div id="fieldContainer">
+        <div class="FuelCounter">
+            <div class="Container">
+                <div class="decrementBox">
+                    <button type="button" class="decButton" onClick="decrementOneTeleop()"><h1><strong>-1</strong></h1></button>
+                    <button type="button" class="decButton" onClick="decrementThreeTeleop()"><h1><strong>-3</strong></h1></button>
+                    <button type="button" class="decButton" onClick="decrementTenTeleop()"><h1><strong>-10</strong></h1></button>
+                </div>
+                
+                <div class="inputBox">  
+                    <h1>Teleop Fuel</h1>
+                    <div class="inputBox2">
+                        <hr class="line"></hr>
+                        <input 
+                            class="fuelInput"
+                            type="number"
+                            id="fuelInput"
+                            value=0
+                            readOnly
+                        />
+                    </div>
+                </div>
+                <div class="incrementBox">
+                    <button type="button" class="incButton" onClick="incrementOneTeleop()"><h1><strong>+1</strong></h1></button>
+                    <button type="button" class="incButton" onClick="incrementThreeTeleop()"><h1><strong>+3</strong></h1></button>
+                    <button type="button" class="incButton" onClick="incrementTenTeleop()"><h2><strong>+10</strong></h2></button>
+                </div>
+               
+            <br/>
+            
+        </div>
+         
+      </div>
+      <div class="ClimbYesNo">
+                <div class="radioGroup">
+                  <label>
+                    <input
+                        type="radio"
+                        name="EndgameClimb"
+                        id="climbInput"
+                        checked
+                    />
+                    None
+                </label>
+                <label>
+                    <input
+                        type="radio"
+                        name="EndgameClimb"
+                        id="climbInput"
+                    />
+                    L1
+                </label>
+                <label>
+                    <input
+                        type="radio"
+                        name="EndgameClimb"
+                        id="climbInput"
+                    />
+                    L2
+                </label>
+                <label>
+                    <input
+                        type="radio"
+                        name="EndgameClimb"
+                        id="climbInput"
+                    />
+                    L3
+                </label>
+            </div>
+            </div>
+      </div>
+      </div>
+      <h3 id="teamNum"></h3>
+      
+    </div>
+    <script type="module" src="script.js"></script>
+  
+<script>
+
+min = 0;
+max = 99999;
+let teleValue = 0;
+
+function setTeleValue(newValue) {
+  teleValue = newValue;
+  document.getElementById('fuelInput').value = teleValue;
+}
+  window.incrementOneTeleop = () => { if (teleValue + 1 <= max) setTeleValue(teleValue + 1); };
+  window.incrementThreeTeleop = () => { if (teleValue + 3 <= max) setTeleValue(teleValue + 3); };
+  window.incrementTenTeleop = () => { if (teleValue + 10 <= max) setTeleValue(teleValue + 10); };
+
+  window.decrementOneTeleop = () => { if (teleValue - 1 >= min) setTeleValue(teleValue - 1); };
+  window.decrementThreeTeleop = () => { if (teleValue - 3 >= min) setTeleValue(teleValue - 3); };
+  window.decrementTenTeleop = () => { if (teleValue - 10 >= min) setTeleValue(teleValue - 10); };
+</script>
+</div>
+<div id="end">
+
+  <div class="form-container">
+    <div id="extraSelectsContainer"></div>
+
+    <div class="inputContainer">
+      <h3 class="inputLabel">Comments</h3>
+      <input id="commentInput" placeholder="Add any additional observations" type="text">
+      <h3 class="inputLabel">Played Defense: <output id="value"></output>/10</h3>
+      <input id="defenseCheck" type="checkbox" oninput="this.checked?document.getElementById('defenseInput').style.display='block':document.getElementById('defenseInput').style.display='none';document.getElementById('value').textContent = null ">
+      <input id="defenseInput" min="1" max="10" step="1" type="range" style="display: none;" oninput="document.getElementById('value').textContent = this.value">
+      
+      <h3 class="inputLabel">Got defended: <div id="impactText">Impact of defense: <output id="impactValue"></output>/10</div></h3>
+      <input id="impactCheck" type="checkbox" oninput="this.checked?(document.getElementById('impactInput').style.display='block'
+      ,document.getElementById('impactText').style.display='block'):(
+        document.getElementById('impactInput').style.display='none',
+        document.getElementById('impactText').style.display='none',
+        document.getElementById('impactValue').textContent = null
+      )">
+      <input id="impactInput" min="1" max="10" step="1" type="range" style="display: none;" oninput="document.getElementById('impactValue').textContent = this.value">
+      
+      <h3 class="inputLabel">Ferried: <output id="ferryValue"></output>/10</h3>
+      <input id="ferryCheck" type="checkbox" oninput="this.checked?document.getElementById('ferryInput').style.display='block':(
+        document.getElementById('ferryInput').style.display='none',
+        document.getElementById('ferryValue').textContent = null
+      )">
+      <input id="ferryInput" min="1" max="10" step="1" type="range" style="display: none;" oninput="document.getElementById('ferryValue').textContent = this.value">
+    </div>
+
+    <div class="button-container">
+      <button class="navButton primary-button" onclick="saveData(); submitData()">
+        Submit Data
+      </button>
+    </div>
+
+    <div class="button-container">
+      <button class="navButton" onclick="saveData(); window.location.href = '/endgame';">
+        Back
+      </button>
+      <button class="navButton" onclick="scoutAgain()">
+        Scout Again
+      </button>
+    </div>
+  </div>
+
+  <script type="module" src="script.js"></script></div>
 </body>
 
 </html>

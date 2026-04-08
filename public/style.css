@@ -7,7 +7,7 @@ body {
   padding: 20px;
   box-sizing: border-box;
 }
-
+@scope (#starting){
 /* Title for the page */
 .title {
   color: white;
@@ -260,4 +260,1184 @@ input::placeholder {
 .switch::after {
   transform: scaleY(0.7);
   transform-origin: center;
+}
+}
+
+@scope (#auto){
+  * {
+  margin: 0;
+  padding: 0;
+}
+
+#container {
+  max-width: 100vw;
+  max-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#fieldContainer {
+  max-width: 100vw;
+  max-height: 49vh;
+  min-height: 50vh;
+  border: 0px solid white;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.teleopButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 10vh; 
+  height: 10vh;
+  bottom: 1vh;
+  padding: 20px 40px;
+  margin: auto;
+  margin-top: 10px;
+}
+
+.clickableImage {
+  position: absolute;
+  border-radius: 5px;
+}
+
+#gamePieceViewerContainer {
+  max-width: 100vw;
+  max-height: 100vh;
+  display: flex;
+  justify-content: center;
+}
+
+#gamePieceViewer {
+  background-color: #bb9839;
+  position: absolute;
+  top: 60vh;
+  height: 20vh;
+  width: 30vw;
+  display: none;
+  align-items: center;
+  flex-direction: column;
+  overflow: scroll;
+  border-radius: 5px;
+}
+
+#gamePieceContainer {
+  display: flex;
+  width: 85%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.gamePieceContainer {
+  display: flex;
+  padding: 5px;
+  border-radius: 5px;
+  align-items: center;
+  justify-content: space-between;
+  margin: 4px;
+  width: 100%;
+}
+
+.gamePieceResultSelector {
+  margin: 5px;
+  height: 4vh;
+}
+.resultText {
+  color: white;
+  margin: 5px;
+  height: 4vh;
+}
+
+#gamePieceViewerTitle {
+  display: flex;
+  height: 4vh;
+  align-items: center;
+  text-align: center;
+}
+
+#teamNum {
+  position: absolute;
+  color: white;
+  top: 0vh;
+}
+
+@media screen and (max-width: 800px) {
+  #gamePieceViewer {
+    width: 80%;
+  }
+
+  .gamePieceContainer {
+    justify-content: space-around;
+  }
+}
+#autoFuelInput{
+  width: 125px;
+  height: 60px;
+  border-radius: 10px;
+  justify-content: center;
+  text-align: center;
+  font-size: 30px;
+  background-color:#CDF3FF;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type=number] {
+  -moz-appearance: textfield; /* Firefox */
+  appearance: textfield; /* Standard property for newer browsers */
+}
+.incButton {
+    background-color: #9DE387;
+    border: 1px solid rgb(255, 255, 255); 
+    color: rgb(7, 85, 0);
+    padding: 5px 10px;
+    cursor: pointer;
+    width: 67px;
+    height: 67px;
+    border-radius: 50%;
+
+}
+
+.decButton {
+    background-color: #FFC1C1; 
+    border: 1px solid rgb(255, 255, 255);
+    color: rgb(108, 0, 0);
+    padding: 5px 10px;
+    cursor: pointer;
+    width: 67px;
+    height: 67px;
+    border-radius: 50%;
+    
+}
+.noShow {
+  max-width: 4vh;
+  max-height: 4vh;
+  min-width: 5vh;
+  min-height: 5vh;
+  position: absolute;
+  background-color: #bb9839;
+  border: none;
+  border-radius: 5px;
+  color: black;
+  padding: 10px 15px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  top: 6vh;
+  left: 10vw;
+}
+.leave{
+  max-width: 4vh;
+  max-height: 4vh;
+  min-width: 5vh;
+  min-height: 5vh;
+  position: absolute;
+  background-color: green;
+  border: none;
+  border-radius: 5px;
+  color: black;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.flash-red{
+  background-color: red !important;
+  
+}
+.embiggen{
+  min-width: 10vh;
+  min-height: 10vh;
+}
+.IncButton {
+    background-color: #9DE387;
+    border: 1px solid rgb(255, 255, 255); 
+    color: rgb(7, 85, 0);
+    padding: 5px 10px;
+    cursor: pointer;
+    width: 67px;
+    height: 67px;
+    border-radius: 50%;
+
+}
+
+.DecButton {
+    background-color: #FFC1C1; 
+    border: 1px solid rgb(255, 255, 255);
+    color: rgb(108, 0, 0);
+    padding: 5px 10px;
+    cursor: pointer;
+    width: 67px;
+    height: 67px;
+    border-radius: 50%;
+    
+}
+
+.Success {
+    background-color: #87E47E;
+    border: 1px solid black;
+    text-align: center;
+    font-size: 25px;
+    height: 43px;
+    width: 50px;
+}
+
+.Fail {
+    background-color: #FF7272;
+    border: 1px solid black;
+    text-align: center;
+    font-size: 25px;
+    height: 43px;
+    width: 50px;
+}
+
+.Counter{
+    background-color: #66FFD4;
+    border: 1px solid black;
+    text-align: center;
+    font-size: 25px;
+    height: 43px;
+    width: 50px;
+}
+
+.CounterButtonRight {
+    background-color: #CBFFF5; 
+    border: 1px solid black;
+    color: black;
+    padding: 5px 10px;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+    cursor: pointer;
+    width: 40px;
+    height: 45px;
+    
+}
+
+.CounterButtonLeft {
+    background-color: #CBFFF5; 
+    border: 1px solid black;
+    color: black;
+    padding: 5px 10px;
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+    cursor: pointer;
+    width: 40px;
+    height: 45px;
+    
+}
+
+
+.NumericInput {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.Container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 20px;
+}
+
+.NumericInput .label{
+    margin-bottom: 5px;
+    font-size: 18px;  
+}
+
+.incrementBox {
+    display: flex;
+    flex-direction: column;
+    gap: 6.7px;
+}
+
+.decrementBox {
+    display: flex;
+    flex-direction: column;
+    gap: 6.7px;
+}
+
+.input {
+    width: 125px;
+    height: 60px;
+    border-radius: 10px;
+    justify-content: center;
+    text-align: center;
+    font-size: 30px;
+    background-color:#CDF3FF;
+}
+
+.inputBox{
+    margin-top: 20px;
+    display:flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+}
+
+.inputBox2{
+    display:flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    gap: 23px;
+}
+
+.line{
+    width: 130px;
+}
+
+@media screen and (max-width: 1150px) {
+    
+.SuccessButtonRight {
+    background-color: #CBFFD4;
+    border: 1px solid black; 
+    color: black;
+    padding: 5px 10px;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+    cursor: pointer;
+    width: 40px;
+    height: 45px;
+
+}
+
+.SuccessButtonLeft {
+    background-color: #CBFFD4;
+    border: 1px solid black; 
+    color: black;
+    padding: 5px 10px;
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+    cursor: pointer;
+    width: 40px;
+    height: 45px;
+
+}
+
+
+.FailButtonRight {
+    background-color: #FFABAB; 
+    border: 1px solid black;
+    color: black;
+    padding: 5px 10px;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+    cursor: pointer;
+    width: 40px;
+    height: 45px;
+    
+}
+
+.FailButtonLeft {
+    background-color: #FFABAB; 
+    border: 1px solid black;
+    color: black;
+    padding: 5px 10px;
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+    cursor: pointer;
+    width: 40px;
+    height: 45px;
+    
+    
+}
+
+.Success {
+    background-color: #87E47E;
+    border: 1px solid black;
+    text-align: center;
+    font-size: 25px;
+    height: 43px;
+    width: 50px;
+}
+
+.Fail {
+    background-color: #FF7272;
+    border: 1px solid black;
+    text-align: center;
+    font-size: 25px;
+    height: 43px;
+    width: 50px;
+}
+
+.Counter{
+    background-color: #66FFD4;
+    border: 1px solid black;
+    text-align: center;
+    font-size: 25px;
+    height: 43px;
+    width: 50px;
+}
+
+.CounterButtonRight {
+    background-color: #CBFFF5; 
+    border: 1px solid black;
+    color: black;
+    padding: 5px 10px;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+    cursor: pointer;
+    width: 40px;
+    height: 45px;
+    
+}
+
+.CounterButtonLeft {
+    background-color: #CBFFF5; 
+    border: 1px solid black;
+    color: black;
+    padding: 5px 10px;
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+    cursor: pointer;
+    width: 40px;
+    height: 45px;
+    
+}
+
+
+.NumericInput {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.Container {
+    display: flex;
+    flex-direction: row;
+}
+
+.incrementBox {
+    display: flex;
+    flex-direction: column;
+}
+
+.decrementBox {
+    display: flex;
+    flex-direction: column;
+}
+
+.NumericInput .label{
+    margin-bottom: 5px;
+    font-size: 18px;
+    
+}
+}
+
+.NumericInput {
+    margin-bottom: -20px;
+}
+.ClimbYesNo {
+    background-color: #d9d26E;
+    color: black;
+    border-radius: 8px;
+    margin: 10px;
+    padding: 7px;
+    width: 125px;
+    justify-self: center;
+    height: 50px;
+    align-items: center;
+  }
+  
+  .radioGroup {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    justify-self: center;
+    width: 125px;
+    gap: 5px;
+  }
+    .radioGroup input[type="radio"] {
+      appearance: none;
+      -webkit-appearance: none; 
+    
+      /* Create a custom circle */
+      width: 1.2rem;
+      height: 1.2rem;
+      border: 2px solid black;     
+      border-radius: 50%;        
+      background-color: #fff;
+      cursor: pointer;
+      outline: none;             
+      margin-right: 0.5rem;      
+    }
+    
+    .radioGroup input[type="radio"]:checked::before {
+      content: "";
+      display: block;
+      width: 0.8rem;
+      height: 0.8rem;
+      background-color: black;  
+      border-radius: 50%;
+      margin: 0.08rem auto;    
+      margin-bottom: 20rem;   
+    }
+    
+    .radioGroup label {
+      display: inline-flex;
+      align-items: center;
+      padding: 1rem 2rem;
+      border: 2px solid Black;
+      border-radius: 0.5rem;
+      background-color: #FFFFBA;
+      color: black;
+    }
+    
+    
+}
+
+@scope (#teleop){
+
+#container {
+  max-width: 100vw;
+  max-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#fieldContainer {
+  max-width: 100vw;
+  max-height: 49vh;
+  min-height: 50vh;
+  border: 0px solid white;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.teleopButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 10vh; 
+  height: 10vh;
+  bottom: 1vh;
+  padding: 20px 40px;
+  margin: auto;
+  margin-top: 10px;
+}
+
+.clickableImage {
+  position: absolute;
+  border-radius: 5px;
+}
+
+#gamePieceViewerContainer {
+  max-width: 100vw;
+  max-height: 100vh;
+  display: flex;
+  justify-content: center;
+}
+
+#gamePieceViewer {
+  background-color: #bb9839;
+  position: absolute;
+  top: 60vh;
+  height: 20vh;
+  width: 30vw;
+  display: none;
+  align-items: center;
+  flex-direction: column;
+  overflow: scroll;
+  border-radius: 5px;
+}
+
+#gamePieceContainer {
+  display: flex;
+  width: 85%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.gamePieceContainer {
+  display: flex;
+  padding: 5px;
+  border-radius: 5px;
+  align-items: center;
+  justify-content: space-around;
+  margin: 4px;
+  width: 100%;
+}
+
+.gamePieceResultSelector {
+  margin: 5px;
+  height: 4vh;
+}
+
+.resultText {
+  color: white;
+  margin: 5px;
+  height: 4vh;
+}
+
+#gamePieceViewerTitle {
+  display: flex;
+  height: 4vh;
+  align-items: center;
+  text-align: center;
+}
+
+#teamNum {
+  position: absolute;
+  color: white;
+  top: 0vh;
+
+}
+
+
+@media screen and (max-width: 800px) {
+  #gamePieceViewer {
+    width: 80%;
+  }
+
+  .gamePieceContainer {
+    justify-content: space-around;
+  }
+}
+#fuelInput{
+  width: 125px;
+  height: 60px;
+  border-radius: 10px;
+  justify-content: center;
+  text-align: center;
+  font-size: 30px;
+  background-color:#CDF3FF;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type=number] {
+  -moz-appearance: textfield; /* Firefox */
+  appearance: textfield; /* Standard property for newer browsers */
+}
+.incButton {
+    background-color: #9DE387;
+    border: 1px solid rgb(255, 255, 255); 
+    color: rgb(7, 85, 0);
+    padding: 5px 10px;
+    cursor: pointer;
+    width: 67px;
+    height: 67px;
+    border-radius: 50%;
+
+}
+
+.decButton {
+    background-color: #FFC1C1; 
+    border: 1px solid rgb(255, 255, 255);
+    color: rgb(108, 0, 0);
+    padding: 5px 10px;
+    cursor: pointer;
+    width: 67px;
+    height: 67px;
+    border-radius: 50%;
+    
+}
+.IncButton {
+    background-color: #9DE387;
+    border: 1px solid rgb(255, 255, 255); 
+    color: rgb(7, 85, 0);
+    padding: 5px 10px;
+    cursor: pointer;
+    width: 67px;
+    height: 67px;
+    border-radius: 50%;
+
+}
+
+.DecButton {
+    background-color: #FFC1C1; 
+    border: 1px solid rgb(255, 255, 255);
+    color: rgb(108, 0, 0);
+    padding: 5px 10px;
+    cursor: pointer;
+    width: 67px;
+    height: 67px;
+    border-radius: 50%;
+    
+}
+
+.Success {
+    background-color: #87E47E;
+    border: 1px solid black;
+    text-align: center;
+    font-size: 25px;
+    height: 43px;
+    width: 50px;
+}
+
+.Fail {
+    background-color: #FF7272;
+    border: 1px solid black;
+    text-align: center;
+    font-size: 25px;
+    height: 43px;
+    width: 50px;
+}
+
+.Counter{
+    background-color: #66FFD4;
+    border: 1px solid black;
+    text-align: center;
+    font-size: 25px;
+    height: 43px;
+    width: 50px;
+}
+
+.CounterButtonRight {
+    background-color: #CBFFF5; 
+    border: 1px solid black;
+    color: black;
+    padding: 5px 10px;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+    cursor: pointer;
+    width: 40px;
+    height: 45px;
+    
+}
+
+.CounterButtonLeft {
+    background-color: #CBFFF5; 
+    border: 1px solid black;
+    color: black;
+    padding: 5px 10px;
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+    cursor: pointer;
+    width: 40px;
+    height: 45px;
+    
+}
+
+
+.NumericInput {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.Container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 20px;
+}
+
+.NumericInput .label{
+    margin-bottom: 5px;
+    font-size: 18px;  
+}
+
+.incrementBox {
+    display: flex;
+    flex-direction: column;
+    gap: 6.7px;
+}
+
+.decrementBox {
+    display: flex;
+    flex-direction: column;
+    gap: 6.7px;
+}
+
+.input {
+    width: 125px;
+    height: 60px;
+    border-radius: 10px;
+    justify-content: center;
+    text-align: center;
+    font-size: 30px;
+    background-color:#CDF3FF;
+}
+
+.inputBox{
+    margin-top: 20px;
+    display:flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+}
+
+.inputBox2{
+    display:flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    gap: 23px;
+}
+
+.line{
+    width: 130px;
+}
+
+@media screen and (max-width: 1150px) {
+    
+.SuccessButtonRight {
+    background-color: #CBFFD4;
+    border: 1px solid black; 
+    color: black;
+    padding: 5px 10px;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+    cursor: pointer;
+    width: 40px;
+    height: 45px;
+
+}
+
+.SuccessButtonLeft {
+    background-color: #CBFFD4;
+    border: 1px solid black; 
+    color: black;
+    padding: 5px 10px;
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+    cursor: pointer;
+    width: 40px;
+    height: 45px;
+
+}
+
+
+.FailButtonRight {
+    background-color: #FFABAB; 
+    border: 1px solid black;
+    color: black;
+    padding: 5px 10px;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+    cursor: pointer;
+    width: 40px;
+    height: 45px;
+    
+}
+
+.FailButtonLeft {
+    background-color: #FFABAB; 
+    border: 1px solid black;
+    color: black;
+    padding: 5px 10px;
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+    cursor: pointer;
+    width: 40px;
+    height: 45px;
+    
+    
+}
+
+.Success {
+    background-color: #87E47E;
+    border: 1px solid black;
+    text-align: center;
+    font-size: 25px;
+    height: 43px;
+    width: 50px;
+}
+
+.Fail {
+    background-color: #FF7272;
+    border: 1px solid black;
+    text-align: center;
+    font-size: 25px;
+    height: 43px;
+    width: 50px;
+}
+
+.Counter{
+    background-color: #66FFD4;
+    border: 1px solid black;
+    text-align: center;
+    font-size: 25px;
+    height: 43px;
+    width: 50px;
+}
+
+.CounterButtonRight {
+    background-color: #CBFFF5; 
+    border: 1px solid black;
+    color: black;
+    padding: 5px 10px;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+    cursor: pointer;
+    width: 40px;
+    height: 45px;
+    
+}
+
+.CounterButtonLeft {
+    background-color: #CBFFF5; 
+    border: 1px solid black;
+    color: black;
+    padding: 5px 10px;
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+    cursor: pointer;
+    width: 40px;
+    height: 45px;
+    
+}
+
+
+.NumericInput {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.Container {
+    display: flex;
+    flex-direction: row;
+}
+
+.incrementBox {
+    display: flex;
+    flex-direction: column;
+}
+
+.decrementBox {
+    display: flex;
+    flex-direction: column;
+}
+
+.NumericInput .label{
+    margin-bottom: 5px;
+    font-size: 18px;
+    
+}
+}
+
+.NumericInput {
+    margin-bottom: -20px;
+}
+.ClimbYesNo {
+    background-color: #d9d26E;
+    color: black;
+    border-radius: 8px;
+    margin: 10px;
+    padding: 7px;
+    width: 300px;
+    justify-self: center;
+    height: 120px;
+    align-items: center;
+  }
+  
+  .radioGroup {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    justify-self: center;
+    width: 300px;
+    gap: 5px;
+  }
+    .radioGroup input[type="radio"] {
+      appearance: none;
+      -webkit-appearance: none; 
+    
+      /* Create a custom circle */
+      width: 1.2rem;
+      height: 1.2rem;
+      border: 2px solid black;     
+      border-radius: 50%;        
+      background-color: #fff;
+      cursor: pointer;
+      outline: none;             
+      margin-right: 0.5rem;      
+    }
+    
+    .radioGroup input[type="radio"]:checked::before {
+      content: "";
+      display: block;
+      width: 0.8rem;
+      height: 0.8rem;
+      background-color: black;  
+      border-radius: 50%;
+      margin: 0.08rem auto;    
+      margin-bottom: 20rem;   
+    }
+    
+    .radioGroup label {
+      display: inline-flex;
+      align-items: center;
+      padding: 1rem 2rem;
+      border: 2px solid Black;
+      border-radius: 0.5rem;
+      background-color: #FFFFBA;
+      color: black;
+    }
+    
+    
+}
+@scope(#end){
+  body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+input[type="checkbox"] {
+  height: 25px;
+}
+.title {
+  color: white;
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 28px;
+}
+
+.form-container {
+  background-color: rgba(26, 45, 67, 0.7);
+  border-radius: 10px;
+  padding: 20px;
+  width: 90%;
+  max-width: 500px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.inputLabel {
+  display: block;
+  color: #bb9839;
+  margin-bottom: 8px;
+  font-size: x-large;
+  font-weight: bold;
+  text-align: left;
+}
+
+select {
+  height: 4vh;
+}
+
+.inputContainer {
+  position: relative;
+  display: block;
+  margin: 15px 0;
+  text-align: center;
+}
+
+#container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.dataButton {
+  width: 40vh;
+  height: 10vh;
+  margin: 3vh;
+}
+
+input,
+select {
+  width: 100%;
+  height: 40px;
+  padding: 8px 12px;
+  border: 2px solid rgba(187, 152, 57, 0.5);
+  border-radius: 5px;
+  background-color: rgba(255, 255, 255, 0.9);
+  color: #1a2d43;
+  font-size: 16px;
+  transition: all 0.3s ease;
+  box-sizing: border-box;
+}
+
+input:focus,
+select:focus {
+  border-color: #bb9839;
+  outline: none;
+  box-shadow: 0 0 5px rgba(187, 152, 57, 0.5);
+}
+
+input::placeholder {
+  color: #777;
+}
+
+.button-container {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 25px;
+  width: 100%;
+}
+
+.navButton {
+  width: 100%;
+  height: auto;
+  padding: 20px 40px;
+  margin: 10px 5px;
+  position: inherit;
+}
+
+.primary-button {
+  background-color: #d4ae4c;
+  color: #000;
+}
+
+#reScoutLabel{
+  color: #d4ae4c;
+}
+#reScoutInput{
+  height: 30px;
+  
+}
+@media screen and (max-width: 800px) {
+  .inputLabel {
+    font-size: large;
+  }
+
+  .form-container {
+    width: 95%;
+    padding: 15px;
+  }
+
+  .navButton {
+    padding: 15px 20px;
+    font-size: 14px;
+  }
+
+  .button-container {
+    flex-wrap: wrap;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .button-container {
+    flex-direction: column;
+  }
+
+  .navButton {
+    width: 100%;
+    margin: 5px 0;
+  }
+}
 }
