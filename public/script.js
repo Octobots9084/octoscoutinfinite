@@ -1,5 +1,5 @@
 //starting page
-const eventKey = "2026cagle";
+const eventKey = "2026cascmp";
 const apiKey = "";
 const apiUrl = `https://frc.nexus/api/v1/event/${eventKey}`;
 let manualInput = false;
@@ -115,11 +115,10 @@ function setAutomaticInput(data) {
   updateTeams(data, true);
 }
 function updateTeams(data, fromManual) {
+  let oldteamSelector = document.getElementById("teamNumberInput");
   if (!fromManual) {
     localStorage.setItem("autoTeam", oldteamSelector.value);
   }
-
-  let oldteamSelector = document.getElementById("teamNumberInput");
   oldteamSelector.remove();
   const teamSelector = document.createElement("select");
   teamSelector.id = "teamNumberInput";
@@ -137,7 +136,7 @@ function updateTeams(data, fromManual) {
       match = data.matches[i];
     }
   }
-  for (i = 0; i < 6; i++) {
+  for (let i = 0; i < 6; i++) {
     let teamOption = document.createElement("option");
     teamNumbers = match.blueTeams.concat(match.redTeams);
     teamOption.innerHTML = bots[i] + teamNumbers[i];
@@ -145,7 +144,9 @@ function updateTeams(data, fromManual) {
     teamOption.setAttribute("data-name", bots[i].slice(0, -3));
     teamSelector.appendChild(teamOption);
   }
-  teamSelector.value = localStorage.getItem("autoTeam");
+  teamSelector.value = !localStorage.getItem("autoTeam")
+    ? "0"
+    : localStorage.getItem("autoTeam");
   const teamcontainer = document.getElementById("teamInputContainer");
   teamcontainer.appendChild(teamSelector);
 }
@@ -171,9 +172,8 @@ async function loadStoredData() {
     );
   }
 }
-
+window.saveData = saveData;
 function saveData() {
-  let teamColorInput = document.getElementById("teamColorInput");
   let teamNumberInput = document.getElementById("teamNumberInput");
   let matchNumberInput = document.getElementById("matchNumberInput");
   let scoutNumberInput = document.getElementById("scoutNumberInput");
@@ -190,18 +190,44 @@ function saveData() {
     teamNumbers = match.blueTeams.concat(match.redTeams);
     metaData.teamNumber = teamNumbers[teamNumberInput.value];
     metaData.teamPosition =
-      teamNumberInput.options[teamNumberInput.selectedIndex].getAttribute(
+      teamNumberInput.options[teamNumberInput.selectedIndex]?.getAttribute(
         "data-name",
-      );
+      ) || "None";
     localStorage.setItem("team", teamNumberInput.value);
   } else {
     metaData.teamNumber = teamNumberInput.value;
     localStorage.setItem("team", teamNumberInput.value);
   }
-  metaData.teamColor = teamColorInput.value;
+  let autoDataToSave = {
+    autoFuel: parseInt(document.getElementById("autoFuelInput").value) || 0,
+    autoClimb: document.getElementById("climbInput").checked ? 1 : 0,
+  };
+  let teleopDataToSave = {
+    teleFuel: parseInt(document.getElementById("fuelInput").value) || 0,
+  };
+  let endgameDataToSave = {
+    name: document.querySelector("input[name='endgameClimb']:checked").value,
+  };
+  let extraDataToSave = {
+    Comments: document.getElementById("commentInput").value,
+    defense: document.getElementById("defenseCheck").checked
+      ? document.getElementById("defenseInput").value
+      : null,
+    defended: document.getElementById("impactCheck").checked
+      ? document.getElementById("impactInput").value
+      : null,
+    ferry: document.getElementById("ferryCheck").checked
+      ? document.getElementById("ferryInput").value
+      : null,
+  };
   metaData.matchNumber = matchNumberInput.value;
   localStorage.setItem("01metaData", JSON.stringify(metaData));
+  localStorage.setItem("03auto", JSON.stringify(autoDataToSave));
+  localStorage.setItem("04teleop", JSON.stringify(teleopDataToSave));
+  localStorage.setItem("05endgame", JSON.stringify(endgameDataToSave));
+  localStorage.setItem("06extra", JSON.stringify(extraDataToSave));
 }
+window.saveDataAnalysis = saveDataAnalysis;
 function saveDataAnalysis() {
   let metaData = {};
   metaData.scoutName = scoutNameInput.value;
@@ -242,6 +268,7 @@ if (!navigator.onLine) {
   console.log("offline");
   let analysisButton = document.getElementById("analysisButton");
   analysisButton.setAttribute("disabled", true);
+  analysisButton.style.backgroundColor = "gray";
 }
 // Add this to your existing script.js
 if ("serviceWorker" in navigator) {
@@ -264,3 +291,89 @@ if ("serviceWorker" in navigator) {
 //end starting page
 
 //submit area
+let qrButton = document.getElementById("qrButton");
+let qrCodeContainer = document.getElementById("qrCodeContainer");
+console.log(qrButton);
+
+qrButton.addEventListener("click", async () => {
+  saveData();
+  let save = ["01metaData", "03auto", "04teleop", "05endgame", "06extra"];
+  let savedData = {};
+  for (let i = 0; i < save.length; i++) {
+    if (localStorage.getItem(save[i]) !== null) {
+      savedData[save[i]] = localStorage.getItem(save[i]);
+    }
+  }
+  const json = JSON.stringify(savedData); // Step 1: Minify
+  const blob = new Blob([json]);
+  const compressedStream = blob
+    .stream()
+    .pipeThrough(new CompressionStream("gzip"));
+  const buffer = await new Response(compressedStream).arrayBuffer();
+  const uint8Array = new Uint8Array(buffer);
+  let binaryString = "";
+  // A simple loop is safer for "ton of data" than the spread operator (...)
+  for (let i = 0; i < uint8Array.length; i++) {
+    binaryString += String.fromCharCode(uint8Array[i]);
+  }
+
+  // Step 2: Binary to URL-safe Base64
+  let compressedData = btoa(binaryString)
+    .replace(/\+/g, "-")
+    .replace(/\//g, "_")
+    .replace(/=+$/, "");
+  console.log(compressedData);
+  qrCodeContainer.innerHTML = "";
+  qrCodeContainer.style.display = "block";
+  var qrcode = new QRCode("qrCodeContainer", {
+    text: "https://team9084.com:9084/input?data=" + compressedData,
+    width: 256,
+    height: 256,
+    colorDark: "#000000",
+    colorLight: "#ffffff",
+    correctLevel: QRCode.CorrectLevel.L,
+  });
+});
+
+window.scoutAgain = scoutAgain;
+function scoutAgain() {
+  window.location.href = "/";
+}
+
+window.submitData = async function () {
+  let save = [
+    "01metaData",
+    "02startingLocation",
+    "03auto",
+    "04teleop",
+    "05endgame",
+    "06extra",
+  ];
+  let savedData = {};
+  for (let i = 0; i < save.length; i++) {
+    console.log(save[i]);
+    if (localStorage.getItem(save[i]) !== null) {
+      savedData[save[i]] = localStorage.getItem(save[i]);
+    }
+  }
+  console.log(localStorage);
+  console.log(savedData);
+  try {
+    let response = await fetch("../submitData", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(savedData),
+    });
+
+    if (response.status == 200) {
+      alert("Match Submitted");
+    } else {
+      alert("Error submitting data. Please try again.");
+    }
+  } catch (error) {
+    console.error("Error submitting data:", error);
+    alert("Failed to submit data. Please check your connection.");
+  }
+};

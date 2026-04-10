@@ -52,7 +52,6 @@
     </div>
   </div>
 
-  <script src="script.js"></script>
   <script type="module" src="name.js"></script>
   </div>
   <div id="auto">
@@ -115,7 +114,6 @@
     </div>
 
   </div>
-  <script type="module" src="script.js"></script>
 
 <script>
 
@@ -219,12 +217,13 @@ function stopPieceTimer() {
          
       </div>
       <div class="ClimbYesNo">
-                <div class="radioGroup">
+                <div class="radioGroup" id="endgameClimbGroup">
                   <label>
                     <input
                         type="radio"
-                        name="EndgameClimb"
+                        name="endgameClimb"
                         id="climbInput"
+                        value="None"
                         checked
                     />
                     None
@@ -232,24 +231,29 @@ function stopPieceTimer() {
                 <label>
                     <input
                         type="radio"
-                        name="EndgameClimb"
+                        name="endgameClimb"
                         id="climbInput"
+                        value="L1"
+
                     />
                     L1
                 </label>
                 <label>
                     <input
                         type="radio"
-                        name="EndgameClimb"
+                        name="endgameClimb"
                         id="climbInput"
+                        value="L2"
+
                     />
                     L2
                 </label>
                 <label>
                     <input
                         type="radio"
-                        name="EndgameClimb"
+                        name="endgameClimb"
                         id="climbInput"
+                        value="L3"
                     />
                     L3
                 </label>
@@ -260,7 +264,6 @@ function stopPieceTimer() {
       <h3 id="teamNum"></h3>
       
     </div>
-    <script type="module" src="script.js"></script>
   
 <script>
 
@@ -293,7 +296,7 @@ function setTeleValue(newValue) {
       <input id="defenseCheck" type="checkbox" oninput="this.checked?document.getElementById('defenseInput').style.display='block':document.getElementById('defenseInput').style.display='none';document.getElementById('value').textContent = null ">
       <input id="defenseInput" min="1" max="10" step="1" type="range" style="display: none;" oninput="document.getElementById('value').textContent = this.value">
       
-      <h3 class="inputLabel">Got defended: <div id="impactText">Impact of defense: <output id="impactValue"></output>/10</div></h3>
+      <h3 class="inputLabel">Got defended: <div id="impactText" style="display: none;">Impact of defense: <output id="impactValue"></output>/10</div></h3>
       <input id="impactCheck" type="checkbox" oninput="this.checked?(document.getElementById('impactInput').style.display='block'
       ,document.getElementById('impactText').style.display='block'):(
         document.getElementById('impactInput').style.display='none',
@@ -314,18 +317,19 @@ function setTeleValue(newValue) {
       <button class="navButton primary-button" onclick="saveData(); submitData()">
         Submit Data
       </button>
+      <button class="navButton primary-button" id="qrButton">
+        QR Code
+      </button>
+      <div id="qrCodeContainer">
     </div>
 
     <div class="button-container">
-      <button class="navButton" onclick="saveData(); window.location.href = '/endgame';">
-        Back
-      </button>
       <button class="navButton" onclick="scoutAgain()">
         Scout Again
       </button>
     </div>
   </div>
-
+  <script src="qrcode.min.js"></script>
   <script type="module" src="script.js"></script></div>
 </body>
 

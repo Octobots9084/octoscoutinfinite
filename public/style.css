@@ -1320,7 +1320,7 @@ input[type="checkbox"] {
   background-color: rgba(26, 45, 67, 0.7);
   border-radius: 10px;
   padding: 20px;
-  width: 90%;
+  width: 100%;
   max-width: 500px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
@@ -1384,10 +1384,10 @@ input::placeholder {
 }
 
 .button-container {
-  display: flex;
   justify-content: space-between;
   margin-top: 25px;
   width: 100%;
+  flex-direction: column;
 }
 
 .navButton {
@@ -1410,6 +1410,16 @@ input::placeholder {
   height: 30px;
   
 }
+img{
+  margin: auto;
+}
+#qrCodeContainer{
+  background-color: #bb9839;
+  padding: 10px;
+  border-radius: 5px;
+  display: none;
+}
+
 @media screen and (max-width: 800px) {
   .inputLabel {
     font-size: large;
@@ -1427,6 +1437,7 @@ input::placeholder {
 
   .button-container {
     flex-wrap: wrap;
+    flex-direction: column;
   }
 }
 

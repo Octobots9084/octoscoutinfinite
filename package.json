@@ -1,6 +1,7 @@
 {
   "dependencies": {
     "express": "^4.19.2",
-    "proper-lockfile": "^4.1.2"
+    "proper-lockfile": "^4.1.2",
+    "qrcodejs": "^1.0.0"
   }
 }

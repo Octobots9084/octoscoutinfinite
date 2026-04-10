@@ -1,5 +1,5 @@
 // public/sw.js
-const CACHE_NAME = "v1";
+const CACHE_NAME = "v2";
 const ASSETS_TO_CACHE = [
   "/",
   "/index.html",
@@ -16,12 +16,12 @@ const ASSETS_TO_CACHE = [
   "/teleop/index.html",
   "/teleop/style.css",
   "/teleop/script.js",
-  "/endgame/index.html",
+  "/name.js",
   "/endgame/style.css",
   "/endgame/script.js",
   "/submit/index.html",
   "/submit/style.css",
-  "/submit/script.js",
+  "/qrcode.min.js",
   "/submit",
   "/teleop",
   "/auto",
@@ -34,11 +34,9 @@ self.addEventListener("install", (event) => {
   event.waitUntil(
     caches.open(CACHE_NAME).then((cache) => cache.addAll(ASSETS_TO_CACHE)),
   );
+  self.skipWaiting();
 });
 
-// public/sw.js
-// public/sw.js
-// public/sw.js
 self.addEventListener("fetch", (event) => {
   if (event.request.mode === "navigate") {
     event.respondWith(
@@ -57,12 +55,16 @@ self.addEventListener("fetch", (event) => {
 });
 
 self.addEventListener("activate", (event) => {
-  // This tells the SW to take control of all open pages (tabs) right now
-  event.waitUntil(self.clients.claim());
-});
-caches.open("v1").then((cache) => {
-  cache.keys().then((keys) => {
-    console.log("CACHED URLS:");
-    keys.forEach((req) => console.log(req.url));
-  });
+  event.waitUntil(
+    caches.keys().then((cacheNames) => {
+      return Promise.all(
+        cacheNames.map((cache) => {
+          if (cache !== CACHE_NAME) {
+            console.log("Deleting old cache:", cache);
+            return caches.delete(cache);
+          }
+        }),
+      );
+    }),
+  );
 });
