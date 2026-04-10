@@ -50,20 +50,27 @@ async function createDataBlocks() {
   container.innerHTML = "";
   let errors = 0;
   let reScouts = 0;
+
   for (let i = 0; i < parsedJSONOutput.length; i++) {
-    if (
-      !parsedJSONOutput[i].id &&
-      !parsedJSONOutput[i]["01metaData"] &&
-      !parsedJSONOutput[i].deleted
-    ) {
-      errors++;
-      removeErrorData(i);
+    console.log(searchType);
+    console.log(
+      searchType
+        .split(".")
+        .reduce((obj, key) => obj?.[key], parsedJSONOutput[i]),
+    );
+    if (!parsedJSONOutput[i]["01metaData"] && !parsedJSONOutput[i].deleted) {
+      // errors++;
+      // removeErrorData(i);
     } else if (
-      !parsedJSONOutput[i].deleted &&
-      (String(parsedJSONOutput[i]["01metaData"]?.[searchType] ?? "")
-        .toLowerCase()
-        .includes(searchFilter.toLowerCase()) ||
-        parsedJSONOutput[i].id)
+      (!parsedJSONOutput[i].deleted &&
+        String(
+          searchType
+            .split(".")
+            .reduce((obj, key) => obj?.[key], parsedJSONOutput[i]),
+        )
+          .toLowerCase()
+          .includes(searchFilter.toLowerCase())) ||
+      parsedJSONOutput[i].id
     ) {
       //create container
 
@@ -234,8 +241,8 @@ async function createDataBlocks() {
             " | Scout: " +
             parsedJSONOutput[i].scoutname;
         } else if (!parsedJSONOutput[i].id) {
-          errors++;
-          removeErrorData(parsedJSONOutput[i]._originalIndex);
+          // errors++;
+          // removeErrorData(parsedJSONOutput[i]._originalIndex);
           console.log(e);
           createDataBlocks();
         }
