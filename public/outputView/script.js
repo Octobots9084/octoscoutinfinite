@@ -103,108 +103,60 @@ async function createDataBlocks() {
           " | Match: " +
           metaData.matchNumber +
           " | Position: " +
-          metaData.teamPosition;
-        if (parsedJSONOutput[i]["02startingLocation"].name == "noShow") {
-          let noShowDisplay = document.createElement("div");
-          noShowDisplay.classList.add("noShow");
-          wrapper.appendChild(noShowDisplay);
-          noShowDisplay.innerHTML = "No Show";
-        } else {
-          //show autonomous results
+          metaData.teamPosition +
+          " | Scout Team: " +
+          metaData.scoutNumber;
+        // if (parsedJSONOutput[i]["02startingLocation"].name == "noShow") {
+        //   let noShowDisplay = document.createElement("div");
+        //   noShowDisplay.classList.add("noShow");
+        //   wrapper.appendChild(noShowDisplay);
+        //   noShowDisplay.innerHTML = "No Show";
+        // } else {
+        //show autonomous results
 
-          let auto = parsedJSONOutput[i]["03auto"];
-          let autoDisplay = document.createElement("div");
-          autoDisplay.classList.add("dataHolder", "collapsible");
-          wrapper.appendChild(autoDisplay);
-          autoDisplay.innerHTML = "Click to View Auto Data";
-          autoDisplay.style.paddingBottom = "5px";
+        let auto = parsedJSONOutput[i]["03auto"];
+        let autoDisplay = document.createElement("div");
+        autoDisplay.classList.add("dataHolder", "collapsible");
+        wrapper.appendChild(autoDisplay);
+        autoDisplay.innerHTML =
+          "Auto Fuel: " + auto.autoFuel + "Auto Climb: " + auto.autoClimb;
+        autoDisplay.style.paddingBottom = "5px";
 
-          for (let j = 0; j < auto.length; j++) {
-            //creating the cointainer for the piece
+        //show teleoperated results
+        let teleop = parsedJSONOutput[i]["04teleop"];
+        let teleopDisplay = document.createElement("div");
+        teleopDisplay.classList.add("dataHolder", "collapsible");
+        wrapper.appendChild(teleopDisplay);
+        teleopDisplay.innerHTML = "Teleop Fuel: " + teleop.teleFuel;
+        teleopDisplay.style.paddingBottom = "5px";
 
-            let piece = auto[j];
-            let pieceContainer = document.createElement("div");
-            pieceContainer.classList.add("gamePiece", "content");
-            //creating the image of the piece
+        //show endgame data
+        let endgame = parsedJSONOutput[i]["05endgame"];
+        let endgameDisplay = document.createElement("div");
+        endgameDisplay.classList.add("dataHolder");
+        wrapper.appendChild(endgameDisplay);
+        endgameDisplay.innerHTML = "Endgame: " + endgame[0]?.name || "none";
 
-            let pieceImage = document.createElement("img");
-            pieceImage.classList.add("pieceImage");
-            pieceImage.setAttribute("src", "../images/" + piece.name + ".png");
-            pieceContainer.appendChild(pieceImage);
-            autoDisplay.appendChild(pieceContainer);
+        //show extra data
+        let extra = parsedJSONOutput[i]["06extra"];
+        let extraDisplay = document.createElement("div");
+        extraDisplay.classList.add("dataHolder");
+        wrapper.appendChild(extraDisplay);
+        extraDisplay.innerHTML =
+          "Died: " +
+          extra.Died +
+          " | Defense: " +
+          extra.Defense +
+          " | Driver Quality: " +
+          extra.Driver_Quality;
 
-            //showing data about the piece
-            let pieceInfo = document.createElement("div");
-            pieceContainer.appendChild(pieceInfo);
-            pieceContainer.classList.add("pieceInfo");
-            pieceInfo.innerHTML = " Result: " + piece.result;
-          }
+        //show comments
 
-          if (auto.length == 0) {
-            autoDisplay.innerHTML = "No Auto Data";
-            autoDisplay.classList.remove("collapsible");
-          }
-
-          //show teleoperated results
-          let teleop = parsedJSONOutput[i]["04teleop"];
-          let teleopDisplay = document.createElement("div");
-          teleopDisplay.classList.add("dataHolder", "collapsible");
-          wrapper.appendChild(teleopDisplay);
-          teleopDisplay.innerHTML = "Click to View Teleop Data";
-          teleopDisplay.style.paddingBottom = "5px";
-
-          for (let j = 0; j < teleop.length; j++) {
-            //creating the cointainer for the piece
-            let piece = teleop[j];
-            let pieceContainer = document.createElement("div");
-            pieceContainer.classList.add("gamePiece", "content");
-
-            //creating the image of the piece
-            let pieceImage = document.createElement("img");
-            pieceImage.classList.add("pieceImage");
-            pieceImage.setAttribute("src", "../images/" + piece.name + ".png");
-            pieceContainer.appendChild(pieceImage);
-            teleopDisplay.appendChild(pieceContainer);
-
-            //showing data about the piece
-            let pieceInfo = document.createElement("div");
-            pieceContainer.appendChild(pieceInfo);
-            pieceContainer.classList.add("pieceInfo");
-            pieceInfo.innerHTML = "Result: " + piece.result;
-          }
-
-          if (teleop.length == 0) {
-            teleopDisplay.innerHTML = "No Teleop Data";
-            teleopDisplay.classList.remove("collapsible");
-          }
-
-          //show endgame data
-          let endgame = parsedJSONOutput[i]["05endgame"];
-          let endgameDisplay = document.createElement("div");
-          endgameDisplay.classList.add("dataHolder");
-          wrapper.appendChild(endgameDisplay);
-          endgameDisplay.innerHTML = "Endgame: " + endgame[0]?.name || "none";
-
-          //show extra data
-          let extra = parsedJSONOutput[i]["06extra"];
-          let extraDisplay = document.createElement("div");
-          extraDisplay.classList.add("dataHolder");
-          wrapper.appendChild(extraDisplay);
-          extraDisplay.innerHTML =
-            "Died: " +
-            extra.Died +
-            " | Defense: " +
-            extra.Defense +
-            " | Driver Quality: " +
-            extra.Driver_Quality;
-
-          //show comments
-
-          let commentDisplay = document.createElement("div");
-          commentDisplay.classList.add("dataHolder");
-          wrapper.appendChild(commentDisplay);
-          commentDisplay.innerHTML = "Comment : " + extra.Comments;
-        }
+        let commentDisplay = document.createElement("div");
+        commentDisplay.classList.add("dataHolder");
+        wrapper.appendChild(commentDisplay);
+        commentDisplay.innerHTML = "Comment : " + extra.Comments;
+        //}
         //find anomalies
         try {
           let extra = parsedJSONOutput[i]["06extra"];
@@ -241,8 +193,8 @@ async function createDataBlocks() {
             " | Scout: " +
             parsedJSONOutput[i].scoutname;
         } else if (!parsedJSONOutput[i].id) {
-          // errors++;
-          // removeErrorData(parsedJSONOutput[i]._originalIndex);
+          errors++;
+          removeErrorData(parsedJSONOutput[i]._originalIndex);
           console.log(e);
           createDataBlocks();
         }
@@ -279,7 +231,7 @@ async function createDataBlocks() {
     anomalousBig +
     "| Rescouts needed: " +
     reScouts;
-  createCollapsibleElements();
+  //createCollapsibleElements();
 }
 async function removeData(index) {
   const input = [];
@@ -368,4 +320,4 @@ searchTypeSelector.addEventListener("input", function () {
 });
 
 createDataBlocks();
-createCollapsibleElements();
+// createCollapsibleElements();
