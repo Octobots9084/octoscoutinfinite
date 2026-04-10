@@ -3,26 +3,8 @@
     {
       "graphName": "Points scored",
       "metrics": [
-        { "path": "$['03auto'][?(@.result == 'Score 1')]", "weight": 1 },
-        { "path": "$['03auto'][?(@.result == 'Score 3')]", "weight": 3 },
         {
-          "path": "$['03auto'][?(@.result == 'Score 5')]",
-          "weight": 5
-        },
-        {
-          "path": "$['04teleop'][?(@.result == 'Score 5')]",
-          "weight": 5
-        },
-        {
-          "path": "$['04teleop'][?(@.result == 'Score 3')]",
-          "weight": 3
-        },
-        {
-          "path": "$['04teleop'][?(@.result == 'Score 1')]",
-          "weight": 1
-        },
-        {
-          "path": "$['03auto'].autoFuel",
+          "path": "$['03auto'].autofuel",
           "weight": 1
         },
         {
@@ -52,22 +34,8 @@
     {
       "graphName": "Fuel Scored",
       "metrics": [
-        { "path": "$['03auto'][?(@.result == 'Score 5')]", "weight": 5 },
-        { "path": "$['04teleop'][?(@.result == 'Score 5')]", "weight": 5 },
-        { "path": "$['03auto'][?(@.result == 'Score 3')]", "weight": 3 },
-        { "path": "$['04teleop'][?(@.result == 'Score 3')]", "weight": 3 } ,
-        { "path": "$['03auto'][?(@.result == 'Score 1')]", "weight": 1 },
-        { "path": "$['04teleop'][?(@.result == 'Score 1')]", "weight": 1 },
-        { "path": "$['03auto'][?(@.result == 'Ferry 5')]", "weight": 5 },
-        { "path": "$['04teleop'][?(@.result == 'Ferry 5')]", "weight": 5 },
-        { "path": "$['03auto'][?(@.result == 'Ferry 3')]", "weight": 3 },
-        { "path": "$['04teleop'][?(@.result == 'Ferry 3')]", "weight": 3 } ,
-        { "path": "$['03auto'][?(@.result == 'Ferry 1')]", "weight": 1 },
-        { "path": "$['04teleop'][?(@.result == 'Ferry 1')]", "weight": 1 },
         { "path": "$['03auto'].autofuel", "weight": 1 },
         { "path": "$['04teleop'].teleFuel", "weight": 1 }
-
-        
       ],
       "units": "Fuel"
     },
@@ -260,54 +228,38 @@
     {
       "graphName": "Fuel Scored",
       "metrics": [
-        { "path": "$['03auto'][?(@.result == 'Score 5')]", "weight": 5 },
-        { "path": "$['04teleop'][?(@.result == 'Score 5')]", "weight": 5 },
-        { "path": "$['03auto'][?(@.result == 'Score 3')]", "weight": 3 },
-        { "path": "$['04teleop'][?(@.result == 'Score 3')]", "weight": 3 } ,
-        { "path": "$['03auto'][?(@.result == 'Score 1')]", "weight": 1 },
-        { "path": "$['04teleop'][?(@.result == 'Score 1')]", "weight": 1 },
-        { "path": "$['03auto'][?(@.result == 'Ferry 5')]", "weight": 5 },
-        { "path": "$['04teleop'][?(@.result == 'Ferry 5')]", "weight": 5 },
-        { "path": "$['03auto'][?(@.result == 'Ferry 3')]", "weight": 3 },
-        { "path": "$['04teleop'][?(@.result == 'Ferry 3')]", "weight": 3 } ,
-        { "path": "$['03auto'][?(@.result == 'Ferry 1')]", "weight": 1 },
-        { "path": "$['04teleop'][?(@.result == 'Ferry 1')]", "weight": 1 },
-        { "path": "$.autofuel", "weight": 1 },
-        { "path": "$.telefuel", "weight": 1 }
+        { "path": "$['03auto'].autofuel", "weight": 1 },
+        { "path": "$['04teleop'].telefuel", "weight": 1 }
       ],
       "units": "Pieces"
     },
     {
       "graphName": "Points scored",
       "metrics": [
-               { "path": "$['03auto'][?(@.result == 'Score 1')]", "weight": 1 },
-        { "path": "$['03auto'][?(@.result == 'Score 3')]", "weight": 3 },
-        {
-          "path": "$['03auto'][?(@.result == 'Score 5')]",
-          "weight": 5
-        },
-        {
-          "path": "$['04teleop'][?(@.result == 'Score 5')]",
-          "weight": 5
-        },
-        {
-          "path": "$['04teleop'][?(@.result == 'Score 3')]",
-          "weight": 3
-        },
-        {
-          "path": "$['04teleop'][?(@.result == 'Score 1')]",
+       {
+          "path": "$['03auto'].autofuel",
           "weight": 1
         },
         {
-          "path": "$.autofuel",
+          "path": "$['04teleop'].teleFuel",
           "weight": 1
         },
         {
-          "path": "$.telefuel",
-          "weight": 1
+          "path": "$['03auto'].autoClimb",
+          "weight": 15
         },
-        {"path": "$.autoclimb","weight": 15},
-        {"path": "$.endclimbposition","weight": 10}
+        {
+          "path": "$['05endgame'][?(@.name == 'L1')]",
+          "weight": 10
+        },
+        {
+          "path": "$['05endgame'][?(@.name == 'L2')]",
+          "weight": 20
+        },
+        {
+          "path": "$['05endgame'][?(@.name == 'L3')]",
+          "weight": 30
+        }
 
       ],
       "units": "Points"
