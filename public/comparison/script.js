@@ -98,7 +98,7 @@ function getGraphConfigForTeams(
       // Getting matches of the team
       let matchesOfTeam = parsedJSONOutput.filter((obj) => {
         const metaData = obj["01metaData"];
-        if (obj.deleted) {
+        if (obj.deleted || !metaData) {
           return false;
         }
         return metaData.teamNumber === teams[l];
@@ -158,7 +158,7 @@ function getGraphConfigForTeams(
 }
 
 // Function to retrieve value by JSON path
-function getValues(JSON, path) {
+function getValues(JSONData, path) {
   try {
     // Ensure jsonpath is loaded and JSONData/path are valid
     if (typeof jsonpath === "undefined" || !JSONData || !path) {
