@@ -326,7 +326,8 @@ qrButton.addEventListener("click", async () => {
   qrCodeContainer.innerHTML = "";
   qrCodeContainer.style.display = "block";
   var qrcode = new QRCode("qrCodeContainer", {
-    text: "https://team9084.com:9084/input?data=" + compressedData,
+    text:
+      "https://0kx8h4gd-9084.usw3.devtunnels.ms/input?data=" + compressedData,
     width: 256,
     height: 256,
     colorDark: "#000000",

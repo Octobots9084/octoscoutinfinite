@@ -1,5 +1,5 @@
 // public/sw.js
-const CACHE_NAME = "v2";
+const CACHE_NAME = "v1";
 const ASSETS_TO_CACHE = [
   "/",
   "/index.html",
@@ -39,9 +39,14 @@ self.addEventListener("install", (event) => {
 
 self.addEventListener("fetch", (event) => {
   if (event.request.mode === "navigate") {
+    const url = new URL(event.request.url);
+    if (url.pathname === "/input") {
+      event.respondWith(fetch(event.request));
+      return;
+    }
     event.respondWith(
       caches.match(event.request).then((response) => {
-        return response;
+        return response || fetch(event.request);
       }),
     );
     return;
