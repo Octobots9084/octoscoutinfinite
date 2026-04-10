@@ -48,7 +48,7 @@
         <span>Manual</span>
       </label>
 
-      <button class="navButton" id="analysisButton" onclick="saveDataAnalysis();window.location.href = '/analysis'">Analysis</button>
+      <button class="navButton" id="analysisButton" onclick="try{saveDataAnalysis();window.location.href = '/analysis'} catch (error) { this.innerHTML=error}">Analysis</button>
     </div>
   </div>
 
