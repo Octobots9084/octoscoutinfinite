@@ -5,6 +5,7 @@ const apiUrl = `https://frc.nexus/api/v1/event/${eventKey}`;
 let manualInput = false;
 let teamNumbers = [];
 let nexusData;
+let submitted = false;
 function getNexusMatches() {
   //get nexus api
   fetch(apiUrl, {
@@ -359,22 +360,28 @@ window.submitData = async function () {
   }
   console.log(localStorage);
   console.log(savedData);
-  try {
-    let response = await fetch("../submitData", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(savedData),
-    });
+  if (
+    !submitted ||
+    confirm("Are you sure you want to submit duplicate data?")
+  ) {
+    submitted = true;
+    try {
+      let response = await fetch("../submitData", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(savedData),
+      });
 
-    if (response.status == 200) {
-      alert("Match Submitted");
-    } else {
-      alert("Error submitting data. Please try again.");
+      if (response.status == 200) {
+        alert("Match Submitted");
+      } else {
+        alert("Error submitting data. Please try again.");
+      }
+    } catch (error) {
+      console.error("Error submitting data:", error);
+      alert("Failed to submit data. Please check your connection.");
     }
-  } catch (error) {
-    console.error("Error submitting data:", error);
-    alert("Failed to submit data. Please check your connection.");
   }
 };
