@@ -40,7 +40,7 @@ self.addEventListener("install", (event) => {
 self.addEventListener("fetch", (event) => {
   if (event.request.mode === "navigate") {
     const url = new URL(event.request.url);
-    if (url.pathname === "/input") {
+    if (url.pathname !== "/") {
       event.respondWith(fetch(event.request));
       return;
     }
