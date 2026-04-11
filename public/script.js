@@ -364,7 +364,6 @@ window.submitData = async function () {
     !submitted ||
     confirm("Are you sure you want to submit duplicate data?")
   ) {
-    submitted = true;
     try {
       let response = await fetch("../submitData", {
         method: "POST",
@@ -376,6 +375,7 @@ window.submitData = async function () {
 
       if (response.status == 200) {
         alert("Match Submitted");
+        submitted = true;
       } else {
         alert("Error submitting data. Please try again.");
       }
