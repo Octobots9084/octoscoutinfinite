@@ -60,7 +60,39 @@
         }
       ],
       "units": "Points"
+    },
+    {
+      "graphName": "Defense",
+      "metrics":[
+        {
+          "path":"$['06extra'].defense",
+          "weight":1  
+        }
+      ],
+      "units": "Rating"
+    },
+    {
+      "graphName": "Impact when Defended",
+      "metrics":[
+        {
+          "path":"$['06extra'].defended",
+          "weight":1  
+        }
+      ],
+      "units": "Rating"
+    },
+    {
+      "graphName": "Ferrying",
+      "metrics":[
+        {
+          "path":"$['06extra'].ferry",
+          "weight":1  
+        }
+      ],
+      "units": "Rating"
     }
+
+
   ],
   "Teleop": [
     {
@@ -69,6 +101,7 @@
           "path": "$['04teleop'].teleFuel",
           "weight": 1
         },
+
                 {
           "path": "$['04teleop'][?(@.result == 'Score 5')]",
           "weight": 5
@@ -118,36 +151,6 @@
         }
       ],
       "units": "Fuel"
-    },
-    {
-      "graphName": "Fuel Ferried",
-      "metrics": [
-        {
-          "path": "$['04teleop'][?(@.result == 'Ferry 5')]",
-          "weight": 5
-        },
-        {
-          "path": "$['04teleop'][?(@.result == 'Ferry 3')]",
-          "weight": 3
-        },
-        {
-          "path": "$['04teleop'][?(@.result == 'Ferry 1')]",
-          "weight": 1
-        },
-                {
-          "path": "$['04teleop'][?(@.result == 'Ferry Long 5')]",
-          "weight": 5
-        },
-        {
-          "path": "$['04teleop'][?(@.result == 'Ferry Long 3')]",
-          "weight": 3
-        },
-        {
-          "path": "$['04teleop'][?(@.result == 'Ferry Long 1')]",
-          "weight": 1
-        }
-      ],
-      "units": "Points"
     }
     
   ],
@@ -156,11 +159,11 @@
       "graphName": "Points scored",
       "metrics": [
         {
-          "path": "$.autoFuel",
+          "path": "$['03auto'].autofuel",
           "weight": 1
         },
         {
-          "path": "$.autoClimb",
+          "path": "$['03auto'].autoClimb",
           "weight": 15
         }
       ],
@@ -170,7 +173,7 @@
       "graphName": "Fuel scored",
       "metrics": [
         {
-          "path": "$.autoFuel",
+          "path": "$['03auto'].autoFuel",
           "weight":1
         }
       ],
@@ -179,8 +182,7 @@
     {
       "graphName": "Climb",
       "metrics":[
-        { "path": "$.autoClimb", "weight":15},
-        { "path": "$[?(@.autoClimb == 1)]", "weight":4}
+        { "path": "$['03auto'].autoClimb", "weight":15}
       ]
     }
     
@@ -189,19 +191,12 @@
     {
       "graphName": "Total Climb Points",
       "metrics": [
-        { "path": "$.autoClimb", "weight":15},
+        { "path": "$['03auto'].autoClimb", "weight":15},
         { "path": "$['05endgame'][?(@.name == 'L1')]", "weight":10},
         { "path": "$['05endgame'][?(@.name == 'L2')]", "weight":20},
         { "path": "$['05endgame'][?(@.name == 'L3')]", "weight":30}
       ],
       "units": "Points"
-    },
-    {
-      "graphName": "Failed Auto Climbs",
-      "metrics": [
-        { "path": "$[?(@.autoclimb == 1)]", "weight":1}
-      ],
-      "units": "Climbs"
     }
   ],
   "Driver": [
