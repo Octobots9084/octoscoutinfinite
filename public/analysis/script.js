@@ -609,16 +609,15 @@ document.addEventListener("DOMContentLoaded", async function () {
 
     // Creating a graph for each section under the category
     const categoryConfig = graphConfig.Overall.find(
-      (categoryConfig) => categoryConfig.graphName === "Controlled Game Pieces",
+      (categoryConfig) => categoryConfig.graphName === "Fuel Scored",
     );
     // Check if categoryConfig and its metrics are valid
     if (
       !categoryConfig ||
       !categoryConfig.graphName ||
-      !Array.isArray(categoryConfig.metrics) ||
-      !categoryConfig.graphName == "Controlled Game Pieces"
+      !Array.isArray(categoryConfig.metrics)
     ) {
-      //return; // Skip this config if invalid
+      // Skip this config if invalid
     }
 
     let dataPoints = [];
@@ -712,9 +711,23 @@ document.addEventListener("DOMContentLoaded", async function () {
     sortedDataPoints.forEach((item, i) => {
       message += item.label + "\n";
     });
+    let csvData = [];
+    sortedDataPoints.forEach((item, i) => {
+      csvData.push(item.label);
+    });
 
+    const csvContent = csvData.join("\n");
+
+    // 2. Create Blob and Link
+    const blob = new Blob([csvContent], { type: "text/csv" });
+    const url = window.URL.createObjectURL(blob);
+    const a = document.createElement("a");
+
+    // 3. Set attributes and trigger click
+    a.setAttribute("href", url);
+    a.setAttribute("download", "my_data.csv");
+    a.click();
     return console.log(message);
   }
   window.printList = printList;
-  //elliotGraph();
 });
